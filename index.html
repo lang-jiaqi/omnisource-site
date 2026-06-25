@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OmniSource — llm-agents — 2026-06-24</title>
+<title>OmniSource — llm-agents — 2026-06-25</title>
 <style>
   :root { --bg:#0a0a0f; --card:#14141c; --fg:#e6e6ea; --muted:#9a9aa8; --accent:#7c83ff; }
   * { box-sizing:border-box; }
@@ -30,159 +30,114 @@
 <header><img src="headbar.png" alt="OmniSource"></header>
 <div class="wrap">
 <h1>OmniSource Daily — llm-agents</h1>
-<p><em>2026-06-24 · 18 signals · sources: arxiv, hf_papers, rss, github</em></p>
+<p><em>2026-06-25 · 13 signals · sources: arxiv, hf_papers, rss, github</em></p>
 <h1>📄 论文</h1>
-<h3>agent evaluation / benchmarks</h3>
-<h2>1. DailyReport: An Open-ended Benchmark for Evaluating Search Agents on Daily Search Tasks</h2>
-<ul>
-<li><strong>Authors:</strong> Jingxuan Han, Wei Liu, Mingyang Zhu, Youpeng Wang, Ziwen Wang et al.</li>
-<li><strong>score 0.76  ·  priority high  ·  rel 1.00  ·  nov 0.80  ·  2026-06-11  ·  via hf_papers  ·  👍 8</strong></li>
-<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.12871">https://arxiv.org/abs/2606.12871</a>  ·  <strong>Code:</strong> <a href="https://github.com/AGI-Eval-Official/DailyReport">https://github.com/AGI-Eval-Official/DailyReport</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为评估搜索代理的能力提供了一个新的基准，强调了在真实世界场景中使用大型语言模型的有效性。</p>
-<p><strong>核心思想:</strong> DailyReport基准通过开放式任务和细化的评估标准，提供了对搜索代理在日常搜索任务中表现的深入分析。</p>
-<h2>2. Counsel: A Meta-Evaluation Dataset for Agentic Tasks</h2>
-<ul>
-<li><strong>Authors:</strong> Sashank Pisupati, Henry Broomfield, Eujeong Choi, Antonia Calvi, Charlie Wang et al.</li>
-<li><strong>score 0.71  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-19  ·  via hf_papers  ·  👍 5</strong></li>
-<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.21627">https://arxiv.org/abs/2606.21627</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为评估智能体任务提供了一个新的数据集，帮助研究人员更好地理解和改进LLM在智能体评估中的应用。</p>
-<p><strong>核心思想:</strong> Counsel是第一个针对智能体任务的元评估数据集，提供了LLM作为评判者的过程级批评和人类元评估。</p>
-<h2>3. SAFARI: Scaling Long Horizon Agentic Fault Attribution via Active Investigation</h2>
-<ul>
-<li><strong>Authors:</strong> Chenyang Zhu, Jiayu Yao, Kushal Chawla, Youbing Yin, Nathan Wolfe et al.</li>
-<li><strong>score 0.70  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-23  ·  via arxiv</strong></li>
-<li><strong>Link:</strong> <a href="http://arxiv.org/abs/2606.24626v1">http://arxiv.org/abs/2606.24626v1</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> SAFARI provides a novel approach to diagnosing failures in long-horizon agentic tasks, which is crucial for improving the reliability of LLM agents in complex environments.</p>
-<p><strong>核心思想:</strong> SAFARI introduces a tool-augmented diagnostic loop that enhances fault attribution in LLMs by utilizing a specialized toolbox and persistent Short-Term Memory for better reasoning across long trajectories.</p>
-<h3>tool use / function calling</h3>
-<h2>4. PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems</h2>
-<ul>
-<li><strong>Authors:</strong> Jiayu Liu, Qihan Lin, Cheng Qian, Rui Wang, Emre Can Acikgoz et al.</li>
-<li><strong>score 1.00  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-21  ·  via hf_papers  ·  👍 80</strong></li>
-<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.22388">https://arxiv.org/abs/2606.22388</a>  ·  <strong>Code:</strong> <a href="https://github.com/JiayuJeff/PlanBench-XL">https://github.com/JiayuJeff/PlanBench-XL</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为LLM代理的工具使用和长远规划提供了一个新的基准，帮助研究人员评估和改进代理在复杂环境中的表现。</p>
-<p><strong>核心思想:</strong> PlanBench-XL是一个交互式基准，评估LLM工具使用代理在大型工具生态系统中进行长远规划的能力。</p>
-<h2>5. The Latent Bridge: A Continuous Slow-Fast Channel for Real-Time Game Agents</h2>
-<ul>
-<li><strong>Authors:</strong> Bojie Li, Noah Shi</li>
-<li><strong>score 0.70  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-23  ·  via arxiv</strong></li>
-<li><strong>Link:</strong> <a href="http://arxiv.org/abs/2606.24470v1">http://arxiv.org/abs/2606.24470v1</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为实时游戏代理的规划和反应能力之间的平衡提供了新的方法，可能会对LLM代理的工具使用和计算能力产生重要影响。</p>
-<p><strong>核心思想:</strong> 提出了一种新的连续潜在桥接方法，通过将慢模型的残差投影到快模型的输入嵌入空间中，优化了实时游戏代理的性能。</p>
 <h3>reasoning / planning</h3>
-<h2>6. CalVerT: Augmenting Agents with Calibrated Verifier Telemetry Improves Action and Learning in Knowledge-Intensive Tasks</h2>
-<ul>
-<li><strong>Authors:</strong> Ashwin Vinod, Ying Ding, Elias Stengel-Eskin</li>
-<li><strong>score 0.80  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-19  ·  via hf_papers  ·  👍 2</strong></li>
-<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.21777">https://arxiv.org/abs/2606.21777</a>  ·  <strong>Code:</strong> <a href="https://github.com/ashwinn-v/CalVerT">https://github.com/ashwinn-v/CalVerT</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为知识密集型任务中的LLM代理提供了一种新的方法来提高其决策和学习能力，尤其是在处理不确定性时。</p>
-<p><strong>核心思想:</strong> CalVerT通过引入校准的自信评分和基础验证评分来增强代理的状态，从而改善其在知识密集型问答中的表现。</p>
-<h2>7. Qwen-AgentWorld: Language World Models for General Agents</h2>
+<h2>1. Qwen-AgentWorld: Language World Models for General Agents</h2>
 <ul>
 <li><strong>Authors:</strong> Yuxin Zuo, Zikai Xiao, Li Sheng, Fei Huang, Jianhong Tu et al.</li>
-<li><strong>score 0.70  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-23  ·  via arxiv</strong></li>
-<li><strong>Link:</strong> <a href="http://arxiv.org/abs/2606.24597v1">http://arxiv.org/abs/2606.24597v1</a></li>
+<li><strong>score 0.90  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-23  ·  via hf_papers  ·  👍 97</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.24597">https://arxiv.org/abs/2606.24597</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这项研究为通用智能体提供了新的语言世界模型，推动了智能体在推理和规划方面的能力。</p>
-<p><strong>核心思想:</strong> Qwen-AgentWorld通过语言模型构建环境模拟，增强了智能体的推理和规划能力。</p>
+<p><strong>为什么值得看:</strong> 这项研究展示了如何利用语言模型进行环境建模，从而推动通用智能体的发展，适合关注智能体工具使用和推理的研究者。</p>
+<p><strong>核心思想:</strong> 该研究提出了Qwen-AgentWorld，一个基于语言模型的环境模拟器，能够通过长链推理在多个领域中提升智能体的表现。</p>
+<h2>2. CalVerT: Augmenting Agents with Calibrated Verifier Telemetry Improves Action and Learning in Knowledge-Intensive Tasks</h2>
+<ul>
+<li><strong>Authors:</strong> Ashwin Vinod, Ying Ding, Elias Stengel-Eskin</li>
+<li><strong>score 0.81  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-19  ·  via hf_papers  ·  👍 3</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.21777">https://arxiv.org/abs/2606.21777</a>  ·  <strong>Code:</strong> <a href="https://github.com/ashwinn-v/CalVerT">https://github.com/ashwinn-v/CalVerT</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> 这项研究为LLM代理提供了一种新的方法来提高其在知识密集型任务中的表现，特别是在处理不确定性和信息过载时。</p>
+<p><strong>核心思想:</strong> CalVerT通过引入校准的自信评分和验证器评分来增强代理的状态，从而改善其在问答任务中的表现。</p>
+<h2>3. ChartWalker: Benchmarking the Cross-Chart RAG Task</h2>
+<ul>
+<li><strong>Authors:</strong> Ning Tang, Chenghan Xie, Hanyang Yuan, Yi Li, Renhong Huang et al.</li>
+<li><strong>score 0.69  ·  priority high  ·  rel 0.80  ·  nov 0.90  ·  2026-06-22  ·  via hf_papers  ·  👍 2</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.23997">https://arxiv.org/abs/2606.23997</a>  ·  <strong>Code:</strong> <a href="https://github.com/downing777/ChartWalker_Pub">https://github.com/downing777/ChartWalker_Pub</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> ChartWalker introduces a novel framework for RAG tasks that enhances the reasoning capabilities of LLM agents, making it crucial for researchers focused on improving multi-modal analytical tasks.</p>
+<p><strong>核心思想:</strong> ChartWalker utilizes a hierarchical knowledge graph and a structure-aware sampling algorithm to create challenging cross-chart RAG tasks, enhancing reasoning and query generation.</p>
 <h3>multi-agent systems</h3>
-<h2>8. Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark</h2>
+<h2>4. OpenRath: Session-Centered Runtime State for Agent Systems</h2>
+<ul>
+<li><strong>Authors:</strong> Fukang Wen, Zhijie Wang, Ruilin Xu</li>
+<li><strong>score 0.89  ·  priority high  ·  rel 1.00  ·  nov 0.80  ·  2026-06-17  ·  via hf_papers  ·  👍 72</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.19409">https://arxiv.org/abs/2606.19409</a>  ·  <strong>Code:</strong> <a href="https://github.com/Rath-Team/OpenRath">https://github.com/Rath-Team/OpenRath</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> OpenRath introduces a novel runtime abstraction that enhances the management of state in agent systems, which is crucial for improving the functionality and reliability of LLM agents.</p>
+<p><strong>核心思想:</strong> OpenRath's core contribution is the Session abstraction that allows for better tracking and management of runtime state in multi-agent systems.</p>
+<h2>5. Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark</h2>
 <ul>
 <li><strong>Authors:</strong> Yigeng Jiang, Tengchao Yang, Taoyong Cui, Jiaxing Wan, Yuan Wang et al.</li>
-<li><strong>score 0.83  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-17  ·  via hf_papers  ·  👍 12</strong></li>
+<li><strong>score 0.83  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-17  ·  via hf_papers  ·  👍 14</strong></li>
 <li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.18648">https://arxiv.org/abs/2606.18648</a>  ·  <strong>Code:</strong> <a href="https://github.com/yigengjiang/physci-deepresearch">https://github.com/yigengjiang/physci-deepresearch</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这项研究为 LLM 代理在物理科学领域的应用提供了重要的基准和框架，揭示了当前模型的局限性并提出了改进方案。</p>
-<p><strong>核心思想:</strong> 研究提出了 PhySciBench 基准和 DelveAgent 框架，通过模块化设计和适应性规划循环来提升 LLM 代理在科学研究中的表现。</p>
-<h1>💻 开源项目</h1>
+<p><strong>为什么值得看:</strong> 这项研究为 LLM 代理在科学研究中的应用提供了重要的基准和框架，推动了多步骤推理和工具使用的能力。</p>
+<p><strong>核心思想:</strong> 该研究提出了 PhySciBench 基准和 DelveAgent 框架，以提高 LLM 代理在物理科学领域的推理能力和可靠性。</p>
+<h2>6. LingxiDiagBench: A Multi-Agent Framework for Benchmarking LLMs in Chinese Psychiatric Consultation and Diagnosis</h2>
+<ul>
+<li><strong>Authors:</strong> Shihao Xu, Tiancheng Zhou, Jiatong Ma, Yanli Ding, Yiming Yan et al.</li>
+<li><strong>score 0.67  ·  priority high  ·  rel 0.80  ·  nov 0.70  ·  2026-06-11  ·  via hf_papers  ·  👍 20</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2602.09379">https://arxiv.org/abs/2602.09379</a>  ·  <strong>Code:</strong> <a href="https://github.com/Lingxi-mental-health/LingxiDiagBench">https://github.com/Lingxi-mental-health/LingxiDiagBench</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> 这项研究为 LLM 代理在心理健康领域的应用提供了一个新的基准，强调了动态咨询中的推理和规划能力的重要性。</p>
+<p><strong>核心思想:</strong> LingxiDiagBench 是一个多代理基准框架，旨在评估 LLM 在中国心理咨询和诊断中的表现，特别关注动态多轮咨询的挑战。</p>
 <h3>tool use / function calling</h3>
-<h2>1. anthropics/claude-code</h2>
+<h2>7. PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use Agents in Large-Scale Tool Ecosystems</h2>
 <ul>
-<li><strong>Authors:</strong> anthropics</li>
-<li><strong>score 0.85  ·  priority high  ·  rel 1.00  ·  nov 0.80  ·  2026-06-23  ·  via github  ·  👍 134003</strong></li>
-<li><strong>Link:</strong> <a href="https://github.com/anthropics/claude-code">https://github.com/anthropics/claude-code</a>  ·  <strong>Code:</strong> <a href="https://github.com/anthropics/claude-code">https://github.com/anthropics/claude-code</a></li>
+<li><strong>Authors:</strong> Jiayu Liu, Qihan Lin, Cheng Qian, Rui Wang, Emre Can Acikgoz et al.</li>
+<li><strong>score 0.98  ·  priority high  ·  rel 1.00  ·  nov 1.00  ·  2026-06-21  ·  via hf_papers  ·  👍 86</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.22388">https://arxiv.org/abs/2606.22388</a>  ·  <strong>Code:</strong> <a href="https://github.com/JiayuJeff/PlanBench-XL">https://github.com/JiayuJeff/PlanBench-XL</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这项研究展示了如何通过自然语言命令增强代码生成和管理的能力，直接与LLM代理的工具使用相关。</p>
-<p><strong>核心思想:</strong> Claude Code是一个能够理解代码库并通过自然语言命令执行常规任务的代理工具。</p>
-<h2>2. langflow-ai/langflow</h2>
+<p><strong>为什么值得看:</strong> 这项研究为LLM代理的长远规划能力提供了新的评估基准，揭示了在复杂工具环境中进行有效工具使用的挑战。</p>
+<p><strong>核心思想:</strong> PlanBench-XL是一个互动基准，评估LLM工具使用代理在动态环境中进行长远规划的能力。</p>
+<h3>agent evaluation / benchmarks</h3>
+<h2>8. DailyReport: An Open-ended Benchmark for Evaluating Search Agents on Daily Search Tasks</h2>
 <ul>
-<li><strong>Authors:</strong> langflow-ai</li>
-<li><strong>score 0.73  ·  priority medium  ·  rel 0.80  ·  nov 0.60  ·  2026-06-24  ·  via github  ·  👍 149991</strong></li>
-<li><strong>Link:</strong> <a href="https://github.com/langflow-ai/langflow">https://github.com/langflow-ai/langflow</a>  ·  <strong>Code:</strong> <a href="https://github.com/langflow-ai/langflow">https://github.com/langflow-ai/langflow</a></li>
+<li><strong>Authors:</strong> Jingxuan Han, Wei Liu, Mingyang Zhu, Youpeng Wang, Ziwen Wang et al.</li>
+<li><strong>score 0.77  ·  priority high  ·  rel 1.00  ·  nov 0.80  ·  2026-06-11  ·  via hf_papers  ·  👍 13</strong></li>
+<li><strong>Link:</strong> <a href="https://arxiv.org/abs/2606.12871">https://arxiv.org/abs/2606.12871</a>  ·  <strong>Code:</strong> <a href="https://github.com/AGI-Eval-Official/DailyReport">https://github.com/AGI-Eval-Official/DailyReport</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> llm-agents researchers should care because Langflow provides a framework for creating AI agents, which is directly relevant to the development and deployment of LLM agents.</p>
-<p><strong>核心思想:</strong> Langflow offers a platform for constructing and managing AI workflows and agents, facilitating tool use and integration.</p>
-<h2>3. anomalyco/opencode</h2>
-<ul>
-<li><strong>Authors:</strong> anomalyco</li>
-<li><strong>score 0.71  ·  priority medium  ·  rel 0.70  ·  nov 0.60  ·  2026-06-24  ·  via github  ·  👍 177822</strong></li>
-<li><strong>Link:</strong> <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a>  ·  <strong>Code:</strong> <a href="https://github.com/anomalyco/opencode">https://github.com/anomalyco/opencode</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究可能为开发开源编码代理提供新的思路，促进LLM代理在编程任务中的应用。</p>
-<p><strong>核心思想:</strong> 该论文介绍了一种开源编码代理，旨在提高编程效率和协作。</p>
-<h3>other</h3>
-<h2>4. langgenius/dify</h2>
-<ul>
-<li><strong>Authors:</strong> langgenius</li>
-<li><strong>score 0.79  ·  priority high  ·  rel 0.90  ·  nov 0.70  ·  2026-06-24  ·  via github  ·  👍 146333</strong></li>
-<li><strong>Link:</strong> <a href="https://github.com/langgenius/dify">https://github.com/langgenius/dify</a>  ·  <strong>Code:</strong> <a href="https://github.com/langgenius/dify">https://github.com/langgenius/dify</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为开发具有代理能力的工作流程提供了一个生产就绪的平台，可能会对 LLM 代理的实际应用产生重要影响。</p>
-<p><strong>核心思想:</strong> 该平台旨在简化和优化代理工作流程的开发过程。</p>
-<h3>multi-agent systems</h3>
-<h2>5. TauricResearch/TradingAgents</h2>
-<ul>
-<li><strong>Authors:</strong> TauricResearch</li>
-<li><strong>score 0.77  ·  priority high  ·  rel 0.90  ·  nov 0.80  ·  2026-06-22  ·  via github  ·  👍 88192</strong></li>
-<li><strong>Link:</strong> <a href="https://github.com/TauricResearch/TradingAgents">https://github.com/TauricResearch/TradingAgents</a>  ·  <strong>Code:</strong> <a href="https://github.com/TauricResearch/TradingAgents">https://github.com/TauricResearch/TradingAgents</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这项研究为多代理系统提供了一个新的框架，能够在金融交易中利用LLM的能力，推动了LLM代理在实际应用中的发展。</p>
-<p><strong>核心思想:</strong> 该框架允许多个LLM代理在金融市场中进行协作和竞争，从而优化交易策略。</p>
+<p><strong>为什么值得看:</strong> 这项研究为评估搜索代理的能力提供了一个新的基准，帮助研究人员理解和改进基于LLM的代理在实际搜索任务中的表现。</p>
+<p><strong>核心思想:</strong> DailyReport基准通过开放式任务和细化的评估标准，提供了对搜索代理在日常搜索任务中表现的深入分析。</p>
 <h1>📝 实验室动态</h1>
 <h3>tool use / function calling</h3>
-<h2>1. Is it agentic enough? Benchmarking open models on your own tooling</h2>
-<ul>
-<li><strong>score 0.61  ·  priority high  ·  rel 1.00  ·  nov 0.70  ·  2026-06-18  ·  via rss</strong></li>
-<li><strong>Link:</strong> <a href="https://huggingface.co/blog/is-it-agentic-enough">https://huggingface.co/blog/is-it-agentic-enough</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 这篇论文为研究人员提供了一个基准测试框架，以评估开放模型在工具使用方面的能力，这对理解和提升LLM代理的性能至关重要。</p>
-<p><strong>核心思想:</strong> 论文提出了一种新的基准测试方法，用于评估开放模型在自主工具使用中的表现。</p>
-<h2>2. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</h2>
+<h2>1. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</h2>
 <ul>
 <li><strong>score 0.60  ·  priority high  ·  rel 0.90  ·  nov 0.80  ·  2026-06-23  ·  via rss</strong></li>
 <li><strong>Link:</strong> <a href="https://huggingface.co/blog/ibm-research/cuga-apps">https://huggingface.co/blog/ibm-research/cuga-apps</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这篇论文提供了具体的示例和工具，帮助研究人员构建具有代理能力的应用程序，推动了LLM代理的实际应用。</p>
-<p><strong>核心思想:</strong> 论文介绍了CUGA，一个轻量级的框架，支持开发多种具有代理功能的应用实例。</p>
-<h2>3. Agentic Resource Discovery: Let agents search</h2>
+<p><strong>为什么值得看:</strong> 这项研究提供了实用的示例和工具，帮助研究人员构建具有代理能力的应用程序，推动了LLM代理的实际应用。</p>
+<p><strong>核心思想:</strong> 该论文介绍了CUGA，一个轻量级的框架，支持构建具有代理性的应用程序，并提供了多个工作示例。</p>
+<h2>2. Agentic Resource Discovery: Let agents search</h2>
 <ul>
 <li><strong>score 0.60  ·  priority high  ·  rel 0.90  ·  nov 0.80  ·  2026-06-17  ·  via rss</strong></li>
 <li><strong>Link:</strong> <a href="https://huggingface.co/blog/agentic-resource-discovery-launch">https://huggingface.co/blog/agentic-resource-discovery-launch</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这项研究为代理的资源发现提供了新的视角，可能会提高代理在复杂环境中的搜索和决策能力。</p>
-<p><strong>核心思想:</strong> 该论文提出了一种新的方法，使代理能够自主搜索和发现资源，从而增强其功能。</p>
+<p><strong>为什么值得看:</strong> 这项研究为LLM代理提供了一种新的资源发现机制，能够提升其在复杂任务中的自主性和效率。</p>
+<p><strong>核心思想:</strong> 该论文提出了一种新方法，使代理能够自主搜索和发现资源，从而增强其功能和应用范围。</p>
+<h2>3. From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot</h2>
+<ul>
+<li><strong>score 0.60  ·  priority high  ·  rel 0.90  ·  nov 0.80  ·  2026-06-17  ·  via rss</strong></li>
+<li><strong>Link:</strong> <a href="https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware">https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> 这篇论文展示了如何将大型语言模型应用于机器人硬件，提供了对 LLM 代理在实际应用中的重要见解。</p>
+<p><strong>核心思想:</strong> 论文介绍了 Strands Agents 和 LeRobot 的结合，展示了 LLM 在机器人控制中的应用。</p>
+<h2>4. Is it agentic enough? Benchmarking open models on your own tooling</h2>
+<ul>
+<li><strong>score 0.57  ·  priority high  ·  rel 0.90  ·  nov 0.70  ·  2026-06-18  ·  via rss</strong></li>
+<li><strong>Link:</strong> <a href="https://huggingface.co/blog/is-it-agentic-enough">https://huggingface.co/blog/is-it-agentic-enough</a></li>
+</ul>
+<p><strong>为什么值得看:</strong> 这项研究为评估开放模型在工具使用方面的能力提供了基准，帮助研究人员理解和改进LLM代理的工具使用能力。</p>
+<p><strong>核心思想:</strong> 该论文提出了一种新的基准测试方法，用于评估开放模型在自定义工具使用中的表现。</p>
 <h3>multi-agent systems</h3>
-<h2>4. The Open Source Community is backing OpenEnv for Agentic RL</h2>
+<h2>5. The Open Source Community is backing OpenEnv for Agentic RL</h2>
 <ul>
 <li><strong>score 0.53  ·  priority medium  ·  rel 0.80  ·  nov 0.70  ·  2026-06-08  ·  via rss</strong></li>
 <li><strong>Link:</strong> <a href="https://huggingface.co/blog/openenv-agentic-rl">https://huggingface.co/blog/openenv-agentic-rl</a></li>
 </ul>
-<p><strong>为什么值得看:</strong> 这篇论文探讨了开放源代码社区如何支持Agentic RL，这对研究LLM代理的工具使用和规划能力至关重要。</p>
-<p><strong>核心思想:</strong> 论文提出了一个新的开放环境OpenEnv，旨在促进代理强化学习的研究和应用。</p>
-<h3>agent safety / robustness</h3>
-<h2>5. MosaicLeaks: Can your research agent keep a secret?</h2>
-<ul>
-<li><strong>score 0.53  ·  priority high  ·  rel 0.80  ·  nov 0.70  ·  2026-06-18  ·  via rss</strong></li>
-<li><strong>Link:</strong> <a href="https://huggingface.co/blog/ServiceNow/mosaicleaks">https://huggingface.co/blog/ServiceNow/mosaicleaks</a></li>
-</ul>
-<p><strong>为什么值得看:</strong> 研究人员应关注此论文，因为它探讨了LLM代理在处理敏感信息时的安全性和隐私问题，这对代理的实际应用至关重要。</p>
-<p><strong>核心思想:</strong> 该论文提出了一种新的方法来评估和增强LLM代理在处理机密信息时的保密能力。</p>
+<p><strong>为什么值得看:</strong> 这篇论文展示了开源社区如何支持Agentic RL，这对研究LLM代理的工具使用和规划具有重要意义。</p>
+<p><strong>核心思想:</strong> 论文探讨了Agentic RL的开源平台OpenEnv及其在多代理系统中的应用。</p>
 <footer>Generated by OmniSource</footer>
 </div>
 </body>
