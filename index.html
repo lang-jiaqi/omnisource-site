@@ -1,7 +1,7 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OmniSource — llm-agents — 2026-06-27</title>
+<title>OmniSource — llm-agents — 2026-06-28</title>
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <style>
   :root { --bg:#0a0a0f; --card:#13131c; --fg:#e8e8ef; --muted:#8e8e9e; --accent:#7c83ff; }
@@ -9,192 +9,74 @@
   body { margin:0; background:var(--bg); color:var(--fg);
     font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
   header img { width:100%; display:block; }
-  .wrap { max-width:880px; margin:0 auto; padding:8px 20px 80px; }
+  .wrap { max-width:1140px; margin:0 auto; padding:8px 20px 80px; }
   .sub { color:var(--muted); font-size:.85rem; margin:14px 0 4px; }
   h2 { font-size:1.05rem; margin:2rem 0 1rem; padding-bottom:.4rem; border-bottom:1px solid #23232e; }
   .card { background:var(--card); border:1px solid #1f1f2b; border-radius:14px;
     padding:18px 20px; margin:14px 0; }
-  .card h3 { margin:0 0 .4rem; font-size:1.05rem; line-height:1.35; }
-  .auth { color:var(--muted); font-size:.82rem; }
-  .meta { color:var(--accent); font-size:.78rem; margin:.3rem 0; }
-  .links { font-size:.85rem; margin:.2rem 0 .6rem; }
+  .card.has-graph { display:flex; gap:24px; align-items:flex-start; }
+  .card-main { flex:1; min-width:0; }
+  .card h3 { margin:0 0 .5rem; font-size:1.22rem; line-height:1.35; }
+  .auth { color:var(--muted); font-size:.9rem; }
+  .meta { color:var(--accent); font-size:.85rem; margin:.4rem 0; }
+  .links { font-size:.95rem; margin:.3rem 0 .7rem; }
   .links a { color:var(--accent); text-decoration:none; }
-  .card p { color:#cdced8; margin:.4rem 0; font-size:.95rem; }
+  .card p { color:#cdced8; margin:.5rem 0; font-size:1.05rem; line-height:1.6; }
   .card b { color:var(--fg); margin-right:.3rem; }
-  .graph { height:300px; margin-top:14px; border-top:1px solid #1f1f2b; }
+  .graph { flex:0 0 420px; width:420px; height:360px; border-radius:10px;
+    background:#0e0e16; border:1px solid #1f1f2b; }
+  @media (max-width:760px) {
+    .card.has-graph { flex-direction:column; align-items:stretch; }
+    .graph { flex:none; width:100%; }
+  }
   footer { margin-top:3rem; color:var(--muted); font-size:.85rem; text-align:center; }
 </style></head>
 <body>
 <header><img src="headbar.png" alt="OmniSource"></header>
 <div class="wrap">
-<div class="sub">2026-06-27 · llm-agents</div>
+<div class="sub">2026-06-28 · llm-agents</div>
 <h2>📄 论文</h2>
-<div class="card">
-<h3>1. Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It</h3>
-<div class="auth">Yupu Hao, Zhuoran Jin, Huanxuan Liao, Kang Liu, Jun Zhao</div>
-<div class="meta">score 0.88  ·  high  ·  2026-06-24  ·  via hf_papers  ·  👍 14</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.26027">链接</a>  ·  <a href="https://github.com/hypasd-art/Tool-RL-Box">代码</a></div>
-<p><b>为什么值得看</b> 研究人员应关注此研究，因为它揭示了多步工具使用中的强化学习失败及其解决方案，直接影响LLM代理的性能和稳定性。</p>
-<p><b>核心思想</b> 该研究提出通过多种监督信号与强化学习结合，显著提高LLM在复杂工具使用任务中的稳定性和性能。</p>
-<div class="graph" id="g_paper_1"></div>
-</div>
-<div class="card">
-<h3>2. Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments</h3>
-<div class="auth">Mykola Vysotskyi, Runqi Lin, Grzegorz Biziel, Michal Zakrzewski, Sebastian Montagna, Damian Rynczak et al.</div>
-<div class="meta">score 0.88  ·  high  ·  2026-06-25  ·  via hf_papers  ·  👍 14</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.14397">链接</a>  ·  <a href="https://github.com/gauntlet-benchmark/evaluation-harness">代码</a></div>
-<p><b>为什么值得看</b> 这项研究为评估智能体在复杂环境中的能力提供了新的基准，帮助研究人员理解当前智能体的局限性。</p>
-<p><b>核心思想</b> GauntletBench是一个新的基准，专注于评估智能体在挑战性场景中的能力，特别是在时间感知、图形理解和3D推理方面。</p>
-<div class="graph" id="g_paper_2"></div>
-</div>
-<div class="card">
-<h3>3. CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies</h3>
-<div class="auth">Issa Sugiura, Daichi Hattori, Kazuo Araragi, Keita Ogawa, Shota Onose, Taro Makino et al.</div>
-<div class="meta">score 0.84  ·  high  ·  2026-06-15  ·  via hf_papers  ·  👍 7</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.16613">链接</a>  ·  <a href="https://github.com/SakanaAI/CoffeeBench">代码</a></div>
-<p><b>为什么值得看</b> 研究人员应关注此基准，因为它提供了评估长时间跨度的 LLM 代理在多代理经济系统中表现的新方法。</p>
-<p><b>核心思想</b> CoffeeBench 是一个用于评估 LLM 代理在异构多代理经济中表现的基准，强调了代理之间的沟通和交易。</p>
-<div class="graph" id="g_paper_3"></div>
-</div>
-<div class="card">
-<h3>4. Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents</h3>
-<div class="auth">Changdae Oh, Wendi Li, Seongheon Park, Samuel Yeh, Tanwi Mallick, Sharon Li</div>
-<div class="meta">score 0.83  ·  high  ·  2026-06-24  ·  via arxiv, hf_papers  ·  👍 6</div>
-<div class="links"><a href="http://arxiv.org/abs/2606.26080v1">链接</a>  ·  <a href="https://github.com/deeplearning-wisc/progress-advantage">代码</a></div>
-<p><b>为什么值得看</b> 这项研究为 LLM 代理的评估提供了一种新的方法，能够在不需要专门奖励模型的情况下进行有效的步骤级评分。</p>
-<p><b>核心思想</b> 该研究提出了一种名为进展优势的隐式优势，通过强化学习后训练过程中的对数概率比来实现。</p>
-<div class="graph" id="g_paper_4"></div>
-</div>
-<div class="card">
-<h3>5. Beyond NL2Code: A Structured Survey of Multimodal Code Intelligence</h3>
-<div class="auth">Xuanle Zhao, Qiushi Sun, Jingyu Xiao, Xuexin Liu, Haoyue Yang, Qiaosheng Chen et al.</div>
-<div class="meta">score 0.82  ·  high  ·  2026-06-16  ·  via hf_papers  ·  👍 36</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.15932">链接</a>  ·  <a href="https://github.com/xjywhu/Awesome-Multimodal-LLM-for-Code">代码</a></div>
-<p><b>为什么值得看</b> 这项研究为多模态代码智能提供了新的视角，强调了视觉输入在代码生成中的重要性，适合关注LLM代理的研究者。</p>
-<p><b>核心思想</b> 该研究通过分类和比较不同的多模态代码智能任务，提出了未来研究的四个验证中心方向。</p>
-<div class="graph" id="g_paper_5"></div>
-</div>
-<div class="card">
-<h3>6. When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents</h3>
-<div class="auth">Kaiyue Yang, Yuyan Bu, Jingwei Yi, Yuchi Wang, Biyu Zhou, Juntao Dai et al.</div>
-<div class="meta">score 0.82  ·  high  ·  2026-06-18  ·  via hf_papers  ·  👍 4</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.20023">链接</a>  ·  <a href="https://github.com/AISafetyHub/agent-tool-selection-bias">代码</a></div>
-<p><b>为什么值得看</b> 研究人员需要关注工具选择中的特权问题，以提高LLM代理的安全性和效率。</p>
-<p><b>核心思想</b> 本研究提出了ToolPrivBench评估LLM代理在工具选择中对特权的敏感性，并引入了一种后训练防御机制以优化工具使用。</p>
-<div class="graph" id="g_paper_6"></div>
-</div>
-<div class="card">
-<h3>7. Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation</h3>
-<div class="auth">Zekai Zhang, Jiahao Li, Jie Zhang, Kaiyuan Gao, Kun Yan, Lihan Jiang et al.</div>
-<div class="meta">score 0.80  ·  high  ·  2026-06-25  ·  via arxiv, hf_papers  ·  👍 37</div>
-<div class="links"><a href="http://arxiv.org/abs/2606.26907v1">链接</a></div>
-<p><b>为什么值得看</b> 研究人员应关注此论文，因为它提出了一种新的代理框架，能够有效地处理图像生成中的上下文差距问题。</p>
-<p><b>核心思想</b> Qwen-Image-Agent通过上下文感知规划和上下文基础构建生成上下文，从而提高图像生成的质量。</p>
-</div>
-<div class="card">
-<h3>8. RL-Index: Reinforcement Learning for Retrieval Index Reasoning</h3>
-<div class="auth">Yongjia Lei, Nedim Lipka, Zhisheng Qi, Utkarsh Sahu, Koustava Goswami, Franck Dernoncourt et al.</div>
-<div class="meta">score 0.73  ·  high  ·  2026-06-15  ·  via hf_papers  ·  👍 5</div>
-<div class="links"><a href="https://arxiv.org/abs/2606.16316">链接</a></div>
-<p><b>为什么值得看</b> 这项研究为检索索引推理提供了一种新的强化学习框架，能够提高检索效率，对llm-agents研究者具有重要意义。</p>
-<p><b>核心思想</b> RL-Index通过将检索索引推理形式化为强化学习问题，优化文档的LLM生成的推理，从而提高检索效果。</p>
-<div class="graph" id="g_paper_8"></div>
-</div>
+<div class="card has-graph"><div class="card-main"><h3>1. Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments</h3><div class="auth">Mykola Vysotskyi, Runqi Lin, Grzegorz Biziel, Michal Zakrzewski, Sebastian Montagna, Damian Rynczak et al.</div><div class="meta">score 0.87  ·  high  ·  2026-06-25  ·  via hf_papers  ·  👍 15</div><div class="links"><a href="https://arxiv.org/abs/2606.14397">链接</a>  ·  <a href="https://github.com/gauntlet-benchmark/evaluation-harness">代码</a></div><p><b>为什么值得看</b> 这项研究为评估智能体在复杂环境中的能力提供了新的基准，帮助研究人员识别当前智能体的局限性。</p><p><b>核心思想</b> GauntletBench是一个新的基准，专注于评估智能体在时间感知、图形理解和3D推理等未充分探索的能力。</p></div><div class="graph" id="g_paper_1"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>2. CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies</h3><div class="auth">Issa Sugiura, Daichi Hattori, Kazuo Araragi, Keita Ogawa, Shota Onose, Taro Makino et al.</div><div class="meta">score 0.83  ·  high  ·  2026-06-15  ·  via hf_papers  ·  👍 7</div><div class="links"><a href="https://arxiv.org/abs/2606.16613">链接</a>  ·  <a href="https://github.com/SakanaAI/CoffeeBench">代码</a></div><p><b>为什么值得看</b> 研究者应该关注这个基准，因为它提供了评估长时间任务中多智能体经济系统中LLM代理的新方法。</p><p><b>核心思想</b> CoffeeBench是一个用于评估LLM代理在异构多智能体经济中的表现的新基准，强调了代理之间的沟通和交易。</p></div><div class="graph" id="g_paper_2"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>3. Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents</h3><div class="auth">Changdae Oh, Wendi Li, Seongheon Park, Samuel Yeh, Tanwi Mallick, Sharon Li</div><div class="meta">score 0.83  ·  high  ·  2026-06-24  ·  via hf_papers  ·  👍 7</div><div class="links"><a href="https://arxiv.org/abs/2606.26080">链接</a>  ·  <a href="https://github.com/deeplearning-wisc/progress-advantage">代码</a></div><p><b>为什么值得看</b> 这项研究为 LLM 代理的评估提供了一种新的无监督方法，能够在复杂环境中有效地进行性能评估。</p><p><b>核心思想</b> 提出了一种名为进展优势的隐式优势度量，能够在不需要专门奖励模型训练的情况下评估 LLM 代理的表现。</p></div><div class="graph" id="g_paper_3"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>4. Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It</h3><div class="auth">Yupu Hao, Zhuoran Jin, Huanxuan Liao, Kang Liu, Jun Zhao</div><div class="meta">score 0.81  ·  high  ·  2026-06-24  ·  via hf_papers  ·  👍 15</div><div class="links"><a href="https://arxiv.org/abs/2606.26027">链接</a>  ·  <a href="https://github.com/hypasd-art/Tool-RL-Box">代码</a></div><p><b>为什么值得看</b> 研究人员应关注如何通过监督信号提升大语言模型在多步骤工具使用中的稳定性和性能。</p><p><b>核心思想</b> 本研究探讨了多步骤工具使用中的强化学习崩溃现象及其通过多样化监督信号的修复方法。</p></div><div class="graph" id="g_paper_4"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>5. Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation</h3><div class="auth">Zekai Zhang, Jiahao Li, Jie Zhang, Kaiyuan Gao, Kun Yan, Lihan Jiang et al.</div><div class="meta">score 0.80  ·  high  ·  2026-06-25  ·  via arxiv, hf_papers  ·  👍 41</div><div class="links"><a href="http://arxiv.org/abs/2606.26907v1">链接</a></div><p><b>为什么值得看</b> 研究人员应关注此研究，因为它提出了一种新的框架来提升图像生成模型的上下文理解能力。</p><p><b>核心思想</b> Qwen-Image-Agent通过上下文感知规划和上下文基础构建来弥补用户输入与生成上下文之间的差距。</p></div><div class="graph" id="g_paper_5"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>6. OpenRCA 2.0: From Outcome Labels to Causal Process Supervision</h3><div class="auth">Aoyang Fang, Yifan Yang, Jin&#x27;ao Shang, Qisheng Lu, Junjielung Xu, Rui Wang et al.</div><div class="meta">score 0.70  ·  high  ·  2026-06-25  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2606.27154v1">链接</a></div><p><b>为什么值得看</b> 研究人员需要关注如何通过因果过程监督来提升LLM代理的推理和工具使用能力。</p><p><b>核心思想</b> 提出了一种新的逐步标注协议PAVE，用于构建具有因果注释的根本原因分析基准OpenRCA 2.0。</p></div><div class="graph" id="g_paper_6"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>7. Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning</h3><div class="auth">Tianyi Men, Zhuoran Jin, Pengfei Cao, Yubo Chen, Kang Liu, Jun Zhao</div><div class="meta">score 0.70  ·  high  ·  2026-06-25  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2606.27330v1">链接</a></div><p><b>为什么值得看</b> 研究人员应关注此研究，因为它提出了一种新方法来增强GUI代理的任务规划能力，特别是在小型多模态模型中。</p><p><b>核心思想</b> 该研究介绍了一种规划经验探索与利用（PEEU）的方法，通过自主探索环境和利用事后经验来提升任务规划能力。</p></div><div class="graph" id="g_paper_7"></div></div>
+<div class="card has-graph"><div class="card-main"><h3>8. Advancing Omnimodal Embodied Agents from Isolated Skills to Everyday Physical Autonomy</h3><div class="auth">Junhao Shi, Zezheng Huai, Siyin Wang, Jia Chen, Yubang Wang, Zhaoye Fei et al.</div><div class="meta">score 0.70  ·  high  ·  2026-06-25  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2606.27251v1">链接</a></div><p><b>为什么值得看</b> 这项研究为构建能够在复杂环境中自主操作的智能体提供了新的框架，适合关注 LLM 代理的研究者。</p><p><b>核心思想</b> OmniAct 框架通过整合多模态语义规划和自适应层次记忆，提升了智能体在物理执行中的自主性和效率。</p></div><div class="graph" id="g_paper_8"></div></div>
 <h2>💻 开源项目</h2>
-<div class="card">
-<h3>1. anthropics/claude-code</h3>
-<div class="auth">anthropics</div>
-<div class="meta">score 0.81  ·  high  ·  2026-06-26  ·  via github  ·  👍 134597</div>
-<div class="links"><a href="https://github.com/anthropics/claude-code">链接</a>  ·  <a href="https://github.com/anthropics/claude-code">代码</a></div>
-<p><b>为什么值得看</b> llm-agents 研究者应该关注这个工具，因为它展示了如何通过自然语言命令提高编码效率，符合代理工具使用的核心主题。</p>
-<p><b>核心思想</b> Claude Code 是一个能够理解代码库并通过自然语言命令执行例行任务的代理工具。</p>
-</div>
-<div class="card">
-<h3>2. thedotmack/claude-mem</h3>
-<div class="auth">thedotmack</div>
-<div class="meta">score 0.77  ·  high  ·  2026-06-25  ·  via github  ·  👍 84540</div>
-<div class="links"><a href="https://github.com/thedotmack/claude-mem">链接</a>  ·  <a href="https://github.com/thedotmack/claude-mem">代码</a></div>
-<p><b>为什么值得看</b> 这项研究对于希望提高代理在多次会话中保持上下文一致性的研究者至关重要。</p>
-<p><b>核心思想</b> 该方法通过压缩和注入上下文信息，增强了代理在不同会话中的记忆能力。</p>
-</div>
-<div class="card">
-<h3>3. infiniflow/ragflow</h3>
-<div class="auth">infiniflow</div>
-<div class="meta">score 0.77  ·  high  ·  2026-06-26  ·  via github  ·  👍 83706</div>
-<div class="links"><a href="https://github.com/infiniflow/ragflow">链接</a>  ·  <a href="https://github.com/infiniflow/ragflow">代码</a></div>
-<p><b>为什么值得看</b> RAGFlow结合了检索增强生成和代理能力，为LLM代理提供了更强大的上下文处理能力，值得研究者关注。</p>
-<p><b>核心思想</b> RAGFlow通过将检索增强生成与代理功能相结合，提升了LLM的上下文理解和生成能力。</p>
-</div>
-<div class="card">
-<h3>4. langgenius/dify</h3>
-<div class="auth">langgenius</div>
-<div class="meta">score 0.75  ·  medium  ·  2026-06-27  ·  via github  ·  👍 146687</div>
-<div class="links"><a href="https://github.com/langgenius/dify">链接</a>  ·  <a href="https://github.com/langgenius/dify">代码</a></div>
-<p><b>为什么值得看</b> 研究者应该关注这个平台，因为它提供了一个用于开发代理工作流的生产就绪平台，可能会推动代理系统的实际应用。</p>
-<p><b>核心思想</b> 该平台旨在简化和优化代理工作流的开发过程。</p>
-</div>
-<div class="card">
-<h3>5. TauricResearch/TradingAgents</h3>
-<div class="auth">TauricResearch</div>
-<div class="meta">score 0.70  ·  medium  ·  2026-06-22  ·  via github  ·  👍 88939</div>
-<div class="links"><a href="https://github.com/TauricResearch/TradingAgents">链接</a>  ·  <a href="https://github.com/TauricResearch/TradingAgents">代码</a></div>
-<p><b>为什么值得看</b> 研究人员应该关注这个框架，因为它展示了多智能体系统在金融交易中的应用，可能推动LLM代理的实际应用。</p>
-<p><b>核心思想</b> 该论文提出了一个多智能体LLM金融交易框架，旨在优化交易决策和策略。</p>
-</div>
+<div class="card"><div class="card-main"><h3>1. anthropics/claude-code</h3><div class="auth">anthropics</div><div class="meta">score 0.85  ·  high  ·  2026-06-26  ·  via github  ·  👍 134734</div><div class="links"><a href="https://github.com/anthropics/claude-code">链接</a>  ·  <a href="https://github.com/anthropics/claude-code">代码</a></div><p><b>为什么值得看</b> 这项研究展示了如何通过自然语言命令增强编程效率，对llm-agents研究者具有重要意义。</p><p><b>核心思想</b> Claude Code是一个能够理解代码库并通过自然语言命令执行例行任务的智能编码工具。</p></div></div>
+<div class="card"><div class="card-main"><h3>2. thedotmack/claude-mem</h3><div class="auth">thedotmack</div><div class="meta">score 0.77  ·  high  ·  2026-06-28  ·  via github  ·  👍 84763</div><div class="links"><a href="https://github.com/thedotmack/claude-mem">链接</a>  ·  <a href="https://github.com/thedotmack/claude-mem">代码</a></div><p><b>为什么值得看</b> 这项研究对于希望提高代理在多次会话中保持上下文一致性的研究者至关重要。</p><p><b>核心思想</b> 该方法通过压缩和注入相关上下文来实现代理在不同会话之间的持久记忆。</p></div></div>
+<div class="card"><div class="card-main"><h3>3. infiniflow/ragflow</h3><div class="auth">infiniflow</div><div class="meta">score 0.77  ·  high  ·  2026-06-28  ·  via github  ·  👍 83752</div><div class="links"><a href="https://github.com/infiniflow/ragflow">链接</a>  ·  <a href="https://github.com/infiniflow/ragflow">代码</a></div><p><b>为什么值得看</b> RAGFlow结合了检索增强生成和代理能力，为LLM代理提供了更强大的上下文支持。</p><p><b>核心思想</b> RAGFlow是一个开源的检索增强生成引擎，能够提升LLM的上下文处理能力。</p></div></div>
+<div class="card"><div class="card-main"><h3>4. langgenius/dify</h3><div class="auth">langgenius</div><div class="meta">score 0.75  ·  medium  ·  2026-06-28  ·  via github  ·  👍 146787</div><div class="links"><a href="https://github.com/langgenius/dify">链接</a>  ·  <a href="https://github.com/langgenius/dify">代码</a></div><p><b>为什么值得看</b> 这项研究为开发智能代理工作流程提供了一个实用的平台，可能会推动代理系统的应用和效率。</p><p><b>核心思想</b> 该平台旨在简化和优化智能代理的工作流程开发。</p></div></div>
+<div class="card"><div class="card-main"><h3>5. TauricResearch/TradingAgents</h3><div class="auth">TauricResearch</div><div class="meta">score 0.70  ·  medium  ·  2026-06-22  ·  via github  ·  👍 89189</div><div class="links"><a href="https://github.com/TauricResearch/TradingAgents">链接</a>  ·  <a href="https://github.com/TauricResearch/TradingAgents">代码</a></div><p><b>为什么值得看</b> 研究者应该关注这个框架，因为它展示了多智能体在金融交易中的应用，可能推动LLM代理的实际应用。</p><p><b>核心思想</b> 该论文提出了一个多智能体LLM金融交易框架，旨在优化交易决策。</p></div></div>
 <h2>📝 实验室动态</h2>
-<div class="card">
-<h3>1. Is it agentic enough? Benchmarking open models on your own tooling</h3>
-<div class="meta">score 0.61  ·  high  ·  2026-06-18  ·  via rss</div>
-<div class="links"><a href="https://huggingface.co/blog/is-it-agentic-enough">链接</a></div>
-<p><b>为什么值得看</b> 这篇论文为研究人员提供了评估开放模型在工具使用方面的能力的基准，帮助他们理解模型的代理性。</p>
-<p><b>核心思想</b> 论文提出了一种新的基准方法，用于评估开放模型在自定义工具上的表现。</p>
-</div>
-<div class="card">
-<h3>2. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</h3>
-<div class="meta">score 0.60  ·  high  ·  2026-06-23  ·  via rss</div>
-<div class="links"><a href="https://huggingface.co/blog/ibm-research/cuga-apps">链接</a></div>
-<p><b>为什么值得看</b> 研究人员应该关注如何利用CUGA构建真实的代理应用，以推动代理技术的实际应用。</p>
-<p><b>核心思想</b> 本文介绍了使用CUGA构建代理应用的轻量级框架，并提供了多个实际示例。</p>
-</div>
-<div class="card">
-<h3>3. Agentic Resource Discovery: Let agents search</h3>
-<div class="meta">score 0.60  ·  high  ·  2026-06-17  ·  via rss</div>
-<div class="links"><a href="https://huggingface.co/blog/agentic-resource-discovery-launch">链接</a></div>
-<p><b>为什么值得看</b> 这项研究为代理系统提供了新的资源发现方法，可能会显著提高其工具使用能力。</p>
-<p><b>核心思想</b> 该论文提出了一种让代理自主搜索和发现资源的机制。</p>
-</div>
-<div class="card">
-<h3>4. From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot</h3>
-<div class="meta">score 0.60  ·  high  ·  2026-06-17  ·  via rss</div>
-<div class="links"><a href="https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware">链接</a></div>
-<p><b>为什么值得看</b> 这篇论文展示了如何将大型语言模型应用于机器人硬件，适合关注LLM代理的研究者。</p>
-<p><b>核心思想</b> 论文提出了一种将Hugging Face Hub的模型与机器人硬件结合的方法。</p>
-</div>
-<div class="card">
-<h3>5. The Open Source Community is backing OpenEnv for Agentic RL</h3>
-<div class="meta">score 0.53  ·  medium  ·  2026-06-08  ·  via rss</div>
-<div class="links"><a href="https://huggingface.co/blog/openenv-agentic-rl">链接</a></div>
-<p><b>为什么值得看</b> 研究人员应该关注开放源代码社区如何支持Agentic RL，以推动LLM代理的能力和应用。</p>
-<p><b>核心思想</b> 该论文探讨了开放源代码社区在Agentic强化学习中的作用，强调了社区协作对LLM代理发展的重要性。</p>
-</div>
+<div class="card"><div class="card-main"><h3>1. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</h3><div class="meta">score 0.60  ·  high  ·  2026-06-23  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/ibm-research/cuga-apps">链接</a></div><p><b>为什么值得看</b> 研究人员可以通过CUGA构建真实的代理应用程序，从而推动LLM代理的实际应用。</p><p><b>核心思想</b> CUGA提供了一种轻量级的框架，支持多种代理应用的构建和示例。</p></div></div>
+<div class="card"><div class="card-main"><h3>2. Agentic Resource Discovery: Let agents search</h3><div class="meta">score 0.60  ·  high  ·  2026-06-17  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/agentic-resource-discovery-launch">链接</a></div><p><b>为什么值得看</b> 这项研究为代理系统提供了新的资源发现方法，能够提升其在复杂任务中的表现。</p><p><b>核心思想</b> 该论文提出了一种新的代理资源发现机制，使得代理能够自主搜索和利用外部资源。</p></div></div>
+<div class="card"><div class="card-main"><h3>3. Is it agentic enough? Benchmarking open models on your own tooling</h3><div class="meta">score 0.57  ·  high  ·  2026-06-18  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/is-it-agentic-enough">链接</a></div><p><b>为什么值得看</b> 这项研究为评估开放模型在工具使用方面的能力提供了基准，帮助研究人员理解其在实际应用中的表现。</p><p><b>核心思想</b> 该论文提出了一种新的基准测试方法，用于评估开放模型在使用自定义工具时的智能表现。</p></div></div>
+<div class="card"><div class="card-main"><h3>4. The Open Source Community is backing OpenEnv for Agentic RL</h3><div class="meta">score 0.53  ·  medium  ·  2026-06-08  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/openenv-agentic-rl">链接</a></div><p><b>为什么值得看</b> 研究人员应该关注开源社区如何推动代理强化学习的发展，这对LLM代理的应用至关重要。</p><p><b>核心思想</b> 该论文探讨了开源社区在代理强化学习（RL）中的作用，尤其是OpenEnv平台的贡献。</p></div></div>
+<div class="card"><div class="card-main"><h3>5. MosaicLeaks: Can your research agent keep a secret?</h3><div class="meta">score 0.53  ·  medium  ·  2026-06-18  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/ServiceNow/mosaicleaks">链接</a></div><p><b>为什么值得看</b> 这项研究探讨了研究代理在处理敏感信息时的安全性，对 llm-agents 研究者来说非常重要。</p><p><b>核心思想</b> 该论文提出了一种新的框架，用于评估研究代理在保密性方面的能力。</p></div></div>
 <footer>Generated by OmniSource</footer>
 </div>
 <script>
-  const GRAPHS = {"g_paper_1": {"nodes": [{"id": "paper", "label": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and", "group": "paper", "size": 16}, {"id": "a0", "label": "Yupu Hao", "group": "author", "value": 1, "title": "Yupu Hao"}, {"id": "a1", "label": "Zhuoran Jin", "group": "author", "value": 1, "title": "Zhuoran Jin"}, {"id": "a2", "label": "Huanxuan Liao", "group": "author", "value": 1, "title": "Huanxuan Liao"}, {"id": "a3", "label": "Kang Liu", "group": "author", "value": 1, "title": "Kang Liu"}, {"id": "a4", "label": "Jun Zhao", "group": "author", "value": 1, "title": "Jun Zhao"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}]}, "g_paper_2": {"nodes": [{"id": "paper", "label": "Running the Gauntlet: Re-evaluating the Capabilities of Agen", "group": "paper", "size": 16}, {"id": "a0", "label": "Yarin Gal", "group": "author", "value": 26538, "title": "Yarin Gal \u00b7 26538 citations \u00b7 h-index 54"}, {"id": "a1", "label": "Adel Bibi", "group": "author", "value": 2712, "title": "Adel Bibi \u00b7 2712 citations \u00b7 h-index 16"}, {"id": "a2", "label": "Adam Mahdi", "group": "author", "value": 1806, "title": "Adam Mahdi \u00b7 1806 citations \u00b7 h-index 23"}, {"id": "a3", "label": "Sebasti\u00e1n Montagna", "group": "author", "value": 29, "title": "Sebasti\u00e1n Montagna \u00b7 29 citations \u00b7 h-index 3"}, {"id": "a4", "label": "Taras Rumezhak", "group": "author", "value": 17, "title": "Taras Rumezhak \u00b7 17 citations \u00b7 h-index 2"}, {"id": "a5", "label": "Grzegorz Biziel", "group": "author", "value": 9, "title": "Grzegorz Biziel \u00b7 9 citations \u00b7 h-index 2"}, {"id": "a6", "label": "Volodymyr Karpiv", "group": "author", "value": 8, "title": "Volodymyr Karpiv \u00b7 8 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Hanna Yershova", "group": "author", "value": 1, "title": "Hanna Yershova \u00b7 1 citations \u00b7 h-index 1"}, {"id": "a8", "label": "Arkadiusz Drohomirecki", "group": "author", "value": 1, "title": "Arkadiusz Drohomirecki \u00b7 1 citations \u00b7 h-index 1"}, {"id": "a9", "label": "Mykola Vysotskyi", "group": "author", "value": 1, "title": "Mykola Vysotskyi"}, {"id": "a10", "label": "Runqi Lin", "group": "author", "value": 1, "title": "Runqi Lin"}, {"id": "a11", "label": "Michal Zakrzewski", "group": "author", "value": 1, "title": "Michal Zakrzewski"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}, {"from": "paper", "to": "a6"}, {"from": "paper", "to": "a7"}, {"from": "paper", "to": "a8"}, {"from": "paper", "to": "a9"}, {"from": "paper", "to": "a10"}, {"from": "paper", "to": "a11"}]}, "g_paper_3": {"nodes": [{"id": "paper", "label": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterog", "group": "paper", "size": 16}, {"id": "a0", "label": "Issa Sugiura", "group": "author", "value": 10, "title": "Issa Sugiura \u00b7 10 citations \u00b7 h-index 2"}, {"id": "a1", "label": "Daichi Hattori", "group": "author", "value": 1, "title": "Daichi Hattori"}, {"id": "a2", "label": "Kazuo Araragi", "group": "author", "value": 1, "title": "Kazuo Araragi"}, {"id": "a3", "label": "Keita Ogawa", "group": "author", "value": 1, "title": "Keita Ogawa"}, {"id": "a4", "label": "Shota Onose", "group": "author", "value": 1, "title": "Shota Onose"}, {"id": "a5", "label": "Taro Makino", "group": "author", "value": 189, "title": "Taro Makino \u00b7 189 citations \u00b7 h-index 8"}, {"id": "a6", "label": "Teppei Usuki", "group": "author", "value": 5, "title": "Teppei Usuki \u00b7 5 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Takashi Ishida", "group": "author", "value": 15567, "title": "Takashi Ishida \u00b7 15567 citations \u00b7 h-index 62"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}, {"from": "paper", "to": "a6"}, {"from": "paper", "to": "a7"}]}, "g_paper_4": {"nodes": [{"id": "paper", "label": "Neglected Free Lunch from Post-training: Progress Advantage ", "group": "paper", "size": 16}, {"id": "a0", "label": "Changdae Oh", "group": "author", "value": 1, "title": "Changdae Oh"}, {"id": "a1", "label": "Wendi Li", "group": "author", "value": 1, "title": "Wendi Li"}, {"id": "a2", "label": "Seongheon Park", "group": "author", "value": 1, "title": "Seongheon Park"}, {"id": "a3", "label": "Samuel Yeh", "group": "author", "value": 1, "title": "Samuel Yeh"}, {"id": "a4", "label": "Tanwi Mallick", "group": "author", "value": 1, "title": "Tanwi Mallick"}, {"id": "a5", "label": "Sharon Li", "group": "author", "value": 1, "title": "Sharon Li"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}]}, "g_paper_5": {"nodes": [{"id": "paper", "label": "Beyond NL2Code: A Structured Survey of Multimodal Code Intel", "group": "paper", "size": 16}, {"id": "a0", "label": "Xiaoman Luo", "group": "author", "value": 1313, "title": "Xiaoman Luo \u00b7 1313 citations \u00b7 h-index 20"}, {"id": "a1", "label": "Zhixiong Zeng", "group": "author", "value": 395, "title": "Zhixiong Zeng \u00b7 395 citations \u00b7 h-index 10"}, {"id": "a2", "label": "Yufeng Zhong", "group": "author", "value": 47, "title": "Yufeng Zhong \u00b7 47 citations \u00b7 h-index 3"}, {"id": "a3", "label": "J W Huang", "group": "author", "value": 30, "title": "J W Huang \u00b7 30 citations \u00b7 h-index 2"}, {"id": "a4", "label": "Xuanle Zhao", "group": "author", "value": 14, "title": "Xuanle Zhao \u00b7 14 citations \u00b7 h-index 2"}, {"id": "a5", "label": "Qiushi Sun", "group": "author", "value": 1, "title": "Qiushi Sun"}, {"id": "a6", "label": "Jingyu Xiao", "group": "author", "value": 1, "title": "Jingyu Xiao"}, {"id": "a7", "label": "Xuexin Liu", "group": "author", "value": 1, "title": "Xuexin Liu"}, {"id": "a8", "label": "Haoyue Yang", "group": "author", "value": 1, "title": "Haoyue Yang"}, {"id": "a9", "label": "Qiaosheng Chen", "group": "author", "value": 1, "title": "Qiaosheng Chen"}, {"id": "a10", "label": "Lei Chen", "group": "author", "value": 1, "title": "Lei Chen"}, {"id": "a11", "label": "Shuai Fu", "group": "author", "value": 1, "title": "Shuai Fu"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}, {"from": "paper", "to": "a6"}, {"from": "paper", "to": "a7"}, {"from": "paper", "to": "a8"}, {"from": "paper", "to": "a9"}, {"from": "paper", "to": "a10"}, {"from": "paper", "to": "a11"}]}, "g_paper_6": {"nodes": [{"id": "paper", "label": "When Lower Privileges Suffice: Investigating Over-Privileged", "group": "paper", "size": 16}, {"id": "a0", "label": "Kaiyue Yang", "group": "author", "value": 1, "title": "Kaiyue Yang"}, {"id": "a1", "label": "Yuyan Bu", "group": "author", "value": 213, "title": "Yuyan Bu \u00b7 213 citations \u00b7 h-index 5"}, {"id": "a2", "label": "Jingwei Yi", "group": "author", "value": 1731, "title": "Jingwei Yi \u00b7 1731 citations \u00b7 h-index 21"}, {"id": "a3", "label": "Yuchi Wang", "group": "author", "value": 1, "title": "Yuchi Wang"}, {"id": "a4", "label": "Biyu Zhou", "group": "author", "value": 178, "title": "Biyu Zhou \u00b7 178 citations \u00b7 h-index 7"}, {"id": "a5", "label": "Juntao Dai", "group": "author", "value": 1, "title": "Juntao Dai"}, {"id": "a6", "label": "Hu S", "group": "author", "value": 4, "title": "Hu S \u00b7 4 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Yaodong Yang", "group": "author", "value": 1, "title": "Yaodong Yang"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}, {"from": "paper", "to": "a6"}, {"from": "paper", "to": "a7"}]}, "g_paper_8": {"nodes": [{"id": "paper", "label": "RL-Index: Reinforcement Learning for Retrieval Index Reasoni", "group": "paper", "size": 16}, {"id": "a0", "label": "Yongjia Lei", "group": "author", "value": 1517, "title": "Yongjia Lei \u00b7 1517 citations \u00b7 h-index 21"}, {"id": "a1", "label": "Nedim Lipka", "group": "author", "value": 1348, "title": "Nedim Lipka \u00b7 1348 citations \u00b7 h-index 18"}, {"id": "a2", "label": "Zhisheng Qi", "group": "author", "value": 1, "title": "Zhisheng Qi"}, {"id": "a3", "label": "Utkarsh Sahu", "group": "author", "value": 1, "title": "Utkarsh Sahu"}, {"id": "a4", "label": "Koustava Goswami", "group": "author", "value": 1, "title": "Koustava Goswami"}, {"id": "a5", "label": "Franck Dernoncourt", "group": "author", "value": 4105, "title": "Franck Dernoncourt \u00b7 4105 citations \u00b7 h-index 32"}, {"id": "a6", "label": "Ryan A. Rossi", "group": "author", "value": 1, "title": "Ryan A. Rossi"}, {"id": "a7", "label": "Yu Wang", "group": "author", "value": 1, "title": "Yu Wang"}], "edges": [{"from": "paper", "to": "a0"}, {"from": "paper", "to": "a1"}, {"from": "paper", "to": "a2"}, {"from": "paper", "to": "a3"}, {"from": "paper", "to": "a4"}, {"from": "paper", "to": "a5"}, {"from": "paper", "to": "a6"}, {"from": "paper", "to": "a7"}]}};
+  const GRAPHS = {"g_paper_1": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Yarin Gal", "group": "author", "value": 26542, "title": "Yarin Gal \u00b7 26542 citations \u00b7 h-index 54"}, {"id": "a1", "label": "Adel Bibi", "group": "author", "value": 2712, "title": "Adel Bibi \u00b7 2712 citations \u00b7 h-index 16"}, {"id": "a2", "label": "Adam Mahdi", "group": "author", "value": 1807, "title": "Adam Mahdi \u00b7 1807 citations \u00b7 h-index 23"}, {"id": "a3", "label": "Sebasti\u00e1n Montagna", "group": "author", "value": 29, "title": "Sebasti\u00e1n Montagna \u00b7 29 citations \u00b7 h-index 3"}, {"id": "a4", "label": "Taras Rumezhak", "group": "author", "value": 17, "title": "Taras Rumezhak \u00b7 17 citations \u00b7 h-index 2"}, {"id": "a5", "label": "Grzegorz Biziel", "group": "author", "value": 9, "title": "Grzegorz Biziel \u00b7 9 citations \u00b7 h-index 2"}, {"id": "a6", "label": "Volodymyr Karpiv", "group": "author", "value": 8, "title": "Volodymyr Karpiv \u00b7 8 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Hanna Yershova", "group": "author", "value": 1, "title": "Hanna Yershova \u00b7 1 citations \u00b7 h-index 1"}, {"id": "a8", "label": "Arkadiusz Drohomirecki", "group": "author", "value": 1, "title": "Arkadiusz Drohomirecki \u00b7 1 citations \u00b7 h-index 1"}, {"id": "a9", "label": "Mykola Vysotskyi", "group": "author", "value": 1, "title": "Mykola Vysotskyi"}, {"id": "a10", "label": "Runqi Lin", "group": "author", "value": 1, "title": "Runqi Lin"}, {"id": "a11", "label": "Michal Zakrzewski", "group": "author", "value": 1, "title": "Michal Zakrzewski"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a6", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a7", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a8", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a9", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a10", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a11", "color": {"color": "#26283a"}, "width": 1}, {"from": "a0", "to": "a1", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.8, "title": "9 papers together"}, {"from": "a2", "to": "a1", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.0, "title": "5 papers together"}, {"from": "a4", "to": "a6", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.4, "title": "7 papers together"}, {"from": "a8", "to": "a2", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 2.8, "title": "4 papers together"}, {"from": "a9", "to": "a6", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.2, "title": "6 papers together"}]}, "g_paper_2": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Issa Sugiura", "group": "author", "value": 10, "title": "Issa Sugiura \u00b7 10 citations \u00b7 h-index 2"}, {"id": "a1", "label": "Daichi Hattori", "group": "author", "value": 1, "title": "Daichi Hattori"}, {"id": "a2", "label": "Kazuo Araragi", "group": "author", "value": 1, "title": "Kazuo Araragi"}, {"id": "a3", "label": "Keita Ogawa", "group": "author", "value": 1, "title": "Keita Ogawa"}, {"id": "a4", "label": "Shota Onose", "group": "author", "value": 1, "title": "Shota Onose"}, {"id": "a5", "label": "Taro Makino", "group": "author", "value": 189, "title": "Taro Makino \u00b7 189 citations \u00b7 h-index 8"}, {"id": "a6", "label": "Teppei Usuki", "group": "author", "value": 5, "title": "Teppei Usuki \u00b7 5 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Takashi Ishida", "group": "author", "value": 15568, "title": "Takashi Ishida \u00b7 15568 citations \u00b7 h-index 62"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a6", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a7", "color": {"color": "#26283a"}, "width": 1}, {"from": "a0", "to": "a5", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 2.6, "title": "3 papers together"}, {"from": "a2", "to": "a6", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 2.6, "title": "3 papers together"}, {"from": "a5", "to": "a7", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 2.6, "title": "3 papers together"}]}, "g_paper_3": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Changdae Oh", "group": "author", "value": 1, "title": "Changdae Oh"}, {"id": "a1", "label": "Wendi Li", "group": "author", "value": 1, "title": "Wendi Li"}, {"id": "a2", "label": "Seongheon Park", "group": "author", "value": 1, "title": "Seongheon Park"}, {"id": "a3", "label": "Samuel Yeh", "group": "author", "value": 1, "title": "Samuel Yeh"}, {"id": "a4", "label": "Tanwi Mallick", "group": "author", "value": 1, "title": "Tanwi Mallick"}, {"id": "a5", "label": "Sharon Li", "group": "author", "value": 1, "title": "Sharon Li"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}]}, "g_paper_4": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Yupu Hao", "group": "author", "value": 1, "title": "Yupu Hao"}, {"id": "a1", "label": "Zhuoran Jin", "group": "author", "value": 1, "title": "Zhuoran Jin"}, {"id": "a2", "label": "Huanxuan Liao", "group": "author", "value": 1, "title": "Huanxuan Liao"}, {"id": "a3", "label": "Kang Liu", "group": "author", "value": 1, "title": "Kang Liu"}, {"id": "a4", "label": "Jun Zhao", "group": "author", "value": 1, "title": "Jun Zhao"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}]}, "g_paper_5": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Yan Xu", "group": "author", "value": 6746, "title": "Yan Xu \u00b7 6746 citations \u00b7 h-index 39"}, {"id": "a1", "label": "Tianhe Wu", "group": "author", "value": 661, "title": "Tianhe Wu \u00b7 661 citations \u00b7 h-index 8"}, {"id": "a2", "label": "Yanran Zhang", "group": "author", "value": 429, "title": "Yanran Zhang \u00b7 429 citations \u00b7 h-index 13"}, {"id": "a3", "label": "Lihan Jiang", "group": "author", "value": 191, "title": "Lihan Jiang \u00b7 191 citations \u00b7 h-index 5"}, {"id": "a4", "label": "C E Wu", "group": "author", "value": 121, "title": "C E Wu \u00b7 121 citations \u00b7 h-index 2"}, {"id": "a5", "label": "Dan Zhao", "group": "author", "value": 3, "title": "Dan Zhao \u00b7 3 citations \u00b7 h-index 1"}, {"id": "a6", "label": "Zekai Zhang", "group": "author", "value": 1, "title": "Zekai Zhang"}, {"id": "a7", "label": "Jiahao Li", "group": "author", "value": 1, "title": "Jiahao Li"}, {"id": "a8", "label": "Jie Zhang", "group": "author", "value": 1, "title": "Jie Zhang"}, {"id": "a9", "label": "Kaiyuan Gao", "group": "author", "value": 1, "title": "Kaiyuan Gao"}, {"id": "a10", "label": "Kun Yan", "group": "author", "value": 1, "title": "Kun Yan"}, {"id": "a11", "label": "Ningyuan Tang", "group": "author", "value": 1, "title": "Ningyuan Tang"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a6", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a7", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a8", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a9", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a10", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a11", "color": {"color": "#26283a"}, "width": 1}, {"from": "a1", "to": "a2", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.8, "title": "9 papers together"}, {"from": "a3", "to": "a1", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.8, "title": "9 papers together"}, {"from": "a11", "to": "a1", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 3.8, "title": "9 papers together"}]}, "g_paper_6": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Aoyang Fang", "group": "author", "value": 1, "title": "Aoyang Fang"}, {"id": "a1", "label": "Yifan Yang", "group": "author", "value": 1, "title": "Yifan Yang"}, {"id": "a2", "label": "Jin\u2019Ao Shang", "group": "author", "value": 1, "title": "Jin\u2019Ao Shang"}, {"id": "a3", "label": "Qisheng Lu", "group": "author", "value": 1, "title": "Qisheng Lu"}, {"id": "a4", "label": "Junjielung Xu", "group": "author", "value": 1, "title": "Junjielung Xu"}, {"id": "a5", "label": "Rui Wang", "group": "author", "value": 1, "title": "Rui Wang"}, {"id": "a6", "label": "Songhan Zhang", "group": "author", "value": 10, "title": "Songhan Zhang \u00b7 10 citations \u00b7 h-index 1"}, {"id": "a7", "label": "Yuzhong Zhang", "group": "author", "value": 1, "title": "Yuzhong Zhang"}, {"id": "a8", "label": "Boxi Yu", "group": "author", "value": 1, "title": "Boxi Yu"}, {"id": "a9", "label": "Pinjia He", "group": "author", "value": 1, "title": "Pinjia He"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a6", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a7", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a8", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a9", "color": {"color": "#26283a"}, "width": 1}]}, "g_paper_7": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Tianyi Men", "group": "author", "value": 5, "title": "Tianyi Men \u00b7 5 citations \u00b7 h-index 1"}, {"id": "a1", "label": "Zhuoran Jin", "group": "author", "value": 1, "title": "Zhuoran Jin"}, {"id": "a2", "label": "Pengfei Cao", "group": "author", "value": 1, "title": "Pengfei Cao"}, {"id": "a3", "label": "Yubo Chen", "group": "author", "value": 1, "title": "Yubo Chen"}, {"id": "a4", "label": "Kang Liu", "group": "author", "value": 1, "title": "Kang Liu"}, {"id": "a5", "label": "Jun Zhao", "group": "author", "value": 1, "title": "Jun Zhao"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}]}, "g_paper_8": {"nodes": [{"id": "paper", "label": "", "group": "paper", "size": 14}, {"id": "a0", "label": "Junhao Shi", "group": "author", "value": 1, "title": "Junhao Shi"}, {"id": "a1", "label": "Zezheng Huai", "group": "author", "value": 1, "title": "Zezheng Huai"}, {"id": "a2", "label": "Siyin Wang", "group": "author", "value": 155, "title": "Siyin Wang \u00b7 155 citations \u00b7 h-index 5"}, {"id": "a3", "label": "Jia Chen", "group": "author", "value": 1, "title": "Jia Chen"}, {"id": "a4", "label": "Yubang. Wang", "group": "author", "value": 9, "title": "Yubang. Wang \u00b7 9 citations \u00b7 h-index 1"}, {"id": "a5", "label": "Zhaoye Fei", "group": "author", "value": 1, "title": "Zhaoye Fei"}, {"id": "a6", "label": "Hechang Chen", "group": "author", "value": 1, "title": "Hechang Chen"}, {"id": "a7", "label": "Jingjing Gong", "group": "author", "value": 1, "title": "Jingjing Gong"}, {"id": "a8", "label": "Xipeng Qiu", "group": "author", "value": 1, "title": "Xipeng Qiu"}, {"id": "a9", "label": "Yi Jiang", "group": "author", "value": 111, "title": "Yi Jiang \u00b7 111 citations \u00b7 h-index 4"}], "edges": [{"from": "paper", "to": "a0", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a1", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a2", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a3", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a4", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a5", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a6", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a7", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a8", "color": {"color": "#26283a"}, "width": 1}, {"from": "paper", "to": "a9", "color": {"color": "#26283a"}, "width": 1}, {"from": "a1", "to": "a4", "color": {"color": "#7c83ff", "highlight": "#9aa0ff"}, "width": 2.6, "title": "3 papers together"}]}};
   const groups = {
     paper:       { color:{ background:'#7c83ff', border:'#9aa0ff' }, font:{ color:'#fff' }, shape:'dot' },
-    author:      { color:{ background:'#e8e8ef', border:'#ffffff' }, font:{ color:'#cfd0da' }, shape:'dot' },
+    author:      { color:{ background:'#e8e8ef', border:'#ffffff' }, shape:'dot',
+                   font:{ color:'#e6e6ea', multi:'html', ital:{ color:'#6fb0a5', size:11 } } },
     institution: { color:{ background:'#173f3a', border:'#2f8377' }, font:{ color:'#8fd6c9' }, shape:'hexagon' },
   };
   const opts = { groups,
-    nodes:{ borderWidth:1, scaling:{ min:7, max:28, label:{ enabled:false } }, font:{ size:12 } },
-    edges:{ color:{ color:'#2a2c3d', highlight:'#7c83ff' }, width:1, smooth:{ type:'continuous' } },
-    physics:{ barnesHut:{ gravitationalConstant:-4000, springLength:95, centralGravity:0.3 },
+    nodes:{ borderWidth:1.5, scaling:{ min:12, max:40, label:{ enabled:false } }, font:{ size:15 } },
+    edges:{ color:{ color:'#2a2c3d', highlight:'#7c83ff' }, width:1.4, smooth:{ type:'continuous' } },
+    physics:{ barnesHut:{ gravitationalConstant:-3000, springLength:75, centralGravity:0.4 },
                stabilization:{ iterations:150 } },
-    interaction:{ hover:true, tooltipDelay:120 } };
+    // fixed scale: no zoom, no pan, no node dragging — a static, hoverable figure
+    interaction:{ hover:true, tooltipDelay:120, zoomView:false, dragView:false, dragNodes:false, selectable:false } };
   for (const [id, g] of Object.entries(GRAPHS)) {
-    new vis.Network(document.getElementById(id),
+    const net = new vis.Network(document.getElementById(id),
       { nodes:new vis.DataSet(g.nodes), edges:new vis.DataSet(g.edges) }, opts);
+    net.once('stabilizationIterationsDone', () => net.fit({ animation:false }));  // fit once, then locked
   }
 </script>
 </body></html>
