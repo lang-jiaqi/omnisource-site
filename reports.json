@@ -5,7 +5,7 @@
     "date": "2026-07-02",
     "period": "Daily",
     "description": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.",
-    "body": "<h2>📄 论文</h2>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. Multi-Block Diffusion Language Models</h3><div class=\"auth\">Yijie Jin, Jiajun Xu, Yuxuan Liu, Chenkai Xu, Yi Tu, Jiajun Li et al.</div><div class=\"meta\">2026-06-30  ·  via hf_papers  ·  👍 24</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.29215\">链接</a>  ·  <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 48</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing</h3><div class=\"auth\">Xinyu Wang, Chongbo Zhao, Fangneng Zhan, Yue Ma</div><div class=\"meta\">2026-06-25  ·  via hf_papers  ·  👍 77</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.26740\">链接</a>  ·  <a href=\"https://github.com/cp-cp/LiveEdit\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 48</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception</h3><div class=\"auth\">Yana Wei, Hongbo Peng, Yanlin Lai, Liang Zhao, Kangheng Lin, En Yu et al.</div><div class=\"meta\">2026-06-26  ·  via hf_papers  ·  👍 22</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.28322\">链接</a>  ·  <a href=\"https://github.com/M1chaelPeng/PerceptionRubrics\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 44</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models</h3><div class=\"auth\">Nikita Kachaev, Andrey Moskalenko, Matvey Skripkin, Nikita Kurlaev, Daria Pugacheva, Albina Burlova et al.</div><div class=\"meta\">2026-06-17  ·  via hf_papers  ·  👍 47</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19297\">链接</a>  ·  <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 43</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning</h3><div class=\"auth\">Hohin Kwan, Hongyu Li, Ray Zhang, Manyuan Zhang, Xianghao Kong, Anyi Rao et al.</div><div class=\"meta\">2026-06-26  ·  via hf_papers  ·  👍 23</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.27828\">链接</a>  ·  <a href=\"https://github.com/Mrakas/video-mme-logical\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 43</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_5\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning</h3><div class=\"auth\">Hongxing Li, Xiufeng Huang, Dingming Li, Wenjing Jiang, Zixuan Wang, Haolei Xu et al.</div><div class=\"meta\">2026-07-01  ·  via arxiv, hf_papers  ·  👍 9</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01191v1\">链接</a>  ·  <a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 36</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents</h3><div class=\"auth\">Shoufa Chen, Luyuan Wang, Xuan Yang, Zhiheng Liu, Yuren Cong, Yuanfeng Ji et al.</div><div class=\"meta\">2026-06-26  ·  via hf_papers  ·  👍 44</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.28480\">链接</a>  ·  <a href=\"https://github.com/facebookresearch/TUA-Bench\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 34</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE</h3><div class=\"auth\">Or Hirschorn, Aaron Olender, Eli Alshan, Ianir Ideses, Lior Fritz, Sagie Benaim</div><div class=\"meta\">2026-06-30  ·  via arxiv, hf_papers  ·  👍 3</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2606.32033v1\">链接</a>  ·  <a href=\"https://github.com/orhir/SpheRoPE\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 30</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_8\"></div></div></div>\n<h2>💻 开源项目</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. liu-ry/EmbodiedZero</h3><div class=\"auth\">liu-ry</div><div class=\"meta\">2026-06-29  ·  via github  ·  👍 7</div><div class=\"links\"><a href=\"https://github.com/liu-ry/EmbodiedZero\">链接</a>  ·  <a href=\"https://github.com/liu-ry/EmbodiedZero\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 34</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:6%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:18%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning</h3><div class=\"auth\">SourangshuGhosh</div><div class=\"meta\">2026-06-18  ·  via github</div><div class=\"links\"><a href=\"https://github.com/SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning\">链接</a>  ·  <a href=\"https://github.com/SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 30</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. TusharSingh098/My-LeetCode-Journey</h3><div class=\"auth\">TusharSingh098</div><div class=\"meta\">2026-06-29  ·  via github  ·  👍 1</div><div class=\"links\"><a href=\"https://github.com/TusharSingh098/My-LeetCode-Journey\">链接</a>  ·  <a href=\"https://github.com/TusharSingh098/My-LeetCode-Journey\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 26</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:1%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:6%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. priyanshpoddar-ai/priyanshpoddar-ai</h3><div class=\"auth\">priyanshpoddar-ai</div><div class=\"meta\">2026-06-29  ·  via github</div><div class=\"links\"><a href=\"https://github.com/priyanshpoddar-ai/priyanshpoddar-ai\">链接</a>  ·  <a href=\"https://github.com/priyanshpoddar-ai/priyanshpoddar-ai\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 25</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. CodeOfCreation/100_Days_Of_Machine_Learning</h3><div class=\"auth\">CodeOfCreation</div><div class=\"meta\">2026-06-29  ·  via github</div><div class=\"links\"><a href=\"https://github.com/CodeOfCreation/100_Days_Of_Machine_Learning\">链接</a>  ·  <a href=\"https://github.com/CodeOfCreation/100_Days_Of_Machine_Learning\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 25</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. 2026 BAIR Graduate Showcase</h3><div class=\"meta\">2026-07-01  ·  via rss</div><div class=\"links\"><a href=\"http://bair.berkeley.edu/blog/2026/07/01/grads-2026/\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 71</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:97%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration</h3><div class=\"meta\">2026-06-30  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/ibm-research/scarfbench\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 69</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:69%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:93%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. Improving health intelligence in ChatGPT</h3><div class=\"meta\">2026-06-18  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/improving-health-intelligence-in-chatgpt\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 68</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</h3><div class=\"meta\">2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 67</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:73%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. Is it agentic enough? Benchmarking open models on your own tooling</h3><div class=\"meta\">2026-06-18  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/is-it-agentic-enough\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 64</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span></span></div></div></div>",
+    "body": "<h2>📄 论文</h2>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. Multi-Block Diffusion Language Models</h3><div class=\"auth\">Yijie Jin, Jiajun Xu, Yuxuan Liu, Chenkai Xu, Yi Tu, Jiajun Li et al.</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 24</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.29215\">链接</a>  ·  <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">代码</a></div><p><b>为什么值得看</b> 这使得多块扩散语言模型在推理时能够实现更高的并行解码效率，显著提高了每次前向传递的令牌数，从而加速生成过程并保持较高的准确性，适用于文本生成任务。</p><p><b>核心思想</b> 通过多块教师强迫（MultiTF）对BD-LMs进行后训练，使模型在有界噪声组上进行训练，从而更好地匹配多块扩散推理状态。</p><div class=\"review\"><span class=\"pot\">潜力 61</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception</h3><div class=\"auth\">Yana Wei, Hongbo Peng, Yanlin Lai, Liang Zhao, Kangheng Lin, En Yu et al.</div><div class=\"meta\">high  ·  2026-06-26  ·  via hf_papers  ·  👍 22</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.28322\">链接</a>  ·  <a href=\"https://github.com/M1chaelPeng/PerceptionRubrics\">代码</a></div><p><b>为什么值得看</b> 这种方法揭示了模型在复杂领域中的脆弱性，并且比传统基准更好地对齐人类感知，提升了生成任务的可靠性。</p><p><b>核心思想</b> 通过引入门控评分机制，强制对必需视觉事实的错误施加二元惩罚，从而提高评估的严格性和准确性。</p><div class=\"review\"><span class=\"pot\">潜力 60</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks</h3><div class=\"auth\">Young-Jun Lee, Seungone Kim, Minki Kang, Alistair Cheong Liang Chuen, Zerui Chen, Seungho Han et al.</div><div class=\"meta\">high  ·  2026-06-27  ·  via hf_papers  ·  👍 26</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.29082\">链接</a>  ·  <a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">代码</a></div><p><b>为什么值得看</b> EFT 使模型能够跨任务重用经验，从而在 22 个保留任务上平均提升 10.22%，改变了模型从零开始解决新问题的方式。</p><p><b>核心思想</b> 通过将进化搜索轨迹转化为监督信号，EFT 在中训练阶段教会 LLMs 在不同任务之间进化解决方案。</p><div class=\"review\"><span class=\"pot\">潜力 57</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:97%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models</h3><div class=\"auth\">Nikita Kachaev, Andrey Moskalenko, Matvey Skripkin, Nikita Kurlaev, Daria Pugacheva, Albina Burlova et al.</div><div class=\"meta\">medium  ·  2026-06-17  ·  via hf_papers  ·  👍 47</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19297\">链接</a>  ·  <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">代码</a></div><p><b>为什么值得看</b> 该方法揭示了 VLA 模型在复杂语义类别上的知识保留差距，且通过 VQA 共同训练可以提高知识保留，帮助研究者理解模型的知识传递和层次特征。</p><p><b>核心思想</b> 通过将视觉-语言-行动模型的知识基准适配为需要通过行动回答的问题，使用轻量级协议 Act2Answer 来评估模型的知识保留能力。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. Trimming the Long-Tail of Visual World Modeling Evaluation</h3><div class=\"auth\">Bingxuan Li, Yining Hong, Cheng Qian, Hyeonjeong Ha, Jiateng Liu, Zhenhailong Wang et al.</div><div class=\"meta\">high  ·  2026-06-23  ·  via hf_papers  ·  👍 37</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.24256\">链接</a>  ·  <a href=\"https://github.com/tailor-bench/code\">代码</a></div><p><b>为什么值得看</b> 该基准揭示了模型在处理非常规和不可能场景时的性能下降，强调了当前模型在物理原则泛化方面的局限性，促使研究者关注模型的深层次理解能力。</p><p><b>核心思想</b> 引入 Tailor-Bench 基准，通过三种场景模式系统评估视觉世界模型在模拟不规则物理交互中的能力。</p><div class=\"review\"><span class=\"pot\">潜力 51</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:98%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_5\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning</h3><div class=\"auth\">Hongxing Li, Xiufeng Huang, Dingming Li, Wenjing Jiang, Zixuan Wang, Haolei Xu et al.</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv, hf_papers  ·  👍 9</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01191v1\">链接</a>  ·  <a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">代码</a></div><p><b>为什么值得看</b> 这种明确区分感知与推理的方式，使得模型在多个基准测试中显著提升性能，尤其是在高分辨率图像的细粒度推理任务上。</p><p><b>核心思想</b> 将视觉推理过程分为两个阶段，首先定位与问题相关的证据，然后基于这些证据进行推理。</p><div class=\"review\"><span class=\"pot\">潜力 51</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE</h3><div class=\"auth\">Or Hirschorn, Aaron Olender, Eli Alshan, Ianir Ideses, Lior Fritz, Sagie Benaim</div><div class=\"meta\">high  ·  2026-06-30  ·  via arxiv, hf_papers  ·  👍 3</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2606.32033v1\">链接</a>  ·  <a href=\"https://github.com/orhir/SpheRoPE\">代码</a></div><p><b>为什么值得看</b> 该方法无需训练和优化，能够在多种生成模式下实现360度全景图像的高效生成，显著降低了推理延迟，拓宽了生成模型的应用范围。</p><p><b>核心思想</b> 通过将球面先验直接注入预训练的扩散变换器，使用球面旋转位置嵌入替代标准的旋转位置嵌入，从而在推理时解决了全景图像生成中的拓扑约束。</p><div class=\"review\"><span class=\"pot\">潜力 48</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History</h3><div class=\"auth\">Zhiwei Li, Yong Hu</div><div class=\"meta\">high  ·  2026-06-23  ·  via hf_papers  ·  👍 22</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.08671\">链接</a>  ·  <a href=\"https://github.com/Tencent/SkillHone\">代码</a></div><p><b>为什么值得看</b> 这使得代理能够在不同会话中进行技能的交叉改进，提升了在深度研究基准上的表现，尤其是在 GAIA 和 WebWalkerQA-EN 上分别提高了 15.8 和 3.2 分。</p><p><b>核心思想</b> SkillHone 通过记录决策历史，允许代理在不断变化的任务中持续进化技能，避免丢失之前的决策依据。</p><div class=\"review\"><span class=\"pot\">潜力 48</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-algorithm_paper_8\"></div></div></div>\n<h2>💻 开源项目</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. liu-ry/EmbodiedZero</h3><div class=\"auth\">liu-ry</div><div class=\"meta\">medium  ·  2026-06-29  ·  via github  ·  👍 7</div><div class=\"links\"><a href=\"https://github.com/liu-ry/EmbodiedZero\">链接</a>  ·  <a href=\"https://github.com/liu-ry/EmbodiedZero\">代码</a></div><p><b>为什么值得看</b> 这个工具包降低了新工程师学习复杂算法的门槛，帮助他们掌握基础概念，但并未提出新的算法或模型架构。</p><p><b>核心思想</b> 提供一个从零开始的工具包，包含多种核心的具身 AI 算法的可运行实现。</p><div class=\"review\"><span class=\"pot\">潜力 31</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:6%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:40%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:18%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. Yasamin-Rajabi/RL-method-implementation</h3><div class=\"auth\">Yasamin-Rajabi</div><div class=\"meta\">medium  ·  2026-06-21  ·  via github</div><div class=\"links\"><a href=\"https://github.com/Yasamin-Rajabi/RL-method-implementation\">链接</a>  ·  <a href=\"https://github.com/Yasamin-Rajabi/RL-method-implementation\">代码</a></div><p><b>为什么值得看</b> 为研究人员提供了一个实践平台，便于测试和比较不同强化学习方法的效果，尤其是在教育和研究环境中。</p><p><b>核心思想</b> 实现了一系列深度强化学习算法，包括经典的基于价值和策略梯度算法，以及元强化学习和持续强化学习等高级主题。</p><div class=\"review\"><span class=\"pot\">潜力 25</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning</h3><div class=\"auth\">SourangshuGhosh</div><div class=\"meta\">low  ·  2026-06-18  ·  via github</div><div class=\"links\"><a href=\"https://github.com/SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning\">链接</a>  ·  <a href=\"https://github.com/SourangshuGhosh/Mathematical-Foundations-of-Deep-Learning\">代码</a></div><p><b>为什么值得看</b> 虽然包含深度学习相关内容，但主要是实现和理论演示，缺乏新的算法或架构创新。</p><p><b>核心思想</b> 提供深度学习算法、数学概念和优化方法的严格实现。</p><div class=\"review\"><span class=\"pot\">潜力 22</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:25%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. LeeBingChuan/rl-gridworld</h3><div class=\"auth\">LeeBingChuan</div><div class=\"meta\">low  ·  2026-06-27  ·  via github</div><div class=\"links\"><a href=\"https://github.com/LeeBingChuan/rl-gridworld\">链接</a>  ·  <a href=\"https://github.com/LeeBingChuan/rl-gridworld\">代码</a></div><p><b>为什么值得看</b> 为初学者提供了一个清晰的学习平台，但对现有强化学习研究没有实质性贡献。</p><p><b>核心思想</b> 在网格世界环境中实现基础的强化学习算法。</p><div class=\"review\"><span class=\"pot\">潜力 22</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:25%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. Basem-Mohamed-1/ml-foundations-from-scratch</h3><div class=\"auth\">Basem-Mohamed-1</div><div class=\"meta\">low  ·  2026-06-21  ·  via github</div><div class=\"links\"><a href=\"https://github.com/Basem-Mohamed-1/ml-foundations-from-scratch\">链接</a>  ·  <a href=\"https://github.com/Basem-Mohamed-1/ml-foundations-from-scratch\">代码</a></div><p><b>为什么值得看</b> 虽然有助于理解算法，但并未提供新的算法或模型架构，主要适合初学者而非研究者。</p><p><b>核心思想</b> 从零开始用 Python 和 NumPy 实现核心机器学习算法，强调数学直觉和优化技术。</p><div class=\"review\"><span class=\"pot\">潜力 17</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:25%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. DiScoFormer: One transformer for density and score, across distributions</h3><div class=\"meta\">high  ·  2026-06-29  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/allenai/discoformer\">链接</a></div><p><b>为什么值得看</b> 这种方法提高了模型的灵活性和效率，使得在多种分布下的任务可以共享同一架构，减少了计算资源的需求。</p><p><b>核心思想</b> 通过一个统一的 Transformer 模型同时处理密度估计和评分任务，避免了传统方法中需要分开处理的复杂性。</p><div class=\"review\"><span class=\"pot\">潜力 95</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:98%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</h3><div class=\"meta\">medium  ·  2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel\">链接</a></div><p><b>为什么值得看</b> 这使得研究人员能够更快地适应 Transformer 模型于特定任务，提升了微调效率，尤其对资源有限的团队尤为重要。</p><p><b>核心思想</b> 利用 NVIDIA NeMo 的 AutoModel 自动化微调过程，显著减少了手动调参的时间和复杂性。</p><div class=\"review\"><span class=\"pot\">潜力 79</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:76%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:80%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:73%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. Improving health intelligence in ChatGPT</h3><div class=\"meta\">low  ·  2026-06-18  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/improving-health-intelligence-in-chatgpt\">链接</a></div><p><b>为什么值得看</b> 这使得 ChatGPT 在健康领域的应用更具可信度，但并未对 AI 算法的基础架构或学习方法带来实质性突破。</p><p><b>核心思想</b> 通过增强推理能力和上下文理解，GPT-5.5 Instant 提升了健康和保健领域的回答质量。</p><div class=\"review\"><span class=\"pot\">潜力 55</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:30%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. Using AI to help physicians diagnose rare genetic diseases affecting children</h3><div class=\"meta\">low  ·  2026-06-18  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/diagnose-rare-childhood-diseases\">链接</a></div><p><b>为什么值得看</b> 这项研究展示了 AI 在医学领域的应用潜力，但主要集中在具体应用而非算法或模型架构的进展。</p><p><b>核心思想</b> 利用 OpenAI 推理模型帮助医生诊断罕见遗传疾病，成功识别出18个新诊断案例。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:58%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:20%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. Is it agentic enough? Benchmarking open models on your own tooling</h3><div class=\"meta\">low  ·  2026-06-18  ·  via rss</div><div class=\"links\"><a href=\"https://huggingface.co/blog/is-it-agentic-enough\">链接</a></div><p><b>为什么值得看</b> 这种方法帮助研究人员更好地理解模型在特定任务中的表现，但未提供新的算法或架构改进。</p><p><b>核心思想</b> 通过在自定义工具上评估开放模型的能力，提出了一种新的基准测试方法。</p><div class=\"review\"><span class=\"pot\">潜力 52</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:30%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span></span></div></div></div>",
     "graphs": {
       "g_ai-algorithm_paper_1": {
         "nodes": [
@@ -81,7 +81,7 @@
             "label": "Dandan Tu\n<i>Huawei</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Dandan Tu</b><br>Huawei<br><a href=\"https://www.semanticscholar.org/author/2379585218\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "title": "<b>Dandan Tu</b><br>Huawei<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2379585218\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": "https://www.semanticscholar.org/author/2379585218",
             "institution": "Huawei",
             "institution_index": 2
@@ -91,7 +91,7 @@
             "label": "Xiaohui Yan\n<i>Huawei</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Xiaohui Yan</b><br>Huawei<br><a href=\"https://www.semanticscholar.org/author/2337007438\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "title": "<b>Xiaohui Yan</b><br>Huawei<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2337007438\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": "https://www.semanticscholar.org/author/2337007438",
             "institution": "Huawei",
             "institution_index": 2
@@ -230,93 +230,6 @@
         ]
       },
       "g_ai-algorithm_paper_2": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing"
-          },
-          {
-            "id": "a0",
-            "label": "Xinyu Wang\n<i>THU</i>",
-            "group": "author",
-            "value": 6,
-            "title": "<b>Xinyu Wang</b><br>THU<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2378075154\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2378075154",
-            "institution": "THU",
-            "institution_index": 0
-          },
-          {
-            "id": "a1",
-            "label": "Chong-Bo Zhao\n<i>THU</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Chong-Bo Zhao</b><br>THU<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2244075308\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2244075308",
-            "institution": "THU",
-            "institution_index": 0
-          },
-          {
-            "id": "a2",
-            "label": "Fangneng Zhan\n<i>HKUST</i>",
-            "group": "author",
-            "value": 6,
-            "title": "<b>Fangneng Zhan</b><br>HKUST<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2264808876\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2264808876",
-            "institution": "HKUST",
-            "institution_index": 1
-          },
-          {
-            "id": "a3",
-            "label": "Yue Ma",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Yue Ma</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2376521977\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2376521977"
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-algorithm_paper_3": {
         "nodes": [
           {
             "id": "paper",
@@ -533,6 +446,169 @@
           }
         ]
       },
+      "g_ai-algorithm_paper_3": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks"
+          },
+          {
+            "id": "a0",
+            "label": "Young-Jun Lee\n<i>University of Minnesota</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Young-Jun Lee</b><br>University of Minnesota<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "University of Minnesota",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Seungone Kim\n<i>Carnegie Mellon University</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Seungone Kim</b><br>Carnegie Mellon University<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "Carnegie Mellon University",
+            "institution_index": 1
+          },
+          {
+            "id": "a2",
+            "label": "Minki Kang\n<i>KAIST</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Minki Kang</b><br>KAIST<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "KAIST",
+            "institution_index": 2
+          },
+          {
+            "id": "a3",
+            "label": "Alistair Cheong Liang Chuen\n<i>Carnegie Mellon University</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Alistair Cheong Liang Chuen</b><br>Carnegie Mellon University<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "Carnegie Mellon University",
+            "institution_index": 1
+          },
+          {
+            "id": "a4",
+            "label": "Zerui Chen\n<i>University of Cambridge</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Zerui Chen</b><br>University of Cambridge<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "University of Cambridge",
+            "institution_index": 3
+          },
+          {
+            "id": "a5",
+            "label": "Seungho Han\n<i>Hanyang University</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Seungho Han</b><br>Hanyang University<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "Hanyang University",
+            "institution_index": 4
+          },
+          {
+            "id": "a6",
+            "label": "Taehee Jung",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Taehee Jung</b><br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": ""
+          },
+          {
+            "id": "a7",
+            "label": "Dongyeop Kang\n<i>University of Minnesota</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Dongyeop Kang</b><br>University of Minnesota<br><a href=\"https://github.com/Open-Galapagos/evolution-fine-tuning\">code</a>",
+            "url": "",
+            "institution": "University of Minnesota",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a6",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a7",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
       "g_ai-algorithm_paper_4": {
         "nodes": [
           {
@@ -589,7 +665,7 @@
             "label": "Albina Burlova\n<i>HSE University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Albina Burlova</b><br>HSE University<br><a href=\"https://www.semanticscholar.org/author/2390036439\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Albina Burlova</b><br>HSE University<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2390036439\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": "https://www.semanticscholar.org/author/2390036439",
             "institution": "HSE University",
             "institution_index": 1
@@ -599,7 +675,7 @@
             "label": "M. Kolosov",
             "group": "author",
             "value": 1,
-            "title": "<b>M. Kolosov</b><br><a href=\"https://www.semanticscholar.org/author/2389322166\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>M. Kolosov</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2389322166\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": "https://www.semanticscholar.org/author/2389322166"
           },
           {
@@ -617,7 +693,7 @@
             "label": "Andrey Kuznetsov\n<i>FusionBrain Lab</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Andrey Kuznetsov</b><br>FusionBrain Lab<br><a href=\"https://www.semanticscholar.org/author/2384449382\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Andrey Kuznetsov</b><br>FusionBrain Lab<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2384449382\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": "https://www.semanticscholar.org/author/2384449382",
             "institution": "FusionBrain Lab",
             "institution_index": 0
@@ -627,7 +703,7 @@
             "label": "Elena Tutubalina\n<i>HSE University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Elena Tutubalina</b><br>HSE University<br><a href=\"https://www.semanticscholar.org/author/2384452750\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Elena Tutubalina</b><br>HSE University<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2384452750\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": "https://www.semanticscholar.org/author/2384452750",
             "institution": "HSE University",
             "institution_index": 1
@@ -769,83 +845,97 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning"
+            "title": "<b>Paper</b><br>Trimming the Long-Tail of Visual World Modeling Evaluation"
           },
           {
             "id": "a0",
-            "label": "Hohin Kwan\n<i>HKUST</i>",
+            "label": "Bingxuan Li\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 2,
-            "title": "<b>Hohin Kwan</b><br>HKUST<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2325156067\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2325156067",
-            "institution": "HKUST",
+            "value": 1,
+            "title": "<b>Bingxuan Li</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
             "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Hongyu Li\n<i>Colab, Beihang University</i>",
+            "label": "Yining Hong\n<i>Stanford University</i>",
             "group": "author",
-            "value": 5,
-            "title": "<b>Hongyu Li</b><br>Colab, Beihang University<br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2317144283\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2317144283",
-            "institution": "Colab, Beihang University",
+            "value": 1,
+            "title": "<b>Yining Hong</b><br>Stanford University<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "Stanford University",
             "institution_index": 1
           },
           {
             "id": "a2",
-            "label": "Ray Zhang\n<i>CUHK</i>",
+            "label": "Cheng Qian\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 3,
-            "title": "<b>Ray Zhang</b><br>CUHK<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2350073299\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2350073299",
-            "institution": "CUHK",
-            "institution_index": 2
+            "value": 1,
+            "title": "<b>Cheng Qian</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Manyuan Zhang",
+            "label": "Hyeonjeong Ha\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 9,
-            "title": "<b>Manyuan Zhang</b><br>h-index 9<br><a href=\"https://www.semanticscholar.org/author/2386865313\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2386865313"
+            "value": 1,
+            "title": "<b>Hyeonjeong Ha</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "Xianghao Kong\n<i>HKUST</i>",
+            "label": "Jiateng Liu\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 6,
-            "title": "<b>Xianghao Kong</b><br>HKUST<br>h-index 6<br><a href=\"https://refkxh.github.io/\">homepage</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://refkxh.github.io/",
-            "institution": "HKUST",
+            "value": 1,
+            "title": "<b>Jiateng Liu</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
             "institution_index": 0
           },
           {
             "id": "a5",
-            "label": "A. Rao",
+            "label": "Zhenhailong Wang\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 4,
-            "title": "<b>A. Rao</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2356632740\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2356632740"
+            "value": 1,
+            "title": "<b>Zhenhailong Wang</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
+            "institution_index": 0
           },
           {
             "id": "a6",
-            "label": "Jiahao Xie\n<i>Colab, Beihang University</i>",
+            "label": "Yue Guo\n<i>University of Illinois Urbana-Champaign</i>",
             "group": "author",
-            "value": 7,
-            "title": "<b>Jiahao Xie</b><br>Colab, Beihang University<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/66056122\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/66056122",
-            "institution": "Colab, Beihang University",
-            "institution_index": 1
+            "value": 1,
+            "title": "<b>Yue Guo</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
+            "institution_index": 0
           },
           {
             "id": "a7",
-            "label": "Si Liu\n<i>Colab, Beihang University</i>",
+            "label": "Yunzhu Li\n<i>Columbia University</i>",
             "group": "author",
-            "value": 7,
-            "title": "<b>Si Liu</b><br>Colab, Beihang University<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2325537006\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2325537006",
-            "institution": "Colab, Beihang University",
-            "institution_index": 1
+            "value": 1,
+            "title": "<b>Yunzhu Li</b><br>Columbia University<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "Columbia University",
+            "institution_index": 2
+          },
+          {
+            "id": "a8",
+            "label": "Heng Ji\n<i>University of Illinois Urbana-Champaign</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Heng Ji</b><br>University of Illinois Urbana-Champaign<br><a href=\"https://github.com/tailor-bench/code\">code</a>",
+            "url": "",
+            "institution": "University of Illinois Urbana-Champaign",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -915,6 +1005,15 @@
           {
             "from": "paper",
             "to": "a7",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a8",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
@@ -1171,209 +1270,6 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents"
-          },
-          {
-            "id": "a0",
-            "label": "Shoufa Chen\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 8,
-            "title": "<b>Shoufa Chen</b><br>Meta AI<br>h-index 8<br><a href=\"https://www.semanticscholar.org/author/2257125196\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2257125196",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a1",
-            "label": "Luyuan Wang\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Luyuan Wang</b><br>Meta AI<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2306134248\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2306134248",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a2",
-            "label": "Xuan Yang\n<i>Duke University</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Xuan Yang</b><br>Duke University<br><a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "",
-            "institution": "Duke University",
-            "institution_index": 1
-          },
-          {
-            "id": "a3",
-            "label": "Zhiheng Liu\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 5,
-            "title": "<b>Zhiheng Liu</b><br>Meta AI<br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2397385536\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2397385536",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a4",
-            "label": "Yuren Cong\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 6,
-            "title": "<b>Yuren Cong</b><br>Meta AI<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2271361976\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2271361976",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a5",
-            "label": "Yuanfeng Ji\n<i>Stanford University</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Yuanfeng Ji</b><br>Stanford University<br><a href=\"https://www.semanticscholar.org/author/2445898950\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2445898950",
-            "institution": "Stanford University",
-            "institution_index": 2
-          },
-          {
-            "id": "a6",
-            "label": "Fei-yan Zhou\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 7,
-            "title": "<b>Fei-yan Zhou</b><br>Meta AI<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2272178085\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2272178085",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a7",
-            "label": "Xiaohui Zhang\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Xiaohui Zhang</b><br>Meta AI<br><a href=\"https://www.semanticscholar.org/author/2403837858\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2403837858",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a8",
-            "label": "Fanny Yang\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Fanny Yang</b><br>Meta AI<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2395680261\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2395680261",
-            "institution": "Meta AI",
-            "institution_index": 0
-          },
-          {
-            "id": "a9",
-            "label": "Belinda Zeng\n<i>Meta AI</i>",
-            "group": "author",
-            "value": 12,
-            "title": "<b>Belinda Zeng</b><br>Meta AI<br>h-index 12<br><a href=\"https://www.semanticscholar.org/author/2007227598\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2007227598",
-            "institution": "Meta AI",
-            "institution_index": 0
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a8",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a9",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-algorithm_paper_8": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
             "title": "<b>Paper</b><br>SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE"
           },
           {
@@ -1489,6 +1385,57 @@
             "width": 1
           }
         ]
+      },
+      "g_ai-algorithm_paper_8": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History"
+          },
+          {
+            "id": "a0",
+            "label": "Zhiwei Li\n<i>WeChat, Tencent Inc., China</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Zhiwei Li</b><br>WeChat, Tencent Inc., China<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2277573979\">Semantic Scholar</a> · <a href=\"https://github.com/Tencent/SkillHone\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2277573979",
+            "institution": "WeChat, Tencent Inc., China",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Yong Hu\n<i>WeChat, Tencent Inc., China</i>",
+            "group": "author",
+            "value": 2,
+            "title": "<b>Yong Hu</b><br>WeChat, Tencent Inc., China<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2179981693\">Semantic Scholar</a> · <a href=\"https://github.com/Tencent/SkillHone\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2179981693",
+            "institution": "WeChat, Tencent Inc., China",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
       }
     }
   },
@@ -1498,7 +1445,7 @@
     "date": "2026-07-02",
     "period": "Daily",
     "description": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.",
-    "body": "<h2>📄 论文</h2>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. ReFreeKV: Towards Threshold-Free KV Cache Compression</h3><div class=\"auth\">Xuanfan Ni, Liyan Xu, Chenyang Lyu, Longyue Wang, Mo Yu, Lemao Liu et al.</div><div class=\"meta\">2026-06-26  ·  via hf_papers  ·  👍 45</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2502.16886\">链接</a>  ·  <a href=\"https://github.com/Patrick-Ni/ReFreeKV\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 46</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. TurboServe: Serving Streaming Video Generation Efficiently and Economically</h3><div class=\"auth\">Youhe Jiang, Haoxu Wang, Haotong Bao, Kai Jiang, Jianfei Chen, Jun Zhu et al.</div><div class=\"meta\">2026-06-17  ·  via hf_papers  ·  👍 18</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19271\">链接</a>  ·  <a href=\"https://github.com/shengshu-ai/TurboServe\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 29</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</h3><div class=\"auth\">Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng</div><div class=\"meta\">2026-07-01  ·  via arxiv, hf_papers  ·  👍 16</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00466v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 28</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents</h3><div class=\"auth\">Utsav Garg, Sungjin Hong, Jason Jung, Justin Lee, Shaan Desai, Joon Hee Kim et al.</div><div class=\"meta\">2026-06-30  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2606.31648v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 16</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</h3><div class=\"auth\">Sheng Qiang, Ruiwei Chen, Yinpeng Wu, Jinyu Gu, Zhichao Hua, Yubin Xia et al.</div><div class=\"meta\">2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00760v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 16</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_5\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering</h3><div class=\"auth\">Zaifeng Pan, Qianxu Wang, Zhengding Hu, Chang Chen, Yue Guan, Yanbo Zhou et al.</div><div class=\"meta\">2026-06-30  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00151v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 15</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal</h3><div class=\"auth\">Prabod Rathnayaka, Fabian Waschkowski, Lukas Wesemann</div><div class=\"meta\">2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00501v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 15</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. FlexViT: A Flexible FPGA-based Accelerator for Edge Vision Transformers</h3><div class=\"auth\">Hubert Dymarkowski, Xingjian Fu, Rappy Saha, Jude Haris, José Cano</div><div class=\"meta\">2026-06-30  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2606.31938v1\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 15</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_8\"></div></div></div>\n<h2>💻 开源项目</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. flashinfer-ai/flashinfer</h3><div class=\"auth\">flashinfer-ai</div><div class=\"meta\">2026-07-02  ·  via github  ·  👍 5888</div><div class=\"links\"><a href=\"https://github.com/flashinfer-ai/flashinfer\">链接</a>  ·  <a href=\"https://github.com/flashinfer-ai/flashinfer\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 72</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. SakanaAI/sparser-faster-llms</h3><div class=\"auth\">SakanaAI</div><div class=\"meta\">2026-06-29  ·  via github  ·  👍 249</div><div class=\"links\"><a href=\"https://github.com/SakanaAI/sparser-faster-llms\">链接</a>  ·  <a href=\"https://github.com/SakanaAI/sparser-faster-llms\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:62%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. AMD-AGI/Apex</h3><div class=\"auth\">AMD-AGI</div><div class=\"meta\">2026-06-26  ·  via github  ·  👍 70</div><div class=\"links\"><a href=\"https://github.com/AMD-AGI/Apex\">链接</a>  ·  <a href=\"https://github.com/AMD-AGI/Apex\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 47</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:20%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. NickMonrad/kernel-ai-assistant</h3><div class=\"auth\">NickMonrad</div><div class=\"meta\">2026-07-02  ·  via github  ·  👍 21</div><div class=\"links\"><a href=\"https://github.com/NickMonrad/kernel-ai-assistant\">链接</a>  ·  <a href=\"https://github.com/NickMonrad/kernel-ai-assistant\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 37</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:10%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:31%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. ahb-sjsu/turboquant-pro</h3><div class=\"auth\">ahb-sjsu</div><div class=\"meta\">2026-07-01  ·  via github  ·  👍 20</div><div class=\"links\"><a href=\"https://github.com/ahb-sjsu/turboquant-pro\">链接</a>  ·  <a href=\"https://github.com/ahb-sjsu/turboquant-pro\">代码</a></div><div class=\"review\"><span class=\"pot\">潜力 37</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:9%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:29%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. OpenAI and Broadcom unveil LLM-optimized inference chip</h3><div class=\"meta\">2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/openai-broadcom-jalapeno-inference-chip\">链接</a></div><div class=\"review\"><span class=\"pot\">潜力 70</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:73%\"></span></span></span></span></div></div></div>",
+    "body": "<h2>📄 论文</h2>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. ReFreeKV: Towards Threshold-Free KV Cache Compression</h3><div class=\"auth\">Xuanfan Ni, Liyan Xu, Chenyang Lyu, Longyue Wang, Mo Yu, Lemao Liu et al.</div><div class=\"meta\">high  ·  2026-06-26  ·  via hf_papers  ·  👍 45</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2502.16886\">链接</a>  ·  <a href=\"https://github.com/Patrick-Ni/ReFreeKV\">代码</a></div><p><b>为什么值得看</b> 这使得在开放域输入下，KV 缓存的压缩性能更为稳健，避免了因阈值选择不当导致的性能下降，适用于多种任务和模型。</p><p><b>核心思想</b> 提出了一种新的目标，消除了对 KV 缓存预算的阈值依赖，实现自适应的预算分配。</p><div class=\"review\"><span class=\"pot\">潜力 70</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. Multi-Block Diffusion Language Models</h3><div class=\"auth\">Yijie Jin, Jiajun Xu, Yuxuan Liu, Chenkai Xu, Yi Tu, Jiajun Li et al.</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 24</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.29215\">链接</a>  ·  <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">代码</a></div><p><b>为什么值得看</b> 这使得模型在推理时能够更高效地利用缓存和并行性，显著提高了每次前向传递的令牌数，从而加速了文本生成过程。</p><p><b>核心思想</b> 通过多块教师强迫训练（MultiTF），在有界噪声组上进行训练，使得多块扩散语言模型（MBD-LMs）能够并行解码多个块。</p><div class=\"review\"><span class=\"pot\">潜力 61</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. TurboServe: Serving Streaming Video Generation Efficiently and Economically</h3><div class=\"auth\">Youhe Jiang, Haoxu Wang, Haotong Bao, Kai Jiang, Jianfei Chen, Jun Zhu et al.</div><div class=\"meta\">high  ·  2026-06-17  ·  via hf_papers  ·  👍 18</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19271\">链接</a>  ·  <a href=\"https://github.com/shengshu-ai/TurboServe\">代码</a></div><p><b>为什么值得看</b> 该系统显著降低了每个视频块的最大延迟和 GPU 运营成本，使得在多用户和多 GPU 环境中高效处理流媒体视频生成成为可能，适用于需要实时响应的应用场景。</p><p><b>核心思想</b> TurboServe 将流媒体视频生成的服务问题建模为在线调度问题，通过迁移感知的会话放置控制器和负载驱动的自动扩展控制器联合协调会话放置和 GPU 资源配置。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:92%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding</h3><div class=\"auth\">Hao Zhang, Yiming Hu, Yong Wang, Mingqiao Mo, Xin Xiao, Xiangxiang Chu</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 67</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.31315\">链接</a>  ·  <a href=\"https://github.com/AMAP-ML/BlockPilot\">代码</a></div><p><b>为什么值得看</b> 这种方法提高了推测解码的效率，使得在推理过程中能够实现更高的速度提升，适用于需要快速推理的应用场景。</p><p><b>核心思想</b> 通过实例自适应策略学习预测最佳块大小，从而在预填充阶段进行一次性决策，优化了扩散基础的推测解码过程。</p><div class=\"review\"><span class=\"pot\">潜力 52</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</h3><div class=\"auth\">Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv, hf_papers  ·  👍 16</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00466v1\">链接</a></div><p><b>为什么值得看</b> 该方法在多个 MoE 模型上显著降低了中位数 TPOT，提升了解码效率，适用于大规模分布式推理场景。</p><p><b>核心思想</b> ELDR 通过构建请求的专家签名，预测生成过程中将激活的专家，从而实现基于专家局部性的路由。</p><div class=\"review\"><span class=\"pot\">潜力 50</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:94%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_5\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining</h3><div class=\"auth\">Philip Zmushko, Egor Petrov, Nursultan Abdullaev, Mikhail Khrushchev, Samuel Horváth</div><div class=\"meta\">high  ·  2026-06-29  ·  via hf_papers  ·  👍 20</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.30634\">链接</a></div><p><b>为什么值得看</b> 这使得在大规模异步管道并行训练中，能够使用更稳健的优化器如Muon，显著提升训练效率，缩小与同步训练的性能差距。</p><p><b>核心思想</b> 通过引入对优化器选择的深入分析，证明了一步梯度延迟的影响主要取决于优化器，而非固有限制。</p><div class=\"review\"><span class=\"pot\">潜力 41</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</h3><div class=\"auth\">Sheng Qiang, Ruiwei Chen, Yinpeng Wu, Jinyu Gu, Zhichao Hua, Yubin Xia et al.</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00760v1\">链接</a></div><p><b>为什么值得看</b> 该方法在保持较低精度损失的同时，实现了高达 16 倍的注意力加速和 3 倍的内存使用减少，显著提升了长上下文 LLM 的服务效率。</p><p><b>核心思想</b> MosaicKV 通过动态二维 KV 缓存压缩，针对每个 KV 向量选择适合的压缩策略，从而减少内存使用并提高服务性能。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering</h3><div class=\"auth\">Zaifeng Pan, Qianxu Wang, Zhengding Hu, Chang Chen, Yue Guan, Yanbo Zhou et al.</div><div class=\"meta\">high  ·  2026-06-30  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00151v1\">链接</a></div><p><b>为什么值得看</b> 这使得 LLM 代理能够在不阻塞的情况下更快地响应请求，显著降低了首次令牌生成时间，提升了用户体验。</p><p><b>核心思想</b> 通过识别上下文变换的分段可分解性，提前执行上下文变换并准备转换后的 KV 缓存，从而消除变换开销。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构</span></div><div class=\"graph\" id=\"g_ai-infra_paper_8\"></div></div></div>\n<h2>💻 开源项目</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. flashinfer-ai/flashinfer</h3><div class=\"auth\">flashinfer-ai</div><div class=\"meta\">high  ·  2026-07-02  ·  via github  ·  👍 5888</div><div class=\"links\"><a href=\"https://github.com/flashinfer-ai/flashinfer\">链接</a>  ·  <a href=\"https://github.com/flashinfer-ai/flashinfer\">代码</a></div><p><b>为什么值得看</b> 通过提升推理性能，FlashInfer 可以帮助开发者在资源受限的环境中更高效地部署 LLM，降低延迟并提高响应速度。</p><p><b>核心思想</b> 提供了一套专门针对大语言模型（LLM）推理的内核库，优化了推理过程中的计算效率。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. RightNow-AI/AutoMegaKernel</h3><div class=\"auth\">RightNow-AI</div><div class=\"meta\">high  ·  2026-06-29  ·  via github  ·  👍 94</div><div class=\"links\"><a href=\"https://github.com/RightNow-AI/AutoMegaKernel\">链接</a>  ·  <a href=\"https://github.com/RightNow-AI/AutoMegaKernel\">代码</a></div><p><b>为什么值得看</b> 这使得在单个 GPU 上进行高效推理成为可能，显著提升了 LLM 的解码速度，适合需要快速响应的应用场景。</p><p><b>核心思想</b> 将模型编译成一个可证明正确的自适应 CUDA 大内核，并在 batch-1 LLM 解码时自我调优超越 cuBLAS。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:72%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. SakanaAI/sparser-faster-llms</h3><div class=\"auth\">SakanaAI</div><div class=\"meta\">high  ·  2026-06-29  ·  via github  ·  👍 249</div><div class=\"links\"><a href=\"https://github.com/SakanaAI/sparser-faster-llms\">链接</a>  ·  <a href=\"https://github.com/SakanaAI/sparser-faster-llms\">代码</a></div><p><b>为什么值得看</b> 通过减少内存占用和提高处理速度，研究人员能够在相同硬件上处理更大规模的模型，提升了资源利用效率和模型部署的灵活性。</p><p><b>核心思想</b> 使用 CUDA 内核利用大语言模型的稀疏性，提高推理和训练过程中的吞吐量并降低内存需求。</p><div class=\"review\"><span class=\"pot\">潜力 68</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:62%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. ahb-sjsu/turboquant-pro</h3><div class=\"auth\">ahb-sjsu</div><div class=\"meta\">high  ·  2026-07-01  ·  via github  ·  👍 20</div><div class=\"links\"><a href=\"https://github.com/ahb-sjsu/turboquant-pro\">链接</a>  ·  <a href=\"https://github.com/ahb-sjsu/turboquant-pro\">代码</a></div><p><b>为什么值得看</b> 这种高效的压缩方法使得在资源受限的环境中仍能高效地进行大规模 LLM 和向量数据库的推理，适合需要快速响应的应用场景。</p><p><b>核心思想</b> 通过 PCA-Matryoshka 和 TurboQuant 实现嵌入和 KV 缓存的 27 倍压缩，同时保持 99.8% 的 recall@10。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:9%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:29%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. Mog9/KV-Compression</h3><div class=\"auth\">Mog9</div><div class=\"meta\">high  ·  2026-06-19  ·  via github  ·  👍 14</div><div class=\"links\"><a href=\"https://github.com/Mog9/KV-Compression\">链接</a>  ·  <a href=\"https://github.com/Mog9/KV-Compression\">代码</a></div><p><b>为什么值得看</b> 通过显著减少内存占用，这使得在资源受限的环境中进行大规模 LLM 推理成为可能，提升了推理效率和可扩展性。</p><p><b>核心思想</b> 在 Triton 中实现并基准测试 KV 缓存压缩方法，结合 Flash Attention 优化 KIVI 和 TurboQuant 内核，达到 GPT-2 上 7.11× 和 Qwen3.5 9B 上 7.31× 的压缩率。</p><div class=\"review\"><span class=\"pot\">潜力 53</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:26%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:26%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<div class=\"card\"><div class=\"card-main\"><h3>1. OpenAI and Broadcom unveil LLM-optimized inference chip</h3><div class=\"meta\">high  ·  2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/openai-broadcom-jalapeno-inference-chip\">链接</a></div><p><b>为什么值得看</b> 该芯片使得在推理阶段处理大型语言模型变得更高效，降低了能耗和延迟，适合需要大规模推理的应用场景。</p><p><b>核心思想</b> Jalapeño 芯片专为 LLM 推理优化，提升了性能和效率，适应更大规模的 AI 系统。</p><div class=\"review\"><span class=\"pot\">潜力 96</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:73%\"></span></span></span></span></div></div></div>",
     "graphs": {
       "g_ai-infra_paper_1": {
         "nodes": [
@@ -1673,6 +1620,228 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
+            "title": "<b>Paper</b><br>Multi-Block Diffusion Language Models"
+          },
+          {
+            "id": "a0",
+            "label": "Yijie Jin\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 3,
+            "title": "<b>Yijie Jin</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2376140086\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2376140086",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Jiajun Xu\n<i>Xi’an Jiao Tong University</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Jiajun Xu</b><br>Xi’an Jiao Tong University<br><a href=\"https://www.semanticscholar.org/author/2445717073\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445717073",
+            "institution": "Xi’an Jiao Tong University",
+            "institution_index": 1
+          },
+          {
+            "id": "a2",
+            "label": "Yuxuan Liu\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yuxuan Liu</b><br>Shanghai Jiao Tong University<br><a href=\"https://www.semanticscholar.org/author/2445899678\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445899678",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a3",
+            "label": "Chenkai Xu\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 2,
+            "title": "<b>Chenkai Xu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2344819363\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2344819363",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a4",
+            "label": "Yi Tu\n<i>Huawei</i>",
+            "group": "author",
+            "value": 4,
+            "title": "<b>Yi Tu</b><br>Huawei<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2378138856\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2378138856",
+            "institution": "Huawei",
+            "institution_index": 2
+          },
+          {
+            "id": "a5",
+            "label": "Jiajun Li\n<i>Huawei</i>",
+            "group": "author",
+            "value": 4,
+            "title": "<b>Jiajun Li</b><br>Huawei<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2377734937\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2377734937",
+            "institution": "Huawei",
+            "institution_index": 2
+          },
+          {
+            "id": "a6",
+            "label": "Dandan Tu\n<i>Huawei</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Dandan Tu</b><br>Huawei<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2379585218\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2379585218",
+            "institution": "Huawei",
+            "institution_index": 2
+          },
+          {
+            "id": "a7",
+            "label": "Xiaohui Yan\n<i>Huawei</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Xiaohui Yan</b><br>Huawei<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2337007438\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2337007438",
+            "institution": "Huawei",
+            "institution_index": 2
+          },
+          {
+            "id": "a8",
+            "label": "Kai Yu\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 2,
+            "title": "<b>Kai Yu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2376516298\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2376516298",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a9",
+            "label": "Pengfei Liu\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 3,
+            "title": "<b>Pengfei Liu</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326473591\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2326473591",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a10",
+            "label": "Zhijie Deng\n<i>Shanghai Jiao Tong University</i>",
+            "group": "author",
+            "value": 3,
+            "title": "<b>Zhijie Deng</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326242217\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2326242217",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a6",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a7",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a8",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a9",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a10",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_3": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
             "title": "<b>Paper</b><br>TurboServe: Serving Streaming Video Generation Efficiently and Economically"
           },
           {
@@ -1819,7 +1988,134 @@
           }
         ]
       },
-      "g_ai-infra_paper_3": {
+      "g_ai-infra_paper_4": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding"
+          },
+          {
+            "id": "a0",
+            "label": "Hao Zhang\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Hao Zhang</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Yiming Hu\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yiming Hu</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a2",
+            "label": "Yong Wang\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yong Wang</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a3",
+            "label": "Mingqiao Mo\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Mingqiao Mo</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a4",
+            "label": "Xin Xiao\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Xin Xiao</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a5",
+            "label": "Xiangxiang Chu\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Xiangxiang Chu</b><br>AMAP, Alibaba Group<br><a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_5": {
         "nodes": [
           {
             "id": "paper",
@@ -1934,86 +2230,64 @@
           }
         ]
       },
-      "g_ai-infra_paper_4": {
+      "g_ai-infra_paper_6": {
         "nodes": [
           {
             "id": "paper",
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents"
+            "title": "<b>Paper</b><br>One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining"
           },
           {
             "id": "a0",
-            "label": "Utsav Garg",
+            "label": "Philip Zmushko\n<i>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab</i>",
             "group": "author",
-            "value": 4,
-            "title": "<b>Utsav Garg</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/39957046\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/39957046"
+            "value": 3,
+            "title": "<b>Philip Zmushko</b><br>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2330245829\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2330245829",
+            "institution": "Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Sungjin Hong",
+            "label": "E. Petrov\n<i>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab</i>",
             "group": "author",
-            "value": 3,
-            "title": "<b>Sungjin Hong</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2334011205\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2334011205"
+            "value": 2,
+            "title": "<b>E. Petrov</b><br>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2365265961\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2365265961",
+            "institution": "Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab",
+            "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Jason J. Jung",
+            "label": "Nursultan Abdullaev\n<i>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab</i>",
             "group": "author",
-            "value": 3,
-            "title": "<b>Jason J. Jung</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2265929182\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2265929182"
+            "value": 1,
+            "title": "<b>Nursultan Abdullaev</b><br>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab<br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2430467719\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2430467719",
+            "institution": "Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Justin Lee",
+            "label": "M. Khrushchev\n<i>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Justin Lee</b>",
-            "url": ""
+            "title": "<b>M. Khrushchev</b><br>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab<br><a href=\"https://www.semanticscholar.org/author/1875058\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/1875058",
+            "institution": "Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "Shaan Desai",
+            "label": "Samuel Horv'ath\n<i>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Shaan Desai</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2350871398\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2350871398"
-          },
-          {
-            "id": "a5",
-            "label": "Joonghoon Kim",
-            "group": "author",
-            "value": 5,
-            "title": "<b>Joonghoon Kim</b><br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2265618046\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2265618046"
-          },
-          {
-            "id": "a6",
-            "label": "Anirudh Shrinivason",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Anirudh Shrinivason</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2350868087\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2350868087"
-          },
-          {
-            "id": "a7",
-            "label": "E. Wen",
-            "group": "author",
-            "value": 2,
-            "title": "<b>E. Wen</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/115255587\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/115255587"
-          },
-          {
-            "id": "a8",
-            "label": "Susie Park",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Susie Park</b><br><a href=\"https://www.semanticscholar.org/author/2445884212\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2445884212"
+            "title": "<b>Samuel Horv&#x27;ath</b><br>Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2363565708\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2363565708",
+            "institution": "Equal contribution. †Work completed while Philip Zmushko was at Yandex and BRAIn Lab",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -2061,46 +2335,10 @@
               "color": "#26283a"
             },
             "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a8",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
           }
         ]
       },
-      "g_ai-infra_paper_5": {
+      "g_ai-infra_paper_7": {
         "nodes": [
           {
             "id": "paper",
@@ -2249,7 +2487,7 @@
           }
         ]
       },
-      "g_ai-infra_paper_6": {
+      "g_ai-infra_paper_8": {
         "nodes": [
           {
             "id": "paper",
@@ -2390,178 +2628,6 @@
           {
             "from": "paper",
             "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_7": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal"
-          },
-          {
-            "id": "a0",
-            "label": "Prabod Rathnayaka",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Prabod Rathnayaka</b>",
-            "url": ""
-          },
-          {
-            "id": "a1",
-            "label": "Fabian Waschkowski",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Fabian Waschkowski</b>",
-            "url": ""
-          },
-          {
-            "id": "a2",
-            "label": "Lukas Wesemann",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Lukas Wesemann</b>",
-            "url": ""
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_8": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>FlexViT: A Flexible FPGA-based Accelerator for Edge Vision Transformers"
-          },
-          {
-            "id": "a0",
-            "label": "Hubert Dymarkowski\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Hubert Dymarkowski</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br><a href=\"https://www.semanticscholar.org/author/2420181951\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2420181951",
-            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
-            "institution_index": 0
-          },
-          {
-            "id": "a1",
-            "label": "Xin Fu\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Xin Fu</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2253256594\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2253256594",
-            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
-            "institution_index": 0
-          },
-          {
-            "id": "a2",
-            "label": "Rappy Saha\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
-            "group": "author",
-            "value": 6,
-            "title": "<b>Rappy Saha</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/10685653\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/10685653",
-            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
-            "institution_index": 0
-          },
-          {
-            "id": "a3",
-            "label": "Jude Haris\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Jude Haris</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2130451942\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2130451942",
-            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
-            "institution_index": 0
-          },
-          {
-            "id": "a4",
-            "label": "José Cano\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>José Cano</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2288216330\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2288216330",
-            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
-            "institution_index": 0
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
