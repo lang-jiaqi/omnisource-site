@@ -18,91 +18,113 @@
           },
           {
             "id": "a0",
-            "label": "Yijie Jin",
+            "label": "Yijie Jin\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 3,
-            "title": "<b>Yijie Jin</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2376140086\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2376140086"
+            "title": "<b>Yijie Jin</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2376140086\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2376140086",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Jiajun Xu",
+            "label": "Jiajun Xu\n<i>Xi’an Jiao Tong University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Jiajun Xu</b><br><a href=\"https://www.semanticscholar.org/author/2445717073\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2445717073"
+            "title": "<b>Jiajun Xu</b><br>Xi’an Jiao Tong University<br><a href=\"https://www.semanticscholar.org/author/2445717073\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445717073",
+            "institution": "Xi’an Jiao Tong University",
+            "institution_index": 1
           },
           {
             "id": "a2",
-            "label": "Yuxuan Liu",
+            "label": "Yuxuan Liu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Yuxuan Liu</b><br><a href=\"https://www.semanticscholar.org/author/2445899678\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2445899678"
+            "title": "<b>Yuxuan Liu</b><br>Shanghai Jiao Tong University<br><a href=\"https://www.semanticscholar.org/author/2445899678\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445899678",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Chenkai Xu",
+            "label": "Chenkai Xu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Chenkai Xu</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2344819363\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2344819363"
+            "title": "<b>Chenkai Xu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2344819363\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2344819363",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "Yi Tu",
+            "label": "Yi Tu\n<i>Huawei</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Yi Tu</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2378138856\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2378138856"
+            "title": "<b>Yi Tu</b><br>Huawei<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2378138856\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2378138856",
+            "institution": "Huawei",
+            "institution_index": 2
           },
           {
             "id": "a5",
-            "label": "Jiajun Li",
+            "label": "Jiajun Li\n<i>Huawei</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Jiajun Li</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2377734937\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2377734937"
+            "title": "<b>Jiajun Li</b><br>Huawei<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2377734937\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2377734937",
+            "institution": "Huawei",
+            "institution_index": 2
           },
           {
             "id": "a6",
-            "label": "Dandan Tu",
+            "label": "Dandan Tu\n<i>Huawei</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Dandan Tu</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2379585218\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2379585218"
+            "title": "<b>Dandan Tu</b><br>Huawei<br><a href=\"https://www.semanticscholar.org/author/2379585218\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2379585218",
+            "institution": "Huawei",
+            "institution_index": 2
           },
           {
             "id": "a7",
-            "label": "Xiaohui Yan",
+            "label": "Xiaohui Yan\n<i>Huawei</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Xiaohui Yan</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2337007438\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2337007438"
+            "title": "<b>Xiaohui Yan</b><br>Huawei<br><a href=\"https://www.semanticscholar.org/author/2337007438\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2337007438",
+            "institution": "Huawei",
+            "institution_index": 2
           },
           {
             "id": "a8",
-            "label": "Kai Yu",
+            "label": "Kai Yu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Kai Yu</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2376516298\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2376516298"
+            "title": "<b>Kai Yu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2376516298\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2376516298",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a9",
-            "label": "Pengfei Liu",
+            "label": "Pengfei Liu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 3,
-            "title": "<b>Pengfei Liu</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326473591\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2326473591"
+            "title": "<b>Pengfei Liu</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326473591\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2326473591",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a10",
-            "label": "Zhijie Deng",
+            "label": "Zhijie Deng\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 3,
-            "title": "<b>Zhijie Deng</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326242217\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2326242217"
+            "title": "<b>Zhijie Deng</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2326242217\">Semantic Scholar</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2326242217",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -218,27 +240,33 @@
           },
           {
             "id": "a0",
-            "label": "Xinyu Wang",
+            "label": "Xinyu Wang\n<i>THU</i>",
             "group": "author",
             "value": 6,
-            "title": "<b>Xinyu Wang</b><br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2378075154\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2378075154"
+            "title": "<b>Xinyu Wang</b><br>THU<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2378075154\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2378075154",
+            "institution": "THU",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Chong-Bo Zhao",
+            "label": "Chong-Bo Zhao\n<i>THU</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Chong-Bo Zhao</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2244075308\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2244075308"
+            "title": "<b>Chong-Bo Zhao</b><br>THU<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2244075308\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2244075308",
+            "institution": "THU",
+            "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Fangneng Zhan",
+            "label": "Fangneng Zhan\n<i>HKUST</i>",
             "group": "author",
             "value": 6,
-            "title": "<b>Fangneng Zhan</b><br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2264808876\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2264808876"
+            "title": "<b>Fangneng Zhan</b><br>HKUST<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2264808876\">Semantic Scholar</a> · <a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2264808876",
+            "institution": "HKUST",
+            "institution_index": 1
           },
           {
             "id": "a3",
@@ -532,11 +560,13 @@
           },
           {
             "id": "a2",
-            "label": "Matvey Skripkin",
+            "label": "Matvey Skripkin\n<i>FusionBrain Lab</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Matvey Skripkin</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2295730897\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2295730897"
+            "title": "<b>Matvey Skripkin</b><br>FusionBrain Lab<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2295730897\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2295730897",
+            "institution": "FusionBrain Lab",
+            "institution_index": 0
           },
           {
             "id": "a3",
@@ -556,51 +586,61 @@
           },
           {
             "id": "a5",
-            "label": "Albina Burlova",
+            "label": "Albina Burlova\n<i>HSE University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Albina Burlova</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2390036439\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2390036439"
+            "title": "<b>Albina Burlova</b><br>HSE University<br><a href=\"https://www.semanticscholar.org/author/2390036439\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2390036439",
+            "institution": "HSE University",
+            "institution_index": 1
           },
           {
             "id": "a6",
             "label": "M. Kolosov",
             "group": "author",
             "value": 1,
-            "title": "<b>M. Kolosov</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2389322166\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>M. Kolosov</b><br><a href=\"https://www.semanticscholar.org/author/2389322166\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": "https://www.semanticscholar.org/author/2389322166"
           },
           {
             "id": "a7",
-            "label": "Denis Shepelev",
+            "label": "Denis Shepelev\n<i>FusionBrain Lab</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Denis Shepelev</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/1713706291\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/1713706291"
+            "title": "<b>Denis Shepelev</b><br>FusionBrain Lab<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/1713706291\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/1713706291",
+            "institution": "FusionBrain Lab",
+            "institution_index": 0
           },
           {
             "id": "a8",
-            "label": "Andrey Kuznetsov",
+            "label": "Andrey Kuznetsov\n<i>FusionBrain Lab</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Andrey Kuznetsov</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2384449382\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2384449382"
+            "title": "<b>Andrey Kuznetsov</b><br>FusionBrain Lab<br><a href=\"https://www.semanticscholar.org/author/2384449382\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2384449382",
+            "institution": "FusionBrain Lab",
+            "institution_index": 0
           },
           {
             "id": "a9",
-            "label": "Elena Tutubalina",
+            "label": "Elena Tutubalina\n<i>HSE University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Elena Tutubalina</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2384452750\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2384452750"
+            "title": "<b>Elena Tutubalina</b><br>HSE University<br><a href=\"https://www.semanticscholar.org/author/2384452750\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2384452750",
+            "institution": "HSE University",
+            "institution_index": 1
           },
           {
             "id": "a10",
-            "label": "Aleksandr I. Panov",
+            "label": "Aleksandr I. Panov\n<i>CogAI Lab</i>",
             "group": "author",
             "value": 7,
-            "title": "<b>Aleksandr I. Panov</b><br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2238010956\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2238010956"
+            "title": "<b>Aleksandr I. Panov</b><br>CogAI Lab<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2238010956\">Semantic Scholar</a> · <a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2238010956",
+            "institution": "CogAI Lab",
+            "institution_index": 2
           },
           {
             "id": "a11",
@@ -733,27 +773,33 @@
           },
           {
             "id": "a0",
-            "label": "Hohin Kwan",
+            "label": "Hohin Kwan\n<i>HKUST</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Hohin Kwan</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2325156067\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2325156067"
+            "title": "<b>Hohin Kwan</b><br>HKUST<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2325156067\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2325156067",
+            "institution": "HKUST",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Hongyu Li",
+            "label": "Hongyu Li\n<i>Colab, Beihang University</i>",
             "group": "author",
             "value": 5,
-            "title": "<b>Hongyu Li</b><br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2317144283\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2317144283"
+            "title": "<b>Hongyu Li</b><br>Colab, Beihang University<br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2317144283\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2317144283",
+            "institution": "Colab, Beihang University",
+            "institution_index": 1
           },
           {
             "id": "a2",
-            "label": "Ray Zhang",
+            "label": "Ray Zhang\n<i>CUHK</i>",
             "group": "author",
             "value": 3,
-            "title": "<b>Ray Zhang</b><br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2350073299\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2350073299"
+            "title": "<b>Ray Zhang</b><br>CUHK<br>h-index 3<br><a href=\"https://www.semanticscholar.org/author/2350073299\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2350073299",
+            "institution": "CUHK",
+            "institution_index": 2
           },
           {
             "id": "a3",
@@ -768,7 +814,7 @@
             "label": "Xianghao Kong\n<i>HKUST</i>",
             "group": "author",
             "value": 6,
-            "title": "<b>Xianghao Kong</b><br>HKUST<br>h-index 6<br><a href=\"https://refkxh.github.io/\">homepage</a> · <a href=\"https://www.semanticscholar.org/author/2355242206\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "title": "<b>Xianghao Kong</b><br>HKUST<br>h-index 6<br><a href=\"https://refkxh.github.io/\">homepage</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": "https://refkxh.github.io/",
             "institution": "HKUST",
             "institution_index": 0
@@ -783,19 +829,23 @@
           },
           {
             "id": "a6",
-            "label": "Jiahao Xie",
+            "label": "Jiahao Xie\n<i>Colab, Beihang University</i>",
             "group": "author",
             "value": 7,
-            "title": "<b>Jiahao Xie</b><br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/66056122\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/66056122"
+            "title": "<b>Jiahao Xie</b><br>Colab, Beihang University<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/66056122\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://www.semanticscholar.org/author/66056122",
+            "institution": "Colab, Beihang University",
+            "institution_index": 1
           },
           {
             "id": "a7",
-            "label": "Si Liu",
+            "label": "Si Liu\n<i>Colab, Beihang University</i>",
             "group": "author",
             "value": 7,
-            "title": "<b>Si Liu</b><br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2325537006\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2325537006"
+            "title": "<b>Si Liu</b><br>Colab, Beihang University<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2325537006\">Semantic Scholar</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2325537006",
+            "institution": "Colab, Beihang University",
+            "institution_index": 1
           }
         ],
         "edges": [
@@ -884,99 +934,123 @@
           },
           {
             "id": "a0",
-            "label": "Hongxing Li",
+            "label": "Hongxing Li\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Hongxing Li</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Hongxing Li</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Xiufeng Huang",
+            "label": "Xiufeng Huang\n<i>Alibaba Group</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Xiufeng Huang</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Xiufeng Huang</b><br>Alibaba Group<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Alibaba Group",
+            "institution_index": 1
           },
           {
             "id": "a2",
-            "label": "Dingming Li",
+            "label": "Dingming Li\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Dingming Li</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Dingming Li</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Wenjing Jiang",
+            "label": "Wenjing Jiang\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Wenjing Jiang</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Wenjing Jiang</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "Zixuan Wang",
+            "label": "Zixuan Wang\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Zixuan Wang</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Zixuan Wang</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a5",
-            "label": "Haolei Xu",
+            "label": "Haolei Xu\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Haolei Xu</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Haolei Xu</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a6",
-            "label": "Hanrong Zhang",
+            "label": "Hanrong Zhang\n<i>Alibaba Group</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Hanrong Zhang</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Hanrong Zhang</b><br>Alibaba Group<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Alibaba Group",
+            "institution_index": 1
           },
           {
             "id": "a7",
-            "label": "Haiwen Hong",
+            "label": "Haiwen Hong\n<i>Alibaba Group</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Haiwen Hong</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Haiwen Hong</b><br>Alibaba Group<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Alibaba Group",
+            "institution_index": 1
           },
           {
             "id": "a8",
-            "label": "Longtao Huang",
+            "label": "Longtao Huang\n<i>Alibaba Group</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Longtao Huang</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Longtao Huang</b><br>Alibaba Group<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Alibaba Group",
+            "institution_index": 1
           },
           {
             "id": "a9",
-            "label": "Hui Xue",
+            "label": "Hui Xue\n<i>Alibaba Group</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Hui Xue</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Hui Xue</b><br>Alibaba Group<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Alibaba Group",
+            "institution_index": 1
           },
           {
             "id": "a10",
-            "label": "Weiming Lu",
+            "label": "Weiming Lu\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Weiming Lu</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Weiming Lu</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           },
           {
             "id": "a11",
-            "label": "Jun Xiao",
+            "label": "Jun Xiao\n<i>Zhejiang University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Jun Xiao</b><br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
-            "url": ""
+            "title": "<b>Jun Xiao</b><br>Zhejiang University<br><a href=\"https://github.com/ZJU-REAL/Perceive-to-Reason\">code</a>",
+            "url": "",
+            "institution": "Zhejiang University",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -1101,83 +1175,103 @@
           },
           {
             "id": "a0",
-            "label": "Shoufa Chen",
+            "label": "Shoufa Chen\n<i>Meta AI</i>",
             "group": "author",
             "value": 8,
-            "title": "<b>Shoufa Chen</b><br>h-index 8<br><a href=\"https://www.semanticscholar.org/author/2257125196\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2257125196"
+            "title": "<b>Shoufa Chen</b><br>Meta AI<br>h-index 8<br><a href=\"https://www.semanticscholar.org/author/2257125196\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2257125196",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Luyuan Wang",
+            "label": "Luyuan Wang\n<i>Meta AI</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Luyuan Wang</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2306134248\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2306134248"
+            "title": "<b>Luyuan Wang</b><br>Meta AI<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2306134248\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2306134248",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Xuan Yang",
+            "label": "Xuan Yang\n<i>Duke University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Xuan Yang</b><br><a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": ""
+            "title": "<b>Xuan Yang</b><br>Duke University<br><a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "",
+            "institution": "Duke University",
+            "institution_index": 1
           },
           {
             "id": "a3",
-            "label": "Zhiheng Liu",
+            "label": "Zhiheng Liu\n<i>Meta AI</i>",
             "group": "author",
             "value": 5,
-            "title": "<b>Zhiheng Liu</b><br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2397385536\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2397385536"
+            "title": "<b>Zhiheng Liu</b><br>Meta AI<br>h-index 5<br><a href=\"https://www.semanticscholar.org/author/2397385536\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2397385536",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "Yuren Cong",
+            "label": "Yuren Cong\n<i>Meta AI</i>",
             "group": "author",
             "value": 6,
-            "title": "<b>Yuren Cong</b><br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2271361976\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2271361976"
+            "title": "<b>Yuren Cong</b><br>Meta AI<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/2271361976\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2271361976",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a5",
-            "label": "Yuanfeng Ji",
+            "label": "Yuanfeng Ji\n<i>Stanford University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Yuanfeng Ji</b><br><a href=\"https://www.semanticscholar.org/author/2445898950\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2445898950"
+            "title": "<b>Yuanfeng Ji</b><br>Stanford University<br><a href=\"https://www.semanticscholar.org/author/2445898950\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445898950",
+            "institution": "Stanford University",
+            "institution_index": 2
           },
           {
             "id": "a6",
-            "label": "Fei-yan Zhou",
+            "label": "Fei-yan Zhou\n<i>Meta AI</i>",
             "group": "author",
             "value": 7,
-            "title": "<b>Fei-yan Zhou</b><br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2272178085\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2272178085"
+            "title": "<b>Fei-yan Zhou</b><br>Meta AI<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/2272178085\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2272178085",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a7",
-            "label": "Xiaohui Zhang",
+            "label": "Xiaohui Zhang\n<i>Meta AI</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Xiaohui Zhang</b><br>h-index 1<br><a href=\"https://www.semanticscholar.org/author/2403837858\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2403837858"
+            "title": "<b>Xiaohui Zhang</b><br>Meta AI<br><a href=\"https://www.semanticscholar.org/author/2403837858\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2403837858",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a8",
-            "label": "Fanny Yang",
+            "label": "Fanny Yang\n<i>Meta AI</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Fanny Yang</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2395680261\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2395680261"
+            "title": "<b>Fanny Yang</b><br>Meta AI<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2395680261\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2395680261",
+            "institution": "Meta AI",
+            "institution_index": 0
           },
           {
             "id": "a9",
-            "label": "Belinda Zeng",
+            "label": "Belinda Zeng\n<i>Meta AI</i>",
             "group": "author",
             "value": 12,
-            "title": "<b>Belinda Zeng</b><br>h-index 12<br><a href=\"https://www.semanticscholar.org/author/2007227598\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2007227598"
+            "title": "<b>Belinda Zeng</b><br>Meta AI<br>h-index 12<br><a href=\"https://www.semanticscholar.org/author/2007227598\">Semantic Scholar</a> · <a href=\"https://github.com/facebookresearch/TUA-Bench\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2007227598",
+            "institution": "Meta AI",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -1284,35 +1378,43 @@
           },
           {
             "id": "a0",
-            "label": "Or Hirschorn",
+            "label": "Or Hirschorn\n<i>Amazon Prime Video</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Or Hirschorn</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2151002676\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2151002676"
+            "title": "<b>Or Hirschorn</b><br>Amazon Prime Video<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2151002676\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2151002676",
+            "institution": "Amazon Prime Video",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Aaron Olender",
+            "label": "Aaron Olender\n<i>Amazon Prime Video</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Aaron Olender</b><br><a href=\"https://www.semanticscholar.org/author/2445794529\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2445794529"
+            "title": "<b>Aaron Olender</b><br>Amazon Prime Video<br><a href=\"https://www.semanticscholar.org/author/2445794529\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2445794529",
+            "institution": "Amazon Prime Video",
+            "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Eli Alshan",
+            "label": "Eli Alshan\n<i>Amazon Prime Video</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Eli Alshan</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/115089681\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
-            "url": "https://www.semanticscholar.org/author/115089681"
+            "title": "<b>Eli Alshan</b><br>Amazon Prime Video<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/115089681\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
+            "url": "https://www.semanticscholar.org/author/115089681",
+            "institution": "Amazon Prime Video",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Ianir A. Ideses",
+            "label": "Ianir A. Ideses\n<i>Amazon Prime Video</i>",
             "group": "author",
             "value": 12,
-            "title": "<b>Ianir A. Ideses</b><br>h-index 12<br><a href=\"https://www.semanticscholar.org/author/1721695\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
-            "url": "https://www.semanticscholar.org/author/1721695"
+            "title": "<b>Ianir A. Ideses</b><br>Amazon Prime Video<br>h-index 12<br><a href=\"https://www.semanticscholar.org/author/1721695\">Semantic Scholar</a> · <a href=\"https://github.com/orhir/SpheRoPE\">code</a>",
+            "url": "https://www.semanticscholar.org/author/1721695",
+            "institution": "Amazon Prime Video",
+            "institution_index": 0
           },
           {
             "id": "a4",
@@ -1623,11 +1725,13 @@
           },
           {
             "id": "a6",
-            "label": "Fangcheng Fu",
+            "label": "Fangcheng Fu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Fangcheng Fu</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2365267735\">Semantic Scholar</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://www.semanticscholar.org/author/2365267735"
+            "title": "<b>Fangcheng Fu</b><br>Shanghai Jiao Tong University<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2365267735\">Semantic Scholar</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://www.semanticscholar.org/author/2365267735",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
           },
           {
             "id": "a7",
@@ -1637,7 +1741,7 @@
             "title": "<b>Jintao Zhang</b><br>Tsinghua University<br>h-index 15<br><a href=\"https://jt-zhang.github.io/\">homepage</a> · <a href=\"https://www.semanticscholar.org/author/2324058513\">Semantic Scholar</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": "https://jt-zhang.github.io/",
             "institution": "Tsinghua University",
-            "institution_index": 0
+            "institution_index": 1
           }
         ],
         "edges": [
@@ -2369,43 +2473,53 @@
           },
           {
             "id": "a0",
-            "label": "Hubert Dymarkowski",
+            "label": "Hubert Dymarkowski\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Hubert Dymarkowski</b><br><a href=\"https://www.semanticscholar.org/author/2420181951\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2420181951"
+            "title": "<b>Hubert Dymarkowski</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br><a href=\"https://www.semanticscholar.org/author/2420181951\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2420181951",
+            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Xin Fu",
+            "label": "Xin Fu\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>Xin Fu</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2253256594\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2253256594"
+            "title": "<b>Xin Fu</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2253256594\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2253256594",
+            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
+            "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Rappy Saha",
+            "label": "Rappy Saha\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
             "group": "author",
             "value": 6,
-            "title": "<b>Rappy Saha</b><br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/10685653\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/10685653"
+            "title": "<b>Rappy Saha</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 6<br><a href=\"https://www.semanticscholar.org/author/10685653\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/10685653",
+            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
+            "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Jude Haris",
+            "label": "Jude Haris\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
             "group": "author",
             "value": 4,
-            "title": "<b>Jude Haris</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2130451942\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2130451942"
+            "title": "<b>Jude Haris</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2130451942\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2130451942",
+            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
+            "institution_index": 0
           },
           {
             "id": "a4",
-            "label": "José Cano",
+            "label": "José Cano\n<i>School of Computing Science, University of Glasgow, Scotland, UK</i>",
             "group": "author",
             "value": 2,
-            "title": "<b>José Cano</b><br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2288216330\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2288216330"
+            "title": "<b>José Cano</b><br>School of Computing Science, University of Glasgow, Scotland, UK<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2288216330\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2288216330",
+            "institution": "School of Computing Science, University of Glasgow, Scotland, UK",
+            "institution_index": 0
           }
         ],
         "edges": [
