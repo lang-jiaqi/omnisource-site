@@ -20,8 +20,8 @@
             "id": "a0",
             "label": "Yijie Jin",
             "group": "author",
-            "value": 1,
-            "title": "<b>Yijie Jin</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 3,
+            "title": "<b>Yijie Jin</b><br>h-index 3<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
@@ -44,24 +44,24 @@
             "id": "a3",
             "label": "Chenkai Xu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Chenkai Xu</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 2,
+            "title": "<b>Chenkai Xu</b><br>h-index 2<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
             "id": "a4",
             "label": "Yi Tu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Yi Tu</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 4,
+            "title": "<b>Yi Tu</b><br>h-index 4<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
             "id": "a5",
             "label": "Jiajun Li",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jiajun Li</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 4,
+            "title": "<b>Jiajun Li</b><br>h-index 4<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
@@ -69,7 +69,7 @@
             "label": "Dandan Tu",
             "group": "author",
             "value": 1,
-            "title": "<b>Dandan Tu</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "title": "<b>Dandan Tu</b><br>h-index 1<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
@@ -77,31 +77,31 @@
             "label": "Xiaohui Yan",
             "group": "author",
             "value": 1,
-            "title": "<b>Xiaohui Yan</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "title": "<b>Xiaohui Yan</b><br>h-index 1<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
             "id": "a8",
             "label": "Kai Yu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Kai Yu</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 2,
+            "title": "<b>Kai Yu</b><br>h-index 2<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
             "id": "a9",
             "label": "Pengfei Liu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Pengfei Liu</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 3,
+            "title": "<b>Pengfei Liu</b><br>h-index 3<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           },
           {
             "id": "a10",
             "label": "Zhijie Deng",
             "group": "author",
-            "value": 1,
-            "title": "<b>Zhijie Deng</b><br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
+            "value": 3,
+            "title": "<b>Zhijie Deng</b><br>h-index 3<br><a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
             "url": ""
           }
         ],
@@ -220,32 +220,32 @@
             "id": "a0",
             "label": "Xinyu Wang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xinyu Wang</b><br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "value": 6,
+            "title": "<b>Xinyu Wang</b><br>h-index 6<br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
             "url": ""
           },
           {
             "id": "a1",
-            "label": "Chongbo Zhao",
+            "label": "Chong-Bo Zhao",
             "group": "author",
-            "value": 1,
-            "title": "<b>Chongbo Zhao</b><br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "value": 2,
+            "title": "<b>Chong-Bo Zhao</b><br>h-index 2<br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
             "url": ""
           },
           {
             "id": "a2",
             "label": "Fangneng Zhan",
             "group": "author",
-            "value": 1,
-            "title": "<b>Fangneng Zhan</b><br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "value": 6,
+            "title": "<b>Fangneng Zhan</b><br>h-index 6<br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
             "url": ""
           },
           {
             "id": "a3",
             "label": "Yue Ma",
             "group": "author",
-            "value": 1,
-            "title": "<b>Yue Ma</b><br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
+            "value": 4,
+            "title": "<b>Yue Ma</b><br>h-index 4<br><a href=\"https://github.com/cp-cp/LiveEdit\">code</a>",
             "url": ""
           }
         ],
@@ -518,40 +518,40 @@
             "id": "a0",
             "label": "Nikita Kachaev",
             "group": "author",
-            "value": 1,
-            "title": "<b>Nikita Kachaev</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 4,
+            "title": "<b>Nikita Kachaev</b><br>h-index 4<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a1",
             "label": "Andrey Moskalenko",
             "group": "author",
-            "value": 1,
-            "title": "<b>Andrey Moskalenko</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 2,
+            "title": "<b>Andrey Moskalenko</b><br>h-index 2<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a2",
             "label": "Matvey Skripkin",
             "group": "author",
-            "value": 1,
-            "title": "<b>Matvey Skripkin</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 4,
+            "title": "<b>Matvey Skripkin</b><br>h-index 4<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a3",
-            "label": "Nikita Kurlaev",
+            "label": "N. Kurlaev",
             "group": "author",
             "value": 1,
-            "title": "<b>Nikita Kurlaev</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>N. Kurlaev</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a4",
-            "label": "Daria Pugacheva",
+            "label": "D. Pugacheva",
             "group": "author",
-            "value": 1,
-            "title": "<b>Daria Pugacheva</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 2,
+            "title": "<b>D. Pugacheva</b><br>h-index 2<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
@@ -559,23 +559,23 @@
             "label": "Albina Burlova",
             "group": "author",
             "value": 1,
-            "title": "<b>Albina Burlova</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Albina Burlova</b><br>h-index 1<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a6",
-            "label": "Mikhail Kolosov",
+            "label": "M. Kolosov",
             "group": "author",
             "value": 1,
-            "title": "<b>Mikhail Kolosov</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>M. Kolosov</b><br>h-index 1<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a7",
             "label": "Denis Shepelev",
             "group": "author",
-            "value": 1,
-            "title": "<b>Denis Shepelev</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 4,
+            "title": "<b>Denis Shepelev</b><br>h-index 4<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
@@ -583,7 +583,7 @@
             "label": "Andrey Kuznetsov",
             "group": "author",
             "value": 1,
-            "title": "<b>Andrey Kuznetsov</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Andrey Kuznetsov</b><br>h-index 1<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
@@ -591,23 +591,23 @@
             "label": "Elena Tutubalina",
             "group": "author",
             "value": 1,
-            "title": "<b>Elena Tutubalina</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "title": "<b>Elena Tutubalina</b><br>h-index 1<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a10",
             "label": "Aleksandr I. Panov",
             "group": "author",
-            "value": 1,
-            "title": "<b>Aleksandr I. Panov</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 7,
+            "title": "<b>Aleksandr I. Panov</b><br>h-index 7<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           },
           {
             "id": "a11",
-            "label": "Alexey K. Kovalev",
+            "label": "A. Kovalev",
             "group": "author",
-            "value": 1,
-            "title": "<b>Alexey K. Kovalev</b><br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
+            "value": 11,
+            "title": "<b>A. Kovalev</b><br>h-index 11<br><a href=\"https://github.com/CognitiveAISystems/Act2Answer\">code</a>",
             "url": ""
           }
         ],
@@ -735,64 +735,66 @@
             "id": "a0",
             "label": "Hohin Kwan",
             "group": "author",
-            "value": 1,
-            "title": "<b>Hohin Kwan</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 2,
+            "title": "<b>Hohin Kwan</b><br>h-index 2<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a1",
             "label": "Hongyu Li",
             "group": "author",
-            "value": 1,
-            "title": "<b>Hongyu Li</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 5,
+            "title": "<b>Hongyu Li</b><br>h-index 5<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a2",
             "label": "Ray Zhang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Ray Zhang</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 3,
+            "title": "<b>Ray Zhang</b><br>h-index 3<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a3",
             "label": "Manyuan Zhang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Manyuan Zhang</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 9,
+            "title": "<b>Manyuan Zhang</b><br>h-index 9<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a4",
-            "label": "Xianghao Kong",
+            "label": "Xianghao Kong\n<i>HKUST</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xianghao Kong</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
-            "url": ""
+            "value": 6,
+            "title": "<b>Xianghao Kong</b><br>HKUST<br>h-index 6<br><a href=\"https://refkxh.github.io/\">homepage</a> · <a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "url": "https://refkxh.github.io/",
+            "institution": "HKUST",
+            "institution_index": 0
           },
           {
             "id": "a5",
-            "label": "Anyi Rao",
+            "label": "A. Rao",
             "group": "author",
-            "value": 1,
-            "title": "<b>Anyi Rao</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 4,
+            "title": "<b>A. Rao</b><br>h-index 4<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a6",
             "label": "Jiahao Xie",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jiahao Xie</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 7,
+            "title": "<b>Jiahao Xie</b><br>h-index 7<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           },
           {
             "id": "a7",
             "label": "Si Liu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Si Liu</b><br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
+            "value": 7,
+            "title": "<b>Si Liu</b><br>h-index 7<br><a href=\"https://github.com/Mrakas/video-mme-logical\">code</a>",
             "url": ""
           }
         ],
@@ -1409,64 +1411,64 @@
             "id": "a0",
             "label": "Xuanfan Ni",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xuanfan Ni</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 5,
+            "title": "<b>Xuanfan Ni</b><br>h-index 5<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a1",
             "label": "Liyan Xu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Liyan Xu</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 5,
+            "title": "<b>Liyan Xu</b><br>h-index 5<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a2",
             "label": "Chenyang Lyu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Chenyang Lyu</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 13,
+            "title": "<b>Chenyang Lyu</b><br>h-index 13<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a3",
             "label": "Longyue Wang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Longyue Wang</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 3,
+            "title": "<b>Longyue Wang</b><br>h-index 3<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a4",
             "label": "Mo Yu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Mo Yu</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 6,
+            "title": "<b>Mo Yu</b><br>h-index 6<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a5",
             "label": "Lemao Liu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Lemao Liu</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 4,
+            "title": "<b>Lemao Liu</b><br>h-index 4<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a6",
             "label": "Fandong Meng",
             "group": "author",
-            "value": 1,
-            "title": "<b>Fandong Meng</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 42,
+            "title": "<b>Fandong Meng</b><br>h-index 42<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
             "id": "a7",
             "label": "Jie Zhou",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jie Zhou</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "value": 7,
+            "title": "<b>Jie Zhou</b><br>h-index 7<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           },
           {
@@ -1474,7 +1476,7 @@
             "label": "Piji Li",
             "group": "author",
             "value": 1,
-            "title": "<b>Piji Li</b><br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
+            "title": "<b>Piji Li</b><br>h-index 1<br><a href=\"https://github.com/Patrick-Ni/ReFreeKV\">code</a>",
             "url": ""
           }
         ],
@@ -1575,65 +1577,67 @@
             "id": "a0",
             "label": "Youhe Jiang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Youhe Jiang</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 12,
+            "title": "<b>Youhe Jiang</b><br>h-index 12<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a1",
             "label": "Haoxu Wang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Haoxu Wang</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 10,
+            "title": "<b>Haoxu Wang</b><br>h-index 10<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a2",
-            "label": "Haotong Bao",
+            "label": "Hao Bao",
             "group": "author",
             "value": 1,
-            "title": "<b>Haotong Bao</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "title": "<b>Hao Bao</b><br>h-index 1<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a3",
             "label": "Kai Jiang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Kai Jiang</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 7,
+            "title": "<b>Kai Jiang</b><br>h-index 7<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a4",
             "label": "Jianfei Chen",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jianfei Chen</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 11,
+            "title": "<b>Jianfei Chen</b><br>h-index 11<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a5",
             "label": "Jun Zhu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jun Zhu</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 15,
+            "title": "<b>Jun Zhu</b><br>h-index 15<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a6",
             "label": "Fangcheng Fu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Fangcheng Fu</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "value": 4,
+            "title": "<b>Fangcheng Fu</b><br>h-index 4<br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
             "url": ""
           },
           {
             "id": "a7",
-            "label": "Jintao Zhang",
+            "label": "Jintao Zhang\n<i>Tsinghua University</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jintao Zhang</b><br><a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": ""
+            "value": 15,
+            "title": "<b>Jintao Zhang</b><br>Tsinghua University<br>h-index 15<br><a href=\"https://jt-zhang.github.io/\">homepage</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://jt-zhang.github.io/",
+            "institution": "Tsinghua University",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -1839,24 +1843,24 @@
             "id": "a0",
             "label": "Utsav Garg",
             "group": "author",
-            "value": 1,
-            "title": "<b>Utsav Garg</b>",
+            "value": 4,
+            "title": "<b>Utsav Garg</b><br>h-index 4",
             "url": ""
           },
           {
             "id": "a1",
             "label": "Sungjin Hong",
             "group": "author",
-            "value": 1,
-            "title": "<b>Sungjin Hong</b>",
+            "value": 3,
+            "title": "<b>Sungjin Hong</b><br>h-index 3",
             "url": ""
           },
           {
             "id": "a2",
-            "label": "Jason Jung",
+            "label": "Jason J. Jung",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jason Jung</b>",
+            "value": 3,
+            "title": "<b>Jason J. Jung</b><br>h-index 3",
             "url": ""
           },
           {
@@ -1871,32 +1875,32 @@
             "id": "a4",
             "label": "Shaan Desai",
             "group": "author",
-            "value": 1,
-            "title": "<b>Shaan Desai</b>",
+            "value": 2,
+            "title": "<b>Shaan Desai</b><br>h-index 2",
             "url": ""
           },
           {
             "id": "a5",
-            "label": "Joon Hee Kim",
+            "label": "Joonghoon Kim",
             "group": "author",
-            "value": 1,
-            "title": "<b>Joon Hee Kim</b>",
+            "value": 5,
+            "title": "<b>Joonghoon Kim</b><br>h-index 5",
             "url": ""
           },
           {
             "id": "a6",
             "label": "Anirudh Shrinivason",
             "group": "author",
-            "value": 1,
-            "title": "<b>Anirudh Shrinivason</b>",
+            "value": 2,
+            "title": "<b>Anirudh Shrinivason</b><br>h-index 2",
             "url": ""
           },
           {
             "id": "a7",
-            "label": "Edmond Wen",
+            "label": "E. Wen",
             "group": "author",
-            "value": 1,
-            "title": "<b>Edmond Wen</b>",
+            "value": 2,
+            "title": "<b>E. Wen</b><br>h-index 2",
             "url": ""
           },
           {
@@ -2373,34 +2377,34 @@
           },
           {
             "id": "a1",
-            "label": "Xingjian Fu",
+            "label": "Xin Fu",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xingjian Fu</b>",
+            "value": 2,
+            "title": "<b>Xin Fu</b><br>h-index 2",
             "url": ""
           },
           {
             "id": "a2",
             "label": "Rappy Saha",
             "group": "author",
-            "value": 1,
-            "title": "<b>Rappy Saha</b>",
+            "value": 6,
+            "title": "<b>Rappy Saha</b><br>h-index 6",
             "url": ""
           },
           {
             "id": "a3",
             "label": "Jude Haris",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jude Haris</b>",
+            "value": 4,
+            "title": "<b>Jude Haris</b><br>h-index 4",
             "url": ""
           },
           {
             "id": "a4",
             "label": "José Cano",
             "group": "author",
-            "value": 1,
-            "title": "<b>José Cano</b>",
+            "value": 2,
+            "title": "<b>José Cano</b><br>h-index 2",
             "url": ""
           }
         ],
