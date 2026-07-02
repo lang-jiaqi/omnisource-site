@@ -88,6 +88,7 @@
   .legend-line { width:18px; height:2px; border-radius:999px; background:var(--accent); }
   .graph { width:100%; height:360px; border-radius:10px;
     background:var(--graph-bg); border:1px solid var(--border); }
+  .graph svg { display:block; width:100%; height:100%; }
   @media (max-width:760px) {
     .topbar { align-items:flex-start; flex-direction:column; }
     .track-heading { flex-direction:column; }
@@ -251,12 +252,100 @@
     };
   };
   const prepareGraph = g => styleGraph(layoutGraph(g));
+  const stripHtml = value => String(value ?? '').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+  const shortLabel = value => {
+    const text = String(value || '');
+    return text.length > 16 ? text.slice(0, 15) + '...' : text;
+  };
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const setSvgAttrs = (el, attrs) => Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
+  const makeSvg = (tag, attrs = {}, text) => {
+    const node = document.createElementNS(SVG_NS, tag);
+    setSvgAttrs(node, attrs);
+    if (text !== undefined) node.textContent = text;
+    return node;
+  };
+  const renderFallbackGraph = (el, graph) => {
+    const laidOut = prepareGraph(graph);
+    const p = graphPalettes[currentTheme()];
+    const byId = new Map(laidOut.nodes.map(node => [String(node.id), node]));
+    el.replaceChildren();
+    const svg = makeSvg('svg', {
+      viewBox:'-220 -205 440 430',
+      preserveAspectRatio:'xMidYMid meet',
+      role:'img',
+      'aria-label':'Author relationship graph',
+    });
+    laidOut.edges.forEach(edge => {
+      const from = byId.get(String(edge.from));
+      const to = byId.get(String(edge.to));
+      if (!from || !to) return;
+      const isCollab = edge.kind === 'collab';
+      svg.appendChild(makeSvg('line', {
+        x1:Number(from.x || 0), y1:Number(from.y || 0),
+        x2:Number(to.x || 0), y2:Number(to.y || 0),
+        stroke:isCollab ? p.accent : p.edge,
+        'stroke-width':isCollab ? 2.2 : 1.4,
+        'stroke-linecap':'round',
+        opacity:isCollab ? 0.72 : 0.9,
+      }));
+    });
+    laidOut.nodes.forEach(node => {
+      const isPaper = node.group === 'paper';
+      const x = Number(node.x || 0);
+      const y = Number(node.y || 0);
+      const radius = isPaper ? 28 : Math.max(12, Math.min(22, 10 + Number(node.value || 1) * 4));
+      const color = node.color && typeof node.color === 'object' ? node.color : {};
+      const fill = color.background || (isPaper ? p.paper : p.author);
+      const stroke = color.border || (isPaper ? p.paperBorder : p.authorBorder);
+      const labelColor = isPaper ? '#fff' : ((node.font && node.font.color) || p.authorLabel);
+      const attrs = {};
+      if (node.url) {
+        attrs.tabindex = '0';
+        attrs.role = 'link';
+      }
+      const group = makeSvg('g', attrs);
+      group.appendChild(makeSvg('title', {}, stripHtml(node.title || node.label || '')));
+      group.appendChild(makeSvg('circle', {
+        cx:x, cy:y, r:radius, fill, stroke,
+        'stroke-width':isPaper ? 2 : 1.2,
+      }));
+      if (isPaper) {
+        group.appendChild(makeSvg('text', {
+          x, y:y + 8, 'text-anchor':'middle', 'font-size':24,
+        }, '📄'));
+      } else {
+        group.appendChild(makeSvg('text', {
+          x, y:y + radius + 17, 'text-anchor':'middle',
+          fill:labelColor, 'font-size':11, 'font-weight':600,
+        }, shortLabel(node.label)));
+      }
+      if (node.url) {
+        group.style.cursor = 'pointer';
+        const openUrl = () => window.open(node.url, '_blank', 'noopener');
+        group.addEventListener('click', openUrl);
+        group.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openUrl();
+          }
+        });
+      }
+      svg.appendChild(group);
+    });
+    el.appendChild(svg);
+    networks.set(el.id, { fallback:true, el, graph });
+  };
   const networks = new Map();
   const initGraph = id => {
     if (networks.has(id) || !GRAPHS[id]) return;
     const el = document.getElementById(id);
     if (!el) return;
     const g = GRAPHS[id];
+    if (!window.vis || !window.vis.DataSet || !window.vis.Network) {
+      renderFallbackGraph(el, g);
+      return;
+    }
     const laidOut = prepareGraph(g);
     const nds = new vis.DataSet(laidOut.nodes);
     const eds = new vis.DataSet(laidOut.edges);
@@ -274,7 +363,11 @@
     const panel = document.querySelector('.track-panel:not([hidden])');
     panel?.querySelectorAll('.graph').forEach(el => initGraph(el.id));
     requestAnimationFrame(() => {
-      panel?.querySelectorAll('.graph').forEach(el => networks.get(el.id)?.net.fit({ animation:false }));
+      panel?.querySelectorAll('.graph').forEach(el => {
+        const item = networks.get(el.id);
+        if (item?.fallback) renderFallbackGraph(el, item.graph);
+        else item?.net?.fit({ animation:false });
+      });
     });
   };
   const defaultTrack = document.querySelector('.track-tab')?.dataset.track;
@@ -301,6 +394,10 @@
     document.documentElement.dataset.theme = nextTheme;
     localStorage.setItem('omnisource-theme', nextTheme);
     networks.forEach(item => {
+      if (item.fallback) {
+        renderFallbackGraph(item.el, item.graph);
+        return;
+      }
       const laidOut = prepareGraph(item.graph);
       item.nodes.update(laidOut.nodes);
       item.edges.update(laidOut.edges);
