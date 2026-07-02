@@ -1,18 +1,48 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OmniSource — llm-agents — 2026-07-01</title>
+<title>OmniSource — ai-infra — 2026-07-02</title>
+<script>
+  (() => {
+    const saved = localStorage.getItem("omnisource-theme");
+    document.documentElement.dataset.theme = saved || "dark";
+  })();
+</script>
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <style>
-  :root { --bg:#0a0a0f; --card:#13131c; --fg:#e8e8ef; --muted:#8e8e9e; --accent:#7c83ff; }
+  :root {
+    --bg:#0a0a0f; --card:#13131c; --fg:#e8e8ef; --muted:#8e8e9e; --accent:#7c83ff;
+    --border:#1f1f2b; --soft-border:#23232e; --body-copy:#cdced8; --graph-bg:#0e0e16;
+    --success:#6fb0a5; --success-border:#2f8377; --bar-bg:#23232e; --hero-bg:#11111a;
+  }
+  :root[data-theme="light"] {
+    --bg:#f7f8fb; --card:#ffffff; --fg:#171821; --muted:#687084; --accent:#4257c9;
+    --border:#dfe3ee; --soft-border:#d7dce8; --body-copy:#303545; --graph-bg:#f0f3f9;
+    --success:#147c71; --success-border:#80beb6; --bar-bg:#d9dfeb; --hero-bg:#ffffff;
+  }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-  header img { width:100%; display:block; }
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    transition:background .2s ease, color .2s ease; }
+  .site-hero { background:var(--hero-bg); border-bottom:1px solid var(--border); }
+  .site-hero-inner { max-width:1280px; margin:0 auto; padding:40px 20px 44px; text-align:center; }
+  .brand-title { margin:0; font-size:clamp(2.6rem, 5vw, 5rem); line-height:.95; letter-spacing:0;
+    font-weight:800; color:#626fff; background:linear-gradient(90deg, #3f7cff 0%, #8f5cff 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .brand-copy { max-width:980px; margin:18px auto 0; color:var(--fg);
+    font-size:clamp(2.2rem, 4.4vw, 4.7rem); line-height:1.1; font-weight:800; letter-spacing:0; }
   .wrap { max-width:1140px; margin:0 auto; padding:8px 20px 80px; }
-  .sub { color:var(--muted); font-size:.85rem; margin:14px 0 4px; }
-  h2 { font-size:1.05rem; margin:2rem 0 1rem; padding-bottom:.4rem; border-bottom:1px solid #23232e; }
-  .card { background:var(--card); border:1px solid #1f1f2b; border-radius:14px;
+  .topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:14px 0 4px; }
+  .sub { color:var(--muted); font-size:.85rem; }
+  .theme-toggle { appearance:none; display:inline-grid; place-items:center; width:38px; height:38px;
+    background:var(--card); border:1px solid var(--border); border-radius:999px; color:var(--fg);
+    box-shadow:0 8px 24px rgba(0,0,0,.08); cursor:pointer; }
+  .theme-toggle:hover { border-color:var(--accent); }
+  .theme-toggle .icon { display:none; font-size:1.05rem; line-height:1; }
+  :root[data-theme="light"] .theme-toggle .moon { display:block; }
+  :root:not([data-theme="light"]) .theme-toggle .sun { display:block; }
+  h2 { font-size:1.05rem; margin:2rem 0 1rem; padding-bottom:.4rem; border-bottom:1px solid var(--soft-border); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px;
     padding:18px 20px; margin:14px 0; }
   .card.has-graph { display:flex; gap:24px; align-items:flex-start; }
   .card-main { flex:1; min-width:0; }
@@ -21,72 +51,187 @@
   .meta { color:var(--accent); font-size:.85rem; margin:.4rem 0; }
   .links { font-size:.95rem; margin:.3rem 0 .7rem; }
   .links a { color:var(--accent); text-decoration:none; }
-  .card p { color:#cdced8; margin:.5rem 0; font-size:1.05rem; line-height:1.6; }
+  .card p { color:var(--body-copy); margin:.5rem 0; font-size:1.05rem; line-height:1.6; }
   .card b { color:var(--fg); margin-right:.3rem; }
   .review { display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    margin:.7rem 0 .2rem; padding-top:.6rem; border-top:1px dashed #23232e; }
-  .pot { flex:none; font-size:.8rem; font-weight:600; color:#6fb0a5;
-    border:1px solid #2f8377; border-radius:999px; padding:.12rem .6rem; }
+    margin:.7rem 0 .2rem; padding-top:.6rem; border-top:1px dashed var(--soft-border); }
+  .pot { flex:none; font-size:.8rem; font-weight:600; color:var(--success);
+    border:1px solid var(--success-border); border-radius:999px; padding:.12rem .6rem; }
   .dims { display:flex; gap:14px; flex-wrap:wrap; }
   .dim { display:flex; align-items:center; gap:6px; font-size:.74rem; color:var(--muted); }
   .dim-l { white-space:nowrap; }
-  .bar { display:inline-block; width:46px; height:5px; border-radius:3px; background:#23232e; }
-  .bar > span { display:block; height:100%; border-radius:3px; background:#6fb0a5; }
-  .graph { flex:0 0 420px; width:420px; height:360px; border-radius:10px;
-    background:#0e0e16; border:1px solid #1f1f2b; }
+  .bar { display:inline-block; width:46px; height:5px; border-radius:3px; background:var(--bar-bg); }
+  .bar > span { display:block; height:100%; border-radius:3px; background:var(--success); }
+  .graph-wrap { flex:0 0 420px; width:420px; }
+  .graph-legend { display:flex; align-items:center; justify-content:flex-end; gap:10px;
+    min-height:24px; margin:0 0 8px; color:var(--muted); font-size:.72rem; flex-wrap:wrap; }
+  .graph-legend span { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .legend-paper { color:var(--accent); font-size:.9rem; line-height:1; }
+  .legend-author { width:8px; height:8px; border-radius:50%; background:var(--fg); border:1px solid var(--border); }
+  .legend-line { width:18px; height:2px; border-radius:999px; background:var(--accent); }
+  .graph { width:100%; height:360px; border-radius:10px;
+    background:var(--graph-bg); border:1px solid var(--border); }
   @media (max-width:760px) {
+    .topbar { align-items:flex-start; flex-direction:column; }
     .card.has-graph { flex-direction:column; align-items:stretch; }
-    .graph { flex:none; width:100%; }
+    .graph-wrap { flex:none; width:100%; }
+    .graph-legend { justify-content:flex-start; }
   }
   footer { margin-top:3rem; color:var(--muted); font-size:.85rem; text-align:center; }
 </style></head>
 <body>
-<header><img src="headbar.png" alt="OmniSource"></header>
+<header class="site-hero"><div class="site-hero-inner"><h1 class="brand-title">OmniSource</h1><p class="brand-copy">AI-Driven Open Research Community</p></div></header>
 <div class="wrap">
-<div class="sub">2026-07-01 · llm-agents</div>
+<div class="topbar"><div class="sub">2026-07-02 · ai-infra</div><button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题"><span class="icon sun" aria-hidden="true">☀</span><span class="icon moon" aria-hidden="true">☾</span></button></div>
 <h2>📄 论文</h2>
-<div class="card"><div class="card-main"><h3>1. Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</h3><div class="auth">Lei Bai, Zongsheng Cao, Yang Chen, Zhiyao Cui, Shangheng Du, Yue Fan et al.</div><div class="meta">high  ·  2026-06-29  ·  via hf_papers  ·  👍 69</div><div class="links"><a href="https://arxiv.org/abs/2606.30616">链接</a>  ·  <a href="https://github.com/InternScience/Agents-A1">代码</a></div><p><b>为什么值得看</b> 该方法使得在长视野任务上，35B模型能够与1T参数模型的性能相匹敌，提供了一种更高效的代理训练路径，适用于多领域的应用场景。</p><p><b>核心思想</b> 通过扩展代理的视野而非参数规模，构建了一个35B的混合专家模型Agents-A1，能够在长达45K个token的轨迹上实现高效的知识-行动基础设施。</p><div class="review"><span class="pot">潜力 66</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:52%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>2. OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks</h3><div class="auth">Mengqi Yuan, Zilong Zhou, Xinzhuang Xiong, Weiming Wu, Jiayang Sun, Jiamin Song et al.</div><div class="meta">high  ·  2026-06-28  ·  via hf_papers  ·  👍 16</div><div class="links"><a href="https://arxiv.org/abs/2606.29537">链接</a>  ·  <a href="https://github.com/xlang-ai/OSWorld-V2">代码</a></div><p><b>为什么值得看</b> 该基准揭示了当前代理在专业级计算机使用中的局限性，强调了在动态环境和隐含状态推理等复杂任务中的不足，推动了未来代理的改进方向。</p><p><b>核心思想</b> OSWorld 2.0 引入了 108 个长时间计算机使用工作流程的基准，旨在捕捉真实世界的复杂性和挑战性。</p><div class="review"><span class="pot">潜力 59</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>3. GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems</h3><div class="auth">Xiaocheng Yang, Abdulrahman Alrabah, Dilek Hakkani-Tür, Gokhan Tur</div><div class="meta">high  ·  2026-06-26  ·  via hf_papers  ·  👍 11</div><div class="links"><a href="https://arxiv.org/abs/2606.28187">链接</a>  ·  <a href="https://github.com/yxc-cyber/AgentChord">代码</a></div><p><b>为什么值得看</b> 该方法使得能够精确识别错误来源并进行有针对性的提示优化，从而显著提升多智能体系统的性能，尤其在复杂任务中表现优于传统方法。</p><p><b>核心思想</b> 通过构建计算图并引入基于梯度的连接权重，GBC 实现了对多智能体系统中每个智能体输出对下游智能体影响的精确量化。</p><div class="review"><span class="pot">潜力 56</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>4. TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents</h3><div class="auth">Shoufa Chen, Luyuan Wang, Xuan Yang, Zhiheng Liu, Yuren Cong, Yuanfeng Ji et al.</div><div class="meta">high  ·  2026-06-26  ·  via hf_papers  ·  👍 44</div><div class="links"><a href="https://arxiv.org/abs/2606.28480">链接</a>  ·  <a href="https://github.com/facebookresearch/TUA-Bench">代码</a></div><p><b>为什么值得看</b> 通过全面评估终端使用能力，TUA-Bench 促进了从狭窄任务助手向能够在多样数字环境中可靠操作的通用代理的转变。</p><p><b>核心思想</b> TUA-Bench 提供了一个包含 120 个真实任务的基准，涵盖文档编辑、邮件管理等多种终端使用场景。</p><div class="review"><span class="pot">潜力 53</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:45%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>5. Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction</h3><div class="auth">Sunqi Fan, Qingle Liu, Runqi Yin, Meng-Hao Guo, Shuojin Yang</div><div class="meta">high  ·  2026-06-28  ·  via hf_papers  ·  👍 22</div><div class="links"><a href="https://arxiv.org/abs/2606.29445">链接</a>  ·  <a href="https://github.com/VG-GUI-TASKER/VG-GUI-TASKER">代码</a></div><p><b>为什么值得看</b> 这一方法显著提升了 MLLM 在视频问答和视频引导的代理任务上的表现，表明关键帧提取对多模态智能的理解和应用至关重要。</p><p><b>核心思想</b> TASKER 算法通过同时考虑任务相关性和场景动态来提取关键帧，从而识别出信息丰富的帧。</p><div class="review"><span class="pot">潜力 53</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:52%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>6. Agentic Abstention: Do Agents Know When to Stop Instead of Act?</h3><div class="auth">Han Luo, Bingbing Wen, Lucy Lu Wang</div><div class="meta">high  ·  2026-06-27  ·  via hf_papers  ·  👍 124</div><div class="links"><a href="https://arxiv.org/abs/2606.28733">链接</a></div><p><b>为什么值得看</b> 通过引入CONVOLVE方法，显著提高了代理在多轮任务中及时弃权的能力，解决了现有模型在环境变化时的决策不足问题，尤其对大规模模型的表现有重要影响。</p><p><b>核心思想</b> 定义了代理性弃权问题，代理在不确定性下决定何时停止交互，而不是仅仅在单轮中选择回答或弃权。</p><div class="review"><span class="pot">潜力 49</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:49%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>7. Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System</h3><div class="auth">Jiazhao Zhang, Gengze Zhou, Hale Yin, Yiyang Huang, Zixing Lei, Qihang Peng et al.</div><div class="meta">high  ·  2026-06-18  ·  via hf_papers  ·  👍 22</div><div class="links"><a href="https://arxiv.org/abs/2606.18112">链接</a>  ·  <a href="https://github.com/QwenLM/Qwen-RobotNav">代码</a></div><p><b>为什么值得看</b> 这种灵活性使得 Qwen-RobotNav 能够在长时间任务中动态切换策略，提升了复杂行为的生成能力，适用于多种智能体导航场景。</p><p><b>核心思想</b> 通过参数化接口和多任务模式，Qwen-RobotNav 在推理时可动态调整导航行为和视觉历史编码。</p><div class="review"><span class="pot">潜力 48</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:56%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:53%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:49%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>8. ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering</h3><div class="auth">ZhengXian Wu, Hangrui Xu, Kai Shi, Zhuohong Chen, Yunyao Yu, Chuanrui Zhang et al.</div><div class="meta">high  ·  2026-06-26  ·  via hf_papers  ·  👍 9</div><div class="links"><a href="https://arxiv.org/abs/2606.27974">链接</a>  ·  <a href="https://github.com/DingWu1021/Promsa">代码</a></div><p><b>为什么值得看</b> 该方法打破了固定的检索-生成流程，使得模型在推理过程中更具适应性，从而在 E-VQA 和 InfoSeek 数据集上实现了显著的检索和端到端准确率提升，适合需要动态检索的应用场景。</p><p><b>核心思想</b> ProMSA 通过迭代选择图像搜索、文本搜索或停止，结合明确的工具调用预算和去重机制，提升了知识基础视觉问答的效率。</p><div class="review"><span class="pot">潜力 48</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:52%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:42%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>1. ReFreeKV: Towards Threshold-Free KV Cache Compression</h3><div class="auth">Xuanfan Ni, Liyan Xu, Chenyang Lyu, Longyue Wang, Mo Yu, Lemao Liu et al.</div><div class="meta">high  ·  2026-06-26  ·  via hf_papers  ·  👍 44</div><div class="links"><a href="https://arxiv.org/abs/2502.16886">链接</a>  ·  <a href="https://github.com/Patrick-Ni/ReFreeKV">代码</a></div><p><b>为什么值得看</b> 这使得在处理开放域输入时，KV缓存的性能更为稳定，适应性更强，从而提高了大规模语言模型推理的效率和灵活性。</p><p><b>核心思想</b> 提出了一种新的目标，通过自适应调整预算分配，实现无阈值的KV缓存压缩，避免了对输入特定阈值的依赖。</p><div class="review"><span class="pot">潜力 58</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:54%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:45%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>2. BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding</h3><div class="auth">Hao Zhang, Yiming Hu, Yong Wang, Mingqiao Mo, Xin Xiao, Xiangxiang Chu</div><div class="meta">high  ·  2026-06-30  ·  via hf_papers  ·  👍 67</div><div class="links"><a href="https://arxiv.org/abs/2606.31315">链接</a>  ·  <a href="https://github.com/AMAP-ML/BlockPilot">代码</a></div><p><b>为什么值得看</b> 这种方法使得推测解码在不同输入上能够动态调整块大小，提高了推理效率，适用于需要快速响应的推理服务场景。</p><p><b>核心思想</b> 通过实例自适应策略学习预测最佳块大小，从而优化扩散基础的推测解码过程。</p><div class="review"><span class="pot">潜力 50</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:51%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>3. TurboServe: Serving Streaming Video Generation Efficiently and Economically</h3><div class="auth">Youhe Jiang, Haoxu Wang, Haotong Bao, Kai Jiang, Jianfei Chen, Jun Zhu et al.</div><div class="meta">high  ·  2026-06-17  ·  via hf_papers  ·  👍 13</div><div class="links"><a href="https://arxiv.org/abs/2606.19271">链接</a>  ·  <a href="https://github.com/shengshu-ai/TurboServe">代码</a></div><p><b>为什么值得看</b> 该系统在多用户和多 GPU 环境中显著降低了每个视频块的最大延迟和 GPU 运营成本，适合需要高效视频生成的应用场景。</p><p><b>核心思想</b> TurboServe 将流媒体视频生成的服务视为一个在线调度问题，通过迁移感知的会话放置控制器和负载驱动的自动扩展控制器来优化会话分配和 GPU 资源配置。</p><div class="review"><span class="pot">潜力 41</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:55%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>4. One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining</h3><div class="auth">Philip Zmushko, Egor Petrov, Nursultan Abdullaev, Mikhail Khrushchev, Samuel Horváth</div><div class="meta">high  ·  2026-06-29  ·  via hf_papers  ·  👍 20</div><div class="links"><a href="https://arxiv.org/abs/2606.30634">链接</a></div><p><b>为什么值得看</b> 这使得在大规模异步管道并行训练中，能够使用更强健的优化器，提升了训练效率，减少了计算资源的浪费，适用于更大规模的模型。</p><p><b>核心思想</b> 通过引入优化器无关的误差反馈修正，解决了异步管道并行训练中的一阶梯度延迟问题，确保了稳定性和收敛性。</p><div class="review"><span class="pot">潜力 40</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:52%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:51%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>5. MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</h3><div class="auth">Sheng Qiang, Ruiwei Chen, Yinpeng Wu, Jinyu Gu, Zhichao Hua, Yubin Xia et al.</div><div class="meta">high  ·  2026-07-01  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2607.00760v1">链接</a></div><p><b>为什么值得看</b> 该方法显著提高了长上下文 LLM 的服务性能，最大可实现 16 倍的注意力加速和 3 倍的内存节省，使得在资源受限的环境中也能高效运行大规模模型。</p><p><b>核心思想</b> MosaicKV 通过动态二维压缩技术，针对 KV 缓存中的重要元素选择压缩策略，从而在保持准确性的同时减少内存使用。</p><div class="review"><span class="pot">潜力 32</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:53%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:51%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>6. SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering</h3><div class="auth">Zaifeng Pan, Qianxu Wang, Zhengding Hu, Chang Chen, Yue Guan, Yanbo Zhou et al.</div><div class="meta">high  ·  2026-06-30  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2607.00151v1">链接</a></div><p><b>为什么值得看</b> 这使得 LLM 代理能够更高效地处理长时间的多轮工作流，显著降低了首次令牌的响应时间，提升了用户体验和系统吞吐量。</p><p><b>核心思想</b> 通过提前执行上下文转换，将其作为异步操作处理，从而避免了阻塞并减少了转换开销。</p><div class="review"><span class="pot">潜力 32</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:50%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>7. BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal</h3><div class="auth">Prabod Rathnayaka, Fabian Waschkowski, Lukas Wesemann</div><div class="meta">high  ·  2026-07-01  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2607.00501v1">链接</a></div><p><b>为什么值得看</b> 这使得在 Apple M 系列设备上进行大规模语言模型推理时，性能显著优于现有框架，满足了边缘推理对高效本地运行时的需求。</p><p><b>核心思想</b> 通过在 Apple Silicon 上原生构建 Metal 推理运行时，结合芯片特定的内核融合和统一内存优化，BaseRT 提高了推理吞吐量。</p><div class="review"><span class="pot">潜力 32</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:48%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:42%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:46%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>8. ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</h3><div class="auth">Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng</div><div class="meta">high  ·  2026-07-01  ·  via arxiv</div><div class="links"><a href="http://arxiv.org/abs/2607.00466v1">链接</a></div><p><b>为什么值得看</b> 该方法在多达 40 个 GPU 的部署中，将中位数 TPOT 降低了 5.9-13.9%，提高了 MoE 模型的解码效率，确保了输出一致性。</p><p><b>核心思想</b> ELDR 通过构建专家签名来预测请求在生成期间将激活的专家，从而实现基于专家局部性的解码路由。</p><div class="review"><span class="pot">潜力 32</span><span class="dims"><span class="dim"><span class="dim-l">新颖度</span><span class="bar"><span style="width:49%"></span></span></span><span class="dim"><span class="dim-l">workload</span><span class="bar"><span style="width:42%"></span></span></span><span class="dim"><span class="dim-l">开源度</span><span class="bar"><span style="width:0%"></span></span></span><span class="dim"><span class="dim-l">洞见</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">呈现</span><span class="bar"><span style="width:47%"></span></span></span><span class="dim"><span class="dim-l">机构信号</span><span class="bar"><span style="width:0%"></span></span></span></span></div></div></div>
 <h2>💻 开源项目</h2>
-<div class="card"><div class="card-main"><h3>1. TauricResearch/TradingAgents</h3><div class="auth">TauricResearch</div><div class="meta">medium  ·  2026-06-22  ·  via github  ·  👍 90054</div><div class="links"><a href="https://github.com/TauricResearch/TradingAgents">链接</a>  ·  <a href="https://github.com/TauricResearch/TradingAgents">代码</a></div><p><b>为什么值得看</b> 该框架使得多个智能体能够在复杂市场环境中协同工作，优化交易决策，适用于金融科技领域的研究者和开发者。</p><p><b>核心思想</b> 通过多智能体系统，结合大语言模型进行金融交易决策，提升交易策略的协同效率。</p><div class="review"><span class="pot">潜力 92</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:75%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>2. thedotmack/claude-mem</h3><div class="auth">thedotmack</div><div class="meta">high  ·  2026-07-01  ·  via github  ·  👍 85270</div><div class="links"><a href="https://github.com/thedotmack/claude-mem">链接</a>  ·  <a href="https://github.com/thedotmack/claude-mem">代码</a></div><p><b>为什么值得看</b> 这使得 LLM 代理能够在不同会话中保持一致性和连贯性，提升用户体验，尤其是在需要长期交互的应用场景中。</p><p><b>核心思想</b> 通过压缩 AI 生成的会话数据，将相关上下文注入未来的会话中，从而实现持久的上下文记忆。</p><div class="review"><span class="pot">潜力 86</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:75%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>3. infiniflow/ragflow</h3><div class="auth">infiniflow</div><div class="meta">medium  ·  2026-07-01  ·  via github  ·  👍 83992</div><div class="links"><a href="https://github.com/infiniflow/ragflow">链接</a>  ·  <a href="https://github.com/infiniflow/ragflow">代码</a></div><p><b>为什么值得看</b> 这使得 LLM 在处理复杂任务时能更有效地利用外部信息，提升了生成质量和上下文理解能力，适用于需要高效信息检索的应用场景。</p><p><b>核心思想</b> 将检索增强生成（RAG）与智能体能力结合，创建一个更优的上下文层。</p><div class="review"><span class="pot">潜力 86</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:75%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>4. opendatalab/MinerU</h3><div class="auth">opendatalab</div><div class="meta">medium  ·  2026-06-30  ·  via github  ·  👍 72658</div><div class="links"><a href="https://github.com/opendatalab/MinerU">链接</a>  ·  <a href="https://github.com/opendatalab/MinerU">代码</a></div><p><b>为什么值得看</b> 这使得LLM代理能够更轻松地处理和理解多种文档格式，从而提高了信息提取和任务执行的效率。</p><p><b>核心思想</b> 将复杂文档（如PDF和Office文档）转换为适合LLM的markdown/JSON格式，以便于代理工作流使用。</p><div class="review"><span class="pot">潜力 86</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:75%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>5. anthropics/claude-code</h3><div class="auth">anthropics</div><div class="meta">high  ·  2026-06-30  ·  via github  ·  👍 135196</div><div class="links"><a href="https://github.com/anthropics/claude-code">链接</a>  ·  <a href="https://github.com/anthropics/claude-code">代码</a></div><p><b>为什么值得看</b> 它使开发者能够更高效地处理复杂代码和 git 工作流，降低了编码的门槛，提升了生产力。</p><p><b>核心思想</b> Claude Code 通过自然语言命令理解代码库并执行例行任务，从而加速编码过程。</p><div class="review"><span class="pot">潜力 81</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:45%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:90%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>1. flashinfer-ai/flashinfer</h3><div class="auth">flashinfer-ai</div><div class="meta">high  ·  2026-07-02  ·  via github  ·  👍 5887</div><div class="links"><a href="https://github.com/flashinfer-ai/flashinfer">链接</a>  ·  <a href="https://github.com/flashinfer-ai/flashinfer">代码</a></div><p><b>为什么值得看</b> 通过优化内核，FlashInfer 能显著提高 LLM 的推理速度和资源利用率，使得在边缘设备上部署变得更加可行。</p><p><b>核心思想</b> FlashInfer 提供了一套高效的内核库，专门针对大规模语言模型的推理服务进行优化。</p><div class="review"><span class="pot">潜力 86</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:90%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:100%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>2. RightNow-AI/AutoMegaKernel</h3><div class="auth">RightNow-AI</div><div class="meta">high  ·  2026-06-29  ·  via github  ·  👍 93</div><div class="links"><a href="https://github.com/RightNow-AI/AutoMegaKernel">链接</a>  ·  <a href="https://github.com/RightNow-AI/AutoMegaKernel">代码</a></div><p><b>为什么值得看</b> 这使得在单个 GPU 上进行高效推理成为可能，显著提升了 LLM 的解码速度，适合需要快速响应的应用场景。</p><p><b>核心思想</b> 将模型编译为一个可证明正确的自适应 CUDA 大内核，并在 batch-1 LLM 解码时超越 cuBLAS 的性能。</p><div class="review"><span class="pot">潜力 86</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:72%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:49%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>3. AMD-AGI/Apex</h3><div class="auth">AMD-AGI</div><div class="meta">high  ·  2026-06-26  ·  via github  ·  👍 70</div><div class="links"><a href="https://github.com/AMD-AGI/Apex">链接</a>  ·  <a href="https://github.com/AMD-AGI/Apex">代码</a></div><p><b>为什么值得看</b> 这使得在 AMD 平台上实现更高效的 GPU 计算，提升了编译速度和正确性，尤其对需要高性能计算的 AI 应用至关重要。</p><p><b>核心思想</b> 利用 LLM 代理优化 AMD ROCm 上的 GPU 内核，通过分析瓶颈内核并使用 Claude Code 或 Codex 进行优化。</p><div class="review"><span class="pot">潜力 58</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:20%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:47%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>4. Mog9/KV-Compression</h3><div class="auth">Mog9</div><div class="meta">high  ·  2026-06-19  ·  via github  ·  👍 14</div><div class="links"><a href="https://github.com/Mog9/KV-Compression">链接</a>  ·  <a href="https://github.com/Mog9/KV-Compression">代码</a></div><p><b>为什么值得看</b> 通过高达 7.31 倍的压缩率，显著降低了 LLM 推理中的内存占用，使得在资源受限的环境中运行大型模型成为可能。</p><p><b>核心思想</b> 在 Triton 中实现并基准测试 KV 缓存压缩方法，结合 Flash Attention 优化 KIVI 和 TurboQuant 内核。</p><div class="review"><span class="pot">潜力 53</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:26%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:45%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:26%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>5. ahb-sjsu/turboquant-pro</h3><div class="auth">ahb-sjsu</div><div class="meta">high  ·  2026-07-01  ·  via github  ·  👍 20</div><div class="links"><a href="https://github.com/ahb-sjsu/turboquant-pro">链接</a>  ·  <a href="https://github.com/ahb-sjsu/turboquant-pro">代码</a></div><p><b>为什么值得看</b> 这种高效的压缩方法使得在资源受限的环境中部署大型语言模型和向量数据库成为可能，显著提升了存储和计算效率，适合需要快速响应的推理服务场景。</p><p><b>核心思想</b> 通过 PCA-Matryoshka 和 TurboQuant 实现嵌入和 KV 缓存的 27 倍压缩，同时保持 99.8% 的 recall@10。</p><div class="review"><span class="pot">潜力 49</span><span class="dims"><span class="dim"><span class="dim-l">增长势头</span><span class="bar"><span style="width:9%"></span></span></span><span class="dim"><span class="dim-l">成熟度</span><span class="bar"><span style="width:75%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">采用度</span><span class="bar"><span style="width:29%"></span></span></span></span></div></div></div>
 <h2>📝 实验室动态</h2>
-<div class="card"><div class="card-main"><h3>1. Agentic Resource Discovery: Let agents search</h3><div class="meta">high  ·  2026-06-17  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/agentic-resource-discovery-launch">链接</a></div><p><b>为什么值得看</b> 这种方法使得智能体能够在动态环境中更好地适应和优化资源使用，尤其对需要实时决策的应用场景具有重要意义。</p><p><b>核心思想</b> 通过让智能体自主搜索和发现资源，提升了任务执行的灵活性和效率。</p><div class="review"><span class="pot">潜力 87</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:88%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:53%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>2. Is it agentic enough? Benchmarking open models on your own tooling</h3><div class="meta">high  ·  2026-06-18  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/is-it-agentic-enough">链接</a></div><p><b>为什么值得看</b> 这种方法使研究人员能够量化不同模型在实际应用中的表现，从而优化工具使用和提高任务完成率。</p><p><b>核心思想</b> 通过自定义工具集对开放模型进行基准测试，评估其在特定任务中的代理能力。</p><div class="review"><span class="pot">潜力 84</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:88%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:90%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:57%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>3. MosaicLeaks: Can your research agent keep a secret?</h3><div class="meta">medium  ·  2026-06-18  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/ServiceNow/mosaicleaks">链接</a></div><p><b>为什么值得看</b> 这使得研究代理能够在涉及敏感信息的任务中安全地执行，扩大了其在实际应用中的可用性，尤其是在医疗和金融领域。</p><p><b>核心思想</b> 通过引入隐私保护机制，确保研究代理在处理敏感信息时不泄露机密数据。</p><div class="review"><span class="pot">潜力 78</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:82%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:80%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:57%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>4. From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot</h3><div class="meta">medium  ·  2026-06-17  ·  via rss</div><div class="links"><a href="https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware">链接</a></div><p><b>为什么值得看</b> 这使得机器人能够快速适应新任务，提升了在动态环境中的自主决策能力，尤其对开发灵活的服务机器人具有重要意义。</p><p><b>核心思想</b> 通过将 Hugging Face Hub 的模型直接集成到机器人硬件中，Strands Agents 实现了模型与物理环境的无缝连接。</p><div class="review"><span class="pot">潜力 78</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:82%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:80%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:85%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:53%"></span></span></span></span></div></div></div>
-<div class="card"><div class="card-main"><h3>5. A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</h3><div class="meta">medium  ·  2026-06-17  ·  via rss</div><div class="links"><a href="https://openai.com/index/ai-chemist-improves-reaction">链接</a></div><p><b>为什么值得看</b> 这表明 AI 可以在药物研发中显著提升反应效率，帮助化学家更快地发现新药物，降低研发成本。</p><p><b>核心思想</b> 使用 GPT-5.4 的近自主 AI 化学家优化了一个关键药物合成反应。</p><div class="review"><span class="pot">潜力 74</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:59%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:80%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:53%"></span></span></span></span></div></div></div>
+<div class="card"><div class="card-main"><h3>1. OpenAI and Broadcom unveil LLM-optimized inference chip</h3><div class="meta">high  ·  2026-06-24  ·  via rss</div><div class="links"><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">链接</a></div><p><b>为什么值得看</b> 该芯片使得 AI 系统在处理大规模语言模型时能够实现更高的计算效率和更低的能耗，适合需要高效推理的应用场景。</p><p><b>核心思想</b> Jalapeño 芯片专为 LLM 推理优化，提升了性能和效率。</p><div class="review"><span class="pot">潜力 89</span><span class="dims"><span class="dim"><span class="dim-l">实质</span><span class="bar"><span style="width:77%"></span></span></span><span class="dim"><span class="dim-l">相关度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">权威度</span><span class="bar"><span style="width:100%"></span></span></span><span class="dim"><span class="dim-l">新鲜度</span><span class="bar"><span style="width:73%"></span></span></span></span></div></div></div>
 <footer>Generated by OmniSource</footer>
 </div>
 <script>
   const GRAPHS = {};
-  const groups = {
-    paper:       { color:{ background:'#7c83ff', border:'#9aa0ff' }, font:{ color:'#fff' }, shape:'dot' },
-    author:      { color:{ background:'#e8e8ef', border:'#ffffff' }, shape:'dot',
-                   font:{ color:'#e6e6ea', multi:'html', ital:{ color:'#6fb0a5', size:11 } } },
-    institution: { color:{ background:'#173f3a', border:'#2f8377' }, font:{ color:'#8fd6c9' }, shape:'hexagon' },
+  const graphPalettes = {
+    dark: {
+      paper:'#7c83ff', paperBorder:'#9aa0ff', author:'#e8e8ef', authorBorder:'#ffffff',
+      authorLabel:'#e6e6ea', institution:'#173f3a', institutionBorder:'#2f8377',
+      institutionLabel:'#8fd6c9', edge:'#2a2c3d', accent:'#7c83ff', success:'#6fb0a5'
+    },
+    light: {
+      paper:'#4257c9', paperBorder:'#6374df', author:'#ffffff', authorBorder:'#b9c0d4',
+      authorLabel:'#202434', institution:'#dff3ef', institutionBorder:'#80beb6',
+      institutionLabel:'#16645d', edge:'#c8cfdd', accent:'#4257c9', success:'#147c71'
+    }
   };
-  const opts = { groups,
-    nodes:{ borderWidth:1, scaling:{ min:8, max:34, label:{ enabled:false } }, font:{ size:13 } },
-    edges:{ color:{ color:'#2a2c3d', highlight:'#7c83ff' }, width:1.4, smooth:{ type:'continuous' } },
-    physics:{ barnesHut:{ gravitationalConstant:-3000, springLength:75, centralGravity:0.4 },
-               stabilization:{ iterations:150 } },
-    // fixed scale: no zoom, no pan, no node dragging — a static, hoverable figure
-    interaction:{ hover:true, tooltipDelay:120, zoomView:false, dragView:false, dragNodes:false, selectable:true } };
+  const institutionPalettes = {
+    dark: [
+      { author:'#e8e8ef', border:'#ffffff', label:'#e6e6ea', muted:'#6fb0a5', institution:'#173f3a' },
+      { author:'#b7c4ff', border:'#d9defe', label:'#edf0ff', muted:'#a7b5ff', institution:'#243060' },
+      { author:'#bfe8dc', border:'#d6fff2', label:'#ecfff9', muted:'#8fd6c9', institution:'#173f3a' },
+      { author:'#ffd1a8', border:'#ffe3c7', label:'#fff4ea', muted:'#e0a466', institution:'#4a2e18' },
+      { author:'#f3b9d8', border:'#ffd7ea', label:'#fff0f7', muted:'#d98ab5', institution:'#452033' },
+      { author:'#c9e6ff', border:'#e0f1ff', label:'#f0f8ff', muted:'#8fc6ed', institution:'#16354b' }
+    ],
+    light: [
+      { author:'#ffffff', border:'#b9c0d4', label:'#202434', muted:'#147c71', institution:'#dff3ef' },
+      { author:'#eef1ff', border:'#9aa8e8', label:'#1f2b66', muted:'#4257c9', institution:'#e4e8ff' },
+      { author:'#e8f7f1', border:'#80beb6', label:'#153f3a', muted:'#147c71', institution:'#dff3ef' },
+      { author:'#fff0df', border:'#e2ad70', label:'#593715', muted:'#b56f1d', institution:'#ffead2' },
+      { author:'#ffedf6', border:'#d995b8', label:'#5a2440', muted:'#b95887', institution:'#fbe0ee' },
+      { author:'#e9f5ff', border:'#8dbddd', label:'#143851', muted:'#357ca8', institution:'#dcefff' }
+    ]
+  };
+  const currentTheme = () => document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  const institutionColor = index => {
+    const colors = institutionPalettes[currentTheme()];
+    return colors[Math.abs(index || 0) % colors.length];
+  };
+  const graphOptions = () => {
+    const p = graphPalettes[currentTheme()];
+    return {
+      groups: {
+        paper:       { color:{ background:p.paper, border:p.paperBorder }, font:{ color:'#fff', size:24 }, shape:'circle',
+                       borderWidth:2, shadow:{ enabled:true, color:p.accent, size:12, x:0, y:0 } },
+        author:      { color:{ background:p.author, border:p.authorBorder }, shape:'dot',
+                       font:{ color:p.authorLabel, multi:'html', ital:{ color:p.success, size:11 } } },
+        institution: { color:{ background:p.institution, border:p.institutionBorder }, font:{ color:p.institutionLabel }, shape:'hexagon' },
+      },
+      layout:{ improvedLayout:false },
+      nodes:{ borderWidth:1, scaling:{ min:8, max:34, label:{ enabled:false } }, font:{ size:13 } },
+      edges:{ color:{ color:p.edge, highlight:p.accent }, width:1.4, smooth:{ type:'continuous' } },
+      physics:false,
+      // fixed scale: no zoom, no pan, no node dragging — a static, hoverable figure
+      interaction:{ hover:true, tooltipDelay:120, zoomView:false, dragView:false, dragNodes:false, selectable:true }
+    };
+  };
+  const styleGraph = g => {
+    const p = graphPalettes[currentTheme()];
+    return {
+      nodes: g.nodes.map(node => {
+        if (Number.isInteger(node.institution_index)) {
+          const c = institutionColor(node.institution_index);
+          if (node.group === 'author') {
+            return { ...node, color:{ background:c.author, border:c.border },
+              font:{ color:c.label, multi:'html', ital:{ color:c.muted, size:11 } } };
+          }
+          if (node.group === 'institution') {
+            return { ...node, color:{ background:c.institution, border:c.border },
+              font:{ color:c.label } };
+          }
+        }
+        return node;
+      }),
+      edges: g.edges.map((edge, index) => ({
+        ...edge,
+        id: edge.id || `e${index}`,
+        color: edge.kind === 'collab'
+          ? { color:p.accent, highlight:p.paperBorder }
+          : { color:p.edge, highlight:p.accent },
+      })),
+    };
+  };
+  const orderedById = nodes => [...nodes].sort((a, b) => String(a.id).localeCompare(String(b.id), undefined, { numeric:true }));
+  const placeRing = (nodes, radius, startAngle = -Math.PI / 2) => {
+    const ordered = orderedById(nodes);
+    return ordered.map((node, i) => {
+      const angle = startAngle + (2 * Math.PI * i) / Math.max(1, ordered.length);
+      return {
+        ...node,
+        x: Math.round(Math.cos(angle) * radius),
+        y: Math.round(Math.sin(angle) * radius),
+        fixed: { x:true, y:true },
+      };
+    });
+  };
+  const layoutGraph = g => {
+    const paper = g.nodes.filter(n => n.group === 'paper').map(n => ({
+      ...n, x:0, y:0, fixed:{ x:true, y:true }
+    }));
+    const authors = g.nodes.filter(n => n.group === 'author');
+    const authorRadius = authors.length <= 5 ? 118 : 146;
+    return {
+      nodes: [
+        ...paper,
+        ...placeRing(authors, authorRadius),
+      ],
+      edges: g.edges,
+    };
+  };
+  const prepareGraph = g => styleGraph(layoutGraph(g));
+  const networks = [];
+  document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+    const nextTheme = currentTheme() === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem('omnisource-theme', nextTheme);
+    networks.forEach(item => {
+      const laidOut = prepareGraph(item.graph);
+      item.nodes.update(laidOut.nodes);
+      item.edges.update(laidOut.edges);
+      item.net.setOptions(graphOptions());
+      requestAnimationFrame(() => item.net.fit({ animation:false }));
+    });
+  });
   for (const [id, g] of Object.entries(GRAPHS)) {
-    const nds = new vis.DataSet(g.nodes);
+    const laidOut = prepareGraph(g);
+    const nds = new vis.DataSet(laidOut.nodes);
+    const eds = new vis.DataSet(laidOut.edges);
     const net = new vis.Network(document.getElementById(id),
-      { nodes:nds, edges:new vis.DataSet(g.edges) }, opts);
-    net.once('stabilizationIterationsDone', () => net.fit({ animation:false }));  // fit once, then locked
+      { nodes:nds, edges:eds }, graphOptions());
+    networks.push({ net, nodes:nds, edges:eds, graph:g });
+    requestAnimationFrame(() => net.fit({ animation:false }));
     // Click an author → open their homepage / ORCID / profile in a new tab.
     net.on('click', p => { const n = p.nodes.length && nds.get(p.nodes[0]);
       if (n && n.url) window.open(n.url, '_blank', 'noopener'); });
