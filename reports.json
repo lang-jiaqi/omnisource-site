@@ -2478,7 +2478,7 @@
     "date": "2026-07-03",
     "period": "Daily",
     "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。",
-    "body": "<h2>📄 论文</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Xingyu Zheng, Xianglong Liu, Yifu Ding, Weilun Feng, Junqing Lin, Jinyang Guo et al.</div><div class=\"meta\">medium  ·  2026-07-02  ·  via hf_papers  ·  👍 17</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2607.01642\">链接</a>  ·  <a href=\"https://github.com/Xingyu-Zheng/MrFlow\">代码</a></div><p><b>为什么值得看</b> MrFlow 提供了一种无需训练的加速方法，能够在保持生成质量的同时，实现高达 25 倍的加速，适用于需要快速生成的应用场景。</p><p><b>核心思想</b> 通过低到高分辨率的分阶段采样流程，MrFlow 在低分辨率下快速生成主要结构，然后在像素空间进行超分辨率处理，从而实现加速。</p><div class=\"review\"><span class=\"pot\">潜力 60</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:86%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng</div><div class=\"meta\">high  ·  2026-07-01  ·  via hf_papers  ·  👍 22</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2607.00466\">链接</a></div><p><b>为什么值得看</b> 该方法在不改变模型输出的情况下，显著降低了解码延迟，使得 MoE 模型在多 GPU 部署中更高效，提升了服务质量。</p><p><b>核心思想</b> ELDR 通过构建请求的专家签名来预测生成期间将激活的专家，并利用 K-means 分区和局部带路由将请求分配给最匹配的解码工作者。</p><div class=\"review\"><span class=\"pot\">潜力 55</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:94%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. TurboServe: Serving Streaming Video Generation Efficiently and Economically</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Youhe Jiang, Haoxu Wang, Haotong Bao, Kai Jiang, Jianfei Chen, Jun Zhu et al.</div><div class=\"meta\">high  ·  2026-06-17  ·  via hf_papers  ·  👍 27</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19271\">链接</a>  ·  <a href=\"https://github.com/shengshu-ai/TurboServe\">代码</a></div><p><b>为什么值得看</b> 该系统显著降低了每个视频片段的最坏情况延迟和 GPU 运营成本，使得在多用户环境中处理流媒体视频生成变得更加高效和经济，适用于需要实时响应的应用场景。</p><p><b>核心思想</b> TurboServe 将流媒体视频生成的服务问题建模为在线调度问题，通过迁移感知的放置控制器和负载驱动的自动扩展控制器联合协调会话放置和 GPU 资源配置。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:92%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">D. Balamurugan, Thomas W. Bush</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01579v1\">链接</a></div><p><b>为什么值得看</b> 这使得在异构 GPU 集群上部署大语言模型时，用户能够更有效地选择配置，从而提高资源利用率并减少不必要的计算开销。</p><p><b>核心思想</b> OmniPilot 通过结合量化成本模型和低置信度请求的放弃层，预测不同配置的服务成本并优化 GPU 集群的使用。</p><div class=\"review\"><span class=\"pot\">潜力 39</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:95%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Shrikara Arun, Anjaly Parayil, Srikant Bharadwaj, Renee St. Amant, Victor Rühle</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02043v1\">链接</a></div><p><b>为什么值得看</b> 该调度器显著降低了 P95 首个令牌的时间，最多可减少 81%，使得在生产环境中处理突发负载时，解码节点的利用率更高，提升了服务质量。</p><p><b>核心思想</b> 通过在解码节点上执行预填充阶段，消除节点间的 KV 缓存传输，从而提高整体效率。</p><div class=\"review\"><span class=\"pot\">潜力 35</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:56%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_5\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. Multi-Block Diffusion Language Models</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">Yijie Jin, Jiajun Xu, Yuxuan Liu, Chenkai Xu, Yi Tu, Jiajun Li et al.</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 30</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.29215\">链接</a>  ·  <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">代码</a></div><p><b>为什么值得看</b> 这种方法显著提高了每次前向传递的令牌数，从3.47提升到6.19，同时保持了较高的准确率，使得在推理时能够更高效地利用计算资源，适合需要快速生成的应用场景。</p><p><b>核心思想</b> 通过多块教师强迫训练（MultiTF），将单块扩展到多块扩散语言模型（MBD-LMs），实现了对多个噪声块的并行解码。</p><div class=\"review\"><span class=\"pot\">潜力 63</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">Wenchen Han, Gingfung Matthew Yeung, Marco Barletta, William Toner, Amory Hoste, Adam Barker</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01831v1\">链接</a></div><p><b>为什么值得看</b> 这种方法使得在长上下文推理中，能够在保持高精度的同时显著降低首次令牌生成时间，适用于需要快速响应的 LLM 服务场景。</p><p><b>核心思想</b> 通过将 KV 缓存分为高优先级的 Anchor 流和低优先级的 Residual 流，允许在接收 Anchor 流后开始解码，同时并行传输 Residual 流。</p><div class=\"review\"><span class=\"pot\">潜力 33</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">Sheng Qiang, Ruiwei Chen, Yinpeng Wu, Jinyu Gu, Zhichao Hua, Yubin Xia et al.</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00760v1\">链接</a></div><p><b>为什么值得看</b> 该方法显著提高了长上下文 LLM 的服务效率，提供了高达 16 倍的注意力加速和 3 倍的内存节省，适用于需要处理大规模上下文的推理服务。</p><p><b>核心思想</b> MosaicKV 通过动态二维压缩技术，根据 KV 缓存中元素的重要性分布，选择适合的压缩策略，从而减少内存使用并提高服务性能。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_8\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">speculative decoding</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>9. BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">speculative decoding</span></span></div><div class=\"auth\">Hao Zhang, Yiming Hu, Yong Wang, Mingqiao Mo, Xin Xiao, Xiangxiang Chu</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 71</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.31315\">链接</a>  ·  <a href=\"https://github.com/AMAP-ML/BlockPilot\">代码</a></div><p><b>为什么值得看</b> 这种方法使得推测解码能够根据输入动态调整块大小，显著提高了推理效率，适用于需要快速响应的应用场景。</p><p><b>核心思想</b> 通过实例自适应策略学习预测最佳块大小，从而优化扩散基础的推测解码性能。</p><div class=\"review\"><span class=\"pot\">潜力 61</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_9\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">agent serving systems</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>10. Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">agent serving systems</span></span></div><div class=\"auth\">Ling Xu, Chuyu Han, Borui Li, Hao Wu, Shiqi Jiang, Ting Cao et al.</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02501v1\">链接</a></div><p><b>为什么值得看</b> 该运行时通过统一的后端抽象，简化了在异构设备和机器人上的部署，提升了效率和准确性，适用于多种嵌入式 AI 模型。</p><p><b>核心思想</b> Embodied.cpp 提供了一个可移植的 C++ 推理运行时，支持多速率执行和延迟优先的融合推理。</p><div class=\"review\"><span class=\"pot\">潜力 40</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:94%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_10\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">quantization / compression</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>11. OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">quantization / compression</span></span></div><div class=\"auth\">Donghyun Lee, Jitesh Chavan, Duy Nguyen, Sam Huang, Liming Jiang, Priyadarshini Panda et al.</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02461v1\">链接</a></div><p><b>为什么值得看</b> 这使得图像和视频扩散变换器的推理成本显著降低，并且在不同模态之间无需额外调优，提升了模型的灵活性和适用性。</p><p><b>核心思想</b> 通过在标准化的旋转基中量化权重和激活，OrbitQuant 实现了数据无关的量化，避免了对每个新检查点或模态重新拟合校准数据的需求。</p><div class=\"review\"><span class=\"pot\">潜力 33</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_11\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">data / model / pipeline parallelism</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>12. HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">data / model / pipeline parallelism</span></span></div><div class=\"auth\">Chao Yuan, Pan Li, Yingnan Sun, Jing Liu</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01817v1\">链接</a></div><p><b>为什么值得看</b> HCMS在处理长序列时提高了GPU资源利用率，尤其在通信比率高于20%时，能显著加速模型训练和推理，适用于视频生成等任务。</p><p><b>核心思想</b> 通过将注意力头分块并利用双CUDA流，实现了通信与计算的细粒度重叠。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_12\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">编译器、内核与硬件 / GPU/加速器内核</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">accelerator / edge inference</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>13. Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">编译器、内核与硬件 / GPU/加速器内核</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">accelerator / edge inference</span></span></div><div class=\"auth\">Junyi Wen, Ruiyan Zhuang, Yongjia Xu, Pengtu Li, Rui Zou, Hongyi Chen et al.</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01590v1\">链接</a></div><p><b>为什么值得看</b> 这使得开发者能够在不需手动调试的情况下，快速生成高性能的 NPU 内核，显著提高了开发效率和系统性能。</p><p><b>核心思想</b> Hawk 通过三大模块结合硬件知识，提升 NPU 内核生成的准确性和执行速度。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_13\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">checkpoint / fault tolerance</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>14. DeadPool: Resilient LLM Training with Hot-Swapping via Zero-Overhead Checkpoint</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">checkpoint / fault tolerance</span></span></div><div class=\"auth\">Haotian Xie, Junlin Chen, Mingkai Zheng, Lishan Yang, Zhao Zhang</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01646v1\">链接</a></div><p><b>为什么值得看</b> DeadPool 使得大规模 LLM 训练在遇到节点故障时无需中断，恢复时间低于 40 秒，显著提高了训练的可靠性与效率。</p><p><b>核心思想</b> 通过热插拔机制替换失败的计算节点，结合内存检查点实现零开销的故障恢复。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_14\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">large-scale pretraining systems</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>15. Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">large-scale pretraining systems</span></span></div><div class=\"auth\">Xuan-Phi Nguyen, Shrey Pandit, Yiran Zhao, Semih Yavuz, Silvio Savarese, Shafiq Joty</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01844v1\">链接</a></div><p><b>为什么值得看</b> 这使得在仅使用 12 个 8x H200 GPU 节点的情况下，能够无损地预训练和微调万亿参数规模的模型，显著提升了大规模训练的可行性和效率。</p><p><b>核心思想</b> 通过结合多种并行技术，优化 Mixture-of-Experts 模型的训练过程，以提高内存效率和吞吐量。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_15\"></div></div></div>\n<h2>💻 开源项目</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>1. flashinfer-ai/flashinfer</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">flashinfer-ai</div><div class=\"meta\">high  ·  2026-07-03  ·  via github  ·  👍 5891</div><div class=\"links\"><a href=\"https://github.com/flashinfer-ai/flashinfer\">链接</a>  ·  <a href=\"https://github.com/flashinfer-ai/flashinfer\">代码</a></div><p><b>为什么值得看</b> 通过优化内核，FlashInfer 能显著提升 LLM 的推理速度和资源利用率，帮助开发者更高效地部署和扩展 AI 应用。</p><p><b>核心思想</b> FlashInfer 提供了一套高效的内核库，专为大规模语言模型的推理服务优化。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:85%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. RightNow-AI/AutoMegaKernel</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">RightNow-AI</div><div class=\"meta\">high  ·  2026-06-29  ·  via github  ·  👍 97</div><div class=\"links\"><a href=\"https://github.com/RightNow-AI/AutoMegaKernel\">链接</a>  ·  <a href=\"https://github.com/RightNow-AI/AutoMegaKernel\">代码</a></div><p><b>为什么值得看</b> 这使得在单个 GPU 上进行高效的 LLM 推理成为可能，显著提高了性能，尤其是在低批量情况下，适合需要快速响应的应用场景。</p><p><b>核心思想</b> 将模型编译为一个可证明正确的自适应 CUDA megakernel，并在 batch-1 LLM 解码时自我调优超越 cuBLAS。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:72%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span></span></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>3. ahb-sjsu/turboquant-pro</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">ahb-sjsu</div><div class=\"meta\">high  ·  2026-07-01  ·  via github  ·  👍 20</div><div class=\"links\"><a href=\"https://github.com/ahb-sjsu/turboquant-pro\">链接</a>  ·  <a href=\"https://github.com/ahb-sjsu/turboquant-pro\">代码</a></div><p><b>为什么值得看</b> 这种压缩方法显著降低了内存占用，使得在资源受限的环境中也能高效运行大型语言模型，适合需要高效推理的应用场景。</p><p><b>核心思想</b> 通过 PCA-Matryoshka 和 TurboQuant 实现 K/V 缓存的 27 倍压缩，同时保持 99.8% 的 recall@10。</p><div class=\"review\"><span class=\"pot\">潜力 54</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:9%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:29%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. Mog9/KV-Compression</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">Mog9</div><div class=\"meta\">high  ·  2026-06-19  ·  via github  ·  👍 14</div><div class=\"links\"><a href=\"https://github.com/Mog9/KV-Compression\">链接</a>  ·  <a href=\"https://github.com/Mog9/KV-Compression\">代码</a></div><p><b>为什么值得看</b> 通过显著减少内存占用，这使得在资源受限的环境中运行大型语言模型成为可能，从而提高了推理效率和可扩展性，尤其适用于边缘计算和实时应用场景。</p><p><b>核心思想</b> 在 Triton 中实现并基准测试了 LLM 推理的 KV 缓存压缩方法，结合 Flash Attention 优化了 KIVI 和 TurboQuant 内核，达到了 GPT-2 上 7.11× 和 Qwen3.5 9B 上 7.31× 的压缩率。</p><div class=\"review\"><span class=\"pot\">潜力 53</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:25%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:26%\"></span></span></span></span></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">quantization / compression</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>5. SakanaAI/sparser-faster-llms</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">quantization / compression</span></span></div><div class=\"auth\">SakanaAI</div><div class=\"meta\">high  ·  2026-06-29  ·  via github  ·  👍 252</div><div class=\"links\"><a href=\"https://github.com/SakanaAI/sparser-faster-llms\">链接</a>  ·  <a href=\"https://github.com/SakanaAI/sparser-faster-llms\">代码</a></div><p><b>为什么值得看</b> 这使得在资源受限的环境中运行大型语言模型成为可能，降低了硬件成本并提高了效率，尤其对推理服务提供商至关重要。</p><p><b>核心思想</b> 使用 CUDA 内核来利用 LLM 的稀疏性，从而提高推理和训练过程中的吞吐量并减少内存需求。</p><div class=\"review\"><span class=\"pot\">潜力 68</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:62%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>1. OpenAI and Broadcom unveil LLM-optimized inference chip</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"meta\">high  ·  2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/openai-broadcom-jalapeno-inference-chip\">链接</a></div><p><b>为什么值得看</b> 该芯片的推出使得 AI 系统在推理时能够以更低的能耗和更高的速度处理大规模模型，满足日益增长的计算需求。</p><p><b>核心思想</b> Jalapeño 芯片专为 LLM 推理优化，提升了性能和效率，支持更大规模的 AI 系统。</p><div class=\"review\"><span class=\"pot\">潜力 96</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span></span></div></div></div>",
+    "body": "<h2>📄 论文</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>1. TurboServe: Serving Streaming Video Generation Efficiently and Economically</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Youhe Jiang, Haoxu Wang, Haotong Bao, Kai Jiang, Jianfei Chen, Jun Zhu et al.</div><div class=\"meta\">high  ·  2026-06-17  ·  via hf_papers  ·  👍 27</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.19271\">链接</a>  ·  <a href=\"https://github.com/shengshu-ai/TurboServe\">代码</a></div><p><b>为什么值得看</b> 该系统显著降低了每个视频块的最坏情况延迟和总 GPU 运营成本，使得在多用户环境中更高效地处理流媒体视频生成，适合需要实时响应的应用场景。</p><p><b>核心思想</b> TurboServe 将流媒体视频生成的服务问题建模为在线调度问题，通过迁移感知的会话放置控制器和负载驱动的自动扩展控制器联合协调会话放置和 GPU 资源配置。</p><div class=\"review\"><span class=\"pot\">潜力 58</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:48%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:92%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_1\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>2. ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Sangjin Choi, Sukmin Cho, Yifan Xiong, Ziyue Yang, Youngjin Kwon, Peng Cheng</div><div class=\"meta\">high  ·  2026-07-01  ·  via hf_papers  ·  👍 22</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2607.00466\">链接</a></div><p><b>为什么值得看</b> 该方法在保持模型输出不变的情况下，显著降低了解码延迟，提升了 MoE 模型的服务效率，适用于大规模 GPU 部署。</p><p><b>核心思想</b> ELDR 通过构建专家签名来预测生成期间将激活的专家，并基于此进行请求路由，从而优化解码工作负载。</p><div class=\"review\"><span class=\"pot\">潜力 55</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:94%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_2\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>3. HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Yifei Liu, Juntong Wu, Yang Liu, Junhao Hu, Minghao Li, Xiaoxu Chen et al.</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01299v1\">链接</a></div><p><b>为什么值得看</b> Hypic系统使得长上下文的请求处理速度提高了2.45倍，并且在保持接近全重计算精度的同时，显著提升了系统的吞吐量，适用于大规模LLM服务场景。</p><p><b>核心思想</b> 通过引入段累积转移算子，结合位置无关缓存，使得混合注意力模型能够在请求间重用KV缓存，显著降低计算复杂度。</p><div class=\"review\"><span class=\"pot\">潜力 39</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:92%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_3\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>4. OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">D. Balamurugan, Thomas W. Bush</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01579v1\">链接</a></div><p><b>为什么值得看</b> 它帮助用户在异构 GPU 集群中更有效地选择配置，降低了资源浪费和失败率，从而提高了整体服务效率和可靠性。</p><p><b>核心思想</b> OmniPilot 通过结合量化成本模型和低置信度请求的放弃层，预测不同配置的服务成本并优化 GPU 资源的使用。</p><div class=\"review\"><span class=\"pot\">潜力 39</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:95%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_4\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>5. Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Shrikara Arun, Anjaly Parayil, Srikant Bharadwaj, Renee St. Amant, Victor Rühle</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02043v1\">链接</a></div><p><b>为什么值得看</b> 这种调度器显著降低了 P95 首个令牌的响应时间，最多可减少 81%，并提高了服务水平目标的达成率，适用于大规模 LLM 服务的生产环境。</p><p><b>核心思想</b> 通过在解码节点上执行预填充阶段，消除了跨节点的 KV 缓存传输，从而提高了效率。</p><div class=\"review\"><span class=\"pot\">潜力 35</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:56%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_5\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>6. 3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Jaehun Lee, In-Jun Jung, Joo-Young Kim</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01617v1\">链接</a></div><p><b>为什么值得看</b> 这种物理隔离设计显著提高了 LLM 服务的吞吐量和降低了延迟，使得处理大规模模型和长上下文的能力更强，适用于高性能推理系统。</p><p><b>核心思想</b> 通过逻辑堆叠的 3D 芯片架构，将 KV 缓存传输通过垂直互连路由，从而减少解码关键路径上的混合流量争用。</p><div class=\"review\"><span class=\"pot\">潜力 34</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_6\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>7. WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Mauricio Fadel Argerich, Jonathan Fürst, Marta Patiño-Martínez</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02391v1\">链接</a></div><p><b>为什么值得看</b> 该方法显著提高了在未见 LLM-GPU 组合中进行推理时的效率，减少了功耗和延迟的预测误差，帮助数据中心优化资源配置，降低能耗。</p><p><b>核心思想</b> WattGPU 利用公开的 LLM 元数据和 GPU 规格，通过两个预测模型来估算未见 GPU 的平均功耗和延迟，避免了硬件访问和繁琐的配置文件需求。</p><div class=\"review\"><span class=\"pot\">潜力 34</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_7\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>8. Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Wenchen Han, Gingfung Matthew Yeung, Marco Barletta, William Toner, Amory Hoste, Adam Barker</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01831v1\">链接</a></div><p><b>为什么值得看</b> 这使得长上下文推理的延迟显著降低，同时保持高精度，适用于需要快速响应的 LLM 服务场景。</p><p><b>核心思想</b> 通过将 KV 缓存分为高优先级的 Anchor 流和低优先级的 Residual 流，实现逐步的 KV 传输，允许在接收 Anchor 流后开始解码。</p><div class=\"review\"><span class=\"pot\">潜力 33</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:54%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_8\"></div></div></div>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>9. MxGLUT: A Reconfigurable LUT-Centric Broadcast Dataflow Accelerator for Mixed-Precision GEMM</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">Weiyu Zhou, Chen Ding, Mingyuan Liu, Liangyu Gan, Yukun Feng, Hao Jia et al.</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01607v1\">链接</a></div><p><b>为什么值得看</b> 这种设计显著降低了乘法器面积和功耗，提高了加速器的面积效率和能量效率，使得在推理过程中能够更高效地处理大语言模型，尤其是在预填充和解码阶段。</p><p><b>核心思想</b> MxGLUT 通过统一的 LUT 计算机制，将 FP8-INT4 和 FP8-FP8 GEMM 操作整合在一个可重构的 LUT 中心广播数据流加速器中，避免了专用浮点乘法器和额外的浮点数据通路。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_9\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">speculative decoding</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>10. BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">speculative decoding</span></span></div><div class=\"auth\">Hao Zhang, Yiming Hu, Yong Wang, Mingqiao Mo, Xin Xiao, Xiangxiang Chu</div><div class=\"meta\">high  ·  2026-06-30  ·  via hf_papers  ·  👍 71</div><div class=\"links\"><a href=\"https://arxiv.org/abs/2606.31315\">链接</a>  ·  <a href=\"https://github.com/AMAP-ML/BlockPilot\">代码</a></div><p><b>为什么值得看</b> 这种方法使得推测解码在不同输入下能够动态调整块大小，显著提高了推理效率，适用于多种模型和场景。</p><p><b>核心思想</b> 通过实例自适应策略学习预测最佳块大小，从而优化扩散基础的推测解码过程。</p><div class=\"review\"><span class=\"pot\">潜力 61</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_10\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">agent serving systems</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>11. Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">agent serving systems</span></span></div><div class=\"auth\">Ling Xu, Chuyu Han, Borui Li, Hao Wu, Shiqi Jiang, Ting Cao et al.</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.02501v1\">链接</a></div><p><b>为什么值得看</b> 该运行时使得在异构设备和机器人上实现高效的闭环控制成为可能，且在不同模型架构中保持高准确率，解决了现有推理运行时的局限性。</p><p><b>核心思想</b> Embodied.cpp 提供了一个模块化的 C++ 推理运行时，支持多速率执行和延迟优先的融合推理。</p><div class=\"review\"><span class=\"pot\">潜力 42</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:55%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:94%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_11\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">large-scale pretraining systems</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>12. Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">large-scale pretraining systems</span></span></div><div class=\"auth\">Xuan-Phi Nguyen, Shrey Pandit, Yiran Zhao, Semih Yavuz, Silvio Savarese, Shafiq Joty</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01844v1\">链接</a></div><p><b>为什么值得看</b> 使得在仅用 12 个 8x H200 GPU 节点的情况下，能够无损地进行万亿参数规模模型的预训练和微调，显著提升了大规模训练的可行性和效率。</p><p><b>核心思想</b> 结合多种并行技术，优化 Mixture-of-Experts 模型的训练过程，以提高内存效率和吞吐量。</p><div class=\"review\"><span class=\"pot\">潜力 41</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:45%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_12\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>13. MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / 内存与解码优化</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">KV cache / long context memory</span></span></div><div class=\"auth\">Sheng Qiang, Ruiwei Chen, Yinpeng Wu, Jinyu Gu, Zhichao Hua, Yubin Xia et al.</div><div class=\"meta\">high  ·  2026-07-01  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.00760v1\">链接</a></div><p><b>为什么值得看</b> 该方法显著提高了长上下文 LLM 的服务效率，提供高达 16 倍的注意力加速和 3 倍的内存使用减少，使得在资源受限的环境中也能高效运行大规模模型。</p><p><b>核心思想</b> MosaicKV 通过动态的二维 KV 缓存压缩，针对每个 KV 向量选择重要元素并应用不同的压缩策略，从而解决了准确性挑战。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:53%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:46%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_13\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">data / model / pipeline parallelism</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>14. HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">data / model / pipeline parallelism</span></span></div><div class=\"auth\">Chao Yuan, Pan Li, Yingnan Sun, Jing Liu</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01817v1\">链接</a></div><p><b>为什么值得看</b> HCMS 在处理长序列时显著提高了 GPU 的资源利用率，尤其在通信比率高于 20% 时，能带来 10%-17.5% 的加速，适合视频生成等应用场景。</p><p><b>核心思想</b> 通过将注意力头分块并利用双 CUDA 流，实现了计算与通信的细粒度重叠。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:50%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:51%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_14\"></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">checkpoint / fault tolerance</span></span></h3>\n<div class=\"card has-graph\"><div class=\"card-main\"><h3>15. DeadPool: Resilient LLM Training with Hot-Swapping via Zero-Overhead Checkpoint</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">训练系统 / 并行与分布式训练</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">checkpoint / fault tolerance</span></span></div><div class=\"auth\">Haotian Xie, Junlin Chen, Mingkai Zheng, Lishan Yang, Zhao Zhang</div><div class=\"meta\">high  ·  2026-07-02  ·  via arxiv</div><div class=\"links\"><a href=\"http://arxiv.org/abs/2607.01646v1\">链接</a></div><p><b>为什么值得看</b> 这使得大规模 LLM 训练在面对节点故障时，能够快速恢复且不影响正常计算，显著提高了训练的可靠性和效率，适用于大规模分布式训练环境。</p><p><b>核心思想</b> 通过热替换机制，DeadPool 在不终止作业的情况下，用备用节点替换故障节点，结合内存检查点实现零开销的故障恢复。</p><div class=\"review\"><span class=\"pot\">潜力 32</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">新颖度</span><span class=\"bar\"><span style=\"width:52%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">workload</span><span class=\"bar\"><span style=\"width:42%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">开源度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">洞见</span><span class=\"bar\"><span style=\"width:49%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">呈现</span><span class=\"bar\"><span style=\"width:47%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">机构信号</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div><div class=\"graph-wrap\"><div class=\"graph-legend\"><span><span class=\"legend-paper\">📄</span>论文</span><span><span class=\"legend-author\"></span>作者</span><span><span class=\"legend-line\"></span>合作线</span><span>同色=同机构；缺失按作者着色</span></div><div class=\"graph\" id=\"g_ai-infra_paper_15\"></div></div></div>\n<h2>💻 开源项目</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>1. lyogavin/airllm</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">lyogavin</div><div class=\"meta\">high  ·  2026-06-30  ·  via github  ·  👍 22104</div><div class=\"links\"><a href=\"https://github.com/lyogavin/airllm\">链接</a>  ·  <a href=\"https://github.com/lyogavin/airllm\">代码</a></div><p><b>为什么值得看</b> 这使得在资源受限的环境中也能进行大规模模型推理，降低了硬件门槛，扩大了应用场景。</p><p><b>核心思想</b> 在单个 4GB GPU 上实现 70B 参数的 AirLLM 推理，利用高效的内存管理技术。</p><div class=\"review\"><span class=\"pot\">潜力 94</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. vllm-project/vllm</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">vllm-project</div><div class=\"meta\">high  ·  2026-07-03  ·  via github  ·  👍 85264</div><div class=\"links\"><a href=\"https://github.com/vllm-project/vllm\">链接</a>  ·  <a href=\"https://github.com/vllm-project/vllm\">代码</a></div><p><b>为什么值得看</b> 这使得在资源受限的环境中也能高效运行大型语言模型，降低了推理成本并提高了响应速度，适合大规模应用场景。</p><p><b>核心思想</b> 通过优化内存管理和计算调度，实现高吞吐量的 LLM 推理与服务。</p><div class=\"review\"><span class=\"pot\">潜力 91</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:90%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. NVIDIA/TensorRT-LLM</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">NVIDIA</div><div class=\"meta\">high  ·  2026-07-03  ·  via github  ·  👍 14019</div><div class=\"links\"><a href=\"https://github.com/NVIDIA/TensorRT-LLM\">链接</a>  ·  <a href=\"https://github.com/NVIDIA/TensorRT-LLM\">代码</a></div><p><b>为什么值得看</b> 通过优化推理过程，TensorRT LLM 使得开发者能够更快速地部署和运行大语言模型，提升了推理效率，适合需要高性能推理的应用场景。</p><p><b>核心思想</b> 提供易用的 Python API 来定义大语言模型，并在 NVIDIA GPU 上高效执行推理。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>4. jundot/omlx</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">jundot</div><div class=\"meta\">medium  ·  2026-07-03  ·  via github  ·  👍 17434</div><div class=\"links\"><a href=\"https://github.com/jundot/omlx\">链接</a>  ·  <a href=\"https://github.com/jundot/omlx\">代码</a></div><p><b>为什么值得看</b> 这种方法使得在Apple设备上进行高效推理成为可能，降低了延迟并提高了资源利用率，适合需要快速响应的应用场景。</p><p><b>核心思想</b> 通过连续批处理和SSD缓存优化LLM推理服务器，提升了在Apple Silicon上的性能。</p><div class=\"review\"><span class=\"pot\">潜力 86</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. gpustack/gpustack</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">gpustack</div><div class=\"meta\">medium  ·  2026-07-03  ·  via github  ·  👍 5264</div><div class=\"links\"><a href=\"https://github.com/gpustack/gpustack\">链接</a>  ·  <a href=\"https://github.com/gpustack/gpustack\">代码</a></div><p><b>为什么值得看</b> 简化了 AI 模型的部署与管理流程，使得用户能够更灵活地使用 GPU 资源，提升了模型服务的效率和可用性。</p><p><b>核心思想</b> 提供高性能 AI 模型服务的 GPU 集群管理器，支持按需 SSH 访问 GPU 实例。</p><div class=\"review\"><span class=\"pot\">潜力 83</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">增长势头</span><span class=\"bar\"><span style=\"width:93%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">成熟度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:75%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">采用度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span></span></div></div></div>\n<h2>📝 实验室动态</h2>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>1. OpenAI and Broadcom unveil LLM-optimized inference chip</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"meta\">high  ·  2026-06-24  ·  via rss</div><div class=\"links\"><a href=\"https://openai.com/index/openai-broadcom-jalapeno-inference-chip\">链接</a></div><p><b>为什么值得看</b> 该芯片使得在推理阶段能够以更低的能耗和更高的效率处理大型语言模型，适用于需要高效推理的应用场景。</p><p><b>核心思想</b> Jalapeño 芯片专为 LLM 推理优化，提升了性能和能效，支持更大规模的 AI 系统。</p><div class=\"review\"><span class=\"pot\">潜力 92</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:88%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:70%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>2. TokenSpeed-Kernel: Portable APIs and High-Performance Kernels for Multi-Silicon LLM Inference</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">AMD Triton Team, TokenSpeed Team</div><div class=\"meta\">high  ·  2026-06-25  ·  via rss</div><div class=\"links\"><a href=\"https://pytorch.org/blog/lightseek-tokenspeed-kernel/\">链接</a></div><p><b>为什么值得看</b> 这使得在多种硅片上进行 LLM 推理变得更加高效和可移植，降低了开发和维护成本，适合不同硬件平台的研究者使用。</p><p><b>核心思想</b> TokenSpeed-kernel 提供了一个干净的分层 API 和注册系统，以解耦高层运行时与底层硬件之间的复杂性。</p><div class=\"review\"><span class=\"pot\">潜力 84</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:88%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:60%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:73%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>3. Serving DeepSeek-V4 on GB300 with SGLang: 5x Higher Throughput at the Same Interactivity Since Day-0</h3><div class=\"topic-chip\"><span class=\"topic-chip-label\">分类</span><span class=\"topic-node\"><span class=\"topic-node-label\">方向</span><span class=\"topic-node-value\">推理系统 / Serving 引擎</span></span><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">LLM serving / inference engines</span></span></div><div class=\"auth\">SGLang Team and NVIDIA Team</div><div class=\"meta\">high  ·  2026-06-23  ·  via rss</div><div class=\"links\"><a href=\"https://pytorch.org/blog/serving-deepseek-v4-on-gb300-with-sglang-5x-higher-throughput-at-the-same-interactivity-since-day-0/\">链接</a></div><p><b>为什么值得看</b> 这使得在相同硬件上可以处理更多请求，提升了推理服务的效率，尤其适合高负载的实时应用场景。</p><p><b>核心思想</b> 通过优化内核和运行时，DeepSeek-V4 在 GB300 上实现了 5 倍的吞吐量提升，同时保持相同的交互性。</p><div class=\"review\"><span class=\"pot\">潜力 81</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:82%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:60%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:67%\"></span></span></span></span></div></div></div>\n<h3 class=\"topic-heading\"><span class=\"topic-node\"><span class=\"topic-node-label\">主题</span><span class=\"topic-node-value\">other</span></span></h3>\n<div class=\"card\"><div class=\"card-main\"><h3>4. Unbox one of NVIDIA&#x27;s first co-packaged optics switches with us. See why we bet on CPO early.</h3><div class=\"auth\">khushboo.goel@lambda.ai (Khushboo Goel)</div><div class=\"meta\">high  ·  2026-06-01  ·  via rss</div><div class=\"links\"><a href=\"https://lambda.ai/blog/unbox-one-of-nvidias-first-co-packaged-optics-samples-with-lambda\">链接</a></div><p><b>为什么值得看</b> 随着工作负载向代理型转变，网络流量增加，优化网络架构可以显著提高令牌生成的吞吐量，减少 GPU 等待数据的时间。</p><p><b>核心思想</b> 在大型 GPU 集群中，网络成为计算环境的一部分，背部结构在三层集群中占据 86% 的网络功耗。</p><div class=\"review\"><span class=\"pot\">潜力 72</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:82%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:100%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:60%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>\n<div class=\"card\"><div class=\"card-main\"><h3>5. Lambda Bare Metal Instances: full hardware control with API-driven operations</h3><div class=\"auth\">khushboo.goel@lambda.ai (Khushboo Goel)</div><div class=\"meta\">medium  ·  2026-05-21  ·  via rss</div><div class=\"links\"><a href=\"https://lambda.ai/blog/lambda-bare-metal-instances\">链接</a></div><p><b>为什么值得看</b> 这使得 AI 团队能够在云环境中获得与本地部署相同的性能，同时简化基础设施管理，适合需要高效能和安全性的应用场景。</p><p><b>核心思想</b> 提供 API 驱动的裸金属实例，使团队能够在不妥协性能和安全性的情况下完全控制硬件。</p><div class=\"review\"><span class=\"pot\">潜力 64</span><span class=\"dims\"><span class=\"dim\"><span class=\"dim-l\">实质</span><span class=\"bar\"><span style=\"width:79%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">相关度</span><span class=\"bar\"><span style=\"width:80%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">权威度</span><span class=\"bar\"><span style=\"width:60%\"></span></span></span><span class=\"dim\"><span class=\"dim-l\">新鲜度</span><span class=\"bar\"><span style=\"width:0%\"></span></span></span></span></div></div></div>",
     "graphs": {
       "g_ai-infra_paper_1": {
         "nodes": [
@@ -2487,77 +2487,77 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling"
+            "title": "<b>Paper</b><br>TurboServe: Serving Streaming Video Generation Efficiently and Economically"
           },
           {
             "id": "a0",
-            "label": "Xingyu Zheng\n<i>State Key Laboratory of Complex & Critical Software Environment, Beihang University</i>",
+            "label": "Youhe Jiang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xingyu Zheng</b><br>State Key Laboratory of Complex &amp; Critical Software Environment, Beihang University<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "State Key Laboratory of Complex & Critical Software Environment, Beihang University",
-            "institution_index": 0
+            "value": 75,
+            "title": "<b>Youhe Jiang</b><br>75 citations · h-index 3<br><a href=\"https://orcid.org/0009-0000-9297-642X\">ORCID</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://orcid.org/0009-0000-9297-642X"
           },
           {
             "id": "a1",
-            "label": "Xianglong Liu\n<i>State Key Laboratory of Complex & Critical Software Environment, Beihang University</i>",
+            "label": "Hao Wang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Xianglong Liu</b><br>State Key Laboratory of Complex &amp; Critical Software Environment, Beihang University<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "State Key Laboratory of Complex & Critical Software Environment, Beihang University",
-            "institution_index": 0
+            "value": 2,
+            "title": "<b>Hao Wang</b><br>2 citations · h-index 1<br><a href=\"https://orcid.org/0009-0006-7513-8014\">ORCID</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://orcid.org/0009-0006-7513-8014"
           },
           {
             "id": "a2",
-            "label": "Yifu Ding\n<i>State Key Laboratory of Complex & Critical Software Environment, Beihang University</i>",
+            "label": "Haotong Bao\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Yifu Ding</b><br>State Key Laboratory of Complex &amp; Critical Software Environment, Beihang University<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "State Key Laboratory of Complex & Critical Software Environment, Beihang University",
+            "value": 18,
+            "title": "<b>Haotong Bao</b><br>Shanghai Jiao Tong University<br>18 citations · h-index 2<br><a href=\"https://openalex.org/A5100594460\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://openalex.org/A5100594460",
+            "institution": "Shanghai Jiao Tong University",
             "institution_index": 0
           },
           {
             "id": "a3",
-            "label": "Weilun Feng\n<i>State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences</i>",
+            "label": "Kai Jiang",
             "group": "author",
-            "value": 1,
-            "title": "<b>Weilun Feng</b><br>State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
-            "institution_index": 1
+            "value": 7,
+            "title": "<b>Kai Jiang</b><br>h-index 7<br><a href=\"https://openalex.org/A5138872786\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://openalex.org/A5138872786"
           },
           {
             "id": "a4",
-            "label": "Junqing Lin\n<i>University of Science and Technology of China</i>",
+            "label": "Jianfei Chen",
             "group": "author",
-            "value": 1,
-            "title": "<b>Junqing Lin</b><br>University of Science and Technology of China<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "University of Science and Technology of China",
-            "institution_index": 2
+            "value": 11,
+            "title": "<b>Jianfei Chen</b><br>h-index 11<br><a href=\"https://openalex.org/A5138920149\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://openalex.org/A5138920149"
           },
           {
             "id": "a5",
-            "label": "Jinyang Guo\n<i>State Key Laboratory of Complex & Critical Software Environment, Beihang University</i>",
+            "label": "J ZHU",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jinyang Guo</b><br>State Key Laboratory of Complex &amp; Critical Software Environment, Beihang University<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "State Key Laboratory of Complex & Critical Software Environment, Beihang University",
-            "institution_index": 0
+            "value": 20,
+            "title": "<b>J ZHU</b><br>20 citations · h-index 3<br><a href=\"https://openalex.org/A5048188910\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://openalex.org/A5048188910"
           },
           {
             "id": "a6",
-            "label": "Haotong Qin\n<i>ETH Z¨urich</i>",
+            "label": "Fangcheng Fu\n<i>Shanghai Jiao Tong University</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Haotong Qin</b><br>ETH Z¨urich<br><a href=\"https://github.com/Xingyu-Zheng/MrFlow\">code</a>",
-            "url": "",
-            "institution": "ETH Z¨urich",
-            "institution_index": 3
+            "value": 4,
+            "title": "<b>Fangcheng Fu</b><br>Shanghai Jiao Tong University<br>h-index 4<br><a href=\"https://openalex.org/A5138863709\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://openalex.org/A5138863709",
+            "institution": "Shanghai Jiao Tong University",
+            "institution_index": 0
+          },
+          {
+            "id": "a7",
+            "label": "Jintao Zhang\n<i>Tsinghua University</i>",
+            "group": "author",
+            "value": 15,
+            "title": "<b>Jintao Zhang</b><br>Tsinghua University<br>h-index 15<br><a href=\"https://jt-zhang.github.io/\">homepage</a> · <a href=\"https://openalex.org/A5138871107\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
+            "url": "https://jt-zhang.github.io/",
+            "institution": "Tsinghua University",
+            "institution_index": 1
           }
         ],
         "edges": [
@@ -2618,6 +2618,15 @@
           {
             "from": "paper",
             "to": "a6",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a7",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
@@ -2748,75 +2757,63 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>TurboServe: Serving Streaming Video Generation Efficiently and Economically"
+            "title": "<b>Paper</b><br>HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching"
           },
           {
             "id": "a0",
-            "label": "Youhe Jiang",
+            "label": "Yifei Liu",
             "group": "author",
-            "value": 75,
-            "title": "<b>Youhe Jiang</b><br>75 citations · h-index 3<br><a href=\"https://orcid.org/0009-0000-9297-642X\">ORCID</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://orcid.org/0009-0000-9297-642X"
+            "value": 1,
+            "title": "<b>Yifei Liu</b>",
+            "url": ""
           },
           {
             "id": "a1",
-            "label": "Hao Wang",
+            "label": "Juntong Wu",
             "group": "author",
-            "value": 2,
-            "title": "<b>Hao Wang</b><br>2 citations · h-index 1<br><a href=\"https://orcid.org/0009-0006-7513-8014\">ORCID</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://orcid.org/0009-0006-7513-8014"
+            "value": 1,
+            "title": "<b>Juntong Wu</b>",
+            "url": ""
           },
           {
             "id": "a2",
-            "label": "Haotong Bao\n<i>Shanghai Jiao Tong University</i>",
+            "label": "Yang Liu",
             "group": "author",
-            "value": 18,
-            "title": "<b>Haotong Bao</b><br>Shanghai Jiao Tong University<br>18 citations · h-index 2<br><a href=\"https://openalex.org/A5100594460\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5100594460",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 0
+            "value": 1,
+            "title": "<b>Yang Liu</b>",
+            "url": ""
           },
           {
             "id": "a3",
-            "label": "Kai Jiang",
+            "label": "Junhao Hu",
             "group": "author",
             "value": 1,
-            "title": "<b>Kai Jiang</b><br><a href=\"https://openalex.org/A5138872786\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5138872786"
+            "title": "<b>Junhao Hu</b>",
+            "url": ""
           },
           {
             "id": "a4",
-            "label": "Jianfei Chen",
+            "label": "Minghao Li",
             "group": "author",
             "value": 1,
-            "title": "<b>Jianfei Chen</b><br><a href=\"https://openalex.org/A5138920149\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5138920149"
+            "title": "<b>Minghao Li</b>",
+            "url": ""
           },
           {
             "id": "a5",
-            "label": "J ZHU",
+            "label": "Xiaoxu Chen",
             "group": "author",
-            "value": 20,
-            "title": "<b>J ZHU</b><br>20 citations · h-index 3<br><a href=\"https://openalex.org/A5048188910\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5048188910"
+            "value": 1,
+            "title": "<b>Xiaoxu Chen</b>",
+            "url": ""
           },
           {
             "id": "a6",
-            "label": "Fangcheng Fu\n<i>Shanghai Jiao Tong University</i>",
+            "label": "Weihang Chen",
             "group": "author",
             "value": 1,
-            "title": "<b>Fangcheng Fu</b><br>Shanghai Jiao Tong University<br><a href=\"https://openalex.org/A5138863709\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5138863709",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 0
-          },
-          {
-            "id": "a7",
-            "label": "Jintao Zhang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Jintao Zhang</b><br><a href=\"https://openalex.org/A5138871107\">OpenAlex</a> · <a href=\"https://github.com/shengshu-ai/TurboServe\">code</a>",
-            "url": "https://openalex.org/A5138871107"
+            "title": "<b>Weihang Chen</b>",
+            "url": ""
           }
         ],
         "edges": [
@@ -2882,15 +2879,6 @@
               "color": "#26283a"
             },
             "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
           }
         ]
       },
@@ -2908,16 +2896,16 @@
             "label": "D. Balamurugan",
             "group": "author",
             "value": 1,
-            "title": "<b>D. Balamurugan</b>",
-            "url": ""
+            "title": "<b>D. Balamurugan</b><br><a href=\"https://www.semanticscholar.org/author/2310381789\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2310381789"
           },
           {
             "id": "a1",
             "label": "Thomas W. Bush\n<i>Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Thomas W. Bush</b><br>Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University",
-            "url": "",
+            "title": "<b>Thomas W. Bush</b><br>Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University<br><a href=\"https://www.semanticscholar.org/author/2446397676\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2446397676",
             "institution": "Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University",
             "institution_index": 0
           }
@@ -3058,115 +3046,37 @@
             "label": "📄",
             "group": "paper",
             "size": 30,
-            "title": "<b>Paper</b><br>Multi-Block Diffusion Language Models"
+            "title": "<b>Paper</b><br>3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving"
           },
           {
             "id": "a0",
-            "label": "Y Jin",
+            "label": "Jaehun Lee\n<i>Korea Advanced Institute of Science and Technology</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Y Jin</b><br>1 citations · h-index 1<br><a href=\"https://openalex.org/A5112642833\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5112642833"
+            "value": 169,
+            "title": "<b>Jaehun Lee</b><br>Korea Advanced Institute of Science and Technology<br>169 citations · h-index 8<br><a href=\"https://orcid.org/0009-0009-2089-6944\">ORCID</a>",
+            "url": "https://orcid.org/0009-0009-2089-6944",
+            "institution": "Korea Advanced Institute of Science and Technology",
+            "institution_index": 0
           },
           {
             "id": "a1",
-            "label": "Jiajun Xu\n<i>Xi’an Jiao Tong University</i>",
+            "label": "In-Jun Jung\n<i>Korea Advanced Institute of Science and Technology</i>",
             "group": "author",
-            "value": 1,
-            "title": "<b>Jiajun Xu</b><br>Xi’an Jiao Tong University<br><a href=\"https://openalex.org/A5139635273\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139635273",
-            "institution": "Xi’an Jiao Tong University",
+            "value": 91,
+            "title": "<b>In-Jun Jung</b><br>Korea Advanced Institute of Science and Technology<br>91 citations · h-index 6<br><a href=\"https://orcid.org/0000-0002-3228-3725\">ORCID</a>",
+            "url": "https://orcid.org/0000-0002-3228-3725",
+            "institution": "Korea Advanced Institute of Science and Technology",
             "institution_index": 0
           },
           {
             "id": "a2",
-            "label": "Yuxuan Liu\n<i>Shanghai Jiao Tong University</i>",
+            "label": "Joo-Young Kim\n<i>Korea Advanced Institute of Science and Technology</i>",
             "group": "author",
             "value": 1,
-            "title": "<b>Yuxuan Liu</b><br>Shanghai Jiao Tong University<br><a href=\"https://openalex.org/A5139691022\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139691022",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 1
-          },
-          {
-            "id": "a3",
-            "label": "Chenkai Xu\n<i>Shanghai Jiao Tong University</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Chenkai Xu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://openalex.org/A5139658097\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139658097",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 1
-          },
-          {
-            "id": "a4",
-            "label": "Yi Tu\n<i>Huawei</i>",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Yi Tu</b><br>Huawei<br>h-index 4<br><a href=\"https://openalex.org/A5139634980\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139634980",
-            "institution": "Huawei",
-            "institution_index": 2
-          },
-          {
-            "id": "a5",
-            "label": "Jiajun Li\n<i>Huawei</i>",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Jiajun Li</b><br>Huawei<br>h-index 4<br><a href=\"https://openalex.org/A5139637614\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139637614",
-            "institution": "Huawei",
-            "institution_index": 2
-          },
-          {
-            "id": "a6",
-            "label": "Dandan Tu\n<i>Huawei</i>",
-            "group": "author",
-            "value": 148,
-            "title": "<b>Dandan Tu</b><br>Huawei<br>148 citations · h-index 7<br><a href=\"https://orcid.org/0000-0002-3560-124X\">ORCID</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://orcid.org/0000-0002-3560-124X",
-            "institution": "Huawei",
-            "institution_index": 2
-          },
-          {
-            "id": "a7",
-            "label": "Xiaohui Yan\n<i>Huawei</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Xiaohui Yan</b><br>Huawei<br>h-index 1<br><a href=\"https://openalex.org/A5139648649\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139648649",
-            "institution": "Huawei",
-            "institution_index": 2
-          },
-          {
-            "id": "a8",
-            "label": "Kai Yu\n<i>Shanghai Jiao Tong University</i>",
-            "group": "author",
-            "value": 2,
-            "title": "<b>Kai Yu</b><br>Shanghai Jiao Tong University<br>h-index 2<br><a href=\"https://openalex.org/A5139672337\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139672337",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 1
-          },
-          {
-            "id": "a9",
-            "label": "Pengfei Liu\n<i>Shanghai Jiao Tong University</i>",
-            "group": "author",
-            "value": 3,
-            "title": "<b>Pengfei Liu</b><br>Shanghai Jiao Tong University<br>h-index 3<br><a href=\"https://openalex.org/A5139677136\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5139677136",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 1
-          },
-          {
-            "id": "a10",
-            "label": "Zhijie Deng\n<i>Shanghai Jiao Tong University</i>",
-            "group": "author",
-            "value": 878,
-            "title": "<b>Zhijie Deng</b><br>Shanghai Jiao Tong University<br>878 citations · h-index 13<br><a href=\"https://openalex.org/A5102623510\">OpenAlex</a> · <a href=\"https://github.com/SJTU-DENG-Lab/mbd-lms\">code</a>",
-            "url": "https://openalex.org/A5102623510",
-            "institution": "Shanghai Jiao Tong University",
-            "institution_index": 1
+            "title": "<b>Joo-Young Kim</b><br>Korea Advanced Institute of Science and Technology<br><a href=\"https://openalex.org/A5139734674\">OpenAlex</a>",
+            "url": "https://openalex.org/A5139734674",
+            "institution": "Korea Advanced Institute of Science and Technology",
+            "institution_index": 0
           }
         ],
         "edges": [
@@ -3196,10 +3106,53 @@
               "color": "#26283a"
             },
             "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_7": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs"
           },
           {
+            "id": "a0",
+            "label": "Mauricio Fadel Argerich\n<i>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland</i>",
+            "group": "author",
+            "value": 7,
+            "title": "<b>Mauricio Fadel Argerich</b><br>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland<br>h-index 7<br><a href=\"https://www.semanticscholar.org/author/51136369\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/51136369",
+            "institution": "Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Jonathan Furst\n<i>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland</i>",
+            "group": "author",
+            "value": 2,
+            "title": "<b>Jonathan Furst</b><br>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2380523061\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2380523061",
+            "institution": "Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland",
+            "institution_index": 0
+          },
+          {
+            "id": "a2",
+            "label": "Marta Patiño-Martínez\n<i>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland</i>",
+            "group": "author",
+            "value": 2,
+            "title": "<b>Marta Patiño-Martínez</b><br>Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland<br>h-index 2<br><a href=\"https://www.semanticscholar.org/author/2305026216\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2305026216",
+            "institution": "Zurich University of Applied Sciences, Gertrudstrasse 15, 8400 Winterthur, Switzerland",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
             "from": "paper",
-            "to": "a3",
+            "to": "a0",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
@@ -3208,7 +3161,7 @@
           },
           {
             "from": "paper",
-            "to": "a4",
+            "to": "a1",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
@@ -3217,52 +3170,7 @@
           },
           {
             "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a8",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a9",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a10",
+            "to": "a2",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
@@ -3271,7 +3179,7 @@
           }
         ]
       },
-      "g_ai-infra_paper_7": {
+      "g_ai-infra_paper_8": {
         "nodes": [
           {
             "id": "paper",
@@ -3386,7 +3294,630 @@
           }
         ]
       },
-      "g_ai-infra_paper_8": {
+      "g_ai-infra_paper_9": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>MxGLUT: A Reconfigurable LUT-Centric Broadcast Dataflow Accelerator for Mixed-Precision GEMM"
+          },
+          {
+            "id": "a0",
+            "label": "Weiyu Zhou\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Weiyu Zhou</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Chen Ding\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Chen Ding</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a2",
+            "label": "Mingyuan Liu\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Mingyuan Liu</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a3",
+            "label": "Liangyu Gan\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Liangyu Gan</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a4",
+            "label": "Yukun Feng\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yukun Feng</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a5",
+            "label": "Hao Jia\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Hao Jia</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a6",
+            "label": "Haoming Chu\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Haoming Chu</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a7",
+            "label": "Lirong Zheng\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Lirong Zheng</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a8",
+            "label": "Ning Ma\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Ning Ma</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          },
+          {
+            "id": "a9",
+            "label": "Yuxiang Huan\n<i>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yuxiang Huan</b><br>University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "url": "",
+            "institution": "University of Macau ‡ Guangdong Institute of Intelligence Science and Technology",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a6",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a7",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a8",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a9",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_10": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding"
+          },
+          {
+            "id": "a0",
+            "label": "Hao Zhang\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Hao Zhang</b><br>AMAP, Alibaba Group<br><a href=\"https://openalex.org/A5139806161\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://openalex.org/A5139806161",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Yiming Hu\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1135,
+            "title": "<b>Yiming Hu</b><br>AMAP, Alibaba Group<br>1135 citations · h-index 14<br><a href=\"https://orcid.org/0009-0006-2418-976X\">ORCID</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://orcid.org/0009-0006-2418-976X",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a2",
+            "label": "Yong Wang\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yong Wang</b><br>AMAP, Alibaba Group<br><a href=\"https://openalex.org/A5139793598\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://openalex.org/A5139793598",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a3",
+            "label": "Mingqiao Mo\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Mingqiao Mo</b><br>AMAP, Alibaba Group<br>1 citations · h-index 1<br><a href=\"https://openalex.org/A5111267280\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://openalex.org/A5111267280",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a4",
+            "label": "Xin Xiao\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 88,
+            "title": "<b>Xin Xiao</b><br>AMAP, Alibaba Group<br>88 citations · h-index 5<br><a href=\"https://openalex.org/A5100559024\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://openalex.org/A5100559024",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          },
+          {
+            "id": "a5",
+            "label": "Xi Chu\n<i>AMAP, Alibaba Group</i>",
+            "group": "author",
+            "value": 1405,
+            "title": "<b>Xi Chu</b><br>AMAP, Alibaba Group<br>1405 citations · h-index 21<br><a href=\"https://openalex.org/A5056733554\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
+            "url": "https://openalex.org/A5056733554",
+            "institution": "AMAP, Alibaba Group",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_11": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots"
+          },
+          {
+            "id": "a0",
+            "label": "Ling Xu",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Ling Xu</b>",
+            "url": ""
+          },
+          {
+            "id": "a1",
+            "label": "Chuyu Han",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Chuyu Han</b>",
+            "url": ""
+          },
+          {
+            "id": "a2",
+            "label": "Borui Li",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Borui Li</b>",
+            "url": ""
+          },
+          {
+            "id": "a3",
+            "label": "Hao Wu",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Hao Wu</b>",
+            "url": ""
+          },
+          {
+            "id": "a4",
+            "label": "Shiqi Jiang",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Shiqi Jiang</b>",
+            "url": ""
+          },
+          {
+            "id": "a5",
+            "label": "Ting Cao",
+            "group": "author",
+            "value": 4,
+            "title": "<b>Ting Cao</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2326975040\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2326975040"
+          },
+          {
+            "id": "a6",
+            "label": "Chuanyou Li",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Chuanyou Li</b>",
+            "url": ""
+          },
+          {
+            "id": "a7",
+            "label": "Shenghui Zhong",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Shenghui Zhong</b><br><a href=\"https://www.semanticscholar.org/author/2439208308\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2439208308"
+          },
+          {
+            "id": "a8",
+            "label": "Shuai Wang",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Shuai Wang</b>",
+            "url": ""
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a6",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a7",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a8",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_12": {
+        "nodes": [
+          {
+            "id": "paper",
+            "label": "📄",
+            "group": "paper",
+            "size": 30,
+            "title": "<b>Paper</b><br>Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models"
+          },
+          {
+            "id": "a0",
+            "label": "Xuan-Phi Nguyen\n<i>Salesforce AI Research</i>",
+            "group": "author",
+            "value": 15,
+            "title": "<b>Xuan-Phi Nguyen</b><br>Salesforce AI Research<br>h-index 15<br><a href=\"https://www.semanticscholar.org/author/1399659909\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/1399659909",
+            "institution": "Salesforce AI Research",
+            "institution_index": 0
+          },
+          {
+            "id": "a1",
+            "label": "Shrey Pandit\n<i>University of Texas at Austin</i>",
+            "group": "author",
+            "value": 9,
+            "title": "<b>Shrey Pandit</b><br>University of Texas at Austin<br>h-index 9<br><a href=\"https://sites.google.com/view/shrey-pandit/\">homepage</a> · <a href=\"https://www.semanticscholar.org/author/1824294087\">Semantic Scholar</a>",
+            "url": "https://sites.google.com/view/shrey-pandit/",
+            "institution": "University of Texas at Austin",
+            "institution_index": 1
+          },
+          {
+            "id": "a2",
+            "label": "Yiran Zhao\n<i>Salesforce AI Research</i>",
+            "group": "author",
+            "value": 1,
+            "title": "<b>Yiran Zhao</b><br>Salesforce AI Research",
+            "url": "",
+            "institution": "Salesforce AI Research",
+            "institution_index": 0
+          },
+          {
+            "id": "a3",
+            "label": "Semih Yavuz\n<i>Salesforce AI Research</i>",
+            "group": "author",
+            "value": 25,
+            "title": "<b>Semih Yavuz</b><br>Salesforce AI Research<br>h-index 25<br><a href=\"https://www.semanticscholar.org/author/3014143\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/3014143",
+            "institution": "Salesforce AI Research",
+            "institution_index": 0
+          },
+          {
+            "id": "a4",
+            "label": "Silvio Savarese\n<i>Salesforce AI Research</i>",
+            "group": "author",
+            "value": 31,
+            "title": "<b>Silvio Savarese</b><br>Salesforce AI Research<br>h-index 31<br><a href=\"https://www.semanticscholar.org/author/2238207181\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2238207181",
+            "institution": "Salesforce AI Research",
+            "institution_index": 0
+          },
+          {
+            "id": "a5",
+            "label": "Shafiq Joty\n<i>Salesforce AI Research</i>",
+            "group": "author",
+            "value": 18,
+            "title": "<b>Shafiq Joty</b><br>Salesforce AI Research<br>h-index 18<br><a href=\"https://www.semanticscholar.org/author/2313536726\">Semantic Scholar</a>",
+            "url": "https://www.semanticscholar.org/author/2313536726",
+            "institution": "Salesforce AI Research",
+            "institution_index": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "paper",
+            "to": "a0",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a1",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a2",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a3",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a4",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          },
+          {
+            "from": "paper",
+            "to": "a5",
+            "kind": "paper_author",
+            "color": {
+              "color": "#26283a"
+            },
+            "width": 1
+          }
+        ]
+      },
+      "g_ai-infra_paper_13": {
         "nodes": [
           {
             "id": "paper",
@@ -3535,449 +4066,7 @@
           }
         ]
       },
-      "g_ai-infra_paper_9": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding"
-          },
-          {
-            "id": "a0",
-            "label": "Hao Zhang\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Hao Zhang</b><br>AMAP, Alibaba Group<br><a href=\"https://openalex.org/A5139806161\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://openalex.org/A5139806161",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          },
-          {
-            "id": "a1",
-            "label": "Yiming Hu\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 1135,
-            "title": "<b>Yiming Hu</b><br>AMAP, Alibaba Group<br>1135 citations · h-index 14<br><a href=\"https://orcid.org/0009-0006-2418-976X\">ORCID</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://orcid.org/0009-0006-2418-976X",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          },
-          {
-            "id": "a2",
-            "label": "Yong Wang\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Yong Wang</b><br>AMAP, Alibaba Group<br><a href=\"https://openalex.org/A5139793598\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://openalex.org/A5139793598",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          },
-          {
-            "id": "a3",
-            "label": "Mingqiao Mo\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Mingqiao Mo</b><br>AMAP, Alibaba Group<br>1 citations · h-index 1<br><a href=\"https://openalex.org/A5111267280\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://openalex.org/A5111267280",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          },
-          {
-            "id": "a4",
-            "label": "Xin Xiao\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 88,
-            "title": "<b>Xin Xiao</b><br>AMAP, Alibaba Group<br>88 citations · h-index 5<br><a href=\"https://openalex.org/A5100559024\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://openalex.org/A5100559024",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          },
-          {
-            "id": "a5",
-            "label": "Xi Chu\n<i>AMAP, Alibaba Group</i>",
-            "group": "author",
-            "value": 1405,
-            "title": "<b>Xi Chu</b><br>AMAP, Alibaba Group<br>1405 citations · h-index 21<br><a href=\"https://openalex.org/A5056733554\">OpenAlex</a> · <a href=\"https://github.com/AMAP-ML/BlockPilot\">code</a>",
-            "url": "https://openalex.org/A5056733554",
-            "institution": "AMAP, Alibaba Group",
-            "institution_index": 0
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_10": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots"
-          },
-          {
-            "id": "a0",
-            "label": "Ling Xu",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Ling Xu</b>",
-            "url": ""
-          },
-          {
-            "id": "a1",
-            "label": "Chuyu Han",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Chuyu Han</b>",
-            "url": ""
-          },
-          {
-            "id": "a2",
-            "label": "Borui Li",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Borui Li</b>",
-            "url": ""
-          },
-          {
-            "id": "a3",
-            "label": "Hao Wu",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Hao Wu</b>",
-            "url": ""
-          },
-          {
-            "id": "a4",
-            "label": "Shiqi Jiang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Shiqi Jiang</b>",
-            "url": ""
-          },
-          {
-            "id": "a5",
-            "label": "Ting Cao",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Ting Cao</b>",
-            "url": ""
-          },
-          {
-            "id": "a6",
-            "label": "Chuanyou Li",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Chuanyou Li</b>",
-            "url": ""
-          },
-          {
-            "id": "a7",
-            "label": "Sheng Zhong",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Sheng Zhong</b>",
-            "url": ""
-          },
-          {
-            "id": "a8",
-            "label": "Shuai Wang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Shuai Wang</b>",
-            "url": ""
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a8",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_11": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers"
-          },
-          {
-            "id": "a0",
-            "label": "Donghyun Lee",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Donghyun Lee</b>",
-            "url": ""
-          },
-          {
-            "id": "a1",
-            "label": "Jitesh Chavan",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Jitesh Chavan</b><br><a href=\"https://www.semanticscholar.org/author/2392719285\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2392719285"
-          },
-          {
-            "id": "a2",
-            "label": "Duy Nguyen",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Duy Nguyen</b><br><a href=\"https://www.semanticscholar.org/author/2446410536\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446410536"
-          },
-          {
-            "id": "a3",
-            "label": "Sam Huang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Sam Huang</b>",
-            "url": ""
-          },
-          {
-            "id": "a4",
-            "label": "Liming Jiang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Liming Jiang</b>",
-            "url": ""
-          },
-          {
-            "id": "a5",
-            "label": "Priyadarshini Panda",
-            "group": "author",
-            "value": 4,
-            "title": "<b>Priyadarshini Panda</b><br>h-index 4<br><a href=\"https://www.semanticscholar.org/author/2353385568\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2353385568"
-          },
-          {
-            "id": "a6",
-            "label": "Timo Mertens",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Timo Mertens</b><br><a href=\"https://www.semanticscholar.org/author/2446397119\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446397119"
-          },
-          {
-            "id": "a7",
-            "label": "Saurabh Shukla",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Saurabh Shukla</b><br><a href=\"https://www.semanticscholar.org/author/2446398614\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446398614"
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_12": {
+      "g_ai-infra_paper_14": {
         "nodes": [
           {
             "id": "paper",
@@ -4058,190 +4147,7 @@
           }
         ]
       },
-      "g_ai-infra_paper_13": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation"
-          },
-          {
-            "id": "a0",
-            "label": "Junyi Wen",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Junyi Wen</b>",
-            "url": ""
-          },
-          {
-            "id": "a1",
-            "label": "Ruiyan Zhuang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Ruiyan Zhuang</b><br><a href=\"https://www.semanticscholar.org/author/2446396208\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446396208"
-          },
-          {
-            "id": "a2",
-            "label": "Yongjia Xu",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Yongjia Xu</b>",
-            "url": ""
-          },
-          {
-            "id": "a3",
-            "label": "Pengtu Li",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Pengtu Li</b>",
-            "url": ""
-          },
-          {
-            "id": "a4",
-            "label": "Rui Zou",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Rui Zou</b><br><a href=\"https://www.semanticscholar.org/author/2446397768\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446397768"
-          },
-          {
-            "id": "a5",
-            "label": "Hongyi Chen",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Hongyi Chen</b>",
-            "url": ""
-          },
-          {
-            "id": "a6",
-            "label": "Chingman Wan",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Chingman Wan</b><br><a href=\"https://www.semanticscholar.org/author/2446396161\">Semantic Scholar</a>",
-            "url": "https://www.semanticscholar.org/author/2446396161"
-          },
-          {
-            "id": "a7",
-            "label": "Puxu Yang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Puxu Yang</b>",
-            "url": ""
-          },
-          {
-            "id": "a8",
-            "label": "Wuhui Chen",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Wuhui Chen</b>",
-            "url": ""
-          },
-          {
-            "id": "a9",
-            "label": "Yanlin Wang",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Yanlin Wang</b>",
-            "url": ""
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a6",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a7",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a8",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a9",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_14": {
+      "g_ai-infra_paper_15": {
         "nodes": [
           {
             "id": "paper",
@@ -4341,133 +4247,6 @@
           {
             "from": "paper",
             "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          }
-        ]
-      },
-      "g_ai-infra_paper_15": {
-        "nodes": [
-          {
-            "id": "paper",
-            "label": "📄",
-            "group": "paper",
-            "size": 30,
-            "title": "<b>Paper</b><br>Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models"
-          },
-          {
-            "id": "a0",
-            "label": "Xuan-Phi Nguyen\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Xuan-Phi Nguyen</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          },
-          {
-            "id": "a1",
-            "label": "Shrey Pandit\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Shrey Pandit</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          },
-          {
-            "id": "a2",
-            "label": "Yiran Zhao\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Yiran Zhao</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          },
-          {
-            "id": "a3",
-            "label": "Semih Yavuz\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Semih Yavuz</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          },
-          {
-            "id": "a4",
-            "label": "Silvio Savarese\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Silvio Savarese</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          },
-          {
-            "id": "a5",
-            "label": "Shafiq Joty\n<i>Salesforce AI Research</i>",
-            "group": "author",
-            "value": 1,
-            "title": "<b>Shafiq Joty</b><br>Salesforce AI Research",
-            "url": "",
-            "institution": "Salesforce AI Research",
-            "institution_index": 0
-          }
-        ],
-        "edges": [
-          {
-            "from": "paper",
-            "to": "a0",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a1",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a2",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a3",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a4",
-            "kind": "paper_author",
-            "color": {
-              "color": "#26283a"
-            },
-            "width": 1
-          },
-          {
-            "from": "paper",
-            "to": "a5",
             "kind": "paper_author",
             "color": {
               "color": "#26283a"
