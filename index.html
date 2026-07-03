@@ -34,13 +34,14 @@
   .wrap { max-width:1140px; margin:0 auto; padding:8px 20px 80px; }
   .topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:14px 0 4px; }
   .sub { color:var(--muted); font-size:.85rem; }
-  .theme-toggle { appearance:none; display:inline-grid; place-items:center; width:38px; height:38px;
-    background:var(--card); border:1px solid var(--border); border-radius:999px; color:var(--fg);
-    box-shadow:0 8px 24px rgba(0,0,0,.08); cursor:pointer; }
-  .theme-toggle:hover { border-color:var(--accent); }
-  .theme-toggle .icon { display:none; font-size:1.05rem; line-height:1; }
-  :root[data-theme="light"] .theme-toggle .moon { display:block; }
-  :root:not([data-theme="light"]) .theme-toggle .sun { display:block; }
+  .theme-switch { display:inline-flex; align-items:center; gap:2px; padding:3px;
+    background:var(--card); border:1px solid var(--border); border-radius:999px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08); }
+  .theme-option { appearance:none; display:grid; place-items:center; width:32px; height:32px;
+    border:0; border-radius:999px; padding:0; background:transparent; color:var(--muted);
+    font:inherit; font-size:1rem; line-height:1; cursor:pointer; }
+  .theme-option:hover { color:var(--fg); }
+  .theme-option.active { background:var(--accent); color:#fff; }
   .track-switcher { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px;
     margin:18px 0 22px; }
   .track-tab { appearance:none; text-align:left; min-height:82px; padding:14px 16px;
@@ -114,7 +115,7 @@
 <body>
 <header class="site-hero"><div class="site-hero-inner"><h1 class="brand-title">OmniSource</h1><p class="brand-copy">AI-Driven Open Research Community</p></div></header>
 <div class="wrap">
-<div class="topbar"><div class="sub">选择一个 track 查看对应的论文、博客和开源项目</div><button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题"><span class="icon sun" aria-hidden="true">☀</span><span class="icon moon" aria-hidden="true">☾</span></button></div>
+<div class="topbar"><div class="sub">选择一个 track 查看对应的论文、博客和开源项目</div><div class="theme-switch" role="group" aria-label="主题"><button class="theme-option" type="button" data-theme-choice="dark" aria-label="暗色主题" title="暗色主题"><span aria-hidden="true">☾</span></button><button class="theme-option" type="button" data-theme-choice="light" aria-label="亮色主题" title="亮色主题"><span aria-hidden="true">☀</span></button></div></div>
 <div class="track-switcher" role="tablist" aria-label="Track selector"><button class="track-tab active" type="button" data-track="ai-algorithm" aria-pressed="true"><span>ai-algorithm</span><small>Daily · 2026-07-03</small></button><button class="track-tab" type="button" data-track="ai-infra" aria-pressed="false"><span>ai-infra</span><small>Daily · 2026-07-03</small></button></div>
 <div class="report-panels"><section class="track-panel" data-track="ai-algorithm"><div class="track-heading"><div><span class="track-kicker">Daily · 2026-07-03</span><h2>ai-algorithm</h2></div><p>AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.</p></div><h2>📄 论文</h2>
 <h3 class="topic-heading"><span class="topic-node"><span class="topic-node-label">方向</span><span class="topic-node-value">模型与训练方法 / 架构设计</span></span><span class="topic-node"><span class="topic-node-label">主题</span><span class="topic-node-value">diffusion / generative modeling</span></span></h3>
@@ -208,6 +209,14 @@
     ]
   };
   const currentTheme = () => document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  function syncThemeSwitch() {
+    const theme = currentTheme();
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      const selected = btn.dataset.themeChoice === theme;
+      btn.classList.toggle('active', selected);
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+  }
   const institutionColor = index => {
     const colors = institutionPalettes[currentTheme()];
     return colors[Math.abs(index || 0) % colors.length];
@@ -450,10 +459,10 @@
   document.querySelectorAll('.track-tab').forEach(tab => {
     tab.addEventListener('click', () => setActiveTrack(tab.dataset.track));
   });
-  document.querySelector('.theme-toggle')?.addEventListener('click', () => {
-    const nextTheme = currentTheme() === 'light' ? 'dark' : 'light';
+  const applyTheme = nextTheme => {
     document.documentElement.dataset.theme = nextTheme;
     localStorage.setItem('omnisource-theme', nextTheme);
+    syncThemeSwitch();
     networks.forEach(item => {
       if (item.fallback) {
         renderFallbackGraph(item.el, item.graph);
@@ -465,8 +474,14 @@
       item.net.setOptions(graphOptions());
       requestAnimationFrame(() => item.net.fit({ animation:false }));
     });
+  };
+  document.querySelectorAll('.theme-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyTheme(btn.dataset.themeChoice === 'light' ? 'light' : 'dark');
+    });
   });
   const hashTrack = decodeURIComponent(window.location.hash.replace(/^#/, ''));
   setActiveTrack(hashTrack || defaultTrack, false);
+  syncThemeSwitch();
 </script>
 </body></html>
