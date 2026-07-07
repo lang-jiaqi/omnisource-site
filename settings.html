@@ -318,11 +318,11 @@ cryptocurrency</textarea>
       </div>
       <div class="preview-body">
         <div class="save-panel">
-          <p class="save-summary">保存会更新仓库配置，并触发一次新的日报/网站重建。</p>
+          <p class="save-summary">先保存配置到仓库；需要立刻生成新日报和网站时，再点重建。</p>
           <div class="save-actions">
             <button class="plain-btn" type="button" id="loginGitHub">Sign in with GitHub</button>
-            <button class="plain-btn" type="button" id="checkSession">Check session</button>
-            <button class="primary-btn" type="button" id="saveGitHub">Save & rebuild</button>
+            <button class="primary-btn" type="button" id="saveGitHub">Save settings</button>
+            <button class="plain-btn" type="button" id="rebuildGitHub">Rebuild report/site</button>
           </div>
           <div class="status" id="status" aria-live="polite"></div>
         </div>
@@ -646,8 +646,8 @@ const apiUrl = path => `${apiBase()}${path}`;
 const updateSaveControls = (stateText, mode = '') => {
   const connected = !!apiBase();
   $('loginGitHub').disabled = !connected;
-  $('checkSession').disabled = !connected;
   $('saveGitHub').disabled = !connected;
+  $('rebuildGitHub').disabled = !connected;
   const authState = $('authState');
   authState.textContent = connected ? (stateText || 'Ready to connect') : 'Backend not connected';
   authState.className = `save-state ${mode}`;
@@ -669,7 +669,7 @@ const refreshSession = async () => {
     setPersistentStatus('Settings API URL is empty.');
     return;
   }
-  setPersistentStatus('Checking GitHub session...');
+  setPersistentStatus('Checking GitHub sign-in...');
   try {
     const response = await apiFetch('/api/auth/session');
     const data = await response.json();
@@ -708,10 +708,28 @@ const saveToGitHub = async () => {
     }
     if (!response.ok) throw new Error(data.message || data.error || 'Save failed.');
     updateSaveControls(`Saved by ${data.user}`, 'ready');
-    setPersistentStatus(`Saved ${data.commit.sha.slice(0, 7)} and triggered ${data.workflow}.`);
+    setPersistentStatus(`Saved ${data.commit.sha.slice(0, 7)}. Click Rebuild report/site when you want to regenerate the report.`);
   } catch (error) {
     updateSaveControls('Save failed', 'warn');
     setPersistentStatus(error.message || 'Save failed.');
+  }
+};
+const rebuildFromGitHub = async () => {
+  setPersistentStatus('Starting report/site rebuild...');
+  try {
+    const response = await apiFetch('/api/config/rebuild', { method: 'POST' });
+    const data = await response.json();
+    if (response.status === 401) {
+      updateSaveControls('Sign in required', 'warn');
+      setPersistentStatus('Please sign in with GitHub first.');
+      return;
+    }
+    if (!response.ok) throw new Error(data.message || data.error || 'Rebuild failed.');
+    updateSaveControls(`Rebuild started by ${data.user}`, 'ready');
+    setPersistentStatus(`Rebuild started via ${data.workflow} on ${data.branch}.`);
+  } catch (error) {
+    updateSaveControls('Rebuild failed', 'warn');
+    setPersistentStatus(error.message || 'Rebuild failed.');
   }
 };
 document.querySelectorAll('input, textarea, select').forEach(el => el.addEventListener('input', render));
@@ -743,8 +761,8 @@ $('loginGitHub').addEventListener('click', () => {
   setPersistentStatus('Opening GitHub sign-in...');
   window.location.href = `${apiBase()}/api/auth/login?return_to=${encodeURIComponent(window.location.href)}`;
 });
-$('checkSession').addEventListener('click', refreshSession);
 $('saveGitHub').addEventListener('click', saveToGitHub);
+$('rebuildGitHub').addEventListener('click', rebuildFromGitHub);
 $('themeBtn').addEventListener('click', () => {
   const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
   document.documentElement.dataset.theme = next;
