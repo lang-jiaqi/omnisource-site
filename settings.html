@@ -501,7 +501,11 @@ const buildPresets = () => {
     return btn;
   }));
 };
-const apiBase = () => String($('apiBase').value || '').trim().replace(/\/+$/, '');
+const normalizedApiBase = value => {
+  const text = String(value || '').trim().replace(/\/+$/, '');
+  return text.includes('example.workers.dev') ? '' : text;
+};
+const apiBase = () => normalizedApiBase($('apiBase').value);
 const apiUrl = path => `${apiBase()}${path}`;
 const updateSaveControls = (stateText, mode = '') => {
   const connected = !!apiBase();
@@ -526,15 +530,24 @@ const apiFetch = async (path, options = {}) => {
 const refreshSession = async () => {
   if (!apiBase()) {
     updateSaveControls();
+    setPersistentStatus('Settings API URL is empty.');
     return;
   }
+  setPersistentStatus('Checking GitHub session...');
   try {
     const response = await apiFetch('/api/auth/session');
     const data = await response.json();
-    if (data.authenticated) updateSaveControls(`Signed in as ${data.user.login}`, 'ready');
-    else updateSaveControls('Not signed in', 'warn');
+    if (!response.ok) throw new Error(data.message || data.error || 'Session check failed.');
+    if (data.authenticated) {
+      updateSaveControls(`Signed in as ${data.user.login}`, 'ready');
+      setPersistentStatus(`Signed in as ${data.user.login}.`);
+    } else {
+      updateSaveControls('Not signed in', 'warn');
+      setPersistentStatus('Not signed in. Use Sign in with GitHub first.');
+    }
   } catch (error) {
     updateSaveControls('API unreachable', 'warn');
+    setPersistentStatus(error.message || 'Could not reach Settings API.');
   }
 };
 const saveToGitHub = async () => {
@@ -581,11 +594,17 @@ $('downloadTrack').addEventListener('click', () => {
   setStatus('Track YAML downloaded');
 });
 $('apiBase').addEventListener('input', () => {
-  localStorage.setItem(API_STORAGE_KEY, apiBase());
+  const value = apiBase();
+  if (value) localStorage.setItem(API_STORAGE_KEY, value);
+  else localStorage.removeItem(API_STORAGE_KEY);
   updateSaveControls();
 });
 $('loginGitHub').addEventListener('click', () => {
-  if (!apiBase()) return;
+  if (!apiBase()) {
+    setPersistentStatus('Settings API URL is empty.');
+    return;
+  }
+  setPersistentStatus('Opening GitHub sign-in...');
   window.location.href = `${apiBase()}/api/auth/login?return_to=${encodeURIComponent(window.location.href)}`;
 });
 $('checkSession').addEventListener('click', refreshSession);
@@ -596,7 +615,9 @@ $('themeBtn').addEventListener('click', () => {
   localStorage.setItem('omnisource-theme', next);
 });
 buildPresets();
-$('apiBase').value = localStorage.getItem(API_STORAGE_KEY) || DEFAULT_API_BASE || '';
+const storedApiBase = normalizedApiBase(localStorage.getItem(API_STORAGE_KEY));
+$('apiBase').value = storedApiBase || DEFAULT_API_BASE || '';
+if (!storedApiBase && DEFAULT_API_BASE) localStorage.setItem(API_STORAGE_KEY, DEFAULT_API_BASE);
 updateSaveControls();
 applyState(JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'));
 render();
