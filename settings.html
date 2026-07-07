@@ -127,21 +127,59 @@
             <input id="trackId" value="my-ai-radar" spellcheck="false">
           </div>
           <input id="activeTracks" type="hidden" value="my-ai-radar">
-          <div class="field">
+          <div class="field" data-language-field="zh">
             <label for="displayZh">中文名称</label>
             <input id="displayZh" value="我的 AI 雷达">
           </div>
-          <div class="field">
+          <div class="field" data-language-field="en">
             <label for="displayEn">English name</label>
             <input id="displayEn" value="My AI Radar">
           </div>
-          <div class="field full">
+          <div class="field full" data-language-field="zh">
             <label for="descZh">中文描述</label>
             <input id="descZh" value="关注我关心的论文、开源项目、实验室博客和 X 账号的个人科研雷达。">
           </div>
-          <div class="field full">
+          <div class="field full" data-language-field="en">
             <label for="descEn">English description</label>
             <input id="descEn" value="A personal research radar for papers, repositories, lab notes, and X accounts I care about.">
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Search and Output</h2>
+        <p class="section-note">这些 queries 会统一用于 arXiv、GitHub、Hacker News 和 X/Twitter；每个平台下面只保留平台特有配置。</p>
+        <div class="field-grid">
+          <div class="field">
+            <label for="searchQueries">Track search queries</label>
+            <textarea id="searchQueries">LLM agents
+reasoning
+tool use
+inference optimization
+post-training
+benchmark</textarea>
+          </div>
+          <div class="field">
+            <label for="negativeKeywords">Negative keywords</label>
+            <textarea id="negativeKeywords">finance
+blockchain
+cryptocurrency</textarea>
+          </div>
+          <div class="field">
+            <label for="topPapers">Top papers</label>
+            <input id="topPapers" type="number" min="1" max="30" value="15">
+          </div>
+          <div class="field">
+            <label for="topRepos">Top repos</label>
+            <input id="topRepos" type="number" min="1" max="20" value="5">
+          </div>
+          <div class="field">
+            <label for="topBlogs">Top blogs</label>
+            <input id="topBlogs" type="number" min="1" max="20" value="5">
+          </div>
+          <div class="field">
+            <label for="language">Report languages</label>
+            <select id="language"><option value="zh">中文 only</option><option value="en">English only</option><option value="both">中文 + English</option></select>
           </div>
         </div>
       </section>
@@ -208,12 +246,7 @@ https://openai.com/news/rss.xml</textarea>
 
           <section class="source-config" data-source-detail="hackernews">
             <h3>Hacker News</h3>
-            <div class="field-grid">
-              <div class="field">
-                <label for="hnTop">Max HN posts</label>
-                <input id="hnTop" type="number" min="5" max="200" step="5" value="50">
-              </div>
-            </div>
+            <input id="hnTop" type="hidden" value="50">
             <p class="hint">Hacker News 也会使用统一的 track search queries。</p>
           </section>
 
@@ -225,10 +258,7 @@ https://openai.com/news/rss.xml</textarea>
                 <textarea id="redditSubreddits">MachineLearning
 LocalLLaMA</textarea>
               </div>
-              <div class="field">
-                <label for="redditTop">Max posts per subreddit</label>
-                <input id="redditTop" type="number" min="5" max="200" step="5" value="50">
-              </div>
+              <input id="redditTop" type="hidden" value="50">
             </div>
           </section>
 
@@ -250,51 +280,10 @@ GoogleDeepMind</textarea>
                 <label for="tweetLanguage">Tweet language</label>
                 <select id="tweetLanguage"><option value="en">English</option><option value="">Any</option><option value="zh">中文</option></select>
               </div>
-              <div class="field">
-                <label for="twitterMax">Max tweets</label>
-                <input id="twitterMax" type="number" min="5" max="500" step="5" value="80">
-              </div>
+              <input id="twitterMax" type="hidden" value="80">
             </div>
             <p class="hint">X/Twitter 的关键词搜索也来自统一的 track search queries；勾选“只看这些账号”后，会只看上面的 accounts。</p>
           </section>
-        </div>
-      </section>
-
-      <section class="settings-section">
-        <h2>Search and Output</h2>
-        <p class="section-note">这些 queries 会统一用于 arXiv、GitHub、Hacker News 和 X/Twitter；每个平台下面只保留平台特有配置。</p>
-        <div class="field-grid">
-          <div class="field">
-            <label for="searchQueries">Track search queries</label>
-            <textarea id="searchQueries">LLM agents
-reasoning
-tool use
-inference optimization
-post-training
-benchmark</textarea>
-          </div>
-          <div class="field">
-            <label for="negativeKeywords">Negative keywords</label>
-            <textarea id="negativeKeywords">finance
-blockchain
-cryptocurrency</textarea>
-          </div>
-          <div class="field">
-            <label for="topPapers">Top papers</label>
-            <input id="topPapers" type="number" min="1" max="30" value="15">
-          </div>
-          <div class="field">
-            <label for="topRepos">Top repos</label>
-            <input id="topRepos" type="number" min="1" max="20" value="5">
-          </div>
-          <div class="field">
-            <label for="topBlogs">Top blogs</label>
-            <input id="topBlogs" type="number" min="1" max="20" value="5">
-          </div>
-          <div class="field">
-            <label for="language">Report languages</label>
-            <select id="language"><option value="both">中文 + English</option><option value="zh">中文 only</option><option value="en">English only</option></select>
-          </div>
         </div>
       </section>
     </form>
@@ -385,6 +374,13 @@ const syncSourceDetails = state => {
     section.hidden = !enabled.has(section.dataset.sourceDetail);
   });
 };
+const syncLanguageFields = state => {
+  const language = state?.language || $('language')?.value || 'zh';
+  const enabled = language === 'both' ? new Set(['zh', 'en']) : new Set([language]);
+  document.querySelectorAll('[data-language-field]').forEach(field => {
+    field.hidden = !enabled.has(field.dataset.languageField);
+  });
+};
 const updateTrackLibrarySelection = trackId => {
   const id = cleanId(trackId);
   const known = new Set(KNOWN_TRACKS.map(track => cleanId(track.slug)));
@@ -413,19 +409,24 @@ const applyState = state => {
     });
   }
   syncSourceDetails(state);
+  syncLanguageFields(state);
 };
 const trackYaml = state => {
   const id = cleanId(state.trackId);
   const queries = state.onlyHandles ? [] : searchQueries(state);
   const handles = splitList(state.twitterHandles).map(handle => handle.replace(/^@/, ''));
   const languages = state.language === 'both' ? ['中文', 'English'] : (state.language === 'zh' ? ['中文'] : ['English']);
+  const primaryName = state.language === 'en' ? (state.displayEn || state.displayZh || id) : (state.displayZh || state.displayEn || id);
+  const primaryDescription = state.language === 'en'
+    ? (state.descEn || state.descZh || '')
+    : (state.descZh || state.descEn || '');
   const lines = [
     `name: ${id}`,
-    `display_name: ${quote(state.displayZh || state.displayEn || id)}`,
+    `display_name: ${quote(primaryName)}`,
     'display_names:',
     `  zh: ${quote(state.displayZh || id)}`,
     `  en: ${quote(state.displayEn || id)}`,
-    `description: ${quote(state.descZh || state.descEn || '')}`,
+    `description: ${quote(primaryDescription)}`,
     'descriptions:',
     `  zh: ${quote(state.descZh || '')}`,
     `  en: ${quote(state.descEn || '')}`,
@@ -535,6 +536,7 @@ const render = () => {
   $('trackYaml').textContent = trackYaml(state);
   $('appYaml').textContent = appYaml(state);
   syncSourceDetails(state);
+  syncLanguageFields(state);
   updateTrackLibrarySelection(state.trackId);
 };
 const setStatus = text => {
