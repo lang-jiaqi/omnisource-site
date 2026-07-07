@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniSource Settings</title>
+<script>
+  (() => {
+    const saved = localStorage.getItem("omnisource-theme");
+    document.documentElement.dataset.theme = saved || "dark";
+  })();
+</script>
+<style>
+  :root {
+    --bg:#0a0a0f; --panel:#13131c; --fg:#e8e8ef; --muted:#8e8e9e; --accent:#7c83ff;
+    --border:#1f1f2b; --soft-border:#282836; --body-copy:#cdced8; --input:#0e0e16;
+    --success:#6fb0a5; --warn:#d9a85c; --hero-bg:#11111a;
+  }
+  :root[data-theme="light"] {
+    --bg:#f7f8fb; --panel:#ffffff; --fg:#171821; --muted:#687084; --accent:#4257c9;
+    --border:#dfe3ee; --soft-border:#d7dce8; --body-copy:#303545; --input:#f0f3f9;
+    --success:#147c71; --warn:#9c6519; --hero-bg:#ffffff;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  a { color:var(--accent); text-decoration:none; }
+  .site-hero { background:var(--hero-bg); border-bottom:1px solid var(--border); }
+  .site-hero-inner { max-width:1180px; margin:0 auto; padding:28px 20px 30px; }
+  .topline { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+  .back-link, .icon-btn { display:inline-grid; place-items:center; min-width:38px; height:38px;
+    border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--muted);
+    box-shadow:0 8px 24px rgba(0,0,0,.08); }
+  .back-link { grid-auto-flow:column; gap:8px; padding:0 14px; font-weight:700; }
+  .back-link:hover, .icon-btn:hover { color:#fff; background:var(--accent); border-color:var(--accent); }
+  .hero-title { margin:0; font-size:2.15rem; line-height:1.05; letter-spacing:0; font-weight:800; }
+  .hero-copy { max-width:780px; margin:10px 0 0; color:var(--body-copy); font-size:1rem; }
+  .shell { max-width:1180px; margin:0 auto; padding:22px 20px 72px; }
+  .notice { border:1px solid var(--soft-border); border-left:3px solid var(--warn);
+    padding:10px 14px; color:var(--body-copy); background:var(--panel); border-radius:8px; }
+  .builder { display:grid; grid-template-columns:minmax(0, 1fr) minmax(360px, 470px);
+    gap:24px; align-items:start; margin-top:20px; }
+  .settings-section { padding:18px 0 20px; border-top:1px solid var(--soft-border); }
+  .settings-section:first-child { border-top:0; padding-top:0; }
+  .settings-section h2 { margin:0 0 12px; font-size:.92rem; line-height:1.2; color:var(--success);
+    text-transform:uppercase; letter-spacing:.04em; }
+  .field-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; }
+  .field { display:flex; flex-direction:column; gap:5px; min-width:0; }
+  .field.full { grid-column:1 / -1; }
+  label, .field-label { color:var(--muted); font-size:.78rem; font-weight:700; }
+  input, textarea, select { width:100%; border:1px solid var(--soft-border); border-radius:8px;
+    background:var(--input); color:var(--fg); padding:9px 10px; font:inherit; outline:none; }
+  textarea { min-height:92px; resize:vertical; }
+  input:focus, textarea:focus, select:focus { border-color:var(--accent); }
+  .checks { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:8px; }
+  .check { display:flex; align-items:center; gap:9px; min-height:36px; border:1px solid var(--soft-border);
+    border-radius:8px; padding:7px 9px; background:var(--panel); color:var(--body-copy); }
+  .check input { width:16px; height:16px; padding:0; accent-color:var(--accent); }
+  .preset-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  .preset-btn, .primary-btn, .plain-btn { appearance:none; border:1px solid var(--soft-border);
+    border-radius:8px; background:var(--panel); color:var(--fg); padding:8px 10px;
+    font:inherit; font-weight:700; cursor:pointer; }
+  .preset-btn:hover, .plain-btn:hover { border-color:var(--accent); color:var(--accent); }
+  .primary-btn { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .preview { position:sticky; top:16px; border:1px solid var(--border); background:var(--panel);
+    border-radius:10px; overflow:hidden; }
+  .preview-head { display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:13px 14px; border-bottom:1px solid var(--soft-border); }
+  .preview-head h2 { margin:0; font-size:.95rem; }
+  .preview-actions { display:flex; gap:8px; flex-wrap:wrap; }
+  .preview-body { display:grid; gap:14px; padding:14px; }
+  .save-panel { border:1px solid var(--soft-border); border-radius:8px; padding:12px; background:var(--input); }
+  .save-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
+  .save-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .save-state { color:var(--muted); font-size:.76rem; font-weight:800; }
+  .save-state.ready { color:var(--success); }
+  .save-state.warn { color:var(--warn); }
+  button:disabled { cursor:not-allowed; opacity:.45; }
+  .code-label { display:flex; align-items:center; justify-content:space-between; gap:8px;
+    color:var(--muted); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
+  pre { margin:0; max-height:360px; overflow:auto; border:1px solid var(--soft-border);
+    border-radius:8px; background:var(--input); color:var(--body-copy); padding:12px;
+    font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; white-space:pre; }
+  .status { min-height:20px; color:var(--success); font-size:.82rem; }
+  .hint { color:var(--muted); font-size:.82rem; margin:.35rem 0 0; }
+  @media (max-width:900px) {
+    .builder { grid-template-columns:1fr; }
+    .preview { position:static; }
+  }
+  @media (max-width:640px) {
+    .field-grid { grid-template-columns:1fr; }
+    .topline { align-items:flex-start; flex-direction:column; }
+  }
+</style></head>
+<body>
+<header class="site-hero">
+  <div class="site-hero-inner">
+    <div class="topline">
+      <a class="back-link" href="./" aria-label="返回日报"><span aria-hidden="true">←</span><span>Report</span></a>
+      <button class="icon-btn" type="button" id="themeBtn" aria-label="切换主题" title="切换主题"><span aria-hidden="true">☾</span></button>
+    </div>
+    <h1 class="hero-title">Settings</h1>
+    <p class="hero-copy">配置 source、track、X/Twitter handles 和输出数量。可先复制 YAML，也可连接 Settings API 后直接保存到 GitHub 并触发重建。</p>
+  </div>
+</header>
+<main class="shell">
+  <div class="notice">
+    `tracks/*.yaml` 和 `omnisource.yaml` 是后续日报的真配置。这个页面不会保存 secret；GitHub 写权限只由后端 Settings API 托管。
+  </div>
+  <div class="builder">
+    <form id="settingsForm" autocomplete="off">
+      <section class="settings-section">
+        <h2>Track</h2>
+        <div class="field-grid">
+          <div class="field">
+            <label for="trackId">Track id</label>
+            <input id="trackId" value="my-ai-radar" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="activeTracks">Active tracks</label>
+            <input id="activeTracks" value="my-ai-radar" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="displayZh">中文名称</label>
+            <input id="displayZh" value="我的 AI 雷达">
+          </div>
+          <div class="field">
+            <label for="displayEn">English name</label>
+            <input id="displayEn" value="My AI Radar">
+          </div>
+          <div class="field full">
+            <label for="descZh">中文描述</label>
+            <input id="descZh" value="关注我关心的论文、开源项目、实验室博客和 X 账号的个人科研雷达。">
+          </div>
+          <div class="field full">
+            <label for="descEn">English description</label>
+            <input id="descEn" value="A personal research radar for papers, repositories, lab notes, and X accounts I care about.">
+          </div>
+        </div>
+        <div class="preset-row" id="presetRow"></div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Sources</h2>
+        <div class="checks" id="sourceChecks">
+          <label class="check"><input type="checkbox" value="arxiv" checked> arXiv</label>
+          <label class="check"><input type="checkbox" value="hf_papers" checked> Hugging Face papers</label>
+          <label class="check"><input type="checkbox" value="rss" checked> RSS blogs</label>
+          <label class="check"><input type="checkbox" value="github" checked> GitHub</label>
+          <label class="check"><input type="checkbox" value="hackernews"> Hacker News</label>
+          <label class="check"><input type="checkbox" value="reddit"> Reddit</label>
+          <label class="check"><input type="checkbox" value="twitter" checked> X/Twitter</label>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Topic Filter</h2>
+        <div class="field-grid">
+          <div class="field">
+            <label for="categories">arXiv categories</label>
+            <textarea id="categories">cs.AI
+cs.LG
+cs.CL</textarea>
+          </div>
+          <div class="field">
+            <label for="keywords">Keywords</label>
+            <textarea id="keywords">LLM agents
+reasoning
+tool use
+inference optimization
+post-training
+benchmark</textarea>
+          </div>
+          <div class="field full">
+            <label for="negativeKeywords">Negative keywords</label>
+            <input id="negativeKeywords" value="finance, blockchain, cryptocurrency">
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>X/Twitter</h2>
+        <div class="field-grid">
+          <div class="field full">
+            <label class="check"><input type="checkbox" id="onlyHandles"> 只看这些 X 账号，不做宽泛关键词搜索</label>
+          </div>
+          <div class="field">
+            <label for="twitterHandles">Handles</label>
+            <textarea id="twitterHandles">karpathy
+swyx
+ClementDelangue
+OpenAI
+GoogleDeepMind</textarea>
+          </div>
+          <div class="field">
+            <label for="twitterQueries">Queries</label>
+            <textarea id="twitterQueries">LLM agents
+reasoning model
+inference optimization</textarea>
+          </div>
+          <div class="field">
+            <label for="tweetLanguage">Tweet language</label>
+            <select id="tweetLanguage"><option value="en">English</option><option value="">Any</option><option value="zh">中文</option></select>
+          </div>
+          <div class="field">
+            <label for="twitterMax">Max tweets</label>
+            <input id="twitterMax" type="number" min="5" max="500" step="5" value="80">
+          </div>
+        </div>
+        <p class="hint">如果只想看固定几个大佬，把上面的“只看这些 X 账号”勾上，生成的 YAML 会是 `queries: []`。</p>
+      </section>
+
+      <section class="settings-section">
+        <h2>Feeds and Repos</h2>
+        <div class="field-grid">
+          <div class="field">
+            <label for="rssFeeds">RSS feeds</label>
+            <textarea id="rssFeeds">https://huggingface.co/blog/feed.xml
+https://blog.research.google/feeds/posts/default
+https://openai.com/news/rss.xml</textarea>
+          </div>
+          <div class="field">
+            <label for="githubQuery">GitHub query</label>
+            <textarea id="githubQuery">LLM agents OR reasoning model OR inference optimization OR post-training</textarea>
+          </div>
+          <div class="field">
+            <label for="days">Daily lookback days</label>
+            <input id="days" type="number" min="1" max="30" value="3">
+          </div>
+          <div class="field">
+            <label for="rssDays">RSS lookback days</label>
+            <input id="rssDays" type="number" min="1" max="90" value="21">
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Output</h2>
+        <div class="field-grid">
+          <div class="field">
+            <label for="topPapers">Top papers</label>
+            <input id="topPapers" type="number" min="1" max="30" value="15">
+          </div>
+          <div class="field">
+            <label for="topRepos">Top repos</label>
+            <input id="topRepos" type="number" min="1" max="20" value="5">
+          </div>
+          <div class="field">
+            <label for="topBlogs">Top blogs</label>
+            <input id="topBlogs" type="number" min="1" max="20" value="5">
+          </div>
+          <div class="field">
+            <label for="language">Report languages</label>
+            <select id="language"><option value="both">中文 + English</option><option value="zh">中文 only</option><option value="en">English only</option></select>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <aside class="preview" aria-label="Generated configuration">
+      <div class="preview-head">
+        <h2>Generated config</h2>
+        <div class="preview-actions">
+          <button class="plain-btn" type="button" id="copyTrack">Copy track</button>
+          <button class="plain-btn" type="button" id="downloadTrack">Download</button>
+        </div>
+      </div>
+      <div class="preview-body">
+        <div class="save-panel">
+          <div class="save-head">
+            <div class="code-label"><span>Save to GitHub</span></div>
+            <span class="save-state" id="authState">Backend not connected</span>
+          </div>
+          <div class="field">
+            <label for="apiBase">Settings API URL</label>
+            <input id="apiBase" placeholder="https://omnisource-settings-api.example.workers.dev" spellcheck="false">
+          </div>
+          <div class="save-actions">
+            <button class="plain-btn" type="button" id="loginGitHub">Sign in with GitHub</button>
+            <button class="plain-btn" type="button" id="checkSession">Check session</button>
+            <button class="primary-btn" type="button" id="saveGitHub">Save & rebuild</button>
+          </div>
+          <p class="hint">普通用户只需要登录并保存。GitHub App、client secret、private key 都放在 Settings API 的部署环境里。</p>
+        </div>
+        <div>
+          <div class="code-label"><span>tracks/<span id="trackFile">my-ai-radar.yaml</span></span></div>
+          <pre id="trackYaml"></pre>
+        </div>
+        <div>
+          <div class="code-label"><span>omnisource.yaml</span><button class="plain-btn" type="button" id="copyApp">Copy</button></div>
+          <pre id="appYaml"></pre>
+        </div>
+        <div class="status" id="status" aria-live="polite"></div>
+      </div>
+    </aside>
+  </div>
+</main>
+<script>
+const KNOWN_TRACKS = [{"slug": "ai-infra", "name": "AI 基础设施", "name_en": "AI Infrastructure", "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "description_en": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters."}, {"slug": "ai-algorithm", "name": "AI 算法", "name_en": "AI Algorithms", "description": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "description_en": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation."}];
+const DEFAULT_API_BASE = "";
+const STORAGE_KEY = 'omnisource-settings-draft';
+const API_STORAGE_KEY = 'omnisource-settings-api-base';
+const fields = [
+  'trackId','activeTracks','displayZh','displayEn','descZh','descEn','categories','keywords',
+  'negativeKeywords','onlyHandles','twitterHandles','twitterQueries','tweetLanguage','twitterMax',
+  'rssFeeds','githubQuery','days','rssDays','topPapers','topRepos','topBlogs','language'
+];
+const $ = id => document.getElementById(id);
+const cleanId = value => String(value || 'my-ai-radar').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'my-ai-radar';
+const splitList = value => String(value || '').split(/[\n,]+/).map(v => v.trim()).filter(Boolean);
+const checkedSources = () => [...document.querySelectorAll('#sourceChecks input:checked')].map(input => input.value);
+const quote = value => JSON.stringify(String(value ?? ''));
+const numberValue = (id, fallback) => Math.max(1, Number($(id).value || fallback));
+const yamlList = (name, values, indent = 0) => {
+  const pad = ' '.repeat(indent);
+  if (!values.length) return [`${pad}${name}: []`];
+  return [`${pad}${name}:`, ...values.map(value => `${pad}  - ${value}`)];
+};
+const yamlQuotedList = (name, values, indent = 0) => {
+  const pad = ' '.repeat(indent);
+  if (!values.length) return [`${pad}${name}: []`];
+  return [`${pad}${name}:`, ...values.map(value => `${pad}  - ${quote(value)}`)];
+};
+const collectState = () => {
+  const state = {};
+  fields.forEach(id => {
+    const el = $(id);
+    state[id] = el.type === 'checkbox' ? el.checked : el.value;
+  });
+  state.sources = checkedSources();
+  return state;
+};
+const applyState = state => {
+  if (!state) return;
+  fields.forEach(id => {
+    const el = $(id);
+    if (!el || state[id] === undefined) return;
+    if (el.type === 'checkbox') el.checked = !!state[id];
+    else el.value = state[id];
+  });
+  if (Array.isArray(state.sources)) {
+    document.querySelectorAll('#sourceChecks input').forEach(input => {
+      input.checked = state.sources.includes(input.value);
+    });
+  }
+};
+const trackYaml = state => {
+  const id = cleanId(state.trackId);
+  const queries = state.onlyHandles ? [] : splitList(state.twitterQueries);
+  const handles = splitList(state.twitterHandles).map(handle => handle.replace(/^@/, ''));
+  const languages = state.language === 'both' ? ['中文', 'English'] : (state.language === 'zh' ? ['中文'] : ['English']);
+  const lines = [
+    `name: ${id}`,
+    `display_name: ${quote(state.displayZh || state.displayEn || id)}`,
+    'display_names:',
+    `  zh: ${quote(state.displayZh || id)}`,
+    `  en: ${quote(state.displayEn || id)}`,
+    `description: ${quote(state.descZh || state.descEn || '')}`,
+    'descriptions:',
+    `  zh: ${quote(state.descZh || '')}`,
+    `  en: ${quote(state.descEn || '')}`,
+    '',
+    ...yamlList('sources', state.sources || []),
+    '',
+    ...yamlList('categories', splitList(state.categories)),
+    `days: ${numberValue('days', 3)}`,
+    'weekly_days: 7',
+    'pool_size: 450',
+    '',
+    ...yamlQuotedList('keywords', splitList(state.keywords)),
+    ...yamlQuotedList('negative_keywords', splitList(state.negativeKeywords)),
+    '',
+  ];
+  if ((state.sources || []).includes('twitter')) {
+    lines.push(
+      'twitter:',
+      '  mode: apify',
+      '  apify_actor: danek/twitter-scraper',
+      `  tweet_language: ${quote(state.tweetLanguage || '')}`,
+      '  query_suffix: "filter:links"',
+      ...yamlQuotedList('queries', queries, 2),
+      ...yamlQuotedList('handles', handles, 2),
+      `  max_results: ${numberValue('twitterMax', 80)}`,
+      ''
+    );
+  }
+  if ((state.sources || []).includes('rss')) {
+    lines.push(...yamlQuotedList('rss_feeds', splitList(state.rssFeeds)), `rss_days: ${numberValue('rssDays', 21)}`, '');
+  }
+  if ((state.sources || []).includes('github')) {
+    lines.push(
+      `github_query: ${quote(state.githubQuery || '')}`,
+      'github_trending_periods:',
+      '  - daily',
+      '  - weekly',
+      'github_fallback_created_days: 120',
+      'github_days: 14',
+      'github_top: 30',
+      ''
+    );
+  }
+  lines.push(
+    'topics:',
+    '  - name: Research Focus',
+    '    children:',
+    '      - name: Main Questions',
+    '        children:',
+    `          - ${quote(splitList(state.keywords)[0] || 'primary theme')}`,
+    `          - ${quote(splitList(state.keywords)[1] || 'secondary theme')}`,
+    '',
+    'llm:',
+    '  provider: openai',
+    '  model: gpt-4o-mini',
+    '',
+    'ranking:',
+    '  relevance: 0.4',
+    '  novelty: 0.3',
+    '  popularity: 0.2',
+    '  code_available: 0.1',
+    '',
+    'quality_distill:',
+    '  min_score: 0.18',
+    '  buffer: 12',
+    '  fill_quota_types:',
+    '    - paper',
+    '    - repo',
+    '    - blog',
+    '',
+    'graph_author_enrichment_top_papers: 15',
+    '',
+    'output:',
+    `  top_papers: ${numberValue('topPapers', 15)}`,
+    `  top_repos: ${numberValue('topRepos', 5)}`,
+    `  top_blogs: ${numberValue('topBlogs', 5)}`,
+    `  language: ${quote(languages[0])}`,
+    '  languages:',
+    ...languages.map(lang => `    - ${quote(lang)}`)
+  );
+  return lines.join('\n') + '\n';
+};
+const appYaml = state => {
+  const active = splitList(state.activeTracks).map(cleanId);
+  const tracks = active.length ? active : [cleanId(state.trackId)];
+  return ['active_tracks:', ...tracks.map(track => `  - ${track}`), ''].join('\n');
+};
+const render = () => {
+  const state = collectState();
+  state.trackId = cleanId(state.trackId);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  $('trackFile').textContent = `${state.trackId}.yaml`;
+  $('trackYaml').textContent = trackYaml(state);
+  $('appYaml').textContent = appYaml(state);
+};
+const setStatus = text => {
+  $('status').textContent = text;
+  window.setTimeout(() => { if ($('status').textContent === text) $('status').textContent = ''; }, 1800);
+};
+const setPersistentStatus = text => {
+  $('status').textContent = text;
+};
+const copyText = async text => {
+  await navigator.clipboard?.writeText(text);
+};
+const download = (filename, text) => {
+  const url = URL.createObjectURL(new Blob([text], { type:'text/yaml;charset=utf-8' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1200);
+};
+const applyPreset = preset => {
+  if (preset.slug === 'x-experts') {
+    applyState({
+      trackId:'x-experts', activeTracks:'x-experts', displayZh:'X 专家雷达', displayEn:'X Experts Radar',
+      descZh:'只关注固定 X 账号链接到的论文和开源项目。', descEn:'A radar for papers and repos linked by fixed X accounts.',
+      categories:'cs.AI\ncs.LG', keywords:'AI research\nLLM\nagents', onlyHandles:true,
+      twitterHandles:'karpathy\nfchollet\nswyx', twitterQueries:'', sources:['twitter'],
+    });
+    render();
+    return;
+  }
+  applyState({
+    trackId:preset.slug, activeTracks:preset.slug,
+    displayZh:preset.name || preset.slug,
+    displayEn:preset.name_en || preset.slug,
+    descZh:preset.description || '',
+    descEn:preset.description_en || '',
+  });
+  render();
+};
+const buildPresets = () => {
+  const row = $('presetRow');
+  const presets = [...KNOWN_TRACKS, { slug:'x-experts', name:'X 专家模式', name_en:'X Experts' }];
+  row.replaceChildren(...presets.map(preset => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'preset-btn';
+    btn.textContent = preset.name || preset.slug;
+    btn.addEventListener('click', () => applyPreset(preset));
+    return btn;
+  }));
+};
+const apiBase = () => String($('apiBase').value || '').trim().replace(/\/+$/, '');
+const apiUrl = path => `${apiBase()}${path}`;
+const updateSaveControls = (stateText, mode = '') => {
+  const connected = !!apiBase();
+  $('loginGitHub').disabled = !connected;
+  $('checkSession').disabled = !connected;
+  $('saveGitHub').disabled = !connected;
+  const authState = $('authState');
+  authState.textContent = connected ? (stateText || 'Ready to connect') : 'Backend not connected';
+  authState.className = `save-state ${mode}`;
+};
+const apiFetch = async (path, options = {}) => {
+  if (!apiBase()) throw new Error('Settings API URL is empty.');
+  return fetch(apiUrl(path), {
+    credentials: 'include',
+    ...options,
+    headers: {
+      ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+      ...(options.headers || {}),
+    },
+  });
+};
+const refreshSession = async () => {
+  if (!apiBase()) {
+    updateSaveControls();
+    return;
+  }
+  try {
+    const response = await apiFetch('/api/auth/session');
+    const data = await response.json();
+    if (data.authenticated) updateSaveControls(`Signed in as ${data.user.login}`, 'ready');
+    else updateSaveControls('Not signed in', 'warn');
+  } catch (error) {
+    updateSaveControls('API unreachable', 'warn');
+  }
+};
+const saveToGitHub = async () => {
+  render();
+  const id = cleanId($('trackId').value);
+  setPersistentStatus('Saving settings to GitHub...');
+  try {
+    const response = await apiFetch('/api/config/save', {
+      method: 'POST',
+      body: JSON.stringify({
+        track_path: `tracks/${id}.yaml`,
+        track_yaml: $('trackYaml').textContent,
+        app_yaml: $('appYaml').textContent,
+        message: `Update OmniSource settings for ${id}`,
+      }),
+    });
+    const data = await response.json();
+    if (response.status === 401) {
+      updateSaveControls('Sign in required', 'warn');
+      setPersistentStatus('Please sign in with GitHub first.');
+      return;
+    }
+    if (!response.ok) throw new Error(data.message || data.error || 'Save failed.');
+    updateSaveControls(`Saved by ${data.user}`, 'ready');
+    setPersistentStatus(`Saved ${data.commit.sha.slice(0, 7)} and triggered ${data.workflow}.`);
+  } catch (error) {
+    updateSaveControls('Save failed', 'warn');
+    setPersistentStatus(error.message || 'Save failed.');
+  }
+};
+document.querySelectorAll('input, textarea, select').forEach(el => el.addEventListener('input', render));
+document.querySelectorAll('#sourceChecks input').forEach(el => el.addEventListener('change', render));
+$('copyTrack').addEventListener('click', async () => {
+  await copyText($('trackYaml').textContent);
+  setStatus('Track YAML copied');
+});
+$('copyApp').addEventListener('click', async () => {
+  await copyText($('appYaml').textContent);
+  setStatus('omnisource.yaml copied');
+});
+$('downloadTrack').addEventListener('click', () => {
+  const id = cleanId($('trackId').value);
+  download(`${id}.yaml`, $('trackYaml').textContent);
+  setStatus('Track YAML downloaded');
+});
+$('apiBase').addEventListener('input', () => {
+  localStorage.setItem(API_STORAGE_KEY, apiBase());
+  updateSaveControls();
+});
+$('loginGitHub').addEventListener('click', () => {
+  if (!apiBase()) return;
+  window.location.href = `${apiBase()}/api/auth/login?return_to=${encodeURIComponent(window.location.href)}`;
+});
+$('checkSession').addEventListener('click', refreshSession);
+$('saveGitHub').addEventListener('click', saveToGitHub);
+$('themeBtn').addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('omnisource-theme', next);
+});
+buildPresets();
+$('apiBase').value = localStorage.getItem(API_STORAGE_KEY) || DEFAULT_API_BASE || '';
+updateSaveControls();
+applyState(JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'));
+render();
+refreshSession();
+</script>
+</body></html>
