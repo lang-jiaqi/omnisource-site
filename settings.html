@@ -39,6 +39,7 @@
   .settings-section:first-child { border-top:0; padding-top:0; }
   .settings-section h2 { margin:0 0 12px; font-size:.92rem; line-height:1.2; color:var(--success);
     text-transform:uppercase; letter-spacing:.04em; }
+  .section-note { margin:-4px 0 12px; color:var(--muted); font-size:.86rem; }
   .field-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; }
   .field { display:flex; flex-direction:column; gap:5px; min-width:0; }
   .field.full { grid-column:1 / -1; }
@@ -51,12 +52,23 @@
   .check { display:flex; align-items:center; gap:9px; min-height:36px; border:1px solid var(--soft-border);
     border-radius:8px; padding:7px 9px; background:var(--panel); color:var(--body-copy); }
   .check input { width:16px; height:16px; padding:0; accent-color:var(--accent); }
-  .preset-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
-  .preset-btn, .primary-btn, .plain-btn { appearance:none; border:1px solid var(--soft-border);
+  .track-library { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; }
+  .track-card { appearance:none; text-align:left; border:1px solid var(--soft-border); border-radius:8px;
+    background:var(--panel); color:var(--fg); padding:11px 12px; font:inherit; cursor:pointer; }
+  .track-card:hover, .track-card.active { border-color:var(--accent); }
+  .track-card.active { box-shadow:inset 0 0 0 1px var(--accent); }
+  .track-card.add-new { border-style:dashed; color:var(--accent); }
+  .track-card-title { display:block; font-weight:800; }
+  .track-card-meta { display:block; margin-top:3px; color:var(--muted); font-size:.78rem; }
+  .primary-btn, .plain-btn { appearance:none; border:1px solid var(--soft-border);
     border-radius:8px; background:var(--panel); color:var(--fg); padding:8px 10px;
     font:inherit; font-weight:700; cursor:pointer; }
-  .preset-btn:hover, .plain-btn:hover { border-color:var(--accent); color:var(--accent); }
+  .plain-btn:hover { border-color:var(--accent); color:var(--accent); }
   .primary-btn { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .source-config { display:grid; gap:12px; padding:14px 0 18px; border-top:1px solid var(--soft-border); }
+  .source-config:first-of-type { border-top:0; padding-top:0; }
+  .source-config[hidden] { display:none; }
+  .source-config h3 { margin:0; color:var(--fg); font-size:.92rem; }
   .preview { border:1px solid var(--border); background:var(--panel); border-radius:10px; overflow:hidden; }
   .preview-head { display:flex; align-items:center; justify-content:space-between; gap:10px;
     padding:13px 14px; border-bottom:1px solid var(--soft-border); }
@@ -94,14 +106,21 @@
       <button class="icon-btn" type="button" id="themeBtn" aria-label="切换主题" title="切换主题"><span aria-hidden="true">☾</span></button>
     </div>
     <h1 class="hero-title">Settings</h1>
-    <p class="hero-copy">选择关注方向和信息源，保存后下一次日报会按新配置生成。</p>
+    <p class="hero-copy">先选择已有 track 或新建一个 track，再选择信息源并配置每个 source 的细节。</p>
   </div>
 </header>
 <main class="shell">
   <div class="builder">
     <form id="settingsForm" autocomplete="off">
       <section class="settings-section">
-        <h2>Track</h2>
+        <h2>Tracks</h2>
+        <p class="section-note">选择一个已有 track 继续编辑，或者新建一个自定义 track。</p>
+        <div class="track-library" id="trackLibrary"></div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Track Identity</h2>
+        <p class="section-note">这里决定保存后的 `tracks/&lt;id&gt;.yaml` 文件名和报告里显示的名称。</p>
         <div class="field-grid">
           <div class="field">
             <label for="trackId">Track id</label>
@@ -125,11 +144,11 @@
             <input id="descEn" value="A personal research radar for papers, repositories, lab notes, and X accounts I care about.">
           </div>
         </div>
-        <div class="preset-row" id="presetRow"></div>
       </section>
 
       <section class="settings-section">
         <h2>Sources</h2>
+        <p class="section-note">先决定这个 track 从哪里收集信号。下面只会展开已选 source 的细节配置。</p>
         <div class="checks" id="sourceChecks">
           <label class="check"><input type="checkbox" value="arxiv" checked> arXiv</label>
           <label class="check"><input type="checkbox" value="hf_papers" checked> Hugging Face papers</label>
@@ -142,16 +161,123 @@
       </section>
 
       <section class="settings-section">
-        <h2>Topic Filter</h2>
-        <div class="field-grid">
-          <div class="field">
-            <label for="categories">arXiv categories</label>
-            <textarea id="categories">cs.AI
+        <h2>Source Details</h2>
+        <p class="section-note">每个已选 source 在这里填自己的抓取范围。没选的 source 会自动收起。</p>
+        <div id="sourceDetails">
+          <section class="source-config" data-source-detail="arxiv">
+            <h3>arXiv</h3>
+            <div class="field-grid">
+              <div class="field">
+                <label for="categories">arXiv categories</label>
+                <textarea id="categories">cs.AI
 cs.LG
 cs.CL</textarea>
-          </div>
+              </div>
+              <div class="field">
+                <label for="days">Lookback days</label>
+                <input id="days" type="number" min="1" max="30" value="3">
+              </div>
+            </div>
+          </section>
+
+          <section class="source-config" data-source-detail="hf_papers">
+            <h3>Hugging Face papers</h3>
+            <p class="hint">使用下面的关键词筛选 Hugging Face 每日论文；这里不需要额外账号列表。</p>
+          </section>
+
+          <section class="source-config" data-source-detail="rss">
+            <h3>RSS blogs</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label for="rssFeeds">RSS feeds</label>
+                <textarea id="rssFeeds">https://huggingface.co/blog/feed.xml
+https://blog.research.google/feeds/posts/default
+https://openai.com/news/rss.xml</textarea>
+              </div>
+              <div class="field">
+                <label for="rssDays">RSS lookback days</label>
+                <input id="rssDays" type="number" min="1" max="90" value="21">
+              </div>
+            </div>
+          </section>
+
+          <section class="source-config" data-source-detail="github">
+            <h3>GitHub</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label for="githubQuery">GitHub search query</label>
+                <textarea id="githubQuery">LLM agents OR reasoning model OR inference optimization OR post-training</textarea>
+              </div>
+            </div>
+          </section>
+
+          <section class="source-config" data-source-detail="hackernews">
+            <h3>Hacker News</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label for="hnQuery">HN search query</label>
+                <textarea id="hnQuery">LLM agents OR reasoning model OR inference optimization</textarea>
+              </div>
+              <div class="field">
+                <label for="hnTop">Max HN posts</label>
+                <input id="hnTop" type="number" min="5" max="200" step="5" value="50">
+              </div>
+            </div>
+          </section>
+
+          <section class="source-config" data-source-detail="reddit">
+            <h3>Reddit</h3>
+            <div class="field-grid">
+              <div class="field">
+                <label for="redditSubreddits">Subreddits</label>
+                <textarea id="redditSubreddits">MachineLearning
+LocalLLaMA</textarea>
+              </div>
+              <div class="field">
+                <label for="redditTop">Max posts per subreddit</label>
+                <input id="redditTop" type="number" min="5" max="200" step="5" value="50">
+              </div>
+            </div>
+          </section>
+
+          <section class="source-config" data-source-detail="twitter">
+            <h3>X/Twitter</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label class="check"><input type="checkbox" id="onlyHandles"> 只看这些 X 账号，不做宽泛关键词搜索</label>
+              </div>
+              <div class="field">
+                <label for="twitterHandles">Accounts / handles</label>
+                <textarea id="twitterHandles">karpathy
+swyx
+ClementDelangue
+OpenAI
+GoogleDeepMind</textarea>
+              </div>
+              <div class="field">
+                <label for="twitterQueries">Keyword queries</label>
+                <textarea id="twitterQueries">LLM agents
+reasoning model
+inference optimization</textarea>
+              </div>
+              <div class="field">
+                <label for="tweetLanguage">Tweet language</label>
+                <select id="tweetLanguage"><option value="en">English</option><option value="">Any</option><option value="zh">中文</option></select>
+              </div>
+              <div class="field">
+                <label for="twitterMax">Max tweets</label>
+                <input id="twitterMax" type="number" min="5" max="500" step="5" value="80">
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Relevance and Output</h2>
+        <div class="field-grid">
           <div class="field">
-            <label for="keywords">Keywords</label>
+            <label for="keywords">Track keywords</label>
             <textarea id="keywords">LLM agents
 reasoning
 tool use
@@ -159,72 +285,12 @@ inference optimization
 post-training
 benchmark</textarea>
           </div>
-          <div class="field full">
+          <div class="field">
             <label for="negativeKeywords">Negative keywords</label>
-            <input id="negativeKeywords" value="finance, blockchain, cryptocurrency">
+            <textarea id="negativeKeywords">finance
+blockchain
+cryptocurrency</textarea>
           </div>
-        </div>
-      </section>
-
-      <section class="settings-section">
-        <h2>X/Twitter</h2>
-        <div class="field-grid">
-          <div class="field full">
-            <label class="check"><input type="checkbox" id="onlyHandles"> 只看这些 X 账号，不做宽泛关键词搜索</label>
-          </div>
-          <div class="field">
-            <label for="twitterHandles">Handles</label>
-            <textarea id="twitterHandles">karpathy
-swyx
-ClementDelangue
-OpenAI
-GoogleDeepMind</textarea>
-          </div>
-          <div class="field">
-            <label for="twitterQueries">Queries</label>
-            <textarea id="twitterQueries">LLM agents
-reasoning model
-inference optimization</textarea>
-          </div>
-          <div class="field">
-            <label for="tweetLanguage">Tweet language</label>
-            <select id="tweetLanguage"><option value="en">English</option><option value="">Any</option><option value="zh">中文</option></select>
-          </div>
-          <div class="field">
-            <label for="twitterMax">Max tweets</label>
-            <input id="twitterMax" type="number" min="5" max="500" step="5" value="80">
-          </div>
-        </div>
-        <p class="hint">如果只想看固定几个大佬，把上面的“只看这些 X 账号”勾上，生成的 YAML 会是 `queries: []`。</p>
-      </section>
-
-      <section class="settings-section">
-        <h2>Feeds and Repos</h2>
-        <div class="field-grid">
-          <div class="field">
-            <label for="rssFeeds">RSS feeds</label>
-            <textarea id="rssFeeds">https://huggingface.co/blog/feed.xml
-https://blog.research.google/feeds/posts/default
-https://openai.com/news/rss.xml</textarea>
-          </div>
-          <div class="field">
-            <label for="githubQuery">GitHub query</label>
-            <textarea id="githubQuery">LLM agents OR reasoning model OR inference optimization OR post-training</textarea>
-          </div>
-          <div class="field">
-            <label for="days">Daily lookback days</label>
-            <input id="days" type="number" min="1" max="30" value="3">
-          </div>
-          <div class="field">
-            <label for="rssDays">RSS lookback days</label>
-            <input id="rssDays" type="number" min="1" max="90" value="21">
-          </div>
-        </div>
-      </section>
-
-      <section class="settings-section">
-        <h2>Output</h2>
-        <div class="field-grid">
           <div class="field">
             <label for="topPapers">Top papers</label>
             <input id="topPapers" type="number" min="1" max="30" value="15">
@@ -287,14 +353,15 @@ https://openai.com/news/rss.xml</textarea>
   </div>
 </main>
 <script>
-const KNOWN_TRACKS = [{"slug": "ai-infra", "name": "AI 基础设施", "name_en": "AI Infrastructure", "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "description_en": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters."}, {"slug": "ai-algorithm", "name": "AI 算法", "name_en": "AI Algorithms", "description": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "description_en": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation."}];
+const KNOWN_TRACKS = [{"slug": "ai-infra", "name": "AI 基础设施", "name_en": "AI Infrastructure", "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "description_en": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "settings": {"trackId": "ai-infra", "activeTracks": "ai-infra", "displayZh": "AI 基础设施", "displayEn": "AI Infrastructure", "descZh": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "descEn": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter"], "categories": "cs.DC\ncs.OS\ncs.PL\ncs.AR\ncs.LG\ncs.AI", "keywords": "AI infrastructure\nLLM serving\ninference\nserving\ndistributed training\nparallelism\ndata parallel\nmodel parallel\npipeline parallel\ncluster\ndatacenter\ndata center\nscheduler\nscheduling\nresource management\nGPU\naccelerator\nCUDA\nTriton\nkernel\ncompiler\nruntime\nmemory\nKV cache\nprefill\nbatching\nrouting\nthroughput\nlatency\ncommunication\nbandwidth\nquantization\nspeculative decoding\ncheckpoint\nfault tolerance", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "vllm_project\nlmsysorg\nPyTorch\nNVIDIAAI\nHuggingFace\ndatabricks\nanyscalecompute", "twitterQueries": "LLM serving\ninference engine\ndistributed training\nCUDA kernel\nGPU inference", "tweetLanguage": "en", "twitterMax": "80", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml\nhttps://pytorch.org/blog/feed.xml\nhttps://developer.nvidia.com/blog/category/artificial-intelligence/feed/\nhttps://www.anyscale.com/blog/rss.xml\nhttps://www.databricks.com/feed\nhttps://lambdalabs.com/blog/rss.xml", "rssDays": "45", "githubQuery": "LLM serving OR inference engine OR distributed training OR CUDA kernel OR GPU inference", "hnQuery": "AI infrastructure OR LLM inference OR distributed training OR GPU serving", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "7", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both"}}, {"slug": "ai-algorithm", "name": "AI 算法", "name_en": "AI Algorithms", "description": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "description_en": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "settings": {"trackId": "ai-algorithm", "activeTracks": "ai-algorithm", "displayZh": "AI 算法", "displayEn": "AI Algorithms", "descZh": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "descEn": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter"], "categories": "cs.AI\ncs.LG\ncs.CL\ncs.CV", "keywords": "algorithm\narchitecture\nfoundation model\nreasoning\nplanning\nreinforcement learning\nrepresentation learning\noptimization\ntransformer\nattention\ndiffusion\nmultimodal\npost-training\nfine-tuning\nbenchmark\nevaluation\nagent", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "karpathy\nfchollet\nylecun\nhardmaru\nrasbt\nlilianweng\nOpenAI\nAnthropicAI\nGoogleDeepMind", "twitterQueries": "foundation model\nreasoning model\npost training\nreinforcement learning\nmultimodal model", "tweetLanguage": "en", "twitterMax": "80", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml", "rssDays": "21", "githubQuery": "foundation model OR reasoning model OR multimodal model OR reinforcement learning OR machine learning algorithm", "hnQuery": "AI algorithm OR foundation model OR reasoning model OR reinforcement learning", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "3", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both"}}];
 const DEFAULT_API_BASE = "https://omnisource-settings-api.omnisource.workers.dev";
 const STORAGE_KEY = 'omnisource-settings-draft';
 const API_STORAGE_KEY = 'omnisource-settings-api-base';
 const fields = [
   'trackId','activeTracks','displayZh','displayEn','descZh','descEn','categories','keywords',
   'negativeKeywords','onlyHandles','twitterHandles','twitterQueries','tweetLanguage','twitterMax',
-  'rssFeeds','githubQuery','days','rssDays','topPapers','topRepos','topBlogs','language'
+  'rssFeeds','githubQuery','hnQuery','hnTop','redditSubreddits','redditTop',
+  'days','rssDays','topPapers','topRepos','topBlogs','language'
 ];
 const $ = id => document.getElementById(id);
 const cleanId = value => String(value || 'my-ai-radar').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'my-ai-radar';
@@ -322,6 +389,21 @@ const collectState = () => {
   state.sources = checkedSources();
   return state;
 };
+const syncSourceDetails = state => {
+  const enabled = new Set(state?.sources || checkedSources());
+  document.querySelectorAll('[data-source-detail]').forEach(section => {
+    section.hidden = !enabled.has(section.dataset.sourceDetail);
+  });
+};
+const updateTrackLibrarySelection = trackId => {
+  const id = cleanId(trackId);
+  const known = new Set(KNOWN_TRACKS.map(track => cleanId(track.slug)));
+  document.querySelectorAll('[data-track-card]').forEach(card => {
+    const key = card.dataset.trackCard;
+    const active = key === id || (key === 'custom' && !known.has(id));
+    card.classList.toggle('active', active);
+  });
+};
 const applyState = state => {
   if (!state) return;
   fields.forEach(id => {
@@ -335,6 +417,7 @@ const applyState = state => {
       input.checked = state.sources.includes(input.value);
     });
   }
+  syncSourceDetails(state);
 };
 const trackYaml = state => {
   const id = cleanId(state.trackId);
@@ -391,6 +474,20 @@ const trackYaml = state => {
       ''
     );
   }
+  if ((state.sources || []).includes('hackernews')) {
+    lines.push(
+      `hn_query: ${quote(state.hnQuery || '')}`,
+      `hn_top: ${numberValue('hnTop', 50)}`,
+      ''
+    );
+  }
+  if ((state.sources || []).includes('reddit')) {
+    lines.push(
+      ...yamlList('reddit_subreddits', splitList(state.redditSubreddits)),
+      `reddit_top: ${numberValue('redditTop', 50)}`,
+      ''
+    );
+  }
   lines.push(
     'topics:',
     '  - name: Research Focus',
@@ -442,6 +539,8 @@ const render = () => {
   $('trackFile').textContent = `${state.trackId}.yaml`;
   $('trackYaml').textContent = trackYaml(state);
   $('appYaml').textContent = appYaml(state);
+  syncSourceDetails(state);
+  updateTrackLibrarySelection(state.trackId);
 };
 const setStatus = text => {
   $('status').textContent = text;
@@ -463,19 +562,11 @@ const download = (filename, text) => {
   link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1200);
 };
-const applyPreset = preset => {
-  if (preset.slug === 'x-experts') {
-    applyState({
-      trackId:'x-experts', activeTracks:'x-experts', displayZh:'X 专家雷达', displayEn:'X Experts Radar',
-      descZh:'只关注固定 X 账号链接到的论文和开源项目。', descEn:'A radar for papers and repos linked by fixed X accounts.',
-      categories:'cs.AI\ncs.LG', keywords:'AI research\nLLM\nagents', onlyHandles:true,
-      twitterHandles:'karpathy\nfchollet\nswyx', twitterQueries:'', sources:['twitter'],
-    });
-    render();
-    return;
-  }
+const applyExistingTrack = preset => {
   applyState({
-    trackId:preset.slug, activeTracks:preset.slug,
+    ...(preset.settings || {}),
+    trackId:preset.slug,
+    activeTracks:preset.slug,
     displayZh:preset.name || preset.slug,
     displayEn:preset.name_en || preset.slug,
     descZh:preset.description || '',
@@ -483,17 +574,68 @@ const applyPreset = preset => {
   });
   render();
 };
-const buildPresets = () => {
-  const row = $('presetRow');
-  const presets = [...KNOWN_TRACKS, { slug:'x-experts', name:'X 专家模式', name_en:'X Experts' }];
-  row.replaceChildren(...presets.map(preset => {
+const newCustomTrack = () => {
+  applyState({
+    trackId:'my-ai-radar',
+    activeTracks:'my-ai-radar',
+    displayZh:'我的 AI 雷达',
+    displayEn:'My AI Radar',
+    descZh:'关注我关心的论文、开源项目、实验室博客和 X 账号的个人科研雷达。',
+    descEn:'A personal research radar for papers, repositories, lab notes, and X accounts I care about.',
+    categories:'cs.AI\ncs.LG\ncs.CL',
+    keywords:'LLM agents\nreasoning\ntool use\ninference optimization\npost-training\nbenchmark',
+    negativeKeywords:'finance\nblockchain\ncryptocurrency',
+    onlyHandles:false,
+    twitterHandles:'karpathy\nswyx\nClementDelangue\nOpenAI\nGoogleDeepMind',
+    twitterQueries:'LLM agents\nreasoning model\ninference optimization',
+    tweetLanguage:'en',
+    twitterMax:'80',
+    rssFeeds:'https://huggingface.co/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml',
+    githubQuery:'LLM agents OR reasoning model OR inference optimization OR post-training',
+    hnQuery:'LLM agents OR reasoning model OR inference optimization',
+    hnTop:'50',
+    redditSubreddits:'MachineLearning\nLocalLLaMA',
+    redditTop:'50',
+    days:'3',
+    rssDays:'21',
+    topPapers:'15',
+    topRepos:'5',
+    topBlogs:'5',
+    language:'both',
+    sources:['arxiv','hf_papers','rss','github','twitter'],
+  });
+  render();
+};
+const buildTrackLibrary = () => {
+  const row = $('trackLibrary');
+  const existingCards = KNOWN_TRACKS.map(preset => {
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'preset-btn';
-    btn.textContent = preset.name || preset.slug;
-    btn.addEventListener('click', () => applyPreset(preset));
+    btn.className = 'track-card';
+    btn.dataset.trackCard = cleanId(preset.slug);
+    const title = document.createElement('span');
+    title.className = 'track-card-title';
+    title.textContent = preset.name || preset.slug;
+    const meta = document.createElement('span');
+    meta.className = 'track-card-meta';
+    meta.textContent = preset.slug;
+    btn.append(title, meta);
+    btn.addEventListener('click', () => applyExistingTrack(preset));
     return btn;
-  }));
+  });
+  const add = document.createElement('button');
+  add.type = 'button';
+  add.className = 'track-card add-new';
+  add.dataset.trackCard = 'custom';
+  const title = document.createElement('span');
+  title.className = 'track-card-title';
+  title.textContent = '+ New custom track';
+  const meta = document.createElement('span');
+  meta.className = 'track-card-meta';
+  meta.textContent = '命名 track，再选择 sources';
+  add.append(title, meta);
+  add.addEventListener('click', newCustomTrack);
+  row.replaceChildren(...existingCards, add);
 };
 const normalizedApiBase = value => {
   const text = String(value || '').trim().replace(/\/+$/, '');
@@ -608,12 +750,19 @@ $('themeBtn').addEventListener('click', () => {
   document.documentElement.dataset.theme = next;
   localStorage.setItem('omnisource-theme', next);
 });
-buildPresets();
+buildTrackLibrary();
 const storedApiBase = normalizedApiBase(localStorage.getItem(API_STORAGE_KEY));
 $('apiBase').value = storedApiBase || DEFAULT_API_BASE || '';
 if (!storedApiBase && DEFAULT_API_BASE) localStorage.setItem(API_STORAGE_KEY, DEFAULT_API_BASE);
 updateSaveControls();
-applyState(JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'));
+const storedDraft = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+if (storedDraft) {
+  applyState(storedDraft);
+} else if (KNOWN_TRACKS.length) {
+  applyExistingTrack(KNOWN_TRACKS[0]);
+} else {
+  newCustomTrack();
+}
 render();
 refreshSession();
 </script>
