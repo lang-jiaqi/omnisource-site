@@ -67,12 +67,16 @@
   .preview-head h2 { margin:0; font-size:.95rem; }
   .preview-actions { display:flex; gap:8px; flex-wrap:wrap; }
   .preview-body { display:grid; gap:14px; padding:14px; }
-  .save-panel { border:1px solid var(--soft-border); border-radius:8px; padding:12px; background:var(--input); }
+  .save-panel { display:grid; gap:12px; }
   .save-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
   .save-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
   .save-state { color:var(--muted); font-size:.76rem; font-weight:800; }
   .save-state.ready { color:var(--success); }
   .save-state.warn { color:var(--warn); }
+  .save-summary { margin:0; color:var(--body-copy); font-size:.88rem; }
+  .advanced-panel { border-top:1px solid var(--soft-border); padding-top:12px; }
+  .advanced-panel summary { cursor:pointer; color:var(--muted); font-weight:800; font-size:.82rem; }
+  .advanced-body { display:grid; gap:12px; margin-top:12px; }
   button:disabled { cursor:not-allowed; opacity:.45; }
   .code-label { display:flex; align-items:center; justify-content:space-between; gap:8px;
     color:var(--muted); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
@@ -98,13 +102,10 @@
       <button class="icon-btn" type="button" id="themeBtn" aria-label="切换主题" title="切换主题"><span aria-hidden="true">☾</span></button>
     </div>
     <h1 class="hero-title">Settings</h1>
-    <p class="hero-copy">配置 source、track、X/Twitter handles 和输出数量。可先复制 YAML，也可连接 Settings API 后直接保存到 GitHub 并触发重建。</p>
+    <p class="hero-copy">选择关注方向和信息源，保存后下一次日报会按新配置生成。</p>
   </div>
 </header>
 <main class="shell">
-  <div class="notice">
-    `tracks/*.yaml` 和 `omnisource.yaml` 是后续日报的真配置。这个页面不会保存 secret；GitHub 写权限只由后端 Settings API 托管。
-  </div>
   <div class="builder">
     <form id="settingsForm" autocomplete="off">
       <section class="settings-section">
@@ -114,10 +115,7 @@
             <label for="trackId">Track id</label>
             <input id="trackId" value="my-ai-radar" spellcheck="false">
           </div>
-          <div class="field">
-            <label for="activeTracks">Active tracks</label>
-            <input id="activeTracks" value="my-ai-radar" spellcheck="false">
-          </div>
+          <input id="activeTracks" type="hidden" value="my-ai-radar">
           <div class="field">
             <label for="displayZh">中文名称</label>
             <input id="displayZh" value="我的 AI 雷达">
@@ -255,40 +253,43 @@ https://openai.com/news/rss.xml</textarea>
       </section>
     </form>
 
-    <aside class="preview" aria-label="Generated configuration">
+    <aside class="preview" aria-label="Save settings">
       <div class="preview-head">
-        <h2>Generated config</h2>
-        <div class="preview-actions">
-          <button class="plain-btn" type="button" id="copyTrack">Copy track</button>
-          <button class="plain-btn" type="button" id="downloadTrack">Download</button>
-        </div>
+        <h2>Save settings</h2>
+        <span class="save-state" id="authState">Backend not connected</span>
       </div>
       <div class="preview-body">
         <div class="save-panel">
-          <div class="save-head">
-            <div class="code-label"><span>Save to GitHub</span></div>
-            <span class="save-state" id="authState">Backend not connected</span>
-          </div>
-          <div class="field">
-            <label for="apiBase">Settings API URL</label>
-            <input id="apiBase" placeholder="https://omnisource-settings-api.example.workers.dev" spellcheck="false">
-          </div>
+          <p class="save-summary">保存会更新仓库配置，并触发一次新的日报/网站重建。</p>
           <div class="save-actions">
             <button class="plain-btn" type="button" id="loginGitHub">Sign in with GitHub</button>
             <button class="plain-btn" type="button" id="checkSession">Check session</button>
             <button class="primary-btn" type="button" id="saveGitHub">Save & rebuild</button>
           </div>
-          <p class="hint">普通用户只需要登录并保存。GitHub App、client secret、private key 都放在 Settings API 的部署环境里。</p>
+          <div class="status" id="status" aria-live="polite"></div>
         </div>
-        <div>
-          <div class="code-label"><span>tracks/<span id="trackFile">my-ai-radar.yaml</span></span></div>
-          <pre id="trackYaml"></pre>
-        </div>
-        <div>
-          <div class="code-label"><span>omnisource.yaml</span><button class="plain-btn" type="button" id="copyApp">Copy</button></div>
-          <pre id="appYaml"></pre>
-        </div>
-        <div class="status" id="status" aria-live="polite"></div>
+        <details class="advanced-panel">
+          <summary>Advanced YAML and API settings</summary>
+          <div class="advanced-body">
+            <div class="field">
+              <label for="apiBase">Settings API URL</label>
+              <input id="apiBase" placeholder="https://omnisource-settings-api.example.workers.dev" spellcheck="false">
+            </div>
+            <div class="preview-actions">
+              <button class="plain-btn" type="button" id="copyTrack">Copy track YAML</button>
+              <button class="plain-btn" type="button" id="downloadTrack">Download YAML</button>
+              <button class="plain-btn" type="button" id="copyApp">Copy app YAML</button>
+            </div>
+            <div>
+              <div class="code-label"><span>tracks/<span id="trackFile">my-ai-radar.yaml</span></span></div>
+              <pre id="trackYaml"></pre>
+            </div>
+            <div>
+              <div class="code-label"><span>omnisource.yaml</span></div>
+              <pre id="appYaml"></pre>
+            </div>
+          </div>
+        </details>
       </div>
     </aside>
   </div>
@@ -325,6 +326,7 @@ const collectState = () => {
     const el = $(id);
     state[id] = el.type === 'checkbox' ? el.checked : el.value;
   });
+  state.activeTracks = state.trackId;
   state.sources = checkedSources();
   return state;
 };
