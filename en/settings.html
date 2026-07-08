@@ -538,6 +538,7 @@ const trackYaml = state => {
     `  top_papers: ${numberValue('topPapers', 15)}`,
     `  top_repos: ${numberValue('topRepos', 5)}`,
     `  top_blogs: ${numberValue('topBlogs', 5)}`,
+    `  top_social: ${(state.sources || []).some(source => ['twitter','hackernews','reddit'].includes(source)) ? 5 : 0}`,
     `  language: ${quote(languages[0])}`,
     '  languages:',
     ...languages.map(lang => `    - ${quote(lang)}`)
