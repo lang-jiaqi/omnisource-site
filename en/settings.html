@@ -196,6 +196,8 @@ cryptocurrency</textarea>
           <label class="check"><input type="checkbox" value="hackernews"> Hacker News</label>
           <label class="check"><input type="checkbox" value="reddit"> Reddit</label>
           <label class="check"><input type="checkbox" value="twitter" checked> X/Twitter</label>
+          <label class="check"><input type="checkbox" value="xiaohongshu"> 小红书</label>
+          <label class="check"><input type="checkbox" value="zhihu"> 知乎</label>
         </div>
       </section>
 
@@ -285,6 +287,36 @@ GoogleDeepMind</textarea>
             </div>
             <p class="hint">X/Twitter 的关键词搜索也来自统一的 track search queries；勾选“只看这些账号”后，会只看上面的 accounts。</p>
           </section>
+
+          <section class="source-config" data-source-detail="xiaohongshu">
+            <h3>小红书</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label for="xiaohongshuCreators">Creators</label>
+                <textarea id="xiaohongshuCreators">科研工具博主 | https://www.xiaohongshu.com/user/profile/6489b7940000000012035e9b</textarea>
+              </div>
+              <div class="field">
+                <label for="xiaohongshuDays">Lookback days</label>
+                <input id="xiaohongshuDays" type="number" min="1" max="90" value="30">
+              </div>
+            </div>
+            <p class="hint">每行一个博主：名称 | profile 链接。小红书需要运行环境登录 OpenCLI；没有登录时会跳过，不影响其他 source。</p>
+          </section>
+
+          <section class="source-config" data-source-detail="zhihu">
+            <h3>知乎</h3>
+            <div class="field-grid">
+              <div class="field full">
+                <label for="zhihuCreators">Creators</label>
+                <textarea id="zhihuCreators">zylmozart | https://www.zhihu.com/people/zylmozart</textarea>
+              </div>
+              <div class="field">
+                <label for="zhihuDays">Lookback days</label>
+                <input id="zhihuDays" type="number" min="1" max="90" value="30">
+              </div>
+            </div>
+            <p class="hint">每行一个作者：名称 | profile 链接。知乎会同时抓文章和回答，再用统一 track search queries 做筛选。</p>
+          </section>
         </div>
       </section>
     </form>
@@ -331,7 +363,7 @@ GoogleDeepMind</textarea>
   </div>
 </main>
 <script>
-const KNOWN_TRACKS = [{"slug": "ai-infra", "name": "AI 基础设施", "name_en": "AI Infrastructure", "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "description_en": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "settings": {"trackId": "ai-infra", "activeTracks": "ai-infra", "displayZh": "AI 基础设施", "displayEn": "AI Infrastructure", "descZh": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "descEn": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter"], "categories": "cs.DC\ncs.OS\ncs.PL\ncs.AR\ncs.LG\ncs.AI", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "vllm_project\nlmsysorg\nPyTorch\nNVIDIAAI\nHuggingFace\ndatabricks\nanyscalecompute", "searchQueries": "AI infrastructure\nLLM serving\ninference\nserving\ndistributed training\nparallelism\ndata parallel\nmodel parallel\npipeline parallel\ncluster\ndatacenter\ndata center\nscheduler\nscheduling\nresource management\nGPU\naccelerator\nCUDA\nTriton\nkernel\ncompiler\nruntime\nmemory\nKV cache\nprefill\nbatching\nrouting\nthroughput\nlatency\ncommunication\nbandwidth\nquantization\nspeculative decoding\ncheckpoint\nfault tolerance\ninference engine\nCUDA kernel\nGPU inference\nLLM inference\nGPU serving", "tweetLanguage": "en", "twitterMax": "80", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml\nhttps://pytorch.org/blog/feed.xml\nhttps://developer.nvidia.com/blog/category/artificial-intelligence/feed/\nhttps://www.anyscale.com/blog/rss.xml\nhttps://www.databricks.com/feed\nhttps://lambdalabs.com/blog/rss.xml", "rssDays": "45", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "7", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both", "advancedYaml": "relevance_filter:\n  paper:\n    preferred_arxiv_categories:\n    - cs.DC\n    - cs.OS\n    - cs.PL\n    - cs.AR\n    broad_arxiv_categories:\n    - cs.AI\n    - cs.LG\n    category_boosts:\n      cs.DC: 4\n      cs.OS: 3\n      cs.PL: 2\n      cs.AR: 2\n    min_anchor_hits: 1\n    broad_category_min_anchor_hits: 1\n    anchor_keywords:\n    - LLM serving\n    - inference engine\n    - serving\n    - distributed training\n    - data parallel\n    - model parallel\n    - pipeline parallel\n    - cluster\n    - scheduling\n    - resource management\n    - GPU\n    - accelerator\n    - CUDA\n    - Triton\n    - kernel\n    - compiler\n    - runtime\n    - KV cache\n    - prefill\n    - decode routing\n    - batching\n    - routing\n    - throughput\n    - latency\n    - communication\n    - bandwidth\n    - quantization\n    - speculative decoding\n    - checkpoint\n    - fault tolerance\n  repo:\n    allow_keyword_fallback: true\n  blog:\n    allow_keyword_fallback: true\n\ntopics:\n- name: 训练系统\n  children:\n  - name: 并行与分布式训练\n    children:\n    - data / model / pipeline parallelism\n    - large-scale pretraining systems\n    - checkpoint / fault tolerance\n  - name: 集群调度与可靠性\n    children:\n    - cluster scheduling\n    - resource management / elasticity\n- name: 推理系统\n  children:\n  - name: Serving 引擎\n    children:\n    - LLM serving / inference engines\n    - batching / routing / latency\n    - agent serving systems\n  - name: 内存与解码优化\n    children:\n    - KV cache / long context memory\n    - quantization / compression\n    - speculative decoding\n- name: 编译器、内核与硬件\n  children:\n  - name: 编译器与运行时\n    children:\n    - compiler / runtime\n    - graph optimization\n  - name: GPU/加速器内核\n    children:\n    - CUDA / kernel optimization\n    - accelerator / edge inference\n- name: 基准与观测\n  children:\n  - name: Infra 评测\n    children:\n    - AI infrastructure benchmarks\n    - profiling / observability\n\ntopic_translations:\n  训练系统: Training Systems\n  并行与分布式训练: Parallel and Distributed Training\n  集群调度与可靠性: Cluster Scheduling and Reliability\n  推理系统: Inference Systems\n  Serving 引擎: Serving Engines\n  内存与解码优化: Memory and Decoding Optimization\n  编译器、内核与硬件: Compilers, Kernels, and Hardware\n  编译器与运行时: Compilers and Runtime\n  GPU/加速器内核: GPU / Accelerator Kernels\n  基准与观测: Benchmarks and Observability\n  Infra 评测: Infrastructure Evaluation"}}, {"slug": "ai-algorithm", "name": "AI 算法", "name_en": "AI Algorithms", "description": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "description_en": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "settings": {"trackId": "ai-algorithm", "activeTracks": "ai-algorithm", "displayZh": "AI 算法", "displayEn": "AI Algorithms", "descZh": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "descEn": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter"], "categories": "cs.AI\ncs.LG\ncs.CL\ncs.CV", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "karpathy\nfchollet\nylecun\nhardmaru\nrasbt\nlilianweng\nOpenAI\nAnthropicAI\nGoogleDeepMind", "searchQueries": "algorithm\narchitecture\nfoundation model\nreasoning\nplanning\nreinforcement learning\nrepresentation learning\noptimization\ntransformer\nattention\ndiffusion\nmultimodal\npost-training\nfine-tuning\nbenchmark\nevaluation\nagent\nreasoning model\npost training\nmultimodal model\nmachine learning algorithm\nAI algorithm", "tweetLanguage": "en", "twitterMax": "80", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml", "rssDays": "21", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "3", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both", "advancedYaml": "watchlist:\n  authors:\n  - Yoshua Bengio\n  - Chelsea Finn\n  top: 10\n\ntopics:\n- name: 模型与训练方法\n  children:\n  - name: 架构设计\n    children:\n    - Transformer / attention variants\n    - diffusion / generative modeling\n    - multimodal / VLM architecture\n  - name: 学习目标与优化\n    children:\n    - representation learning\n    - optimization / training dynamics\n    - data-efficient learning\n- name: 推理、智能体与后训练\n  children:\n  - name: 推理与规划\n    children:\n    - reasoning / planning\n    - tool use / agent workflow\n  - name: 后训练与对齐\n    children:\n    - reinforcement learning\n    - post-training / alignment data\n- name: 评测与可靠性\n  children:\n  - name: 评测体系\n    children:\n    - evaluation / benchmarks\n    - multimodal evaluation\n  - name: 鲁棒性与泛化\n    children:\n    - robustness / generalization\n    - safety / refusal behavior\n\ntopic_translations:\n  模型与训练方法: Models and Training Methods\n  架构设计: Architecture Design\n  学习目标与优化: Learning Objectives and Optimization\n  推理、智能体与后训练: Reasoning, Agents, and Post-Training\n  推理与规划: Reasoning and Planning\n  后训练与对齐: Post-Training and Alignment\n  评测与可靠性: Evaluation and Reliability\n  评测体系: Evaluation Systems\n  鲁棒性与泛化: Robustness and Generalization"}}];
+const KNOWN_TRACKS = [{"slug": "ai-infra", "name": "AI 基础设施", "name_en": "AI Infrastructure", "description": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "description_en": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "settings": {"trackId": "ai-infra", "activeTracks": "ai-infra", "displayZh": "AI 基础设施", "displayEn": "AI Infrastructure", "descZh": "面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。", "descEn": "AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter", "xiaohongshu", "zhihu"], "categories": "cs.DC\ncs.OS\ncs.PL\ncs.AR\ncs.LG\ncs.AI", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "vllm_project\nlmsysorg\nPyTorch\nNVIDIAAI\nHuggingFace\ndatabricks\nanyscalecompute", "searchQueries": "AI infrastructure\nLLM serving\ninference\nserving\ndistributed training\nparallelism\ndata parallel\nmodel parallel\npipeline parallel\ncluster\ndatacenter\ndata center\nscheduler\nscheduling\nresource management\nGPU\naccelerator\nCUDA\nTriton\nkernel\ncompiler\nruntime\nmemory\nKV cache\nprefill\nbatching\nrouting\nthroughput\nlatency\ncommunication\nbandwidth\nquantization\nspeculative decoding\ncheckpoint\nfault tolerance\ninference engine\nCUDA kernel\nGPU inference\nLLM inference\nGPU serving\n人工智能\n大模型\n推理\n训练\n部署\n算力\n集群\n系统\n工程\n论文", "tweetLanguage": "en", "twitterMax": "80", "xiaohongshuCreators": "科研工具博主 | https://www.xiaohongshu.com/user/profile/6489b7940000000012035e9b", "xiaohongshuDays": "30", "zhihuCreators": "zylmozart | https://www.zhihu.com/people/zylmozart", "zhihuDays": "30", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml\nhttps://pytorch.org/blog/feed.xml\nhttps://developer.nvidia.com/blog/category/artificial-intelligence/feed/\nhttps://www.anyscale.com/blog/rss.xml\nhttps://www.databricks.com/feed\nhttps://lambdalabs.com/blog/rss.xml", "rssDays": "45", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "7", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both", "advancedYaml": "relevance_filter:\n  paper:\n    preferred_arxiv_categories:\n    - cs.DC\n    - cs.OS\n    - cs.PL\n    - cs.AR\n    broad_arxiv_categories:\n    - cs.AI\n    - cs.LG\n    category_boosts:\n      cs.DC: 4\n      cs.OS: 3\n      cs.PL: 2\n      cs.AR: 2\n    min_anchor_hits: 1\n    broad_category_min_anchor_hits: 1\n    anchor_keywords:\n    - LLM serving\n    - inference engine\n    - serving\n    - distributed training\n    - data parallel\n    - model parallel\n    - pipeline parallel\n    - cluster\n    - scheduling\n    - resource management\n    - GPU\n    - accelerator\n    - CUDA\n    - Triton\n    - kernel\n    - compiler\n    - runtime\n    - KV cache\n    - prefill\n    - decode routing\n    - batching\n    - routing\n    - throughput\n    - latency\n    - communication\n    - bandwidth\n    - quantization\n    - speculative decoding\n    - checkpoint\n    - fault tolerance\n  repo:\n    allow_keyword_fallback: true\n  blog:\n    allow_keyword_fallback: true\n\ntopics:\n- name: 训练系统\n  children:\n  - name: 并行与分布式训练\n    children:\n    - data / model / pipeline parallelism\n    - large-scale pretraining systems\n    - checkpoint / fault tolerance\n  - name: 集群调度与可靠性\n    children:\n    - cluster scheduling\n    - resource management / elasticity\n- name: 推理系统\n  children:\n  - name: Serving 引擎\n    children:\n    - LLM serving / inference engines\n    - batching / routing / latency\n    - agent serving systems\n  - name: 内存与解码优化\n    children:\n    - KV cache / long context memory\n    - quantization / compression\n    - speculative decoding\n- name: 编译器、内核与硬件\n  children:\n  - name: 编译器与运行时\n    children:\n    - compiler / runtime\n    - graph optimization\n  - name: GPU/加速器内核\n    children:\n    - CUDA / kernel optimization\n    - accelerator / edge inference\n- name: 基准与观测\n  children:\n  - name: Infra 评测\n    children:\n    - AI infrastructure benchmarks\n    - profiling / observability\n\ntopic_translations:\n  训练系统: Training Systems\n  并行与分布式训练: Parallel and Distributed Training\n  集群调度与可靠性: Cluster Scheduling and Reliability\n  推理系统: Inference Systems\n  Serving 引擎: Serving Engines\n  内存与解码优化: Memory and Decoding Optimization\n  编译器、内核与硬件: Compilers, Kernels, and Hardware\n  编译器与运行时: Compilers and Runtime\n  GPU/加速器内核: GPU / Accelerator Kernels\n  基准与观测: Benchmarks and Observability\n  Infra 评测: Infrastructure Evaluation"}}, {"slug": "ai-algorithm", "name": "AI 算法", "name_en": "AI Algorithms", "description": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "description_en": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "settings": {"trackId": "ai-algorithm", "activeTracks": "ai-algorithm", "displayZh": "AI 算法", "displayEn": "AI Algorithms", "descZh": "AI 算法、模型架构、推理、学习方法、后训练与评测。", "descEn": "AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.", "sources": ["arxiv", "hf_papers", "rss", "github", "hackernews", "reddit", "twitter", "xiaohongshu", "zhihu"], "categories": "cs.AI\ncs.LG\ncs.CL\ncs.CV", "negativeKeywords": "finance\nblockchain\ncryptocurrency", "onlyHandles": false, "twitterHandles": "karpathy\nfchollet\nylecun\nhardmaru\nrasbt\nlilianweng\nOpenAI\nAnthropicAI\nGoogleDeepMind", "searchQueries": "algorithm\narchitecture\nfoundation model\nreasoning\nplanning\nreinforcement learning\nrepresentation learning\noptimization\ntransformer\nattention\ndiffusion\nmultimodal\npost-training\nfine-tuning\nbenchmark\nevaluation\nagent\nAI\n人工智能\n大模型\n推理\n后训练\n多模态\n强化学习\n评测\n科研\n论文\n学术\nreasoning model\npost training\nmultimodal model\nmachine learning algorithm\nAI algorithm", "tweetLanguage": "en", "twitterMax": "80", "xiaohongshuCreators": "科研工具博主 | https://www.xiaohongshu.com/user/profile/6489b7940000000012035e9b", "xiaohongshuDays": "30", "zhihuCreators": "zylmozart | https://www.zhihu.com/people/zylmozart", "zhihuDays": "30", "rssFeeds": "https://huggingface.co/blog/feed.xml\nhttps://bair.berkeley.edu/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml", "rssDays": "21", "hnTop": "50", "redditSubreddits": "MachineLearning\nLocalLLaMA", "redditTop": "50", "days": "3", "topPapers": "15", "topRepos": "5", "topBlogs": "5", "language": "both", "advancedYaml": "watchlist:\n  authors:\n  - Yoshua Bengio\n  - Chelsea Finn\n  top: 10\n\ntopics:\n- name: 模型与训练方法\n  children:\n  - name: 架构设计\n    children:\n    - Transformer / attention variants\n    - diffusion / generative modeling\n    - multimodal / VLM architecture\n  - name: 学习目标与优化\n    children:\n    - representation learning\n    - optimization / training dynamics\n    - data-efficient learning\n- name: 推理、智能体与后训练\n  children:\n  - name: 推理与规划\n    children:\n    - reasoning / planning\n    - tool use / agent workflow\n  - name: 后训练与对齐\n    children:\n    - reinforcement learning\n    - post-training / alignment data\n- name: 评测与可靠性\n  children:\n  - name: 评测体系\n    children:\n    - evaluation / benchmarks\n    - multimodal evaluation\n  - name: 鲁棒性与泛化\n    children:\n    - robustness / generalization\n    - safety / refusal behavior\n\ntopic_translations:\n  模型与训练方法: Models and Training Methods\n  架构设计: Architecture Design\n  学习目标与优化: Learning Objectives and Optimization\n  推理、智能体与后训练: Reasoning, Agents, and Post-Training\n  推理与规划: Reasoning and Planning\n  后训练与对齐: Post-Training and Alignment\n  评测与可靠性: Evaluation and Reliability\n  评测体系: Evaluation Systems\n  鲁棒性与泛化: Robustness and Generalization"}}];
 const APP_CONFIG = {"activeTracks": ["ai-algorithm", "ai-infra"], "settingsApiUrl": "https://omnisource-settings-api.omnisource.workers.dev"};
 const DEFAULT_API_BASE = "https://omnisource-settings-api.omnisource.workers.dev";
 const SETTINGS_LANGUAGE = "en";
@@ -340,6 +372,7 @@ const API_STORAGE_KEY = 'omnisource-settings-api-base';
 const fields = [
   'trackId','activeTracks','displayZh','displayEn','descZh','descEn','categories','searchQueries',
   'negativeKeywords','onlyHandles','twitterHandles','tweetLanguage','twitterMax',
+  'xiaohongshuCreators','xiaohongshuDays','zhihuCreators','zhihuDays',
   'rssFeeds','hnTop','redditSubreddits','redditTop',
   'days','rssDays','topPapers','topRepos','topBlogs','language'
 ];
@@ -347,6 +380,7 @@ const $ = id => document.getElementById(id);
 const cleanId = value => String(value || 'my-ai-radar').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'my-ai-radar';
 const isEnglishSettings = () => SETTINGS_LANGUAGE === 'en';
 const splitList = value => String(value || '').split(/[\n,]+/).map(v => v.trim()).filter(Boolean);
+const splitRows = value => String(value || '').split(/\n+/).map(v => v.trim()).filter(Boolean);
 const checkedSources = () => [...document.querySelectorAll('#sourceChecks input:checked')].map(input => input.value);
 const quote = value => JSON.stringify(String(value ?? ''));
 const numberValue = (id, fallback) => Math.max(1, Number($(id).value || fallback));
@@ -362,6 +396,44 @@ const yamlQuotedList = (name, values, indent = 0) => {
   const pad = ' '.repeat(indent);
   if (!values.length) return [`${pad}${name}: []`];
   return [`${pad}${name}:`, ...values.map(value => `${pad}  - ${quote(value)}`)];
+};
+const creatorRows = value => splitRows(value).map(line => {
+  const parts = line.split('|');
+  const target = parts.length > 1 ? parts.slice(1).join('|').trim() : parts[0].trim();
+  const name = parts.length > 1 ? parts[0].trim() : '';
+  return { name, target };
+}).filter(row => row.name || row.target);
+const zhihuUserFromTarget = target => {
+  const text = String(target || '').trim();
+  if (!/^https?:\/\//i.test(text)) return text;
+  try {
+    const url = new URL(text);
+    const parts = url.pathname.split('/').filter(Boolean);
+    const peopleIndex = parts.indexOf('people');
+    if (peopleIndex >= 0 && parts[peopleIndex + 1]) return parts[peopleIndex + 1];
+    return parts.at(-1) || text;
+  } catch {
+    return text;
+  }
+};
+const yamlCreatorItems = (name, rows, platform, indent = 2) => {
+  const pad = ' '.repeat(indent);
+  if (!rows.length) return [`${pad}${name}: []`];
+  const lines = [`${pad}${name}:`];
+  rows.forEach(row => {
+    const display = row.name || row.target;
+    lines.push(`${pad}  - name: ${quote(display)}`);
+    if (platform === 'xiaohongshu') {
+      if (/^https?:\/\//i.test(row.target)) lines.push(`${pad}    profile_url: ${quote(row.target)}`);
+      else lines.push(`${pad}    user_id: ${quote(row.target)}`);
+    } else {
+      const user = zhihuUserFromTarget(row.target);
+      lines.push(`${pad}    user: ${quote(user)}`);
+      if (/^https?:\/\//i.test(row.target)) lines.push(`${pad}    profile_url: ${quote(row.target)}`);
+      lines.push(`${pad}    articles: true`, `${pad}    answers: true`);
+    }
+  });
+  return lines;
 };
 const collectState = () => {
   const state = {};
@@ -469,6 +541,35 @@ const trackYaml = state => {
       ''
     );
   }
+  if ((state.sources || []).includes('xiaohongshu')) {
+    lines.push(
+      'xiaohongshu:',
+      '  enabled: true',
+      '  backend: opencli',
+      '  command: opencli',
+      '  timezone: Asia/Shanghai',
+      `  days: ${numberValue('xiaohongshuDays', 30)}`,
+      '  max_notes_per_creator: 20',
+      '  fetch_details: false',
+      '  include_unknown_dates: false',
+      ...yamlCreatorItems('creators', creatorRows(state.xiaohongshuCreators), 'xiaohongshu', 2),
+      ''
+    );
+  }
+  if ((state.sources || []).includes('zhihu')) {
+    lines.push(
+      'zhihu:',
+      '  enabled: true',
+      '  backend: opencli',
+      '  command: opencli',
+      '  timezone: Asia/Shanghai',
+      `  days: ${numberValue('zhihuDays', 30)}`,
+      '  max_items_per_creator: 20',
+      '  summary_max_chars: 500',
+      ...yamlCreatorItems('creators', creatorRows(state.zhihuCreators), 'zhihu', 2),
+      ''
+    );
+  }
   if ((state.sources || []).includes('rss')) {
     lines.push(...yamlQuotedList('rss_feeds', splitList(state.rssFeeds)), `rss_days: ${numberValue('rssDays', 21)}`, '');
   }
@@ -538,7 +639,7 @@ const trackYaml = state => {
     `  top_papers: ${numberValue('topPapers', 15)}`,
     `  top_repos: ${numberValue('topRepos', 5)}`,
     `  top_blogs: ${numberValue('topBlogs', 5)}`,
-    `  top_social: ${(state.sources || []).some(source => ['twitter','hackernews','reddit'].includes(source)) ? 5 : 0}`,
+    `  top_social: ${(state.sources || []).some(source => ['twitter','hackernews','reddit','xiaohongshu','zhihu'].includes(source)) ? 5 : 0}`,
     `  language: ${quote(languages[0])}`,
     '  languages:',
     ...languages.map(lang => `    - ${quote(lang)}`)
@@ -623,6 +724,10 @@ const newCustomTrack = () => {
     twitterHandles:'karpathy\nswyx\nClementDelangue\nOpenAI\nGoogleDeepMind',
     tweetLanguage:'en',
     twitterMax:'80',
+    xiaohongshuCreators:'科研工具博主 | https://www.xiaohongshu.com/user/profile/6489b7940000000012035e9b',
+    xiaohongshuDays:'30',
+    zhihuCreators:'zylmozart | https://www.zhihu.com/people/zylmozart',
+    zhihuDays:'30',
     rssFeeds:'https://huggingface.co/blog/feed.xml\nhttps://blog.research.google/feeds/posts/default\nhttps://openai.com/news/rss.xml',
     hnTop:'50',
     redditSubreddits:'MachineLearning\nLocalLLaMA',
