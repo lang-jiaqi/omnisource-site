@@ -36,15 +36,18 @@
   button { font:inherit; }
   .home-hero { position:relative; min-height:560px; overflow:hidden;
     background:
+      radial-gradient(circle at 76% 32%, rgba(138,136,255,.34), transparent 34%),
+      radial-gradient(circle at 84% 70%, rgba(121,234,214,.22), transparent 28%),
       linear-gradient(135deg, #050714 0%, #101735 52%, #06131d 100%);
     border-bottom:1px solid var(--border); box-shadow:inset 0 -150px 120px var(--bg); }
   .home-hero::before { content:""; position:absolute; inset:0; pointer-events:none;
     background:
       linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
       linear-gradient(90deg, rgba(121,234,214,.06) 1px, transparent 1px);
-    background-size:44px 44px; opacity:.36; mask-image:linear-gradient(to bottom, rgba(0,0,0,.95), transparent 90%); }
+    background-size:38px 38px; opacity:.43; mask-image:linear-gradient(to bottom, rgba(0,0,0,.96), transparent 92%); }
   .home-hero::after { content:""; position:absolute; inset:0; pointer-events:none;
     background:
+      linear-gradient(115deg, transparent 0%, rgba(121,234,214,.10) 38%, transparent 56%),
       linear-gradient(100deg, rgba(5,7,16,.95) 0%, rgba(5,7,16,.64) 52%, rgba(5,7,16,.82) 100%),
       linear-gradient(180deg, transparent 0%, rgba(5,7,13,.72) 100%); }
   .hero-network { position:absolute; inset:0; width:100%; height:100%; display:block; z-index:0; }
@@ -67,6 +70,7 @@
     border-radius:999px; padding:0; background:transparent; color:rgba(255,255,255,.72);
     font-size:1rem; line-height:1; cursor:pointer; }
   .theme-option.active { background:var(--accent-2); color:#fff; }
+  .topline, .hero-copy { position:relative; z-index:3; }
   .hero-copy { max-width:900px; color:#fff; text-shadow:0 18px 64px rgba(0,0,0,.5); }
   .eyebrow { display:inline-flex; align-items:center; min-height:28px; padding:0 10px;
     border:1px solid rgba(121,234,214,.32); border-radius:999px; color:#c8fff7;
@@ -77,12 +81,26 @@
     font-size:clamp(1.08rem, 2vw, 1.42rem); line-height:1.46; }
   .hero-subcopy { max-width:720px; margin:10px 0 0; color:rgba(224,232,250,.72);
     font-size:1rem; line-height:1.6; }
-  .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
-  .hero-cta { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 18px;
-    border-radius:999px; border:1px solid rgba(255,255,255,.18); background:var(--button);
-    color:var(--button-fg); font-weight:900; box-shadow:0 18px 48px rgba(0,0,0,.24); }
-  .hero-cta.secondary { background:rgba(255,255,255,.07); color:#fff; }
-  .hero-cta:hover { transform:translateY(-1px); }
+  .hero-instrument { position:absolute; right:18px; bottom:64px; z-index:1; width:min(430px, 42vw);
+    aspect-ratio:1; border-radius:50%; opacity:.96; filter:drop-shadow(0 28px 80px rgba(0,0,0,.36)); }
+  .hero-instrument::before { content:""; position:absolute; inset:0; border-radius:50%;
+    background:
+      conic-gradient(from 208deg, transparent 0 58%, rgba(121,234,214,.34) 63%, transparent 72%),
+      radial-gradient(circle, rgba(121,234,214,.18) 0 2px, transparent 3px),
+      repeating-radial-gradient(circle, rgba(255,255,255,.16) 0 1px, transparent 1px 56px);
+    border:1px solid rgba(121,234,214,.2); animation:radarSpin 13s linear infinite; }
+  .hero-instrument::after { content:""; position:absolute; inset:18%; border-radius:50%;
+    background:radial-gradient(circle, rgba(121,234,214,.36) 0 4px, transparent 5px),
+      linear-gradient(90deg, transparent calc(50% - .5px), rgba(121,234,214,.18) 50%, transparent calc(50% + .5px)),
+      linear-gradient(0deg, transparent calc(50% - .5px), rgba(121,234,214,.18) 50%, transparent calc(50% + .5px));
+    border:1px solid rgba(255,255,255,.16); box-shadow:inset 0 0 42px rgba(121,234,214,.08); }
+  .radar-node { position:absolute; width:7px; height:7px; border-radius:50%; background:var(--accent);
+    box-shadow:0 0 0 5px rgba(121,234,214,.12), 0 0 22px rgba(121,234,214,.64); }
+  .radar-node:nth-child(1) { left:18%; top:38%; }
+  .radar-node:nth-child(2) { right:24%; top:22%; background:var(--accent-2); }
+  .radar-node:nth-child(3) { right:16%; bottom:30%; }
+  .radar-node:nth-child(4) { left:34%; bottom:18%; background:var(--warm); }
+  @keyframes radarSpin { to { transform:rotate(360deg); } }
   .home-shell { max-width:1180px; margin:-72px auto 0; padding:0 20px 80px; position:relative; z-index:3; }
   .entry-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; align-items:stretch; }
   .entry-card { position:relative; min-height:242px; border:1px solid var(--border); border-radius:8px;
@@ -111,7 +129,7 @@
     .home-hero, .home-hero-inner { min-height:520px; }
     .topline { align-items:flex-start; flex-direction:column; }
     h1 { font-size:clamp(3.1rem, 18vw, 4.6rem); }
-    .hero-actions { margin-top:22px; }
+    .hero-instrument { width:330px; right:-118px; bottom:76px; opacity:.48; }
     .entry-grid, .metric-row { grid-template-columns:1fr; }
     .home-shell { margin-top:-54px; }
   }
@@ -135,10 +153,12 @@
       <h1>OmniSource</h1>
       <p class="hero-lead">把每日科研情报和每周 AI 工具推荐放在同一个工作台。</p>
       <p class="hero-subcopy">OmniSource 先替你跨平台筛掉噪声，再把值得看的论文、项目、博客和工具整理成可行动的入口。</p>
-      <div class="hero-actions">
-        <a class="hero-cta" href="report.html">进入 Report</a>
-        <a class="hero-cta secondary" href="tools.html">查看工具</a>
-      </div>
+    </div>
+    <div class="hero-instrument" aria-hidden="true">
+      <span class="radar-node"></span>
+      <span class="radar-node"></span>
+      <span class="radar-node"></span>
+      <span class="radar-node"></span>
     </div>
   </div>
 </header>
