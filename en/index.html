@@ -83,12 +83,12 @@
     -webkit-background-clip:text; background-clip:text;
     filter:drop-shadow(0 20px 54px rgba(0,0,0,.34)); isolation:isolate; }
   h1::before { content:attr(data-title); position:absolute; inset:0; z-index:-1;
-    color:transparent; background:linear-gradient(96deg, transparent 0 36%, #63d8ff 56%, #7d80ff 72%, #bb76ff 100%);
-    -webkit-background-clip:text; background-clip:text; -webkit-text-stroke:8px transparent;
-    transform:translate(12px, 5px); filter:blur(13px); opacity:.72; pointer-events:none; }
-  h1::after { content:""; position:absolute; right:-.18em; top:5%; width:.42em; height:88%; z-index:-1;
-    border-radius:999px; background:linear-gradient(180deg, rgba(99,216,255,.18), rgba(126,128,255,.44), rgba(187,118,255,.22));
-    filter:blur(18px); opacity:.88; pointer-events:none; }
+    color:transparent; background:linear-gradient(96deg, transparent 0 44%, rgba(99,216,255,.96) 60%, rgba(125,128,255,.9) 76%, rgba(187,118,255,.76) 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-stroke:4px transparent;
+    transform:translate(9px, 3px); filter:blur(6px); opacity:.62; pointer-events:none; }
+  h1::after { content:""; position:absolute; right:-.08em; top:10%; width:.2em; height:76%; z-index:-1;
+    border-radius:999px; background:linear-gradient(180deg, rgba(111,226,255,.16), rgba(126,128,255,.58), rgba(195,129,255,.18));
+    filter:blur(9px); opacity:.72; pointer-events:none; }
   .hero-lead { max-width:780px; margin:20px 0 0; color:rgba(255,255,255,.9);
     font-size:clamp(1.08rem, 2vw, 1.42rem); line-height:1.46; }
   .hero-subcopy { max-width:720px; margin:10px 0 0; color:rgba(224,232,250,.72);
