@@ -76,7 +76,19 @@
     border:1px solid rgba(121,234,214,.32); border-radius:999px; color:#c8fff7;
     background:rgba(121,234,214,.08); font-size:.74rem; font-weight:900; letter-spacing:.08em;
     text-transform:uppercase; }
-  h1 { margin:14px 0 0; font-size:clamp(3.8rem, 8vw, 7.4rem); line-height:.88; letter-spacing:0; }
+  h1 { position:relative; display:inline-block; margin:14px 0 0;
+    font-size:clamp(3.8rem, 8vw, 7.4rem); line-height:.88; letter-spacing:0;
+    color:transparent;
+    background:linear-gradient(92deg, #ffffff 0%, #f1f6ff 46%, #c7d8ff 72%, #a99cff 100%);
+    -webkit-background-clip:text; background-clip:text;
+    filter:drop-shadow(0 20px 54px rgba(0,0,0,.34)); isolation:isolate; }
+  h1::before { content:attr(data-title); position:absolute; inset:0; z-index:-1;
+    color:transparent; background:linear-gradient(96deg, transparent 0 36%, #63d8ff 56%, #7d80ff 72%, #bb76ff 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-stroke:8px transparent;
+    transform:translate(12px, 5px); filter:blur(13px); opacity:.72; pointer-events:none; }
+  h1::after { content:""; position:absolute; right:-.18em; top:5%; width:.42em; height:88%; z-index:-1;
+    border-radius:999px; background:linear-gradient(180deg, rgba(99,216,255,.18), rgba(126,128,255,.44), rgba(187,118,255,.22));
+    filter:blur(18px); opacity:.88; pointer-events:none; }
   .hero-lead { max-width:780px; margin:20px 0 0; color:rgba(255,255,255,.9);
     font-size:clamp(1.08rem, 2vw, 1.42rem); line-height:1.46; }
   .hero-subcopy { max-width:720px; margin:10px 0 0; color:rgba(224,232,250,.72);
@@ -150,7 +162,7 @@
     </div>
     <div class="hero-copy">
       <div class="eyebrow">AI research signal desk</div>
-      <h1>OmniSource</h1>
+      <h1 data-title="OmniSource">OmniSource</h1>
       <p class="hero-lead">把每日科研情报和每周 AI 工具推荐放在同一个工作台。</p>
       <p class="hero-subcopy">OmniSource 先替你跨平台筛掉噪声，再把值得看的论文、项目、博客和工具整理成可行动的入口。</p>
     </div>
