@@ -103,7 +103,7 @@
     </div>
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">本周更新 · 2026-07-13</div>
+        <div class="eyebrow">本周更新 · 2026-07-15</div>
         <h1>每周工具雷达</h1>
         <p class="hero-copy">每周挑出一组跟 AI 工作流相关、值得试用的小工具。按使用场景筛选，真正有用的再带回自己的工作台。</p>
       </div>
@@ -123,143 +123,189 @@
   <div class="filters" aria-label="工具场景筛选">
     <button class="category-filter active" type="button" data-filter="all">全部</button><button class="category-filter" type="button" data-filter="discovery">发现与雷达</button><button class="category-filter" type="button" data-filter="coding">编程开发</button><button class="category-filter" type="button" data-filter="automation">自动化连接</button><button class="category-filter" type="button" data-filter="builder">应用搭建</button><button class="category-filter" type="button" data-filter="research">研究检索</button>
     <button class="favorites-toggle" type="button" id="favoriteFilter">只看收藏</button>
-    <span class="updated">本周更新 · 2026-07-13</span>
+    <span class="updated">本周更新 · 2026-07-15</span>
   </div>
   <section class="tool-grid" id="toolGrid">
-      <article class="tool-card" data-tool-id="codex-radar" data-category="discovery">
-        <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌁</span>
-          <div>
-            <div class="tool-title-row">
-              <h2>Codex Radar</h2>
-              <span class="tool-category">场景: 发现与雷达</span>
-            </div>
-            <p>围绕 Codex 生态的资源和动态雷达，适合快速了解工具、案例和社区更新。</p>
-          </div>
-          <button class="favorite-btn" type="button" data-favorite="codex-radar" aria-label="收藏工具" title="收藏工具">☆</button>
-        </div>
-        <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>想跟进 Codex 周边工具、教程、生态变化时，把它作为一个入口页。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>适合作为工具雷达的参考样例：垂直、轻量、信息密度高，也能帮助我们观察 Codex 生态里哪些工具正在冒头。</dd></div>
-        </dl>
-        <div class="tool-footer">
-          <span>Community site · Worth tracking</span>
-          <a href="https://codexradar.com/" target="_blank" rel="noopener">打开</a>
-        </div>
-      </article>
-    
-
-      <article class="tool-card" data-tool-id="opencli" data-category="automation">
-        <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌘</span>
-          <div>
-            <div class="tool-title-row">
-              <h2>OpenCLI</h2>
-              <span class="tool-category">场景: 自动化连接</span>
-            </div>
-            <p>把浏览器连接给本地 agent 的自动化桥，适合需要登录态页面抓取或操作的场景。</p>
-          </div>
-          <button class="favorite-btn" type="button" data-favorite="opencli" aria-label="收藏工具" title="收藏工具">☆</button>
-        </div>
-        <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>跑小红书、知乎这类需要浏览器登录态的 source，或者让 agent 操作网页。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>对 OmniSource 这种多平台信息源很关键：当内容需要登录态或没有稳定 API 时，它能把浏览器变成可控 source。</dd></div>
-        </dl>
-        <div class="tool-footer">
-          <span>GitHub · Useful for local workflows</span>
-          <a href="https://github.com/jackwener/OpenCLI" target="_blank" rel="noopener">打开</a>
-        </div>
-      </article>
-    
-
-      <article class="tool-card" data-tool-id="aider" data-category="coding">
+      <article class="tool-card" data-tool-id="ecc" data-category="coding">
         <div class="tool-card-head">
           <span class="tool-icon" aria-hidden="true">⌨</span>
           <div>
             <div class="tool-title-row">
-              <h2>Aider</h2>
+              <h2>ECC</h2>
               <span class="tool-category">场景: 编程开发</span>
             </div>
-            <p>终端里的 AI 结对编程工具，强调直接读写代码、配合 git 修改。</p>
+            <p>ECC 是一个来自 GitHub 的 编程开发 工具线索。The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
           </div>
-          <button class="favorite-btn" type="button" data-favorite="aider" aria-label="收藏工具" title="收藏工具">☆</button>
+          <button class="favorite-btn" type="button" data-favorite="ecc" aria-label="收藏工具" title="收藏工具">☆</button>
         </div>
         <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>适合希望在命令行里快速改代码、生成 patch、配合现有 repo 迭代的人。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>仍然是理解命令行 AI 编程工作流的好入口，适合和 Codex、Claude Code 等工具做横向对比。</dd></div>
+          <div><dt>适合什么时候用</dt><dd>需要提升日常编码、代码理解、重构或 repo 迭代效率时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
         </dl>
         <div class="tool-footer">
-          <span>Website · Practical</span>
-          <a href="https://aider.chat/" target="_blank" rel="noopener">打开</a>
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">打开</a>
         </div>
       </article>
     
 
-      <article class="tool-card" data-tool-id="continue" data-category="coding">
+      <article class="tool-card" data-tool-id="open-design" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">▣</span>
+          <span class="tool-icon" aria-hidden="true">⌨</span>
           <div>
             <div class="tool-title-row">
-              <h2>Continue</h2>
+              <h2>open-design</h2>
               <span class="tool-category">场景: 编程开发</span>
             </div>
-            <p>开源 IDE AI 助手，支持把模型、上下文和团队规则配置进开发环境。</p>
+            <p>open-design 是一个来自 GitHub 的 编程开发 工具线索。🎨 The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images &amp; video — real files, HTML/PDF/PPTX/MP4 expor</p>
           </div>
-          <button class="favorite-btn" type="button" data-favorite="continue" aria-label="收藏工具" title="收藏工具">☆</button>
+          <button class="favorite-btn" type="button" data-favorite="open-design" aria-label="收藏工具" title="收藏工具">☆</button>
         </div>
         <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>团队想把代码助手接进 VS Code / JetBrains，并保留自定义模型和规则时可以评估。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>适合关注“团队如何把 AI 助手接入日常 IDE”的用户，配置空间比单点工具更大。</dd></div>
+          <div><dt>适合什么时候用</dt><dd>需要提升日常编码、代码理解、重构或 repo 迭代效率时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
         </dl>
         <div class="tool-footer">
-          <span>Website · Configurable</span>
-          <a href="https://continue.dev/" target="_blank" rel="noopener">打开</a>
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">打开</a>
         </div>
       </article>
     
 
-      <article class="tool-card" data-tool-id="dify" data-category="builder">
+      <article class="tool-card" data-tool-id="mempalace" data-category="automation">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">◆</span>
+          <span class="tool-icon" aria-hidden="true">⌘</span>
           <div>
             <div class="tool-title-row">
-              <h2>Dify</h2>
-              <span class="tool-category">场景: 应用搭建</span>
+              <h2>mempalace</h2>
+              <span class="tool-category">场景: 自动化连接</span>
             </div>
-            <p>面向 agent、RAG 和工作流应用的可视化构建平台。</p>
+            <p>mempalace 是一个来自 GitHub 的 自动化连接 工具线索。The best-benchmarked open-source AI memory system. And it&#x27;s free.</p>
           </div>
-          <button class="favorite-btn" type="button" data-favorite="dify" aria-label="收藏工具" title="收藏工具">☆</button>
+          <button class="favorite-btn" type="button" data-favorite="mempalace" aria-label="收藏工具" title="收藏工具">☆</button>
         </div>
         <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>当你想快速把一个 AI workflow 做成可测试的应用，而不是只停留在脚本阶段。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>代表了 agent / RAG / workflow 从脚本走向可交付应用的路线，适合想快速搭建原型的人试用。</dd></div>
+          <div><dt>适合什么时候用</dt><dd>需要把浏览器、API、文档和 agent 工作流连接起来时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
         </dl>
         <div class="tool-footer">
-          <span>Website · Builder platform</span>
-          <a href="https://dify.ai/" target="_blank" rel="noopener">打开</a>
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener">打开</a>
         </div>
       </article>
     
 
-      <article class="tool-card" data-tool-id="perplexity-labs" data-category="research">
+      <article class="tool-card" data-tool-id="hyperframes" data-category="automation">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">◐</span>
+          <span class="tool-icon" aria-hidden="true">⌘</span>
           <div>
             <div class="tool-title-row">
-              <h2>Perplexity Labs</h2>
-              <span class="tool-category">场景: 研究检索</span>
+              <h2>hyperframes</h2>
+              <span class="tool-category">场景: 自动化连接</span>
             </div>
-            <p>偏研究和检索的 AI 实验工具入口，适合快速探索资料和生成初步产物。</p>
+            <p>hyperframes 是一个来自 GitHub 的 自动化连接 工具线索。Write HTML. Render video. Built for agents.</p>
           </div>
-          <button class="favorite-btn" type="button" data-favorite="perplexity-labs" aria-label="收藏工具" title="收藏工具">☆</button>
+          <button class="favorite-btn" type="button" data-favorite="hyperframes" aria-label="收藏工具" title="收藏工具">☆</button>
         </div>
         <dl class="tool-notes">
-          <div><dt>适合什么时候用</dt><dd>需要快速了解一个陌生问题、收集线索、再把结果转成初稿时使用。</dd></div>
-          <div><dt>本周推荐理由</dt><dd>适合研究前期快速扫资料、形成问题地图；它体现了搜索型 AI 从答案框转向工作台的趋势。</dd></div>
+          <div><dt>适合什么时候用</dt><dd>需要把浏览器、API、文档和 agent 工作流连接起来时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
         </dl>
         <div class="tool-footer">
-          <span>Website · Try selectively</span>
-          <a href="https://www.perplexity.ai/labs" target="_blank" rel="noopener">打开</a>
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">打开</a>
+        </div>
+      </article>
+    
+
+      <article class="tool-card" data-tool-id="vibe-trading" data-category="automation">
+        <div class="tool-card-head">
+          <span class="tool-icon" aria-hidden="true">⌘</span>
+          <div>
+            <div class="tool-title-row">
+              <h2>Vibe-Trading</h2>
+              <span class="tool-category">场景: 自动化连接</span>
+            </div>
+            <p>Vibe-Trading 是一个来自 GitHub 的 自动化连接 工具线索。&quot;Vibe-Trading: Your Personal Trading Agent&quot;</p>
+          </div>
+          <button class="favorite-btn" type="button" data-favorite="vibe-trading" aria-label="收藏工具" title="收藏工具">☆</button>
+        </div>
+        <dl class="tool-notes">
+          <div><dt>适合什么时候用</dt><dd>需要把浏览器、API、文档和 agent 工作流连接起来时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
+        </dl>
+        <div class="tool-footer">
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/HKUDS/Vibe-Trading" target="_blank" rel="noopener">打开</a>
+        </div>
+      </article>
+    
+
+      <article class="tool-card" data-tool-id="loop-engineering" data-category="coding">
+        <div class="tool-card-head">
+          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <div>
+            <div class="tool-title-row">
+              <h2>loop-engineering</h2>
+              <span class="tool-category">场景: 编程开发</span>
+            </div>
+            <p>loop-engineering 是一个来自 GitHub 的 编程开发 工具线索。Practical patterns, starters &amp; CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost</p>
+          </div>
+          <button class="favorite-btn" type="button" data-favorite="loop-engineering" aria-label="收藏工具" title="收藏工具">☆</button>
+        </div>
+        <dl class="tool-notes">
+          <div><dt>适合什么时候用</dt><dd>需要提升日常编码、代码理解、重构或 repo 迭代效率时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
+        </dl>
+        <div class="tool-footer">
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/cobusgreyling/loop-engineering" target="_blank" rel="noopener">打开</a>
+        </div>
+      </article>
+    
+
+      <article class="tool-card" data-tool-id="open-code-review" data-category="coding">
+        <div class="tool-card-head">
+          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <div>
+            <div class="tool-title-row">
+              <h2>open-code-review</h2>
+              <span class="tool-category">场景: 编程开发</span>
+            </div>
+            <p>open-code-review 是一个来自 GitHub 的 编程开发 工具线索。Open-source &amp; free — Battle-tested at Alibaba&#x27;s scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL inj</p>
+          </div>
+          <button class="favorite-btn" type="button" data-favorite="open-code-review" aria-label="收藏工具" title="收藏工具">☆</button>
+        </div>
+        <dl class="tool-notes">
+          <div><dt>适合什么时候用</dt><dd>需要提升日常编码、代码理解、重构或 repo 迭代效率时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
+        </dl>
+        <div class="tool-footer">
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">打开</a>
+        </div>
+      </article>
+    
+
+      <article class="tool-card" data-tool-id="context-mode" data-category="coding">
+        <div class="tool-card-head">
+          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <div>
+            <div class="tool-title-row">
+              <h2>context-mode</h2>
+              <span class="tool-category">场景: 编程开发</span>
+            </div>
+            <p>context-mode 是一个来自 GitHub 的 编程开发 工具线索。Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.</p>
+          </div>
+          <button class="favorite-btn" type="button" data-favorite="context-mode" aria-label="收藏工具" title="收藏工具">☆</button>
+        </div>
+        <dl class="tool-notes">
+          <div><dt>适合什么时候用</dt><dd>需要提升日常编码、代码理解、重构或 repo 迭代效率时评估。</dd></div>
+          <div><dt>本周推荐理由</dt><dd>本周进入雷达是因为它在 GitHub 出现了新信号，同时比泛泛的老牌项目更值得快速验证。</dd></div>
+        </dl>
+        <div class="tool-footer">
+          <span>GitHub · Fresh repo</span>
+          <a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener">打开</a>
         </div>
       </article>
     </section>
