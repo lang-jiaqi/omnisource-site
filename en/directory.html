@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniSource / Directory</title>
+<link rel="stylesheet" href="../directory.css">
+</head>
+<body>
+<div class="directory-shell">
+  <header class="directory-nav">
+    <a class="directory-wordmark" href="report.html" aria-label="OmniSource"><span class="directory-mark">O</span><span>OMNISOURCE</span></a>
+    <div class="directory-nav-meta"><span>01</span><i></i><span>04</span><span class="directory-nav-label">OmniSource / interface study</span></div>
+    <div class="directory-nav-actions"><div class="directory-lang"><a class="lang-option" href="../directory.html" hreflang="zh">ZH</a><a class="lang-option active" href="directory.html" hreflang="en">EN</a></div><button class="directory-theme-button" id="directoryTheme" type="button" aria-label="Toggle theme">☾</button><button class="directory-menu-button" type="button" aria-expanded="false" aria-controls="directoryMenu">INDEX</button></div>
+  </header>
+
+  <main>
+    <section class="directory-hero" aria-labelledby="directoryTitle">
+      <div class="directory-hero-copy">
+        <span class="directory-kicker">OmniSource / interface study</span>
+        <h1 id="directoryTitle">Research signals,<br>recomposed.</h1>
+        <p>An exploratory directory for research intelligence. Reports keep the full signal flow; the tool radar surfaces useful new tools each week.</p>
+        <div class="directory-hero-links"><a href="report.html"><span>01</span>Research reports<b aria-hidden="true">-></b></a><a href="tools.html"><span>02</span>Weekly tool radar<b aria-hidden="true">-></b></a></div>
+        <div class="directory-status"><span class="directory-status-dot"></span><span>Move the cursor to explore the aperture</span></div>
+      </div>
+      <div class="directory-aperture" aria-label="Interactive radial aperture">
+        <canvas id="directoryAperture" aria-hidden="true"></canvas>
+        <span class="aperture-cross aperture-cross-x"></span><span class="aperture-cross aperture-cross-y"></span>
+        <span class="aperture-core"></span><span class="aperture-readout">R / 01<br>LIVE SIGNAL</span>
+      </div>
+    </section>
+
+    <section class="directory-index" id="directoryIndex" aria-labelledby="indexTitle">
+      <div class="directory-section-heading"><span>INDEX / 01</span><h2 id="indexTitle">Open index</h2><p>An exploratory directory for research intelligence. Reports keep the full signal flow; the tool radar surfaces useful new tools each week.</p></div>
+      <div class="directory-project-grid">
+        <a class="directory-project directory-project-featured" href="report.html"><span class="directory-project-number">01</span><span class="directory-project-kind">REPORT</span><strong>Research reports</strong><small>Papers, repos, blogs, community signals, and author graphs.</small><b aria-hidden="true">-></b></a>
+        <a class="directory-project" href="tools.html"><span class="directory-project-number">02</span><span class="directory-project-kind">RADAR</span><strong>Weekly tool radar</strong><small>Curated AI tools with practical use cases.</small><b aria-hidden="true">-></b></a>
+        <div class="directory-project directory-project-muted"><span class="directory-project-number">03</span><span class="directory-project-kind">WORKSPACE</span><strong>Reserved workspace</strong><small>Saved signals and more sources will unfold here.</small><b aria-hidden="true">+</b></div>
+      </div>
+    </section>
+
+    <section class="directory-tracks" aria-labelledby="tracksTitle">
+      <div class="directory-section-heading"><span>INDEX / 02</span><h2 id="tracksTitle">Active research tracks</h2></div>
+      <div class="directory-track-list"><a class="directory-track" href="report.html#ai-infra"><span class="directory-track-number">01</span><span><strong>AI Infrastructure</strong><small>AI infrastructure for distributed training, inference serving, systems, compilers, kernels, and clusters.</small></span><span class="directory-arrow" aria-hidden="true">-></span></a><a class="directory-track" href="report.html#ai-algorithm"><span class="directory-track-number">02</span><span><strong>AI Algorithms</strong><small>AI algorithms, model architectures, reasoning, learning methods, post-training, and evaluation.</small></span><span class="directory-arrow" aria-hidden="true">-></span></a></div>
+    </section>
+  </main>
+  <footer class="directory-footer"><a href="report.html">Back to OmniSource</a><span>OMNISOURCE / RESEARCH SIGNAL DESK</span></footer>
+</div>
+<aside class="directory-menu" id="directoryMenu" hidden><div class="directory-menu-inner"><button class="directory-menu-close" type="button" aria-label="Close">×</button><span class="directory-kicker">NAVIGATION</span><a href="report.html">01 / Research reports</a><a href="tools.html">02 / Weekly tool radar</a><a href="#directoryIndex">03 / Open index</a></div></aside>
+<script src="../directory-ui.js"></script>
+</body></html>

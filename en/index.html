@@ -2,6 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OmniSource</title>
+<link rel="stylesheet" href="../theme.css">
 <script>
   (() => {
     if (location.hash && location.hash.length > 1) {
@@ -145,7 +146,7 @@
     .entry-grid, .metric-row { grid-template-columns:1fr; }
     .home-shell { margin-top:-54px; }
   }
-</style></head>
+</style><link rel="stylesheet" href="../theme.css"></head>
 <body>
 <header class="home-hero">
   <canvas class="hero-network" id="heroNetwork" aria-hidden="true"></canvas>
@@ -211,15 +212,16 @@
   const hero = document.querySelector(".home-hero");
   const ctx = canvas.getContext("2d");
   const pointer = { x: 0, y: 0, active: false };
+  const aperture = { x: 0, y: 0 };
   let width = 0;
   let height = 0;
   let nodes = [];
   const colors = {
-    node: "rgba(132, 226, 255, 0.88)",
-    nodeAlt: "rgba(151, 129, 255, 0.76)",
-    line: "rgba(126, 139, 255, 0.28)",
-    lineHot: "rgba(116, 224, 255, 0.46)",
-    scan: "rgba(116, 224, 255, 0.10)"
+    cyan: "rgba(126, 232, 220, 0.82)",
+    blue: "rgba(127, 150, 255, 0.72)",
+    violet: "rgba(192, 144, 255, 0.62)",
+    line: "rgba(132, 160, 255, 0.16)",
+    hot: "rgba(134, 232, 225, 0.42)"
   };
   const resizeNetwork = () => {
     const rect = hero.getBoundingClientRect();
@@ -231,14 +233,17 @@
     canvas.style.width = width + "px";
     canvas.style.height = height + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.max(46, Math.min(86, Math.floor(width / 18)));
+    aperture.x = width * .77;
+    aperture.y = height * .47;
+    const count = Math.max(88, Math.min(160, Math.floor(width / 8)));
     nodes = Array.from({ length: count }, (_, index) => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - .5) * .18,
-      vy: (Math.random() - .5) * .18,
-      r: index % 7 === 0 ? 2.2 : 1.35 + Math.random() * 1.2,
-      phase: Math.random() * Math.PI * 2
+      angle: Math.random() * Math.PI * 2,
+      radius: 35 + Math.random() * Math.min(width, height) * .55,
+      speed: (.04 + Math.random() * .12) * (index % 2 ? 1 : -1),
+      drift: Math.random() * Math.PI * 2,
+      size: index % 11 === 0 ? 2.2 : .75 + Math.random() * 1.35,
+      phase: Math.random() * Math.PI * 2,
+      hue: index % 5
     }));
   };
   hero.addEventListener("pointermove", event => {
@@ -252,60 +257,75 @@
   const drawNetwork = time => {
     ctx.clearRect(0, 0, width, height);
     const t = time * 0.001;
+    const targetX = pointer.active ? pointer.x : width * .77;
+    const targetY = pointer.active ? pointer.y : height * .47;
+    aperture.x += (targetX - aperture.x) * .035;
+    aperture.y += (targetY - aperture.y) * .035;
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
-    for (let i = 0; i < nodes.length; i += 1) {
-      const a = nodes[i];
-      a.x += a.vx + Math.sin(t + a.phase) * 0.045;
-      a.y += a.vy + Math.cos(t * .8 + a.phase) * 0.035;
-      if (a.x < -20) a.x = width + 20;
-      if (a.x > width + 20) a.x = -20;
-      if (a.y < -20) a.y = height + 20;
-      if (a.y > height + 20) a.y = -20;
-      if (pointer.active) {
-        const dx = pointer.x - a.x;
-        const dy = pointer.y - a.y;
-        const distance = Math.hypot(dx, dy);
-        if (distance < 180 && distance > 0.1) {
-          const pull = (1 - distance / 180) * 0.22;
-          a.x += (dx / distance) * pull;
-          a.y += (dy / distance) * pull;
-        }
-      }
-      for (let j = i + 1; j < nodes.length; j += 1) {
-        const b = nodes[j];
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        const distance = Math.hypot(dx, dy);
-        if (distance < 124) {
-          const alpha = 1 - distance / 124;
-          ctx.strokeStyle = alpha > .62 ? colors.lineHot : colors.line;
-          ctx.globalAlpha = alpha * .72;
-          ctx.lineWidth = alpha > .62 ? 1.25 : .8;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
-      }
-    }
-    nodes.forEach((node, index) => {
-      ctx.globalAlpha = .72 + Math.sin(t * 2 + node.phase) * .18;
-      ctx.fillStyle = index % 5 === 0 ? colors.nodeAlt : colors.node;
+    const maxRadius = Math.min(width, height) * .64;
+    const glow = ctx.createRadialGradient(aperture.x, aperture.y, 0, aperture.x, aperture.y, maxRadius);
+    glow.addColorStop(0, "rgba(137, 167, 255, .22)");
+    glow.addColorStop(.18, "rgba(128, 229, 218, .08)");
+    glow.addColorStop(.52, "rgba(80, 95, 196, .035)");
+    glow.addColorStop(1, "rgba(0, 0, 0, 0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, width, height);
+    ctx.translate(aperture.x, aperture.y);
+    for (let ring = 1; ring <= 7; ring += 1) {
+      const radius = maxRadius * (ring / 7);
+      ctx.globalAlpha = .2 - ring * .014;
+      ctx.strokeStyle = ring % 2 ? colors.blue : colors.cyan;
+      ctx.lineWidth = ring === 7 ? 1.8 : 1;
+      ctx.setLineDash(ring % 2 ? [2, 12] : [1, 22]);
       ctx.beginPath();
-      ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = colors.scan;
-    ctx.lineWidth = 1;
-    for (let offset = -height; offset < width; offset += 170) {
-      const x = (offset + (t * 42) % 170);
-      ctx.beginPath();
-      ctx.moveTo(x, height);
-      ctx.lineTo(x + height * .9, 0);
+      ctx.arc(0, 0, radius + Math.sin(t * .22 + ring) * 3, 0, Math.PI * 2);
       ctx.stroke();
     }
+    ctx.setLineDash([]);
+    const sweepAngle = t * .22;
+    const sweepGradient = ctx.createLinearGradient(0, 0, Math.cos(sweepAngle) * maxRadius, Math.sin(sweepAngle) * maxRadius);
+    sweepGradient.addColorStop(0, "rgba(229, 255, 249, .42)");
+    sweepGradient.addColorStop(.18, "rgba(140, 232, 221, .2)");
+    sweepGradient.addColorStop(1, "rgba(140, 232, 221, 0)");
+    ctx.globalAlpha = .9;
+    ctx.strokeStyle = sweepGradient;
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(Math.cos(sweepAngle) * maxRadius, Math.sin(sweepAngle) * maxRadius);
+    ctx.stroke();
+    for (let ray = 0; ray < 22; ray += 1) {
+      const angle = ray * Math.PI * 2 / 22 + t * .018;
+      ctx.globalAlpha = ray % 4 === 0 ? .24 : .08;
+      ctx.strokeStyle = ray % 4 === 0 ? colors.hot : colors.line;
+      ctx.lineWidth = ray % 4 === 0 ? 1 : .55;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(angle) * 20, Math.sin(angle) * 20);
+      ctx.lineTo(Math.cos(angle) * maxRadius, Math.sin(angle) * maxRadius);
+      ctx.stroke();
+    }
+    nodes.forEach((node, index) => {
+      node.angle += node.speed * .006;
+      const radius = node.radius + Math.sin(t * .18 + node.drift) * 4;
+      const x = Math.cos(node.angle) * radius;
+      const y = Math.sin(node.angle) * radius * .74;
+      const alpha = Math.max(.08, .76 - radius / maxRadius * .62);
+      ctx.globalAlpha = alpha * (.72 + Math.sin(t * 1.5 + node.phase) * .2);
+      ctx.fillStyle = node.hue === 0 ? colors.cyan : node.hue === 1 ? colors.blue : colors.violet;
+      ctx.beginPath();
+      ctx.arc(x, y, node.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.globalAlpha = .74;
+    const core = ctx.createRadialGradient(0, 0, 0, 0, 0, 22);
+    core.addColorStop(0, "rgba(229, 255, 249, .92)");
+    core.addColorStop(.16, "rgba(128, 229, 218, .62)");
+    core.addColorStop(1, "rgba(128, 229, 218, 0)");
+    ctx.fillStyle = core;
+    ctx.beginPath();
+    ctx.arc(0, 0, 22, 0, Math.PI * 2);
+    ctx.fill();
     ctx.restore();
     requestAnimationFrame(drawNetwork);
   };

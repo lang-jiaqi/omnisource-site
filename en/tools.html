@@ -2,6 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OmniSource — Tools</title>
+<link rel="stylesheet" href="../theme.css">
 <script>
   (() => {
     const saved = localStorage.getItem("omnisource-theme");
@@ -90,12 +91,12 @@
     .tool-title-row { flex-direction:column; gap:6px; }
     .tool-category { max-width:none; width:max-content; }
   }
-</style></head>
-<body>
+</style><link rel="stylesheet" href="../workspace.css"></head>
+<body class="tools-page">
 <header class="site-hero">
   <div class="hero-inner">
     <div class="topline">
-      <a class="back-link" href="index.html" aria-label="Home"><span aria-hidden="true">←</span><span>Home</span></a>
+      <a class="back-link" href="index.html" aria-label="Home"><span class="workspace-brand-mark" aria-hidden="true">◉</span><span>OMNI<span class="brand-dot-text">.</span>SOURCE</span></a>
       <div class="top-actions">
         <div class="lang-switch" aria-label="Language"><a class="lang-option" href="../tools.html" hreflang="zh">中文</a><a class="lang-option active" href="tools.html" hreflang="en">EN</a></div>
         <button class="icon-btn" type="button" id="themeBtn" aria-label="Theme" title="Theme"><span aria-hidden="true">☾</span></button>
@@ -128,7 +129,7 @@
   <section class="tool-grid" id="toolGrid">
       <article class="tool-card" data-tool-id="open-design" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/nexu-io.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌨</span></span>
           <div>
             <div class="tool-title-row">
               <h2>open-design</h2>
@@ -151,7 +152,7 @@
 
       <article class="tool-card" data-tool-id="wigolo" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/KnockOutEZ.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌨</span></span>
           <div>
             <div class="tool-title-row">
               <h2>wigolo</h2>
@@ -174,7 +175,7 @@
 
       <article class="tool-card" data-tool-id="posthog" data-category="automation">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌘</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/PostHog.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌘</span></span>
           <div>
             <div class="tool-title-row">
               <h2>posthog</h2>
@@ -197,7 +198,7 @@
 
       <article class="tool-card" data-tool-id="hyperframes" data-category="automation">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌘</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/heygen-com.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌘</span></span>
           <div>
             <div class="tool-title-row">
               <h2>hyperframes</h2>
@@ -220,7 +221,7 @@
 
       <article class="tool-card" data-tool-id="jcode" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/1jehuang.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌨</span></span>
           <div>
             <div class="tool-title-row">
               <h2>jcode</h2>
@@ -243,7 +244,7 @@
 
       <article class="tool-card" data-tool-id="vibe-trading" data-category="automation">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌘</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/HKUDS.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌘</span></span>
           <div>
             <div class="tool-title-row">
               <h2>Vibe-Trading</h2>
@@ -266,7 +267,7 @@
 
       <article class="tool-card" data-tool-id="loop-engineering" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/cobusgreyling.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌨</span></span>
           <div>
             <div class="tool-title-row">
               <h2>loop-engineering</h2>
@@ -287,17 +288,17 @@
       </article>
     
 
-      <article class="tool-card" data-tool-id="code-review-graph" data-category="coding">
+      <article class="tool-card" data-tool-id="open-code-review" data-category="coding">
         <div class="tool-card-head">
-          <span class="tool-icon" aria-hidden="true">⌨</span>
+          <span class="tool-icon" aria-hidden="true"><img class="tool-logo" src="https://github.com/alibaba.png?size=96" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="tool-icon-fallback" hidden>⌨</span></span>
           <div>
             <div class="tool-title-row">
-              <h2>code-review-graph</h2>
+              <h2>open-code-review</h2>
               <span class="tool-category">Use case: Coding</span>
             </div>
-            <p>code-review-graph is a coding tool signal from GitHub. Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.</p>
+            <p>open-code-review is a coding tool signal from GitHub. Open-source &amp; free — Battle-tested at Alibaba&#x27;s scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL inj</p>
           </div>
-          <button class="favorite-btn" type="button" data-favorite="code-review-graph" aria-label="Save tool" title="Save tool">☆</button>
+          <button class="favorite-btn" type="button" data-favorite="open-code-review" aria-label="Save tool" title="Save tool">☆</button>
         </div>
         <dl class="tool-notes">
           <div><dt>Best used for</dt><dd>Evaluate it when improving day-to-day coding, code review, refactoring, or repo iteration.</dd></div>
@@ -305,7 +306,7 @@
         </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
-          <a href="https://github.com/tirth8205/code-review-graph" target="_blank" rel="noopener">Open</a>
+          <a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">Open</a>
         </div>
       </article>
     </section>
@@ -385,4 +386,5 @@
   syncFavorites();
   applyFilters();
 </script>
+<script src="../tools-ui.js"></script>
 </body></html>

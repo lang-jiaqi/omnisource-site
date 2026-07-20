@@ -98,14 +98,15 @@
     .field-grid { grid-template-columns:1fr; }
     .topline { align-items:flex-start; flex-direction:column; }
   }
-</style></head>
-<body>
+</style><link rel="stylesheet" href="../theme.css"><link rel="stylesheet" href="../workspace.css"></head>
+<body class="settings-page">
 <header class="site-hero">
   <div class="site-hero-inner">
     <div class="topline">
-      <a class="back-link" href="./" aria-label="返回日报"><span aria-hidden="true">←</span><span>Report</span></a>
+      <a class="back-link" href="./" aria-label="返回日报"><span class="workspace-brand-mark" aria-hidden="true">◉</span><span>OMNI<span class="brand-dot-text">.</span>SOURCE</span></a>
       <button class="icon-btn" type="button" id="themeBtn" aria-label="切换主题" title="切换主题"><span aria-hidden="true">☾</span></button>
     </div>
+    <span class="workspace-kicker">03 / SETTINGS</span>
     <h1 class="hero-title">Settings</h1>
     <p class="hero-copy">先选择已有 track 或新建一个 track，再选择信息源并配置每个 source 的细节。</p>
   </div>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniSource / Directory</title>
+<link rel="stylesheet" href="directory.css">
+</head>
+<body>
+<div class="directory-shell">
+  <header class="directory-nav">
+    <a class="directory-wordmark" href="report.html" aria-label="OmniSource"><span class="directory-mark">O</span><span>OMNISOURCE</span></a>
+    <div class="directory-nav-meta"><span>01</span><i></i><span>04</span><span class="directory-nav-label">OmniSource / interface study</span></div>
+    <div class="directory-nav-actions"><div class="directory-lang"><a class="lang-option active" href="directory.html" hreflang="zh">中文</a><a class="lang-option" href="en/directory.html" hreflang="en">EN</a></div><button class="directory-theme-button" id="directoryTheme" type="button" aria-label="Toggle theme">☾</button><button class="directory-menu-button" type="button" aria-expanded="false" aria-controls="directoryMenu">INDEX</button></div>
+  </header>
+
+  <main>
+    <section class="directory-hero" aria-labelledby="directoryTitle">
+      <div class="directory-hero-copy">
+        <span class="directory-kicker">OmniSource / interface study</span>
+        <h1 id="directoryTitle">研究信号，<br>重新编排。</h1>
+        <p>一个可探索的科研情报目录。日报保留完整信息流，工具雷达负责每周发现值得使用的新工具。</p>
+        <div class="directory-hero-links"><a href="report.html"><span>01</span>科研情报日报<b aria-hidden="true">-></b></a><a href="tools.html"><span>02</span>每周工具雷达<b aria-hidden="true">-></b></a></div>
+        <div class="directory-status"><span class="directory-status-dot"></span><span>移动光标，探索 aperture</span></div>
+      </div>
+      <div class="directory-aperture" aria-label="Interactive radial aperture">
+        <canvas id="directoryAperture" aria-hidden="true"></canvas>
+        <span class="aperture-cross aperture-cross-x"></span><span class="aperture-cross aperture-cross-y"></span>
+        <span class="aperture-core"></span><span class="aperture-readout">R / 01<br>LIVE SIGNAL</span>
+      </div>
+    </section>
+
+    <section class="directory-index" id="directoryIndex" aria-labelledby="indexTitle">
+      <div class="directory-section-heading"><span>INDEX / 01</span><h2 id="indexTitle">进入目录</h2><p>一个可探索的科研情报目录。日报保留完整信息流，工具雷达负责每周发现值得使用的新工具。</p></div>
+      <div class="directory-project-grid">
+        <a class="directory-project directory-project-featured" href="report.html"><span class="directory-project-number">01</span><span class="directory-project-kind">REPORT</span><strong>科研情报日报</strong><small>论文、项目、博客、社区动态与作者关系图。</small><b aria-hidden="true">-></b></a>
+        <a class="directory-project" href="tools.html"><span class="directory-project-number">02</span><span class="directory-project-kind">RADAR</span><strong>每周工具雷达</strong><small>经过筛选的 AI 工具与真实使用场景。</small><b aria-hidden="true">-></b></a>
+        <div class="directory-project directory-project-muted"><span class="directory-project-number">03</span><span class="directory-project-kind">WORKSPACE</span><strong>预留工作区</strong><small>收藏信号与更多 source 会在这里展开。</small><b aria-hidden="true">+</b></div>
+      </div>
+    </section>
+
+    <section class="directory-tracks" aria-labelledby="tracksTitle">
+      <div class="directory-section-heading"><span>INDEX / 02</span><h2 id="tracksTitle">当前研究轨道</h2></div>
+      <div class="directory-track-list"><a class="directory-track" href="report.html#ai-infra"><span class="directory-track-number">01</span><span><strong>AI 基础设施</strong><small>面向分布式训练、推理服务、系统、编译器、内核与集群的 AI 基础设施。</small></span><span class="directory-arrow" aria-hidden="true">-></span></a><a class="directory-track" href="report.html#ai-algorithm"><span class="directory-track-number">02</span><span><strong>AI 算法</strong><small>AI 算法、模型架构、推理、学习方法、后训练与评测。</small></span><span class="directory-arrow" aria-hidden="true">-></span></a></div>
+    </section>
+  </main>
+  <footer class="directory-footer"><a href="report.html">返回 OmniSource</a><span>OMNISOURCE / RESEARCH SIGNAL DESK</span></footer>
+</div>
+<aside class="directory-menu" id="directoryMenu" hidden><div class="directory-menu-inner"><button class="directory-menu-close" type="button" aria-label="Close">×</button><span class="directory-kicker">NAVIGATION</span><a href="report.html">01 / 科研情报日报</a><a href="tools.html">02 / 每周工具雷达</a><a href="#directoryIndex">03 / 进入目录</a></div></aside>
+<script src="directory-ui.js"></script>
+</body></html>
