@@ -24,7 +24,11 @@
     <dl><dt>${copy.use}</dt><dd class="tool-detail-use"></dd><dt>${copy.why}</dt><dd class="tool-detail-why"></dd></dl>
     <a target="_blank" rel="noopener"></a>`;
   document.body.appendChild(drawer);
-  const close = () => { drawer.classList.remove("open"); document.body.classList.remove("tool-detail-open"); };
+  const close = () => {
+    drawer.classList.remove("open");
+    document.body.classList.remove("tool-detail-open");
+    cards.forEach(card => card.classList.remove("is-selected"));
+  };
   drawer.querySelector(".tool-detail-close").addEventListener("click", close);
   const select = card => {
     cards.forEach(item => item.classList.toggle("is-selected", item === card));
@@ -43,5 +47,12 @@
     if (event.target.closest("a, button, input")) return;
     select(card);
   }));
+  document.addEventListener("omnisource:tool-filter-change", event => {
+    const visibleCards = event.detail?.visibleCards;
+    if (!Array.isArray(visibleCards)) return;
+    const selectedCard = cards.find(card => card.classList.contains("is-selected"));
+    if (!selectedCard || visibleCards.includes(selectedCard)) return;
+    close();
+  });
   document.addEventListener("keydown", event => { if (event.key === "Escape") close(); });
 })();
