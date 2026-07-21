@@ -1631,6 +1631,120 @@ body.settings-page * {
   background: var(--workspace-panel-2) !important;
 }
 
+.report-page .method-brief {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255, 122, 77, .42) !important;
+  background:
+    linear-gradient(112deg, rgba(255, 122, 77, .095), transparent 44%),
+    var(--workspace-panel-2) !important;
+  box-shadow: inset 3px 0 0 var(--workspace-ember), 0 14px 28px rgba(0, 0, 0, .1);
+}
+
+:root[data-theme="light"] .report-page .method-brief {
+  border-color: rgba(201, 77, 42, .34) !important;
+  background:
+    linear-gradient(112deg, rgba(201, 77, 42, .075), transparent 48%),
+    var(--workspace-panel-2) !important;
+}
+
+.report-page .method-brief summary {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 18px !important;
+  color: var(--workspace-text) !important;
+  font: 700 15px/1 var(--workspace-display) !important;
+  letter-spacing: 0;
+}
+
+.report-page .method-brief summary::before {
+  width: 18px !important;
+  height: 2px;
+  margin-right: 13px !important;
+  border-radius: 0;
+  background: var(--workspace-ember);
+  color: transparent !important;
+  content: "" !important;
+}
+
+.report-page .method-brief[open] summary::before {
+  content: "" !important;
+}
+
+.report-page .method-brief summary::after {
+  content: "RESEARCH NOTE";
+  margin-left: auto;
+  color: var(--workspace-ember);
+  font: 700 9px/1 var(--workspace-mono);
+  letter-spacing: .13em;
+}
+
+.report-page .method-brief .foldout-body {
+  padding: 0 !important;
+  border-top: 1px solid rgba(255, 122, 77, .24) !important;
+  background: rgba(5, 7, 11, .2);
+}
+
+:root[data-theme="light"] .report-page .method-brief .foldout-body {
+  background: rgba(255, 255, 255, .34);
+}
+
+.report-page .method-brief-rows {
+  display: grid;
+}
+
+.report-page .method-brief-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 19px;
+}
+
+.report-page .method-brief-row + .method-brief-row {
+  border-top: 1px solid var(--workspace-line);
+}
+
+.report-page .method-brief-index {
+  padding-top: 3px;
+  color: var(--workspace-ember);
+  font: 700 10px/1 var(--workspace-mono);
+  letter-spacing: .09em;
+}
+
+.report-page .method-brief-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--workspace-ember-soft);
+  font: 700 11px/1.15 var(--workspace-mono);
+  letter-spacing: .08em;
+}
+
+.report-page .method-brief-copy p {
+  margin: 0 !important;
+  color: var(--workspace-copy) !important;
+  font-size: .96rem !important;
+  line-height: 1.7 !important;
+}
+
+@media (max-width: 560px) {
+  .report-page .method-brief summary {
+    min-height: 52px;
+    padding: 13px 14px !important;
+    font-size: 14px !important;
+  }
+
+  .report-page .method-brief summary::after {
+    display: none;
+  }
+
+  .report-page .method-brief-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 10px;
+    padding: 14px;
+  }
+}
+
 .report-page .review {
   margin-top: 14px !important;
   border-top-color: var(--workspace-line) !important;
