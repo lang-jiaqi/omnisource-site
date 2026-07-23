@@ -6,8 +6,22 @@
   const menuButton = document.querySelector(".directory-menu-button");
   const menuClose = document.querySelector(".directory-menu-close");
   const themeButton = document.getElementById("directoryTheme");
+  const beijingTime = document.querySelector("[data-beijing-time]");
   const savedTheme = localStorage.getItem("omnisource-theme") || "dark";
   root.dataset.theme = savedTheme;
+
+  if (beijingTime) {
+    const formatter = new Intl.DateTimeFormat("zh-CN", {
+      timeZone: "Asia/Shanghai",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    });
+    const updateBeijingTime = () => { beijingTime.textContent = formatter.format(new Date()); };
+    updateBeijingTime();
+    window.setInterval(updateBeijingTime, 1000);
+  }
 
   const syncTheme = () => {
     const light = root.dataset.theme === "light";
