@@ -50,6 +50,8 @@
     open: "Open source",
     focus: "Focus item",
     close: "Close",
+    voicePlay: "Play full episode",
+    voicePause: "Pause episode",
   } : {
     kicker: "当前信号",
     empty: "选择一篇论文、动态或开源项目，在这里查看上下文。",
@@ -57,6 +59,8 @@
     open: "打开来源",
     focus: "定位内容",
     close: "关闭",
+    voicePlay: "播放整期语音日报",
+    voicePause: "暂停语音日报",
   };
 
   const wrap = document.querySelector(".wrap");
@@ -188,32 +192,69 @@
   if (voiceBlog) {
     const audio = voiceBlog.querySelector("[data-voice-audio-player]");
     const start = voiceBlog.querySelector("[data-voice-start]");
+    const player = voiceBlog.querySelector("[data-voice-player]");
+    const progress = voiceBlog.querySelector("[data-voice-progress]");
+    const currentTime = voiceBlog.querySelector("[data-voice-current]");
+    const duration = voiceBlog.querySelector("[data-voice-duration]");
     const status = voiceBlog.querySelector("[data-voice-status]");
     const activeEpisode = () => document.querySelector(".track-panel:not([hidden])")?.dataset.voiceAudio || "";
+    const formatTime = value => {
+      if (!Number.isFinite(value)) return "--:--";
+      const seconds = Math.max(0, Math.floor(value));
+      return `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
+    };
+    const syncProgress = () => {
+      if (!audio) return;
+      const total = Number.isFinite(audio.duration) ? audio.duration : 0;
+      if (progress) {
+        progress.max = String(total);
+        progress.value = String(Math.min(audio.currentTime || 0, total));
+      }
+      if (currentTime) currentTime.textContent = formatTime(audio.currentTime);
+      if (duration) duration.textContent = formatTime(total);
+    };
+    const syncButton = () => {
+      if (!start) return;
+      start.textContent = audio && !audio.paused ? `⏸ ${copy.voicePause}` : `▶ ${copy.voicePlay}`;
+    };
 
-    const refreshVoiceBlog = (autoplay = false) => {
+    const refreshVoiceBlog = () => {
       const url = activeEpisode();
       if (!audio || !start) return;
       const available = Boolean(url);
       start.hidden = !available;
-      audio.hidden = !available;
+      if (player) player.hidden = !available;
       if (!available) {
         if (status) status.textContent = copy.voiceUnavailable;
         return;
       }
       if (audio.src !== new URL(url, window.location.href).href) {
+        audio.pause();
         audio.src = url;
         audio.load();
+        syncProgress();
       }
       if (status && !audio.paused) status.textContent = copy.voiceNowPlaying;
-      if (autoplay) audio.play().catch(() => {});
+      syncButton();
     };
 
     start?.addEventListener("click", () => {
-      refreshVoiceBlog(true);
+      refreshVoiceBlog();
+      if (!audio) return;
+      if (audio.paused) audio.play().catch(() => {});
+      else audio.pause();
     });
     audio?.addEventListener("play", () => {
       if (status) status.textContent = copy.voiceNowPlaying;
+      syncButton();
+    });
+    audio?.addEventListener("pause", syncButton);
+    audio?.addEventListener("timeupdate", syncProgress);
+    audio?.addEventListener("loadedmetadata", syncProgress);
+    audio?.addEventListener("durationchange", syncProgress);
+    audio?.addEventListener("ended", () => { syncProgress(); syncButton(); });
+    progress?.addEventListener("input", () => {
+      if (audio) audio.currentTime = Number(progress.value);
     });
     document.querySelectorAll(".track-tab").forEach(tab => tab.addEventListener("click", () => {
       window.setTimeout(refreshVoiceBlog, 0);
