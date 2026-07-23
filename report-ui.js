@@ -183,4 +183,66 @@
     const focused = panels.querySelector(".card.is-focused:not([hidden])");
     if (!focused) select(visibleCards()[0]);
   });
+
+  const voiceBlog = document.querySelector("[data-voice-blog]");
+  if (voiceBlog) {
+    const audio = voiceBlog.querySelector("[data-voice-audio-player]");
+    const start = voiceBlog.querySelector("[data-voice-start]");
+    const status = voiceBlog.querySelector("[data-voice-status]");
+    let playlist = [];
+    let current = -1;
+
+    const collectPlaylist = () => visibleCards()
+      .map(card => {
+        const button = card.querySelector("[data-voice-audio]");
+        if (!button) return null;
+        return { url: button.dataset.voiceAudio, title: button.dataset.voiceTitle || "" };
+      })
+      .filter(item => item && item.url);
+
+    const playAt = (index, autoplay = true) => {
+      if (!audio || !playlist[index]) return;
+      current = index;
+      audio.src = playlist[index].url;
+      if (status) status.textContent = `${copy.voiceNowPlaying} · ${playlist[index].title}`;
+      if (autoplay) audio.play().catch(() => {});
+    };
+
+    const refreshVoiceBlog = () => {
+      playlist = collectPlaylist();
+      if (!audio || !start) return;
+      const available = playlist.length > 0;
+      start.hidden = !available;
+      audio.hidden = !available;
+      if (!available) {
+        if (status) status.textContent = copy.voiceUnavailable;
+        return;
+      }
+      if (current < 0 || current >= playlist.length) playAt(0, false);
+      if (status && !audio.paused) status.textContent = `${copy.voiceNowPlaying} · ${playlist[current].title}`;
+    };
+
+    start?.addEventListener("click", () => {
+      refreshVoiceBlog();
+      if (playlist.length) playAt(current < 0 ? 0 : current);
+    });
+    audio?.addEventListener("ended", () => {
+      if (current + 1 < playlist.length) playAt(current + 1);
+      else if (status) status.textContent = copy.voiceNowPlaying;
+    });
+    audio?.addEventListener("play", () => {
+      if (status && playlist[current]) status.textContent = `${copy.voiceNowPlaying} · ${playlist[current].title}`;
+    });
+    document.addEventListener("click", event => {
+      const button = event.target.closest("[data-voice-play]");
+      if (!button || !voiceBlog.contains(button)) return;
+      playlist = collectPlaylist();
+      const index = playlist.findIndex(item => item.url === button.dataset.voiceAudio);
+      if (index >= 0) playAt(index);
+    });
+    document.querySelectorAll(".track-tab").forEach(tab => tab.addEventListener("click", () => {
+      window.setTimeout(refreshVoiceBlog, 0);
+    }));
+    refreshVoiceBlog();
+  }
 })();

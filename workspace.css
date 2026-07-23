@@ -1616,7 +1616,8 @@ body.settings-page * {
 }
 
 .report-page .source-signal-link[data-source="rss"]::before,
-.report-page .source-signal-link[data-source="blog"]::before {
+.report-page .source-signal-link[data-source="blog"]::before,
+.report-page .source-signal-link[data-source="blogrxiv"]::before {
   background: var(--workspace-success);
 }
 
