@@ -1,4 +1,46 @@
 (() => {
+  const feedbackKey = "omnisource-item-feedback";
+  const splitValues = value => String(value || "").split(",").map(item => item.trim().toLowerCase()).filter(Boolean);
+  const splitTopic = value => splitValues(value);
+  const overlapCount = (left, right) => {
+    const rightValues = new Set(right);
+    return [...new Set(left)].filter(item => rightValues.has(item)).length;
+  };
+  const preferenceScore = (candidate, entries) => {
+    let total = 0;
+    let matches = 0;
+    const candidateTopic = splitTopic(candidate.topic);
+    const candidateKeywords = splitValues(candidate.keywords);
+    const candidateSources = splitValues(candidate.sources);
+    entries.forEach(entry => {
+      if (String(entry.track || "") !== String(candidate.track || "")) return;
+      const direction = entry.vote === "up" ? 1 : -1;
+      let similarity = 0;
+      if (entry.id && entry.type === candidate.type && entry.id === candidate.id) similarity += 4;
+      const entryTopic = splitTopic(entry.topic);
+      if (candidateTopic.length && entryTopic.length) {
+        similarity += candidate.topic === entry.topic ? 2 : Math.min(1.5, overlapCount(candidateTopic, entryTopic) * 0.5);
+      }
+      similarity += Math.min(1.8, overlapCount(candidateKeywords, splitValues(entry.keywords)) * 0.45);
+      similarity += Math.min(0.6, overlapCount(candidateSources, splitValues(entry.sources)) * 0.2);
+      if (!similarity) return;
+      total += direction * similarity;
+      matches += 1;
+    });
+    if (!matches) return 0;
+    return Math.max(-4, Math.min(4, total / Math.sqrt(matches)));
+  };
+  const rankCandidates = (candidates, entries) => {
+    const poolSize = Math.max(1, candidates.length);
+    return candidates.map(candidate => {
+      const baseRank = Math.max(1, Number(candidate.baseRank) || poolSize);
+      const baseScore = 1 - ((baseRank - 1) / poolSize);
+      return { ...candidate, score: baseScore + 0.4 * preferenceScore(candidate, entries) };
+    }).sort((left, right) => right.score - left.score || left.baseRank - right.baseRank);
+  };
+  if (typeof module !== "undefined" && module.exports) module.exports = { preferenceScore, rankCandidates };
+  if (typeof document === "undefined") return;
+
   const root = document.documentElement;
   const isEnglish = root.lang === "en";
   const copy = isEnglish ? {
@@ -21,6 +63,49 @@
   const panels = document.querySelector(".report-panels");
   if (!wrap || !panels) return;
 
+  const feedbackEntries = () => {
+    try {
+      const entries = JSON.parse(localStorage.getItem(feedbackKey) || "[]");
+      return Array.isArray(entries) ? entries : [];
+    } catch (_) {
+      return [];
+    }
+  };
+  const cardCandidate = card => {
+    const feedback = card.querySelector(".item-feedback")?.dataset || {};
+    return {
+      element: card,
+      baseRank: Number(card.dataset.personalizationRank || 0),
+      id: feedback.feedbackId || "",
+      type: feedback.feedbackItemType || "item",
+      track: feedback.feedbackTrack || "",
+      topic: feedback.feedbackTopic || "",
+      keywords: feedback.feedbackKeywords || "",
+      sources: feedback.feedbackSources || "",
+    };
+  };
+  const applyPersonalization = () => {
+    const entries = feedbackEntries();
+    panels.querySelectorAll(".signal-section[data-personalization-limit]").forEach(section => {
+      const feed = section.querySelector(".signal-feed");
+      if (!feed) return;
+      const limit = Math.max(0, Number(section.dataset.personalizationLimit || 0));
+      const candidates = [...feed.querySelectorAll(":scope > .card")].map(cardCandidate);
+      const track = candidates[0]?.track || "";
+      const preferences = entries.filter(entry => String(entry.track || "") === track);
+      if (!preferences.length) return;
+      const ranked = rankCandidates(candidates, preferences);
+      feed.classList.add("personalized");
+      ranked.forEach((candidate, index) => {
+        candidate.element.hidden = index >= limit;
+        const label = candidate.element.querySelector(".feed-index");
+        if (label) label.textContent = String(index + 1).padStart(2, "0");
+        feed.appendChild(candidate.element);
+      });
+    });
+  };
+  applyPersonalization();
+
   const inspector = document.createElement("aside");
   inspector.className = "signal-inspector";
   inspector.setAttribute("aria-live", "polite");
@@ -40,7 +125,7 @@
   const open = inspector.querySelector("a");
   const focus = inspector.querySelector("button");
 
-  const visibleCards = () => [...panels.querySelectorAll(".track-panel:not([hidden]) .card")];
+  const visibleCards = () => [...panels.querySelectorAll(".track-panel:not([hidden]) .card:not([hidden])")];
   const cardSourceUrl = card => card.querySelector(".item-feedback")?.dataset.feedbackUrl
     || card.querySelector(".links a")?.href || "";
   const select = card => {
@@ -92,4 +177,10 @@
   document.querySelectorAll(".track-tab").forEach(tab => tab.addEventListener("click", () => {
     window.setTimeout(() => { bindCards(); select(visibleCards()[0]); }, 0);
   }));
+  document.addEventListener("omnisource:feedback-changed", () => {
+    applyPersonalization();
+    bindCards();
+    const focused = panels.querySelector(".card.is-focused:not([hidden])");
+    if (!focused) select(visibleCards()[0]);
+  });
 })();
