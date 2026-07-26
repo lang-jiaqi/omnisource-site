@@ -40,14 +40,9 @@
   .subscribe-box { border:1px solid var(--soft-border); background:var(--panel); border-radius:8px; padding:14px; }
   .subscribe-box h2 { margin:0; font-size:.95rem; }
   .subscribe-box p { margin:6px 0 12px; color:var(--muted); font-size:.84rem; }
-  .subscribe-form { display:flex; gap:8px; }
-  .subscribe-form input { min-width:0; flex:1; border:1px solid var(--soft-border); border-radius:8px;
-    background:var(--input); color:var(--fg); padding:9px 10px; outline:none; }
-  .subscribe-form input:focus { border-color:var(--accent); }
-  .subscribe-form button, .category-filter, .favorites-toggle { appearance:none; border:1px solid var(--soft-border);
+  .subscribe-cta, .category-filter, .favorites-toggle { appearance:none; border:1px solid var(--soft-border);
     border-radius:999px; background:var(--panel); color:var(--fg); padding:8px 11px; font-weight:800; cursor:pointer; }
-  .subscribe-form button { background:var(--accent); border-color:var(--accent); color:#fff; white-space:nowrap; }
-  .subscribe-status { min-height:20px; margin-top:8px; color:var(--accent); font-size:.82rem; }
+  .subscribe-cta { display:inline-block; background:var(--accent); border-color:var(--accent); color:#fff; text-decoration:none; white-space:nowrap; }
   .shell { max-width:1180px; margin:0 auto; padding:20px 20px 72px; }
   .filters { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:10px 0 18px; }
   .category-filter { color:var(--muted); }
@@ -86,7 +81,6 @@
   @media (max-width:760px) {
     .topline { align-items:flex-start; flex-direction:column; }
     .hero-grid { grid-template-columns:1fr; }
-    .subscribe-form { flex-direction:column; }
     .updated { margin-left:0; width:100%; }
     .tool-title-row { flex-direction:column; gap:6px; }
     .tool-category { max-width:none; width:max-content; }
@@ -98,6 +92,7 @@
     <div class="topline">
       <a class="back-link" href="index.html" aria-label="Home"><span class="workspace-brand-mark" aria-hidden="true">◉</span><span>OMNI<span class="brand-dot-text">.</span>SOURCE</span></a>
       <div class="top-actions">
+        <a class="subscribe-link" href="../subscribe.html">订阅</a>
         <div class="lang-switch" aria-label="Language"><a class="lang-option" href="../tools.html" hreflang="zh">中文</a><a class="lang-option active" href="tools.html" hreflang="en">EN</a></div>
         <button class="icon-btn" type="button" id="themeBtn" aria-label="Theme" title="Theme"><span aria-hidden="true">☾</span></button>
       </div>
@@ -108,14 +103,10 @@
         <h1>Weekly Tool Radar</h1>
         <p class="hero-copy">A weekly shortlist of AI-workflow tools worth trying. Filter by use case, favorite what looks useful, and bring the good ones into your own stack.</p>
       </div>
-      <section class="subscribe-box" aria-label="Weekly email subscription">
-        <h2>Weekly email subscription</h2>
-        <p>One tool radar email per week. This demo stores subscription intent locally until a mail backend is connected.</p>
-        <form class="subscribe-form" id="subscribeForm">
-          <input id="subscribeEmail" type="email" autocomplete="email" placeholder="Email">
-          <button type="submit">Save weekly subscription</button>
-        </form>
-        <div class="subscribe-status" id="subscribeStatus" aria-live="polite"></div>
+      <section class="subscribe-box" aria-label="Subscribe to OmniSource">
+        <h2>Subscribe to OmniSource</h2>
+        <p>Choose daily or weekly delivery for official reports, startup signals, and the weekly tool radar.</p>
+        <a class="subscribe-cta" href="../subscribe.html">Choose a cadence</a>
       </section>
     </div>
   </div>
@@ -139,10 +130,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="ego-lite" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when connecting browsers, APIs, documents, and agent workflows.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Trending</span>
           <a href="https://github.com/citrolabs/ego-lite" target="_blank" rel="noopener">Open</a>
@@ -162,10 +149,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="open-design" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when improving day-to-day coding, code review, refactoring, or repo iteration.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">Open</a>
@@ -185,10 +168,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="graphify" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when improving day-to-day coding, code review, refactoring, or repo iteration.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">Open</a>
@@ -208,10 +187,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="mempalace" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when connecting browsers, APIs, documents, and agent workflows.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener">Open</a>
@@ -231,10 +206,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="open-code-review" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when improving day-to-day coding, code review, refactoring, or repo iteration.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Trending</span>
           <a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">Open</a>
@@ -254,10 +225,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="agent-reach" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when connecting browsers, APIs, documents, and agent workflows.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener">Open</a>
@@ -277,10 +244,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="ai-engineering-from-scratch" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when connecting browsers, APIs, documents, and agent workflows.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">Open</a>
@@ -300,10 +263,6 @@
           </div>
           <button class="favorite-btn" type="button" data-favorite="hyperframes" aria-label="Save tool" title="Save tool">☆</button>
         </div>
-        <dl class="tool-notes">
-          <div><dt>Best used for</dt><dd>Evaluate it when connecting browsers, APIs, documents, and agent workflows.</dd></div>
-          <div><dt>Why this week</dt><dd>It enters this week&#x27;s radar because GitHub surfaced a fresh signal and it is worth a quick hands-on check.</dd></div>
-        </dl>
         <div class="tool-footer">
           <span>GitHub · Fresh repo</span>
           <a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">Open</a>
@@ -314,9 +273,6 @@
 </main>
 <script>
   const FAVORITE_KEY = 'omnisource-tool-favorites';
-  const SUBSCRIBE_KEY = 'omnisource-tool-weekly-subscription';
-  const savedMessage = "Weekly subscription intent saved";
-  const invalidMessage = "Enter an email address";
   const favorites = () => new Set(JSON.parse(localStorage.getItem(FAVORITE_KEY) || '[]'));
   const saveFavorites = set => localStorage.setItem(FAVORITE_KEY, JSON.stringify([...set]));
   let activeFilter = 'all';
@@ -372,19 +328,6 @@
     event.currentTarget.classList.toggle('active', favoritesOnly);
     applyFilters();
   });
-  document.getElementById('subscribeForm').addEventListener('submit', event => {
-    event.preventDefault();
-    const email = document.getElementById('subscribeEmail').value.trim();
-    const status = document.getElementById('subscribeStatus');
-    if (!email || !email.includes('@')) {
-      status.textContent = invalidMessage;
-      return;
-    }
-    localStorage.setItem(SUBSCRIBE_KEY, JSON.stringify({ email, cadence:'weekly', savedAt:new Date().toISOString() }));
-    status.textContent = savedMessage;
-  });
-  const existing = JSON.parse(localStorage.getItem(SUBSCRIBE_KEY) || 'null');
-  if (existing?.email) document.getElementById('subscribeEmail').value = existing.email;
   document.getElementById('themeBtn').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
     document.documentElement.dataset.theme = next;
@@ -393,5 +336,4 @@
   syncFavorites();
   applyFilters();
 </script>
-<script src="../tools-ui.js"></script>
 </body></html>

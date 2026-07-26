@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscriber management · OmniSource</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../workspace.css">
+<style>
+  body.subscribers-page { min-height:100vh; }
+  .subscribers-shell { max-width:1180px; margin:0 auto; padding:28px 22px 80px; }
+  .subscribers-topline { display:flex; align-items:center; justify-content:space-between; gap:18px; padding-bottom:18px; border-bottom:1px solid var(--soft-border); }
+  .subscribers-brand { color:var(--fg); text-decoration:none; font-size:.78rem; font-weight:900; letter-spacing:.1em; }
+  .subscribers-brand i { color:var(--accent); font-style:normal; }
+  .subscribers-actions, .subscribers-controls { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .subscribers-actions a, .subscribers-actions button, .subscribers-controls button { color:var(--muted); background:transparent; border:1px solid var(--soft-border); border-radius:999px; padding:7px 10px; text-decoration:none; cursor:pointer; }
+  .subscribers-actions a:hover, .subscribers-actions button:hover, .subscribers-controls button:hover { color:var(--fg); border-color:var(--accent); }
+  .subscribers-hero { padding:70px 0 30px; }
+  .subscribers-kicker { color:var(--accent); font-size:.72rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+  .subscribers-hero h1 { margin:12px 0 0; font-size:clamp(2.3rem, 6vw, 5rem); line-height:.94; letter-spacing:-.04em; }
+  .subscribers-copy { max-width:700px; color:var(--body-copy); line-height:1.65; }
+  .subscribers-panel { overflow:hidden; border:1px solid var(--soft-border); border-radius:12px; background:var(--panel); }
+  .subscribers-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--soft-border); }
+  .subscribers-count { color:var(--muted); font-size:.86rem; }
+  .subscribers-table-wrap { overflow:auto; }
+  table { width:100%; border-collapse:collapse; min-width:720px; }
+  th, td { padding:12px 14px; border-bottom:1px solid var(--soft-border); text-align:left; white-space:nowrap; }
+  th { color:var(--muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; }
+  td { color:var(--body-copy); font-size:.88rem; }
+  td:first-child { color:var(--fg); font-weight:700; }
+  select { border:1px solid var(--soft-border); border-radius:7px; background:var(--input); color:var(--fg); padding:6px 8px; }
+  .unsubscribe-btn { border:0; background:transparent; color:var(--accent); cursor:pointer; font-weight:700; }
+  .unsubscribe-btn:disabled { color:var(--muted); cursor:default; }
+  .subscribers-status { padding:18px 16px; color:var(--muted); line-height:1.6; }
+  .subscribers-status.error { color:#d8766d; }
+  @media (max-width:650px) { .subscribers-topline, .subscribers-toolbar { align-items:flex-start; flex-direction:column; } }
+</style></head>
+<body class="subscribers-page">
+<main class="subscribers-shell">
+  <header class="subscribers-topline">
+    <a class="subscribers-brand" href="../subscribe.html" aria-label="Subscribe">OMNI<i>.</i>SOURCE</a>
+    <div class="subscribers-actions"><div class="lang-switch"><a class="lang-option" href="../subscribers.html" hreflang="zh">中文</a><a class="lang-option active" href="subscribers.html" hreflang="en">EN</a></div><button id="loginBtn" type="button">Sign in with GitHub</button><button id="logoutBtn" type="button" hidden>Sign out</button></div>
+  </header>
+  <section class="subscribers-hero">
+    <div class="subscribers-kicker">OMNI / SUBSCRIBERS</div>
+    <h1>Subscriber management</h1>
+    <p class="subscribers-copy">For OmniSource administrators only. Review cadence, update lists, or unsubscribe a contact.</p>
+  </section>
+  <section class="subscribers-panel">
+    <div class="subscribers-toolbar"><span class="subscribers-count" id="subscriberCount"></span><div class="subscribers-controls"><button id="refreshBtn" type="button">Refresh</button><button id="exportBtn" type="button">Export CSV</button></div></div>
+    <div class="subscribers-table-wrap"><table><thead><tr><th>Email</th><th>Cadence</th><th>Status</th><th>Updated</th><th>Action</th></tr></thead><tbody id="subscriberRows"></tbody></table></div>
+    <div class="subscribers-status" id="subscriberStatus" aria-live="polite"></div>
+  </section>
+</main>
+<script>
+  const API_BASE = "https://omnisource-settings-api.omnisource.workers.dev";
+  const loadingMessage = "Loading subscribers…";
+  const unauthorizedMessage = "Sign in with a GitHub account that can access the repository.";
+  const emptyMessage = "No subscribers yet.";
+  const confirmMessage = "Unsubscribe this email address?";
+  const dailyLabel = "Daily";
+  const weeklyLabel = "Weekly";
+  const unsubscribeLabel = "Unsubscribe";
+  const unsubscribedLabel = "Unsubscribed";
+  let subscriptions = [];
+  const status = document.getElementById('subscriberStatus');
+  const rows = document.getElementById('subscriberRows');
+  const count = document.getElementById('subscriberCount');
+  const setStatus = (message, error = false) => { status.textContent = message; status.classList.toggle('error', error); };
+  const apiFetch = (path, options = {}) => fetch(`${API_BASE}${path}`, {credentials:'include', ...options, headers:{'Content-Type':'application/json', ...(options.headers || {})}});
+  const login = () => { window.location.href = `${API_BASE}/api/auth/login?return_to=${encodeURIComponent(window.location.href)}`; };
+  const render = () => {
+    count.textContent = `${subscriptions.length} subscribers`;
+    rows.innerHTML = '';
+    subscriptions.forEach(item => {
+      const row = document.createElement('tr');
+      const cadence = document.createElement('select');
+      [['daily', dailyLabel], ['weekly', weeklyLabel]].forEach(([value, label]) => { const option = document.createElement('option'); option.value = value; option.textContent = label; option.selected = item.cadence === value; cadence.appendChild(option); });
+      cadence.addEventListener('change', async () => {
+        cadence.disabled = true;
+        const response = await apiFetch('/api/subscriptions', {method:'PATCH', body:JSON.stringify({email:item.email, cadence:cadence.value})});
+        if (!response.ok) { cadence.value = item.cadence; setStatus('Update failed', true); }
+        else { item.cadence = cadence.value; setStatus('Updated'); }
+        cadence.disabled = false;
+      });
+      const action = document.createElement('button'); action.className = 'unsubscribe-btn'; action.textContent = item.status === 'unsubscribed' ? unsubscribedLabel : unsubscribeLabel; action.disabled = item.status === 'unsubscribed';
+      action.addEventListener('click', async () => {
+        if (!window.confirm(confirmMessage)) return;
+        action.disabled = true;
+        const response = await apiFetch('/api/subscriptions', {method:'DELETE', body:JSON.stringify({email:item.email})});
+        if (!response.ok) { action.disabled = false; setStatus('Unsubscribe failed', true); }
+        else { item.status = 'unsubscribed'; action.textContent = unsubscribedLabel; setStatus('Updated'); }
+      });
+      [item.email, cadence, item.status || '', item.updated_at ? new Date(item.updated_at).toLocaleString() : '', action].forEach(value => { const cell = document.createElement('td'); if (typeof value === 'string') cell.textContent = value; else cell.appendChild(value); row.appendChild(cell); });
+      rows.appendChild(row);
+    });
+  };
+  const load = async () => {
+    setStatus(loadingMessage);
+    try {
+      subscriptions = [];
+      let cursor = '';
+      do {
+        const suffix = cursor ? `?limit=1000&cursor=${encodeURIComponent(cursor)}` : '?limit=1000';
+        const response = await apiFetch(`/api/subscriptions${suffix}`);
+        if (response.status === 401 || response.status === 403) { document.getElementById('loginBtn').hidden = false; setStatus(unauthorizedMessage, true); return; }
+        const payload = await response.json();
+        if (!response.ok || !payload.ok) throw new Error(payload.message || 'Load failed');
+        subscriptions.push(...(payload.subscriptions || []));
+        cursor = payload.cursor || '';
+      } while (cursor);
+      render(); setStatus(subscriptions.length ? '' : emptyMessage); document.getElementById('loginBtn').hidden = true; document.getElementById('logoutBtn').hidden = false;
+    } catch (error) { setStatus(error.message || 'Load failed', true); }
+  };
+  document.getElementById('loginBtn').addEventListener('click', login);
+  document.getElementById('refreshBtn').addEventListener('click', load);
+  document.getElementById('logoutBtn').addEventListener('click', async () => { await apiFetch('/api/auth/logout', {method:'POST'}); window.location.reload(); });
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    const csv = ['email,cadence,status,updated_at', ...subscriptions.map(item => [item.email,item.cadence,item.status,item.updated_at].map(value => `"${String(value || '').replaceAll('"','""')}"`).join(','))].join('\n');
+    const link = document.createElement('a'); link.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'})); link.download = 'omnisource-subscribers.csv'; link.click(); URL.revokeObjectURL(link.href);
+  });
+  document.getElementById('loginBtn').hidden = false;
+  load();
+</script>
+</body></html>

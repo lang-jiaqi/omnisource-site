@@ -422,7 +422,7 @@ a, button, .card, .tool-card, .track-tab, .entry-card, .metric, .feedback-btn,
   background: transparent;
   box-shadow: none;
 }
-.inspector-kicker, .tool-detail-drawer .inspector-kicker {
+.inspector-kicker {
   color: var(--os-cyan);
   font-size: .64rem;
   font-weight: 850;
@@ -508,18 +508,6 @@ a, button, .card, .tool-card, .track-tab, .entry-card, .metric, .feedback-btn,
 .tool-icon { border-radius: 2px !important; background: rgba(141, 157, 255, .1) !important; }
 .tool-category { border-radius: 0 !important; }
 .tool-footer { border-top-color: var(--os-line) !important; }
-.tool-detail-drawer {
-  width: min(430px, calc(100vw - 28px));
-  padding: 86px 28px 28px;
-  border-left: 1px solid var(--os-line-strong);
-  border-radius: 0;
-  background: rgba(8, 10, 18, .97);
-  box-shadow: -30px 0 90px rgba(0, 0, 0, .28);
-}
-.tool-detail-close { border-radius: 0; }
-.tool-detail-drawer h2 { font-size: 1.5rem; letter-spacing: -.02em; }
-.tool-detail-drawer a { border-radius: 0; background: var(--os-blue); }
-
 @media (max-width: 1100px) {
   .wrap { grid-template-columns: 170px minmax(0, 1fr); grid-template-areas: "topbar topbar" "tracks reports" "footer footer"; }
   .signal-inspector { display: none !important; }

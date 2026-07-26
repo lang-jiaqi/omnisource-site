@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe to OmniSource · OmniSource</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../workspace.css">
+<style>
+  body.subscription-page { min-height:100vh; }
+  .subscription-shell { max-width:960px; margin:0 auto; padding:28px 22px 96px; }
+  .subscription-topline { display:flex; align-items:center; justify-content:space-between; gap:18px; padding-bottom:18px; border-bottom:1px solid var(--soft-border); }
+  .subscription-brand { color:var(--fg); text-decoration:none; font-size:.78rem; font-weight:900; letter-spacing:.1em; }
+  .subscription-brand i { color:var(--accent); font-style:normal; }
+  .subscription-actions { display:flex; align-items:center; gap:10px; }
+  .subscription-actions a, .subscription-actions button { color:var(--muted); background:transparent; border:1px solid var(--soft-border); border-radius:999px; padding:7px 10px; text-decoration:none; cursor:pointer; }
+  .subscription-actions a:hover, .subscription-actions button:hover { color:var(--fg); border-color:var(--accent); }
+  .subscription-hero { max-width:760px; padding:92px 0 40px; }
+  .subscription-kicker { color:var(--accent); font-size:.72rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+  .subscription-hero h1 { margin:12px 0 0; font-size:clamp(2.5rem, 7vw, 5.8rem); line-height:.92; letter-spacing:-.04em; }
+  .subscription-copy { max-width:620px; margin:22px 0 0; color:var(--body-copy); font-size:1.05rem; line-height:1.7; }
+  .subscription-panel { max-width:720px; padding:24px; border:1px solid var(--soft-border); border-radius:12px; background:var(--panel); box-shadow:0 20px 70px rgba(0,0,0,.12); }
+  .subscription-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-bottom:20px; }
+  .subscription-option { position:relative; display:block; padding:16px; border:1px solid var(--soft-border); border-radius:10px; cursor:pointer; }
+  .subscription-option:has(input:checked) { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+  .subscription-option input { position:absolute; opacity:0; pointer-events:none; }
+  .subscription-option strong { display:block; color:var(--fg); font-size:1rem; }
+  .subscription-option small { display:block; margin-top:8px; color:var(--muted); line-height:1.5; }
+  .subscription-field { display:flex; gap:10px; }
+  .subscription-field input { min-width:0; flex:1; border:1px solid var(--soft-border); border-radius:8px; background:var(--input); color:var(--fg); padding:12px; outline:none; }
+  .subscription-field input:focus { border-color:var(--accent); }
+  .subscription-field button { border:1px solid var(--accent); border-radius:999px; background:var(--accent); color:#fff; padding:10px 16px; font-weight:800; cursor:pointer; white-space:nowrap; }
+  .subscription-field button:disabled { cursor:wait; opacity:.65; }
+  .subscription-consent { display:flex; align-items:flex-start; gap:8px; margin-top:14px; color:var(--muted); font-size:.8rem; line-height:1.5; }
+  .subscription-consent input { width:16px; height:16px; margin:2px 0 0; accent-color:var(--accent); }
+  .subscription-note, .subscription-status { margin:12px 0 0; color:var(--muted); font-size:.84rem; line-height:1.55; }
+  .subscription-status { min-height:22px; color:var(--accent); }
+  @media (max-width:650px) { .subscription-options, .subscription-field { grid-template-columns:1fr; flex-direction:column; } .subscription-hero { padding-top:62px; } }
+</style></head>
+<body class="subscription-page" data-theme="dark">
+<main class="subscription-shell">
+  <header class="subscription-topline">
+    <a class="subscription-brand" href="../index.html" aria-label="Home">OMNI<i>.</i>SOURCE</a>
+    <div class="subscription-actions"><a href="../subscribers.html">Manage subscribers</a><div class="lang-switch"><a class="lang-option" href="../subscribe.html" hreflang="zh">中文</a><a class="lang-option active" href="subscribe.html" hreflang="en">EN</a></div><button id="themeBtn" type="button" aria-label="Theme">☾</button></div>
+  </header>
+  <section class="subscription-hero">
+    <div class="subscription-kicker">OMNI / SUBSCRIPTION</div>
+    <h1>Subscribe to OmniSource</h1>
+    <p class="subscription-copy">Choose your pace. Research reports and startup signals can arrive daily or weekly; the AI tool radar is always weekly.</p>
+  </section>
+  <section class="subscription-panel" aria-label="Subscribe to OmniSource">
+    <div class="subscription-options">
+      <label class="subscription-option"><input type="radio" name="cadence" value="daily" checked><strong>Daily</strong><small>Research reports + startup signals, every day</small></label>
+      <label class="subscription-option"><input type="radio" name="cadence" value="weekly"><strong>Weekly</strong><small>Research reports + startup signals, once a week</small></label>
+    </div>
+    <form id="subscriptionForm" class="subscription-field">
+      <input id="subscriptionEmail" type="email" autocomplete="email" placeholder="Your email" required>
+      <button id="subscriptionSubmit" type="submit">Save subscription</button>
+    </form>
+    <label class="subscription-consent"><input id="subscriptionConsent" type="checkbox" required><span>I agree to receive official OmniSource emails.</span></label>
+    <p class="subscription-note">Your email is used only for official OmniSource updates. You can change cadence or unsubscribe at any time.</p>
+    <div id="subscriptionStatus" class="subscription-status" aria-live="polite"></div>
+  </section>
+</main>
+<script>
+  const API_BASE = "https://omnisource-settings-api.omnisource.workers.dev";
+  const requiredMessage = "Enter a valid email and choose a cadence.";
+  const savingMessage = "Saving…";
+  const savedMessage = "Saved.";
+  const failedMessage = "The subscription service is temporarily unavailable.";
+  const form = document.getElementById('subscriptionForm');
+  const emailInput = document.getElementById('subscriptionEmail');
+  const consentInput = document.getElementById('subscriptionConsent');
+  const submit = document.getElementById('subscriptionSubmit');
+  const status = document.getElementById('subscriptionStatus');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const email = emailInput.value.trim();
+    const cadence = document.querySelector('input[name="cadence"]:checked')?.value;
+    if (!email || !email.includes('@') || !cadence || !consentInput.checked) { status.textContent = requiredMessage; return; }
+    if (!API_BASE) { status.textContent = failedMessage; return; }
+    submit.disabled = true;
+    status.textContent = savingMessage;
+    try {
+      const response = await fetch(`${API_BASE}/api/subscriptions`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, cadence, consent: true, source: 'website'})
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || !payload.ok) throw new Error(payload.message || failedMessage);
+      localStorage.setItem('omnisource-subscription', JSON.stringify({email, cadence}));
+      status.textContent = payload.message || savedMessage;
+    } catch (error) {
+      status.textContent = error.message || failedMessage;
+    } finally {
+      submit.disabled = false;
+    }
+  });
+  const existing = JSON.parse(localStorage.getItem('omnisource-subscription') || 'null');
+  if (existing?.email) emailInput.value = existing.email;
+  if (existing?.cadence) {
+    const option = document.querySelector(`input[name="cadence"][value="${existing.cadence}"]`);
+    if (option) option.checked = true;
+  }
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('omnisource-theme', next);
+  });
+  document.documentElement.dataset.theme = localStorage.getItem('omnisource-theme') || 'dark';
+</script>
+</body></html>

@@ -718,26 +718,6 @@ body.settings-page::before {
   text-transform: uppercase;
 }
 
-.tools-page .tool-detail-drawer {
-  border-left: 1px solid var(--workspace-line-strong);
-  border-radius: 0;
-  background: rgba(8, 10, 16, .98);
-}
-
-:root[data-theme="light"] .tools-page .tool-detail-drawer {
-  background: rgba(250, 251, 253, .98);
-}
-
-.tools-page .tool-detail-close,
-.tools-page .tool-detail-drawer a {
-  border-radius: 6px;
-}
-
-.tools-page .tool-detail-drawer a {
-  background: var(--workspace-ember);
-  color: var(--workspace-base);
-}
-
 /* Settings uses the same instrument-panel language without changing its form logic. */
 .settings-page .site-hero {
   position: relative;
