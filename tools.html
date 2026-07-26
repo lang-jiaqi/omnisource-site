@@ -37,12 +37,8 @@
   .eyebrow { color:var(--accent); font-size:.78rem; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
   h1 { margin:6px 0 0; font-size:clamp(2.1rem, 5vw, 4.4rem); line-height:1; letter-spacing:0; }
   .hero-copy { max-width:760px; margin:12px 0 0; color:var(--body-copy); font-size:1rem; }
-  .subscribe-box { border:1px solid var(--soft-border); background:var(--panel); border-radius:8px; padding:14px; }
-  .subscribe-box h2 { margin:0; font-size:.95rem; }
-  .subscribe-box p { margin:6px 0 12px; color:var(--muted); font-size:.84rem; }
-  .subscribe-cta, .category-filter, .favorites-toggle { appearance:none; border:1px solid var(--soft-border);
+  .category-filter, .favorites-toggle { appearance:none; border:1px solid var(--soft-border);
     border-radius:999px; background:var(--panel); color:var(--fg); padding:8px 11px; font-weight:800; cursor:pointer; }
-  .subscribe-cta { display:inline-block; background:var(--accent); border-color:var(--accent); color:#fff; text-decoration:none; white-space:nowrap; }
   .shell { max-width:1180px; margin:0 auto; padding:20px 20px 72px; }
   .filters { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:10px 0 18px; }
   .category-filter { color:var(--muted); }
@@ -92,7 +88,6 @@
     <div class="topline">
       <a class="back-link" href="index.html" aria-label="首页"><span class="workspace-brand-mark" aria-hidden="true">◉</span><span>OMNI<span class="brand-dot-text">.</span>SOURCE</span></a>
       <div class="top-actions">
-        <a class="subscribe-link" href="subscribe.html">订阅</a>
         <div class="lang-switch" aria-label="Language"><a class="lang-option active" href="tools.html" hreflang="zh">中文</a><a class="lang-option" href="en/tools.html" hreflang="en">EN</a></div>
         <button class="icon-btn" type="button" id="themeBtn" aria-label="Theme" title="Theme"><span aria-hidden="true">☾</span></button>
       </div>
@@ -103,11 +98,6 @@
         <h1>每周工具雷达</h1>
         <p class="hero-copy">每周挑出一组跟 AI 工作流相关、值得试用的小工具。按使用场景筛选，真正有用的再带回自己的工作台。</p>
       </div>
-      <section class="subscribe-box" aria-label="订阅 OmniSource">
-        <h2>订阅 OmniSource</h2>
-        <p>统一设置按天或按周接收官方 Report、创业信息流和每周工具雷达。</p>
-        <a class="subscribe-cta" href="subscribe.html">设置订阅频率</a>
-      </section>
     </div>
   </div>
 </header>
