@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lang-jiaqi.github.io/omnisource-site/sitemap.xml
